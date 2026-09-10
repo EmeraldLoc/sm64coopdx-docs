@@ -1050,8 +1050,8 @@ def doc_files(processed_files):
     page_len_limit = 150000
     extra_space = 25000
 
-    s = '## [:rewind: Modding](modding.md)\n\n'
-    s += '---\n\n$[FUNCTION_NAV_HERE]\n\n---\n'
+    s = '## [:rewind: Modding](modding.md)\n'
+    s += '\n---\n\n$[FUNCTION_NAV_HERE]\n\n---\n'
     s += '$[FUNCTION_INDEX_HERE]'
 
     manual_functions, classes = read_manually_written_functions(get_path(manually_written_functions_filename))
@@ -1074,10 +1074,10 @@ def doc_files(processed_files):
         s_file += functions
 
         if len(s) + len(s_file) + extra_space > page_len_limit:
-            s += '---\n\n$[FUNCTION_NAV_HERE]\n'
+            s += '\n---\n\n$[FUNCTION_NAV_HERE]\n'
             pages[page_num] = s
-            s = '## [:rewind: Lua Functions](functions.md)\n\n'
-            s += '---\n\n$[FUNCTION_NAV_HERE]\n'
+            s = '## [:rewind: Lua Functions](functions.md)\n'
+            s += '\n---\n\n$[FUNCTION_NAV_HERE]\n'
             page_num += 1
             extra_space = 0
 

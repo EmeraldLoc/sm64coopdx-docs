@@ -9097,6 +9097,7 @@ Runs an OR operator on the `obj`'s respawn info with `bits` << 8. If `bits` is 0
 ### C Prototype
 
 `void set_object_respawn_info_bits(struct Object *obj, u8 bits);`
+
 ---
 
 [< prev](functions-4.md) | [1](functions.md) | [2](functions-2.md) | [3](functions-3.md) | [4](functions-4.md) | 5 | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-6.md)

@@ -7921,6 +7921,7 @@ Overrides the soundbank, set to -1 to reset
 ### C Prototype
 
 `void set_sound_bank_override(s32 bank);`
+
 ---
 
 [< prev](functions-2.md) | [1](functions.md) | [2](functions-2.md) | 3 | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-4.md)

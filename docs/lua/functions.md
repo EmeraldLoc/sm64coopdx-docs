@@ -2990,6 +2990,7 @@ If `command` includes parameter specifiers (subsequences beginning with `%`), th
 The number of provided parameters must be equal to the number of specifiers in `command`, and the order of parameters must be the same as the specifiers.
 
 The following specifiers are allowed:
+
 - `%i` for an `integer` parameter
 - `%s` for a `string` parameter
 - `%v` for a `Vtx` parameter
@@ -2999,11 +3000,13 @@ The following specifiers are allowed:
 ### Lua Example
 
 Plain string:
+
 ```lua
 gfx_set_command(gfx, "gsDPSetEnvColor(0x00, 0xFF, 0x00, 0xFF)")
 ```
 
 With parameter specifiers:
+
 ```lua
 local r, g, b, a = 0x00, 0xFF, 0x00, 0xFF
 gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, %i)", r, g, b, a)
@@ -3177,6 +3180,7 @@ Plays a screen transition after a `delay` in frames
 ### C Prototype
 
 `void play_transition_after_delay(s16 transType, s16 time, u8 red, u8 green, u8 blue, s16 delay);`
+
 ---
 
 1 | [2](functions-2.md) | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-2.md)

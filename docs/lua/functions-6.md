@@ -9988,6 +9988,7 @@ Create a sound spawner for objects that need a sound play once.
 ### C Prototype
 
 `void create_sound_spawner(s32 soundMagic);`
+
 ---
 
 [< prev](functions-5.md) | [1](functions.md) | [2](functions-2.md) | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | 6 | [7](functions-7.md) | [next >](functions-7.md)
