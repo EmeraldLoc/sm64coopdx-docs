@@ -19,3 +19,7 @@ For documentation on the source code of this project, check out the [C documenta
 ## Contributing to Documentation
 
 To contribute to documentation, check out the [documentation for documenting](contributing-to-docs.md)!
+
+## Additional Resources
+
+TODO: Add additional resources (Libraries like debugging libraries, etc. TBD)
