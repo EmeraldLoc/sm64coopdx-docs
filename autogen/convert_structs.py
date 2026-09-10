@@ -705,8 +705,6 @@ def doc_struct(struct):
         s += "| ---- | --------- |\n"
         s += field_functions
 
-    s += '\n[:arrow_up_small:](#)\n\n<br />\n'
-
     return s
 
 def doc_structs(structs):

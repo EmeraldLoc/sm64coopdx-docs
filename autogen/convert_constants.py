@@ -354,7 +354,7 @@ def build_to_c(built_files):
 ############################################################################
 
 def doc_constant_index(processed_files):
-    s = '# Supported Constants\n'
+    s = '# Supported Constants\n\n'
     for processed_file in processed_files:
         constants = processed_file['constants']
         if not constants:
@@ -364,12 +364,11 @@ def doc_constant_index(processed_files):
         constants = [x for x in processed_file['constants'] if 'identifier' in x]
         for c in constants:
             if len(c['constants']) > 0:
-                s += '    - [enum %s](#enum-%s)\n' % (c['identifier'], c['identifier'])
+                s += '    - [enum %s](#enum-%s)\n' % (c['identifier'], c['identifier'].lower())
 
-    s += '\n<br />\n\n'
     return s
 
-def doc_constant(fname, processed_constant):
+def doc_constant(fname, processed_constant, next_entry):
     constants = processed_constant
     s = ''
 
@@ -380,19 +379,28 @@ def doc_constant(fname, processed_constant):
             return ''
 
         enum = 'enum ' + processed_constant['identifier']
-        s += '\n### %s\n' % (enum)
+        s += '### %s\n\n' % (enum)
         s += '| Identifier | Value |\n'
         s += '| :--------- | :---- |\n'
         for c in constants:
             s += '| %s | %s |\n' % (c[0], c[1].replace('|', '\\|'))
+
+        if next_entry is not None and ('identifier' not in next_entry or len(next_entry.get('constants', [])) > 0):
+            s += '\n'
         return s
+
+    wasConstantAdded = False
 
     for c in [processed_constant]:
         if c[0].startswith('#'):
             continue
         if not allowed_identifier(None, constants_hidden, fname, c[0]):
             continue
+        wasConstantAdded = True
         s += '- %s\n' % (c[0])
+
+    if wasConstantAdded and next_entry is not None and 'identifier' in next_entry:
+        s += '\n'
 
     return s
 
@@ -401,12 +409,11 @@ def doc_file(processed_file):
     if not constants:
         return ''
 
-    s = '## %s\n' % (processed_file['filename'])
-    for c in constants:
-        s += doc_constant(processed_file['filename'], c)
+    s = '\n## %s\n\n' % (processed_file['filename'])
+    for i, c in enumerate(constants):
+        next_entry = constants[i + 1] if i < len(constants) - 1 else None
+        s += doc_constant(processed_file['filename'], c, next_entry)
 
-    s += '\n[:arrow_up_small:](#)\n'
-    s += '\n<br />\n\n'
     return s
 
 def doc_files(processed_files):

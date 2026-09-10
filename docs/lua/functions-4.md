@@ -6,35 +6,6 @@
 
 
 ---
-# functions from load.h
-
-<br />
-
-
-## set_sound_bank_override
-
-### Description
-Overrides the soundbank, set to -1 to reset
-
-### Lua Example
-`set_sound_bank_override(bank)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| bank | `integer` |
-
-### Returns
-- None
-
-### C Prototype
-`void set_sound_bank_override(s32 bank);`
-
-[:arrow_up_small:](#)
-
-<br />
-
----
 # functions from mario.h
 
 <br />
@@ -60,9 +31,6 @@ Useful for deciding when to transition out of an animation-driven action
 ### C Prototype
 `s32 is_anim_at_end(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## is_anim_past_end
 
@@ -84,9 +52,6 @@ Useful for advanced checks where slightly early transitions or timing are needed
 ### C Prototype
 `s32 is_anim_past_end(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_mario_animation
 
@@ -108,9 +73,6 @@ Sets Mario's current animation to `targetAnimID` at a default acceleration (no s
 ### C Prototype
 `s16 set_mario_animation(struct MarioState *m, s32 targetAnimID);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_mario_anim_with_accel
 
@@ -134,9 +96,6 @@ Useful for controlling animation timing, e.g., slow-motion or fast-forward effec
 ### C Prototype
 `s16 set_mario_anim_with_accel(struct MarioState *m, s32 targetAnimID, s32 accel);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_character_animation
 
@@ -158,9 +117,6 @@ Sets the character-specific animation at its default rate (no acceleration)
 ### C Prototype
 `s16 set_character_animation(struct MarioState *m, enum CharacterAnimID targetAnimID);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_character_anim_with_accel
 
@@ -184,9 +140,6 @@ Useful for varying animation speeds based on context or dynamic conditions (e.g.
 ### C Prototype
 `s16 set_character_anim_with_accel(struct MarioState *m, enum CharacterAnimID targetAnimID, s32 accel);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_anim_to_frame
 
@@ -208,9 +161,6 @@ Sets the current animation frame to a specific `animFrame`
 ### C Prototype
 `void set_anim_to_frame(struct MarioState *m, s16 animFrame);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## is_anim_past_frame
 
@@ -233,9 +183,6 @@ Useful for conditional logic where an action can branch after reaching a specifi
 ### C Prototype
 `s32 is_anim_past_frame(struct MarioState *m, s16 animFrame);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## find_mario_anim_flags_and_translation
 
@@ -259,9 +206,6 @@ Useful for determining positional offsets from animations (e.g., stepping forwar
 ### C Prototype
 `s16 find_mario_anim_flags_and_translation(struct Object *o, s32 yaw, VEC_OUT Vec3s translation);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_mario_pos_for_anim
 
@@ -282,9 +226,6 @@ Applies the translation from Mario's current animation to his world position. Co
 ### C Prototype
 `void update_mario_pos_for_anim(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## return_mario_anim_y_translation
 
@@ -306,9 +247,6 @@ Useful for adjusting Mario's vertical position based on an ongoing animation (e.
 ### C Prototype
 `s16 return_mario_anim_y_translation(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_if_no_flag
 
@@ -331,9 +269,6 @@ Plays a sound if Mario does not currently have a specific flag set. Once played,
 ### C Prototype
 `void play_sound_if_no_flag(struct MarioState *m, u32 soundBits, u32 flags);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_jump_sound
 
@@ -354,9 +289,6 @@ Plays Mario's jump sound if it hasn't been played yet since the last action chan
 ### C Prototype
 `void play_mario_jump_sound(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## adjust_sound_for_speed
 
@@ -378,9 +310,6 @@ Useful for adding dynamic audio feedback based on Mario's running or walking spe
 ### C Prototype
 `void adjust_sound_for_speed(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_and_spawn_particles
 
@@ -403,9 +332,6 @@ Plays the specified sound effect and spawns surface-appropriate particles (e.g.,
 ### C Prototype
 `void play_sound_and_spawn_particles(struct MarioState *m, u32 soundBits, u32 waveParticleType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_action_sound
 
@@ -428,9 +354,6 @@ Plays an action sound once per action, optionally spawning wave or dust particle
 ### C Prototype
 `void play_mario_action_sound(struct MarioState *m, u32 soundBits, u32 waveParticleType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_landing_sound
 
@@ -452,9 +375,6 @@ Plays a normal landing sound (or metal landing sound if Mario is metal) and spaw
 ### C Prototype
 `void play_mario_landing_sound(struct MarioState *m, u32 soundBits);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_landing_sound_once
 
@@ -476,9 +396,6 @@ A variant of `play_mario_landing_sound` that ensures the sound is only played on
 ### C Prototype
 `void play_mario_landing_sound_once(struct MarioState *m, u32 soundBits);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_heavy_landing_sound
 
@@ -501,9 +418,6 @@ Useful for making big impact landings stand out aurally
 ### C Prototype
 `void play_mario_heavy_landing_sound(struct MarioState *m, u32 soundBits);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_heavy_landing_sound_once
 
@@ -526,9 +440,6 @@ Useful for consistent heavy landing effects without repetition
 ### C Prototype
 `void play_mario_heavy_landing_sound_once(struct MarioState *m, u32 soundBits);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_mario_sound
 
@@ -551,9 +462,6 @@ Plays a given action sound (like a jump or landing) and also a Mario voice line 
 ### C Prototype
 `void play_mario_sound(struct MarioState *m, s32 primarySoundBits, s32 scondarySoundBits);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_is_crouching
 
@@ -574,9 +482,6 @@ Returns true if Mario is in any of the crouching or crawling states, checking hi
 ### C Prototype
 `bool mario_is_crouching(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_is_ground_pound_landing
 
@@ -597,9 +502,6 @@ Returns true if Mario is in a ground pound landing state (`ACT_GROUND_POUND_LAND
 ### C Prototype
 `bool mario_is_ground_pound_landing(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_can_bubble
 
@@ -620,9 +522,6 @@ Checks whether Mario can become bubbled under certain game conditions (multiplay
 ### C Prototype
 `bool mario_can_bubble(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_set_bubbled
 
@@ -644,9 +543,6 @@ Transitions Mario into a bubbled state (if available in multiplayer), decrementi
 ### C Prototype
 `void mario_set_bubbled(struct MarioState* m, OPTIONAL bool stayAlive);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_set_forward_vel
 
@@ -669,9 +565,6 @@ Useful for controlling Mario's speed and direction in various actions (jumping, 
 ### C Prototype
 `void mario_set_forward_vel(struct MarioState *m, f32 speed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_get_floor_class
 
@@ -693,9 +586,6 @@ Useful for controlling friction, movement speed adjustments, and whether Mario s
 ### C Prototype
 `s32 mario_get_floor_class(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_get_terrain_sound_addend
 
@@ -717,9 +607,6 @@ Useful for playing context-specific footstep or movement sounds
 ### C Prototype
 `u32 mario_get_terrain_sound_addend(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## resolve_and_return_wall_collisions
 
@@ -743,9 +630,6 @@ Useful for collision detection when updating Mario's movement or adjusting his p
 ### C Prototype
 `struct Surface *resolve_and_return_wall_collisions(VEC_OUT Vec3f pos, f32 offset, f32 radius);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## resolve_and_return_wall_collisions_data
 
@@ -769,9 +653,6 @@ Similar to `resolve_and_return_wall_collisions` but also returns detailed collis
 ### C Prototype
 `void resolve_and_return_wall_collisions_data(VEC_OUT Vec3f pos, f32 offset, f32 radius, struct WallCollisionData* collisionData);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_find_ceil
 
@@ -795,9 +676,6 @@ Returns the ceiling height and surface
 ### C Prototype
 `f32 vec3f_find_ceil(Vec3f pos, f32 height, RET struct Surface **ceil);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_mario_ceil
 
@@ -822,9 +700,6 @@ Returns the ceiling height and surface
 ### C Prototype
 `f32 vec3f_mario_ceil(Vec3f pos, f32 height, RET struct Surface **ceil);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_facing_downhill
 
@@ -847,9 +722,6 @@ Useful for deciding if Mario will walk or slide on sloped floors
 ### C Prototype
 `s32 mario_facing_downhill(struct MarioState *m, s32 turnYaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_floor_is_slippery
 
@@ -871,9 +743,6 @@ Useful for deciding if Mario should transition to sliding or maintain normal tra
 ### C Prototype
 `u32 mario_floor_is_slippery(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_floor_is_slope
 
@@ -894,9 +763,6 @@ Checks whether Mario's floor is a slope, i.e., not flat but not necessarily stee
 ### C Prototype
 `s32 mario_floor_is_slope(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_floor_is_steep
 
@@ -918,9 +784,6 @@ Useful for restricting normal movement on surfaces with extreme angles
 ### C Prototype
 `s32 mario_floor_is_steep(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## find_floor_height_relative_polar
 
@@ -944,9 +807,6 @@ Useful for determining height differentials ahead or behind Mario, e.g. for slop
 ### C Prototype
 `f32 find_floor_height_relative_polar(struct MarioState *m, s16 angleFromMario, f32 distFromMario);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## find_floor_slope
 
@@ -969,9 +829,6 @@ Useful for slope-based calculations such as setting walking or sliding behaviors
 ### C Prototype
 `s16 find_floor_slope(struct MarioState *m, s16 yawOffset);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_mario_sound_and_camera
 
@@ -993,9 +850,6 @@ Useful for synchronizing camera behavior and ambient sounds with Mario's state c
 ### C Prototype
 `void update_mario_sound_and_camera(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_steep_jump_action
 
@@ -1017,9 +871,6 @@ Useful for forcing special jump states on surfaces exceeding normal slope limits
 ### C Prototype
 `void set_steep_jump_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_mario_y_vel_based_on_fspeed
 
@@ -1042,9 +893,6 @@ Adjusts Mario's vertical velocity (`m.vel.y`) based on his forward speed. This f
 ### C Prototype
 `void set_mario_y_vel_based_on_fspeed(struct MarioState *m, f32 initialVelY, f32 multiplier);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_mario_action
 
@@ -1067,9 +915,6 @@ Sets Mario's action to the specified `action` and `actionArg`, routing through g
 ### C Prototype
 `u32 set_mario_action(struct MarioState *m, u32 action, u32 actionArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_jump_from_landing
 
@@ -1090,9 +935,6 @@ When Mario lands on the ground, decides whether to jump again (single, double, t
 ### C Prototype
 `s32 set_jump_from_landing(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_jumping_action
 
@@ -1115,9 +957,6 @@ Sets Mario to a jumping action (regular, double, triple, or steep jump) if condi
 ### C Prototype
 `s32 set_jumping_action(struct MarioState *m, u32 action, u32 actionArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## drop_and_set_mario_action
 
@@ -1140,9 +979,6 @@ Drops any currently held object and sets Mario to a new action. This function is
 ### C Prototype
 `s32 drop_and_set_mario_action(struct MarioState *m, u32 action, u32 actionArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## hurt_and_set_mario_action
 
@@ -1166,9 +1002,6 @@ Increments Mario's `hurtCounter` and immediately sets a new action. Often used w
 ### C Prototype
 `s32 hurt_and_set_mario_action(struct MarioState *m, u32 action, u32 actionArg, s16 hurtCounter);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_action_exits
 
@@ -1190,9 +1023,6 @@ Useful for quickly exiting certain stationary actions when Mario begins moving o
 ### C Prototype
 `s32 check_common_action_exits(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_hold_action_exits
 
@@ -1213,9 +1043,6 @@ Checks for inputs that cause common hold-action transitions (hold jump, hold fre
 ### C Prototype
 `s32 check_common_hold_action_exits(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## transition_submerged_to_walking
 
@@ -1237,9 +1064,6 @@ Useful for restoring standard ground movement when emerging from water
 ### C Prototype
 `s32 transition_submerged_to_walking(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_water_plunge_action
 
@@ -1260,9 +1084,6 @@ Transitions Mario into a "water plunge" action, used when he enters water from a
 ### C Prototype
 `s32 set_water_plunge_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## execute_mario_action
 
@@ -1283,9 +1104,6 @@ Main driver for Mario's behavior. Executes the current action group (stationary,
 ### C Prototype
 `s32 execute_mario_action(UNUSED struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## force_idle_state
 
@@ -1307,9 +1125,6 @@ Useful for quickly resetting Mario's state to an idle pose under special conditi
 ### C Prototype
 `s32 force_idle_state(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## init_single_mario
 
@@ -1330,9 +1145,6 @@ Initializes the fields of a single `MarioState` structure when the player spawns
 ### C Prototype
 `void init_single_mario(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_mario_particle_flags
 
@@ -1355,9 +1167,6 @@ Sets Mario's particle flags to spawn various visual effects (dust, water splashe
 ### C Prototype
 `void set_mario_particle_flags(struct MarioState* m, u32 flags, u8 clear);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_update_wall
 
@@ -1379,9 +1188,6 @@ Updates Mario's wall information based on wall collisions (`WallCollisionData`).
 ### C Prototype
 `void mario_update_wall(struct MarioState* m, struct WallCollisionData* wcd);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_mario_state_from_object
 
@@ -1402,9 +1208,6 @@ Gets the MarioState corresponding to the provided object if the object is a Mari
 ### C Prototype
 `struct MarioState *get_mario_state_from_object(struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_airborne.c
@@ -1435,9 +1238,6 @@ If the current animation frame matches any of the specified frames, it triggers 
 ### C Prototype
 `void play_flip_sounds(struct MarioState *m, s16 frame1, s16 frame2, s16 frame3);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_far_fall_sound
 
@@ -1459,9 +1259,6 @@ If the fall exceeds a threshold, triggers a "long fall" exclamation. Also sets a
 ### C Prototype
 `void play_far_fall_sound(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_knockback_sound
 
@@ -1483,9 +1280,6 @@ depending on whether Mario's forward velocity is high enough to be considered a 
 ### C Prototype
 `void play_knockback_sound(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## lava_boost_on_wall
 
@@ -1508,9 +1302,6 @@ Useful for handling collisions with lava walls, giving Mario a strong upward/for
 ### C Prototype
 `s32 lava_boost_on_wall(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_fall_damage
 
@@ -1535,9 +1326,6 @@ Useful for determining if Mario's fall warrants a health penalty or a special la
 ### C Prototype
 `s32 check_fall_damage(struct MarioState *m, u32 hardFallAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_kick_or_dive_in_air
 
@@ -1559,9 +1347,6 @@ Pressing the B button in the air can trigger a jump kick (at lower speeds) or a 
 ### C Prototype
 `s32 check_kick_or_dive_in_air(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## should_get_stuck_in_ground
 
@@ -1584,9 +1369,6 @@ Returns true if Mario should be stuck, false otherwise
 ### C Prototype
 `s32 should_get_stuck_in_ground(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_fall_damage_or_get_stuck
 
@@ -1610,9 +1392,6 @@ action changes to being stuck in the ground. Otherwise, normal fall damage logic
 ### C Prototype
 `s32 check_fall_damage_or_get_stuck(struct MarioState *m, u32 hardFallAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_horizontal_wind
 
@@ -1634,9 +1413,6 @@ velocity. Caps speed at certain thresholds, updates Mario's forward velocity and
 ### C Prototype
 `s32 check_horizontal_wind(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_air_with_turn
 
@@ -1658,9 +1434,6 @@ approaches the forward velocity toward zero if no input is pressed, and modifies
 ### C Prototype
 `void update_air_with_turn(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_air_without_turn
 
@@ -1682,9 +1455,6 @@ move sideways relative to his current facing direction. Also checks horizontal w
 ### C Prototype
 `void update_air_without_turn(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_lava_boost_or_twirling
 
@@ -1706,9 +1476,6 @@ and facing angle, but in a more restricted manner compared to standard jump move
 ### C Prototype
 `void update_lava_boost_or_twirling(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_flying_yaw
 
@@ -1730,9 +1497,6 @@ and sets Mario's roll angle to simulate banking turns. This results in a more na
 ### C Prototype
 `void update_flying_yaw(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_flying_pitch
 
@@ -1754,9 +1518,6 @@ and clamps the final pitch angle to a certain range, simulating a smooth flight 
 ### C Prototype
 `void update_flying_pitch(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_flying
 
@@ -1778,9 +1539,6 @@ applies drag, and adjusts forward velocity. Also updates Mario's model angles fo
 ### C Prototype
 `void update_flying(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_air_action_step
 
@@ -1806,9 +1564,6 @@ Handles how Mario lands, hits walls, grabs ledges, or grabs ceilings. Optionally
 ### C Prototype
 `u32 common_air_action_step(struct MarioState *m, u32 landAction, s32 animation, u32 stepArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_air_knockback_step
 
@@ -1834,9 +1589,6 @@ and handles wall collisions or landing transitions to appropriate ground knockba
 ### C Prototype
 `u32 common_air_knockback_step(struct MarioState *m, u32 landAction, u32 hardFallAction, s32 animation, f32 speed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_wall_kick
 
@@ -1858,9 +1610,6 @@ and the `wallKickTimer` allow, Mario transitions to `ACT_WALL_KICK_AIR`
 ### C Prototype
 `s32 check_wall_kick(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_airborne_cancels
 
@@ -1883,9 +1632,6 @@ if on certain wind surfaces. Also resets `m.quicksandDepth`
 ### C Prototype
 `s32 check_common_airborne_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_airborne_action
 
@@ -1907,9 +1653,6 @@ Dispatches to the appropriate action function, such as jump, double jump, freefa
 ### C Prototype
 `s32 mario_execute_airborne_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_automatic.c
@@ -1937,9 +1680,6 @@ In Shifting Sand Land, the leaf effect spawns higher due to the taller palm tree
 ### C Prototype
 `void add_tree_leaf_particles(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_climbing_sounds
 
@@ -1961,9 +1701,6 @@ Plays the appropriate climbing sound effect depending on whether Mario is on a t
 ### C Prototype
 `void play_climbing_sounds(struct MarioState *m, s32 b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_pole_position
 
@@ -1986,9 +1723,6 @@ Useful for ensuring Mario's correct placement and transitions when climbing pole
 ### C Prototype
 `s32 set_pole_position(struct MarioState *m, f32 offsetY);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## perform_hanging_step
 
@@ -2010,9 +1744,6 @@ Performs a single step of movement while Mario is hanging from a ceiling. It han
 ### C Prototype
 `s32 perform_hanging_step(struct MarioState *m, VEC_OUT Vec3f nextPos);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_hang_moving
 
@@ -2033,9 +1764,6 @@ Updates Mario's velocity and position while he is moving across a hangable ceili
 ### C Prototype
 `s32 update_hang_moving(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_hang_stationary
 
@@ -2056,9 +1784,6 @@ Keeps Mario stationary while he is hanging from a ceiling. This function zeroes 
 ### C Prototype
 `void update_hang_stationary(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## let_go_of_ledge
 
@@ -2079,9 +1804,6 @@ Handles Mario letting go of a ledge by adjusting his position and setting his ve
 ### C Prototype
 `s32 let_go_of_ledge(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## climb_up_ledge
 
@@ -2102,9 +1824,6 @@ Moves Mario onto the top of a ledge once he finishes climbing it. This shifts Ma
 ### C Prototype
 `void climb_up_ledge(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_ledge_climb_camera
 
@@ -2125,9 +1844,6 @@ Gradually adjusts the camera position to track Mario as he climbs a ledge. This 
 ### C Prototype
 `void update_ledge_climb_camera(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_ledge_climb
 
@@ -2150,9 +1866,6 @@ Updates Mario's climb onto a ledge by setting the chosen climbing animation and 
 ### C Prototype
 `void update_ledge_climb(struct MarioState *m, s32 animation, u32 endAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_pop_bubble
 
@@ -2173,9 +1886,6 @@ Makes Mario act like he was popped from a bubble. Useful for custom bubble poppi
 ### C Prototype
 `void mario_pop_bubble(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_automatic_cancels
 
@@ -2196,9 +1906,6 @@ Checks if Mario should cancel his current automatic action, primarily by detecti
 ### C Prototype
 `s32 check_common_automatic_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_automatic_action
 
@@ -2220,9 +1927,6 @@ Returns true if the action was canceled and a new action was set, or false other
 ### C Prototype
 `s32 mario_execute_automatic_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_cutscene.c
@@ -2249,9 +1953,6 @@ Calculates the pixel width of a given credits string. Each space is counted as 4
 ### C Prototype
 `s32 get_credits_str_width(char *str);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_end_peach_loop
 
@@ -2270,9 +1971,6 @@ Handles Peach's final cutscene animation. Cycles through frames based on the glo
 ### C Prototype
 `void bhv_end_peach_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_end_toad_loop
 
@@ -2291,9 +1989,6 @@ Handles Toad's final cutscene animation. Chooses which animation index to use ba
 ### C Prototype
 `void bhv_end_toad_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_star_collection_dialog
 
@@ -2314,9 +2009,6 @@ Determines which (if any) dialog to show when Mario collects a star. Checks mile
 ### C Prototype
 `s32 get_star_collection_dialog(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## handle_save_menu
 
@@ -2337,9 +2029,6 @@ Handles interactions with the save menu after collecting a star/key. Checks the 
 ### C Prototype
 `void handle_save_menu(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_take_cap_off
 
@@ -2360,9 +2049,6 @@ Transitions Mario's state from wearing the cap on his head to holding it in his 
 ### C Prototype
 `void cutscene_take_cap_off(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_put_cap_on
 
@@ -2383,9 +2069,6 @@ Transitions Mario's state from having the cap in his hand to wearing it on his h
 ### C Prototype
 `void cutscene_put_cap_on(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_ready_to_speak
 
@@ -2406,9 +2089,6 @@ Checks if Mario's current action allows him to speak. For Mario to be ready, his
 ### C Prototype
 `s32 mario_ready_to_speak(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## should_start_or_continue_dialog
 
@@ -2430,9 +2110,6 @@ Checks if the dialog from a specified `object` should start or continue for this
 ### C Prototype
 `u8 should_start_or_continue_dialog(struct MarioState* m, struct Object* object);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## general_star_dance_handler
 
@@ -2454,9 +2131,6 @@ Manages the star collection dance sequence for Mario, both on land and in water.
 ### C Prototype
 `void general_star_dance_handler(struct MarioState *m, s32 isInWater);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_death_handler
 
@@ -2479,9 +2153,6 @@ Handles shared logic for Mario's various death states. Plays the specified death
 ### C Prototype
 `s32 common_death_handler(struct MarioState *m, s32 animation, s32 frameToDeathWarp);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## launch_mario_until_land
 
@@ -2505,9 +2176,6 @@ Launches Mario forward with a given velocity (`forwardVel`) and sets his animati
 ### C Prototype
 `s32 launch_mario_until_land(struct MarioState *m, s32 endAction, s32 animation, f32 forwardVel);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stuck_in_ground_handler
 
@@ -2533,9 +2201,6 @@ Handles the cutscene and animation sequence for when Mario is stuck in the groun
 ### C Prototype
 `void stuck_in_ground_handler(struct MarioState *m, s32 animation, s32 unstuckFrame, s32 target2, s32 target3, s32 endAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## generate_yellow_sparkles
 
@@ -2559,9 +2224,6 @@ Spawns yellow sparkles in a circular pattern around a specified point (`x`, `y`,
 ### C Prototype
 `void generate_yellow_sparkles(s16 x, s16 y, s16 z, f32 radius);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_cutscene_action
 
@@ -2582,9 +2244,6 @@ Executes Mario's current cutscene action based on his `action` field. Includes v
 ### C Prototype
 `s32 mario_execute_cutscene_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_moving.c
@@ -2612,9 +2271,6 @@ Calculates a pitch offset used while running to simulate leaning forward at high
 ### C Prototype
 `s16 tilt_body_running(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_step_sound
 
@@ -2638,9 +2294,6 @@ Also chooses specific sounds if Mario is wearing Metal Cap or is in quicksand
 ### C Prototype
 `void play_step_sound(struct MarioState *m, s16 frame1, s16 frame2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## align_with_floor
 
@@ -2661,9 +2314,6 @@ Aligns Mario's position and model transformation matrix to match the floor's ang
 ### C Prototype
 `void align_with_floor(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## begin_walking_action
 
@@ -2687,9 +2337,6 @@ Sets Mario's facing yaw to his intended yaw, applies a specified forward velocit
 ### C Prototype
 `s32 begin_walking_action(struct MarioState *m, f32 forwardVel, u32 action, u32 actionArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_ledge_climb_down
 
@@ -2711,9 +2358,6 @@ If the conditions are met, transitions Mario into a ledge-climb-down action and 
 ### C Prototype
 `void check_ledge_climb_down(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## slide_bonk
 
@@ -2736,9 +2380,6 @@ Handles the scenario where Mario slides into a wall. If Mario is moving fast, re
 ### C Prototype
 `void slide_bonk(struct MarioState *m, u32 fastAction, u32 slowAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_triple_jump_action
 
@@ -2761,9 +2402,6 @@ Determines the proper triple jump action based on Mario's forward velocity and t
 ### C Prototype
 `s32 set_triple_jump_action(struct MarioState *m, UNUSED u32 action, UNUSED u32 actionArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_sliding_angle
 
@@ -2788,9 +2426,6 @@ Handles facing-direction changes and maximum speed limits
 ### C Prototype
 `void update_sliding_angle(struct MarioState *m, f32 accel, f32 lossFactor);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_sliding
 
@@ -2814,9 +2449,6 @@ Returns `true` if sliding has stopped
 ### C Prototype
 `s32 update_sliding(struct MarioState *m, f32 stopSpeed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## apply_slope_accel
 
@@ -2838,9 +2470,6 @@ On downward slopes, Mario gains speed, while on upward slopes, Mario loses speed
 ### C Prototype
 `void apply_slope_accel(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## apply_landing_accel
 
@@ -2863,9 +2492,6 @@ Capped in such a way that Mario eventually stops or stabilizes on flatter ground
 ### C Prototype
 `s32 apply_landing_accel(struct MarioState *m, f32 frictionFactor);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_shell_speed
 
@@ -2886,9 +2512,6 @@ Controls Mario's speed when riding a Koopa Shell on the ground.
 ### C Prototype
 `void update_shell_speed(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## apply_slope_decel
 
@@ -2911,9 +2534,6 @@ This function can completely stop Mario if the slope is gentle enough or if fric
 ### C Prototype
 `s32 apply_slope_decel(struct MarioState *m, f32 decelCoef);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_decelerating_speed
 
@@ -2935,9 +2555,6 @@ Returns true if Mario's speed reaches zero, meaning he has stopped
 ### C Prototype
 `s32 update_decelerating_speed(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_walking_speed
 
@@ -2959,9 +2576,6 @@ Caps speed at a certain value and may reduce it slightly on steep slopes
 ### C Prototype
 `void update_walking_speed(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## should_begin_sliding
 
@@ -2983,9 +2597,6 @@ Returns true if conditions to slide are met.
 ### C Prototype
 `s32 should_begin_sliding(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## analog_stick_held_back
 
@@ -3007,9 +2618,6 @@ Returns true if the stick is far enough in the opposite direction, indicating Ma
 ### C Prototype
 `s32 analog_stick_held_back(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_ground_dive_or_punch
 
@@ -3031,9 +2639,6 @@ Returns `true` if the action was changed to either a dive or a punching attack
 ### C Prototype
 `s32 check_ground_dive_or_punch(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## begin_braking_action
 
@@ -3055,9 +2660,6 @@ Also handles the scenario where Mario is up against a wall, transitioning to a s
 ### C Prototype
 `s32 begin_braking_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## anim_and_audio_for_walk
 
@@ -3079,9 +2681,6 @@ The specific animation used (tiptoe, walk, or run) depends on Mario's current sp
 ### C Prototype
 `void anim_and_audio_for_walk(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## anim_and_audio_for_hold_walk
 
@@ -3103,9 +2702,6 @@ Adjusts the animation speed dynamically based on Mario's velocity
 ### C Prototype
 `void anim_and_audio_for_hold_walk(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## anim_and_audio_for_heavy_walk
 
@@ -3127,9 +2723,6 @@ Sets the character animation speed based on Mario's intended movement speed
 ### C Prototype
 `void anim_and_audio_for_heavy_walk(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## push_or_sidle_wall
 
@@ -3151,9 +2744,6 @@ When Mario hits a wall during movement, decides whether he's pushing against the
 ### C Prototype
 `void push_or_sidle_wall(struct MarioState *m, Vec3f startPos);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## tilt_body_walking
 
@@ -3176,9 +2766,6 @@ The tilt is based on his change in yaw and current speed, giving a leaning appea
 ### C Prototype
 `void tilt_body_walking(struct MarioState *m, s16 startYaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## tilt_body_ground_shell
 
@@ -3201,9 +2788,6 @@ Similar to other tilt functions but tuned for shell-riding speeds and angles
 ### C Prototype
 `void tilt_body_ground_shell(struct MarioState *m, s16 startYaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## tilt_body_butt_slide
 
@@ -3225,9 +2809,6 @@ Gives the appearance that Mario is balancing or leaning into a turn
 ### C Prototype
 `void tilt_body_butt_slide(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_slide_action
 
@@ -3251,9 +2832,6 @@ Applies shared logic for sliding-related actions while playing sliding sounds, m
 ### C Prototype
 `void common_slide_action(struct MarioState *m, u32 endAction, u32 airAction, s32 animation);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_slide_action_with_jump
 
@@ -3279,9 +2857,6 @@ If the sliding slows enough, Mario transitions to a specified stopping action
 ### C Prototype
 `s32 common_slide_action_with_jump(struct MarioState *m, u32 stopAction, u32 jumpAction, u32 airAction, s32 animation);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stomach_slide_action
 
@@ -3306,9 +2881,6 @@ Uses `common_slide_action` for the core movement logic
 ### C Prototype
 `s32 stomach_slide_action(struct MarioState *m, u32 stopAction, u32 airAction, s32 animation);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_ground_knockback_action
 
@@ -3333,9 +2905,6 @@ Handles knockback on the ground (getting hit while on the ground) with shared lo
 ### C Prototype
 `s32 common_ground_knockback_action(struct MarioState *m, s32 animation, s32 arg2, s32 arg3, s32 arg4);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_landing_action
 
@@ -3358,9 +2927,6 @@ Applies movement upon landing from a jump or fall. Adjusts velocity based on slo
 ### C Prototype
 `u32 common_landing_action(struct MarioState *m, s16 animation, u32 airAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## quicksand_jump_land_action
 
@@ -3386,9 +2952,6 @@ First part of the animation reduces his quicksand depth. Ends with a normal land
 ### C Prototype
 `s32 quicksand_jump_land_action(struct MarioState *m, s32 animation1, s32 animation2, u32 endAction, u32 airAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_moving_cancels
 
@@ -3409,9 +2972,6 @@ Performs common checks when Mario is in a moving state, transitions to water plu
 ### C Prototype
 `s32 check_common_moving_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_moving_action
 
@@ -3432,9 +2992,6 @@ Executes Mario's current moving actions by: checking common cancellations (e.g.,
 ### C Prototype
 `s32 mario_execute_moving_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_object.c
@@ -3463,9 +3020,6 @@ Performs a stationary step, sets `m`'s animation and sets action to `endAction` 
 ### C Prototype
 `void animated_stationary_ground_step(struct MarioState *m, s32 animation, u32 endAction);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_update_punch_sequence
 
@@ -3486,9 +3040,6 @@ Updates Mario's punching state
 ### C Prototype
 `s32 mario_update_punch_sequence(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_object_cancels
 
@@ -3511,9 +3062,6 @@ if Mario is dead
 ### C Prototype
 `s32 check_common_object_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_object_action
 
@@ -3535,9 +3083,6 @@ Dispatches to the appropriate action function, such as punching, throwing, picki
 ### C Prototype
 `s32 mario_execute_object_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_stationary.c
@@ -3564,9 +3109,6 @@ Checks for and handles common conditions that would cancel Mario's current idle 
 ### C Prototype
 `s32 check_common_idle_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_hold_idle_cancels
 
@@ -3587,9 +3129,6 @@ Checks for and handles common conditions that would cancel Mario's current idle 
 ### C Prototype
 `s32 check_common_hold_idle_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_anim_sound
 
@@ -3613,9 +3152,6 @@ Plays a `sound` if Mario's action state and animation frame match the parameters
 ### C Prototype
 `void play_anim_sound(struct MarioState *m, u32 actionState, s32 animFrame, u32 sound);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stopping_step
 
@@ -3638,9 +3174,6 @@ Runs a stationary step, sets the character animation, and changes action if the 
 ### C Prototype
 `void stopping_step(struct MarioState *m, s32 animID, u32 action);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## landing_step
 
@@ -3663,9 +3196,6 @@ Runs a stationary step, sets the character animation, and changes action if the 
 ### C Prototype
 `s32 landing_step(struct MarioState *m, s32 animID, u32 action);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_landing_cancels
 
@@ -3687,9 +3217,6 @@ Checks for and handles common conditions that would cancel Mario's current landi
 ### C Prototype
 `s32 check_common_landing_cancels(struct MarioState *m, u32 action);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_common_stationary_cancels
 
@@ -3710,9 +3237,6 @@ Checks for and handles common conditions that would cancel Mario's current stati
 ### C Prototype
 `s32 check_common_stationary_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_stationary_action
 
@@ -3734,9 +3258,6 @@ Dispatches to the appropriate action function, such as idle, sleeping, crouching
 ### C Prototype
 `s32 mario_execute_stationary_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_actions_submerged.c
@@ -3764,9 +3285,6 @@ Sets Mario's particle flags if he's at the surface of a water box
 ### C Prototype
 `void set_swimming_at_surface_particles(struct MarioState *m, u32 particleFlag);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## perform_water_full_step
 
@@ -3788,9 +3306,6 @@ Performs a full water movement step where ceilings, floors, and walls are handle
 ### C Prototype
 `u32 perform_water_full_step(struct MarioState *m, VEC_OUT Vec3f nextPos);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## apply_water_current
 
@@ -3812,9 +3327,6 @@ Calculates a water current and outputs it in `step`
 ### C Prototype
 `void apply_water_current(struct MarioState *m, VEC_OUT Vec3f step);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## perform_water_step
 
@@ -3835,9 +3347,6 @@ Performs a water step
 ### C Prototype
 `u32 perform_water_step(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## float_surface_gfx
 
@@ -3858,9 +3367,6 @@ Controls the bobbing that happens when you swim near the water surface
 ### C Prototype
 `void float_surface_gfx(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_execute_submerged_action
 
@@ -3882,9 +3388,6 @@ Dispatches to the appropriate action function, such as breaststroke, flutterkick
 ### C Prototype
 `s32 mario_execute_submerged_action(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_misc.h
@@ -3909,9 +3412,6 @@ Behavior init function for NPC Toad
 ### C Prototype
 `void bhv_toad_message_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_toad_message_loop
 
@@ -3930,9 +3430,6 @@ Behavior loop function for NPC Toad
 ### C Prototype
 `void bhv_toad_message_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unlock_door_star_init
 
@@ -3951,9 +3448,6 @@ Behavior init function for Star Door unlock object
 ### C Prototype
 `void bhv_unlock_door_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unlock_door_star_loop
 
@@ -3972,9 +3466,6 @@ Behavior loop function for Star Door unlock object
 ### C Prototype
 `void bhv_unlock_door_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## geo_get_mario_state
 
@@ -3993,9 +3484,6 @@ When used in a geo function, retrieve the MarioState associated to the current p
 ### C Prototype
 `struct MarioState *geo_get_mario_state(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## geo_get_body_state
 
@@ -4014,9 +3502,6 @@ When used in a geo function, retrieve the MarioBodyState associated to the curre
 ### C Prototype
 `struct MarioBodyState *geo_get_body_state(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## geo_get_mario_object
 
@@ -4035,9 +3520,6 @@ When used in a geo function, retrieve the Mario object associated to the current
 ### C Prototype
 `struct Object *geo_get_mario_object(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from mario_step.h
@@ -4062,9 +3544,6 @@ Always returns zero. May have been originally used for beta trampolines
 ### C Prototype
 `f32 get_additive_y_vel_for_jumps(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_bonk_reflection
 
@@ -4086,9 +3565,6 @@ Reflects Mario off a wall if he is colliding with one and flips forward velocity
 ### C Prototype
 `void mario_bonk_reflection(struct MarioState *m, u8 negateSpeed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_update_quicksand
 
@@ -4110,9 +3586,6 @@ Updates Mario's state in quicksand, sinks him at `sinkingSpeed` if he's in non i
 ### C Prototype
 `u32 mario_update_quicksand(struct MarioState *m, f32 sinkingSpeed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_push_off_steep_floor
 
@@ -4135,9 +3608,6 @@ Pushes Mario off a steep floor and sets his action to `action` with `actionArg`
 ### C Prototype
 `u32 mario_push_off_steep_floor(struct MarioState *m, u32 action, u32 actionArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_update_moving_sand
 
@@ -4158,9 +3628,6 @@ Pushes Mario in the direction of the quicksand based on the floor surface
 ### C Prototype
 `u32 mario_update_moving_sand(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_update_windy_ground
 
@@ -4181,9 +3648,6 @@ Pushes Mario in the direction of the wind based on the floor surface
 ### C Prototype
 `u32 mario_update_windy_ground(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stop_and_set_height_to_floor
 
@@ -4204,9 +3668,6 @@ Sets all of Mario's velocity variables to 0 and sets his Y position to the floor
 ### C Prototype
 `void stop_and_set_height_to_floor(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stationary_ground_step
 
@@ -4227,9 +3688,6 @@ Performs a full Mario stationary physics step (4 substeps) and returns a `GROUND
 ### C Prototype
 `s32 stationary_ground_step(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## perform_ground_step
 
@@ -4250,9 +3708,6 @@ Performs a full Mario ground physics step (4 substeps) and returns a `GROUND_STE
 ### C Prototype
 `s32 perform_ground_step(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## perform_air_step
 
@@ -4274,9 +3729,6 @@ Performs a full Mario air physics step (4 substeps) and returns an `AIR_STEP_*` 
 ### C Prototype
 `s32 perform_air_step(struct MarioState *m, u32 stepArg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_vel_from_pitch_and_yaw
 
@@ -4297,9 +3749,6 @@ Sets Mario's velocity to his forward velocity multiplied by the cosine and sine 
 ### C Prototype
 `void set_vel_from_pitch_and_yaw(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from math_util.h
@@ -4326,9 +3775,6 @@ Calculates the sine of the given angle, where the angle is specified as a signed
 ### C Prototype
 `f32 sins(s16 sm64Angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## coss
 
@@ -4349,9 +3795,6 @@ Calculates the cosine of the given angle, where the angle is specified as a sign
 ### C Prototype
 `f32 coss(s16 sm64Angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## atan2s
 
@@ -4373,9 +3816,6 @@ Computes the arctangent of y/x and returns the angle as a signed 16-bit integer,
 ### C Prototype
 `s16 atan2s(f32 y, f32 x);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## atan2f
 
@@ -4397,9 +3837,6 @@ Computes the arctangent of a/b and returns it as a floating-point angle in radia
 ### C Prototype
 `f32 atan2f(f32 a, f32 b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_s32
 
@@ -4423,9 +3860,6 @@ Gradually moves an integer `current` value toward a `target` value, increasing i
 ### C Prototype
 `s32 approach_s32(s32 current, s32 target, s32 inc, s32 dec);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_f32
 
@@ -4449,9 +3883,6 @@ Similar to `approach_s32`, but operates on floating-point numbers. It moves `cur
 ### C Prototype
 `f32 approach_f32(f32 current, f32 target, f32 inc, f32 dec);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spline_get_weights
 
@@ -4475,9 +3906,6 @@ Computes spline interpolation weights for a given parameter `t` and stores these
 ### C Prototype
 `void spline_get_weights(struct MarioState* m, VEC_OUT Vec4f result, f32 t, UNUSED s32 c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## anim_spline_init
 
@@ -4499,9 +3927,6 @@ Initializes a spline-based animation for the `MarioState` structure `m` using th
 ### C Prototype
 `void anim_spline_init(struct MarioState* m, Vec4s *keyFrames);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## anim_spline_poll
 
@@ -4523,9 +3948,6 @@ Advances the spline-based animation associated with `m` and stores the current i
 ### C Prototype
 `s32 anim_spline_poll(struct MarioState* m, VEC_OUT Vec3f result);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_rotate_zxy
 
@@ -4547,9 +3969,6 @@ Rotates the 3D floating-point vector `v` by the angles specified in the 3D signe
 ### C Prototype
 `Vec3fp vec3f_rotate_zxy(VEC_OUT Vec3f v, Vec3s rotate);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_rotate_around_n
 
@@ -4573,9 +3992,6 @@ Rotates the 3D floating-point vector `v` around the vector `n`, given a rotation
 ### C Prototype
 `Vec3fp vec3f_rotate_around_n(VEC_OUT Vec3f dest, Vec3f v, Vec3f n, s16 r);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_project
 
@@ -4598,9 +4014,6 @@ Projects the 3D floating-point vector `v` onto another 3D floating-point vector 
 ### C Prototype
 `Vec3fp vec3f_project(VEC_OUT Vec3f dest, Vec3f v, Vec3f onto);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_transform
 
@@ -4625,9 +4038,6 @@ Scales the 3D floating-point vector `v` by the vector `scale`, then rotates it b
 ### C Prototype
 `Vec3fp vec3f_transform(VEC_OUT Vec3f dest, Vec3f v, Vec3f translation, Vec3s rotation, Vec3f scale);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_get_dist_and_angle
 
@@ -4651,9 +4061,6 @@ Calculates the distance between two points in 3D space (`from` and `to`), as wel
 ### C Prototype
 `void vec3f_get_dist_and_angle(Vec3f from, Vec3f to, RET f32 *dist, RET s16 *pitch, RET s16 *yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_set_dist_and_angle
 
@@ -4678,9 +4085,6 @@ Positions the point `to` at a given `dist`, `pitch`, and `yaw` relative to the p
 ### C Prototype
 `void vec3f_set_dist_and_angle(Vec3f from, VEC_OUT Vec3f to, f32 dist, s16 pitch, s16 yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## find_vector_perpendicular_to_plane
 
@@ -4704,9 +4108,6 @@ Determines a vector that is perpendicular (normal) to the plane defined by three
 ### C Prototype
 `Vec3fp find_vector_perpendicular_to_plane(VEC_OUT Vec3f dest, Vec3f a, Vec3f b, Vec3f c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_lookat
 
@@ -4730,9 +4131,6 @@ Adjusts the 4x4 floating-point matrix `mtx` so that it represents a viewing tran
 ### C Prototype
 `void mtxf_lookat(VEC_OUT Mat4 mtx, Vec3f from, Vec3f to, s16 roll);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_rotate_zxy_and_translate
 
@@ -4755,9 +4153,6 @@ Rotates `dest` according to the angles in `rotate` using ZXY order, and then tra
 ### C Prototype
 `void mtxf_rotate_zxy_and_translate(VEC_OUT Mat4 dest, Vec3f translate, Vec3s rotate);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_rotate_xyz_and_translate
 
@@ -4780,9 +4175,6 @@ Rotates `dest` using angles in XYZ order, and then translates it by the 3D float
 ### C Prototype
 `void mtxf_rotate_xyz_and_translate(VEC_OUT Mat4 dest, Vec3f b, Vec3s c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_billboard
 
@@ -4806,9 +4198,6 @@ Transforms a 4x4 floating-point matrix `mtx` into a "billboard" oriented toward 
 ### C Prototype
 `void mtxf_billboard(VEC_OUT Mat4 dest, Mat4 mtx, Vec3f position, s16 angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_cylboard
 
@@ -4832,9 +4221,6 @@ Creates a "cylindrical billboard" transformation from the 4x4 matrix `mtx` place
 ### C Prototype
 `void mtxf_cylboard(VEC_OUT Mat4 dest, Mat4 mtx, Vec3f position, s16 angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_align_terrain_normal
 
@@ -4858,9 +4244,6 @@ Aligns `dest` so that it fits the orientation of a terrain surface defined by it
 ### C Prototype
 `void mtxf_align_terrain_normal(VEC_OUT Mat4 dest, Vec3f upDir, Vec3f pos, s16 yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_align_terrain_triangle
 
@@ -4884,9 +4267,6 @@ Aligns `mtx` to fit onto a terrain triangle at `pos`, applying a given `yaw` and
 ### C Prototype
 `void mtxf_align_terrain_triangle(VEC_OUT Mat4 mtx, Vec3f pos, s16 yaw, f32 radius);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_mul
 
@@ -4909,9 +4289,6 @@ Multiplies two 4x4 floating-point matrices `a` and `b` (in that order), storing 
 ### C Prototype
 `void mtxf_mul(VEC_OUT Mat4 dest, Mat4 a, Mat4 b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_mul_vec3s
 
@@ -4933,9 +4310,6 @@ Multiplies the 3D signed-integer vector `b` with the 4x4 floating-point matrix `
 ### C Prototype
 `Vec3sp mtxf_mul_vec3s(Mat4 mtx, VEC_OUT Vec3s b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_rotate_xy
 
@@ -4957,9 +4331,6 @@ Rotates the matrix `mtx` in the XY plane by the given `angle`. Rotating in the X
 ### C Prototype
 `void mtxf_rotate_xy(VEC_OUT Mat4 mtx, s16 angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_inverse
 
@@ -4981,9 +4352,6 @@ Inverts the 4x4 floating-point matrix `src` and stores the inverse in `dest`. Ap
 ### C Prototype
 `void mtxf_inverse(VEC_OUT Mat4 dest, Mat4 src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_inverse_non_affine
 
@@ -5005,9 +4373,6 @@ Inverts the 4x4 floating-point matrix `src` and stores the inverse in `dest`. Ap
 ### C Prototype
 `bool mtxf_inverse_non_affine(VEC_OUT Mat4 dest, Mat4 src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_pos_from_transform_mtx
 
@@ -5030,9 +4395,6 @@ Extracts the position (translation component) from the transformation matrix `ob
 ### C Prototype
 `Vec3fp get_pos_from_transform_mtx(VEC_OUT Vec3f dest, Mat4 objMtx, Mat4 camMtx);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_world_mtx_from_transform
 
@@ -5055,9 +4417,6 @@ Strip the camera-view matrix `camMtx` off of a model-view matrix `objMtx` and st
 ### C Prototype
 `void get_world_mtx_from_transform(VEC_OUT Mat4 dest, Mat4 objMtx, Mat4 camMtx);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from math_util.inl
@@ -5085,9 +4444,6 @@ Returns `replacement` if `replacement` is not zero. Otherwise, returns `value`
 ### C Prototype
 `f32 replace_value_if_not_zero(f32 value, f32 replacement);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sm64_to_radians
 
@@ -5108,9 +4464,6 @@ Converts an angle from SM64 format to radians
 ### C Prototype
 `f32 sm64_to_radians(s16 sm64Angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## radians_to_sm64
 
@@ -5131,9 +4484,6 @@ Converts an angle from radians to SM64 format
 ### C Prototype
 `s16 radians_to_sm64(f32 radiansAngle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sm64_to_degrees
 
@@ -5154,9 +4504,6 @@ Converts an angle from SM64 format to degrees
 ### C Prototype
 `f32 sm64_to_degrees(s16 sm64Angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## degrees_to_sm64
 
@@ -5177,9 +4524,6 @@ Converts an angle from degrees to SM64 format
 ### C Prototype
 `s16 degrees_to_sm64(f32 degreesAngle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from math_util_mat4.inl
@@ -5207,9 +4551,6 @@ Unless you really need this-It's reccomended to use mtxf_identity instead.
 ### C Prototype
 `void mtxf_zero(VEC_OUT Mat4 mtx);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_copy
 
@@ -5231,9 +4572,6 @@ Copies the 4x4 floating-point matrix `src` into `dest`. After this operation, `d
 ### C Prototype
 `void mtxf_copy(VEC_OUT Mat4 dest, Mat4 src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_identity
 
@@ -5254,9 +4592,6 @@ Sets the 4x4 floating-point matrix `mtx` to the identity matrix. The identity ma
 ### C Prototype
 `void mtxf_identity(VEC_OUT Mat4 mtx);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_translate
 
@@ -5278,9 +4613,6 @@ Sets the 4x4 floating-point matrix `dest` to the translation matrix decribed by 
 ### C Prototype
 `void mtxf_translate(VEC_OUT Mat4 dest, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mtxf_scale_vec3f
 
@@ -5303,9 +4635,6 @@ Scales the 4x4 floating-point matrix `mtx` by the scaling factors found in the 3
 ### C Prototype
 `void mtxf_scale_vec3f(VEC_OUT Mat4 dest, Mat4 mtx, Vec3f s);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from math_util_vec3f.inl
@@ -5332,9 +4661,6 @@ Sets the components of the 3D floating-point vector `v` to 0
 ### C Prototype
 `Vec3fp vec3f_zero(VEC_OUT Vec3f v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_copy
 
@@ -5356,9 +4682,6 @@ Copies the contents of a 3D floating-point vector (`src`) into another 3D floati
 ### C Prototype
 `Vec3fp vec3f_copy(VEC_OUT Vec3f dest, Vec3f src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_set
 
@@ -5382,9 +4705,6 @@ Sets the values of the 3D floating-point vector `dest` to the given x, y, and z 
 ### C Prototype
 `Vec3fp vec3f_set(VEC_OUT Vec3f dest, f32 x, f32 y, f32 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_add
 
@@ -5406,9 +4726,6 @@ Adds the components of the 3D floating-point vector `a` to `dest`
 ### C Prototype
 `Vec3fp vec3f_add(VEC_OUT Vec3f dest, Vec3f a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_sum
 
@@ -5431,9 +4748,6 @@ Adds the components of two 3D floating-point vectors `a` and `b` and stores the 
 ### C Prototype
 `Vec3fp vec3f_sum(VEC_OUT Vec3f dest, Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_sub
 
@@ -5455,9 +4769,6 @@ Subtracts the components of the 3D floating-point vector `a` from `dest`
 ### C Prototype
 `Vec3fp vec3f_sub(VEC_OUT Vec3f dest, Vec3f a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_dif
 
@@ -5480,9 +4791,6 @@ Subtracts the components of the 3D floating-point vector `b` from the components
 ### C Prototype
 `Vec3fp vec3f_dif(VEC_OUT Vec3f dest, Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_mul
 
@@ -5504,9 +4812,6 @@ Multiplies each component of the 3D floating-point vector `dest` by the scalar v
 ### C Prototype
 `Vec3fp vec3f_mul(VEC_OUT Vec3f dest, f32 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_mult
 
@@ -5528,9 +4833,6 @@ Multiplies the components of the 3D floating-point vector `dest` with the compon
 ### C Prototype
 `Vec3fp vec3f_mult(VEC_OUT Vec3f dest, Vec3f a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_prod
 
@@ -5553,9 +4855,6 @@ Multiplies the components of two 3D floating-point vectors `a` and `b` and store
 ### C Prototype
 `Vec3fp vec3f_prod(VEC_OUT Vec3f dest, Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_div
 
@@ -5577,9 +4876,6 @@ Divides each component of the 3D floating-point vector `dest` by the scalar valu
 ### C Prototype
 `Vec3fp vec3f_div(VEC_OUT Vec3f dest, f32 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_length
 
@@ -5600,9 +4896,6 @@ Calculates the length (magnitude) of the 3D floating-point vector `a`
 ### C Prototype
 `f32 vec3f_length(Vec3f a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_normalize
 
@@ -5623,9 +4916,6 @@ Normalizes the 3D floating-point vector `v` so that its length (magnitude) becom
 ### C Prototype
 `Vec3fp vec3f_normalize(VEC_OUT Vec3f v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_set_magnitude
 
@@ -5647,9 +4937,6 @@ Sets the length (magnitude) of 3D floating-point vector `v`, while retaining its
 ### C Prototype
 `Vec3fp vec3f_set_magnitude(VEC_OUT Vec3f v, f32 mag);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_dot
 
@@ -5671,9 +4958,6 @@ Computes the dot product of the two 3D floating-point vectors `a` and `b`
 ### C Prototype
 `f32 vec3f_dot(Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_cross
 
@@ -5696,9 +4980,6 @@ Computes the cross product of two 3D floating-point vectors `a` and `b` and stor
 ### C Prototype
 `Vec3fp vec3f_cross(VEC_OUT Vec3f dest, Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_combine
 
@@ -5723,9 +5004,6 @@ Takes two 3D floating-point vectors `vecA` and `vecB`, multiplies them by `sclA`
 ### C Prototype
 `Vec3fp vec3f_combine(VEC_OUT Vec3f dest, Vec3f vecA, Vec3f vecB, f32 sclA, f32 sclB);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_dist
 
@@ -5747,9 +5025,6 @@ Calculates the distance between two 3D floating-point vectors `v1` and `v2`
 ### C Prototype
 `f32 vec3f_dist(Vec3f v1, Vec3f v2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_hdist
 
@@ -5771,9 +5046,6 @@ Calculates the horizontal distance between two 3D floating-point vectors `v1` an
 ### C Prototype
 `f32 vec3f_hdist(Vec3f v1, Vec3f v2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_is_zero
 
@@ -5794,9 +5066,6 @@ Returns `true` if all components of the 3D floating-point vector `v` are zero
 ### C Prototype
 `bool vec3f_is_zero(Vec3f v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_to_vec3i
 
@@ -5818,9 +5087,6 @@ Converts a 3D floating-point vector `a` into a 3D integer vector and stores the 
 ### C Prototype
 `Vec3ip vec3f_to_vec3i(VEC_OUT Vec3i dest, Vec3f a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_to_vec3s
 
@@ -5842,9 +5108,6 @@ Converts a 3D floating-point vector `a` into a 3D short integer vector and store
 ### C Prototype
 `Vec3sp vec3f_to_vec3s(VEC_OUT Vec3s dest, Vec3f a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from math_util_vec3i.inl
@@ -5871,9 +5134,6 @@ Sets the components of the 3D integer vector `v` to 0
 ### C Prototype
 `Vec3ip vec3i_zero(VEC_OUT Vec3i v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_copy
 
@@ -5895,9 +5155,6 @@ Copies the contents of a 3D integer vector (`src`) into another 3D integer vecto
 ### C Prototype
 `Vec3ip vec3i_copy(VEC_OUT Vec3i dest, Vec3i src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_set
 
@@ -5921,9 +5178,6 @@ Sets the values of the 3D integer vector `dest` to the given x, y, and z values
 ### C Prototype
 `Vec3ip vec3i_set(VEC_OUT Vec3i dest, s32 x, s32 y, s32 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_add
 
@@ -5945,9 +5199,6 @@ Adds the components of the 3D integer vector `a` to `dest`
 ### C Prototype
 `Vec3ip vec3i_add(VEC_OUT Vec3i dest, Vec3i a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_sum
 
@@ -5970,9 +5221,6 @@ Adds the components of two 3D integer vectors `a` and `b` and stores the result 
 ### C Prototype
 `Vec3ip vec3i_sum(VEC_OUT Vec3i dest, Vec3i a, Vec3i b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_sub
 
@@ -5994,9 +5242,6 @@ Subtracts the components of the 3D integer vector `a` from `dest`
 ### C Prototype
 `Vec3ip vec3i_sub(VEC_OUT Vec3i dest, Vec3i a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_dif
 
@@ -6019,9 +5264,6 @@ Subtracts the components of the 3D integer vector `b` from the components of `a`
 ### C Prototype
 `Vec3ip vec3i_dif(VEC_OUT Vec3i dest, Vec3i a, Vec3i b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_mul
 
@@ -6043,9 +5285,6 @@ Multiplies each component of the 3D integer vector `dest` by the scalar value `a
 ### C Prototype
 `Vec3ip vec3i_mul(VEC_OUT Vec3i dest, f32 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_mult
 
@@ -6067,9 +5306,6 @@ Multiplies the components of the 3D integer vector `dest` with the components of
 ### C Prototype
 `Vec3ip vec3i_mult(VEC_OUT Vec3i dest, Vec3i a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_prod
 
@@ -6092,9 +5328,6 @@ Multiplies the components of two 3D integer vectors `a` and `b` and stores the r
 ### C Prototype
 `Vec3ip vec3i_prod(VEC_OUT Vec3i dest, Vec3i a, Vec3i b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_div
 
@@ -6116,9 +5349,6 @@ Divides each component of the 3D integer vector `dest` by the scalar value `a`
 ### C Prototype
 `Vec3ip vec3i_div(VEC_OUT Vec3i dest, f32 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_length
 
@@ -6139,9 +5369,6 @@ Calculates the length (magnitude) of the 3D integer vector `a`
 ### C Prototype
 `f32 vec3i_length(Vec3i a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_normalize
 
@@ -6162,9 +5389,6 @@ Normalizes the 3D integer vector `v` so that its length (magnitude) becomes 1, w
 ### C Prototype
 `Vec3ip vec3i_normalize(VEC_OUT Vec3i v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_set_magnitude
 
@@ -6186,9 +5410,6 @@ Sets the length (magnitude) of 3D integer vector `v`, while retaining its direct
 ### C Prototype
 `Vec3ip vec3i_set_magnitude(VEC_OUT Vec3i v, f32 mag);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_dot
 
@@ -6210,9 +5431,6 @@ Computes the dot product of the two 3D integer vectors `a` and `b`
 ### C Prototype
 `f32 vec3i_dot(Vec3i a, Vec3i b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_cross
 
@@ -6235,9 +5453,6 @@ Computes the cross product of two 3D integer vectors `a` and `b` and stores the 
 ### C Prototype
 `Vec3ip vec3i_cross(VEC_OUT Vec3i dest, Vec3i a, Vec3i b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_combine
 
@@ -6262,9 +5477,6 @@ Takes two 3D integer vectors `vecA` and `vecB`, multiplies them by `sclA` and `s
 ### C Prototype
 `Vec3ip vec3i_combine(VEC_OUT Vec3i dest, Vec3i vecA, Vec3i vecB, f32 sclA, f32 sclB);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_dist
 
@@ -6286,9 +5498,6 @@ Calculates the distance between two 3D integer vectors `v1` and `v2`
 ### C Prototype
 `f32 vec3i_dist(Vec3i v1, Vec3i v2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_hdist
 
@@ -6310,9 +5519,6 @@ Calculates the horizontal distance between two 3D integer vectors `v1` and `v2`,
 ### C Prototype
 `f32 vec3i_hdist(Vec3i v1, Vec3i v2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_is_zero
 
@@ -6333,9 +5539,6 @@ Returns `true` if all components of the 3D integer vector `v` are zero
 ### C Prototype
 `bool vec3i_is_zero(Vec3i v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_to_vec3f
 
@@ -6357,9 +5560,6 @@ Converts a 3D integer vector `a` into a 3D floating-point vector and stores the 
 ### C Prototype
 `Vec3fp vec3i_to_vec3f(VEC_OUT Vec3f dest, Vec3i a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3i_to_vec3s
 
@@ -6381,9 +5581,6 @@ Converts a 3D integer vector `a` into a 3D short integer vector and stores the r
 ### C Prototype
 `Vec3sp vec3i_to_vec3s(VEC_OUT Vec3s dest, Vec3i a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from math_util_vec3s.inl
@@ -6410,9 +5607,6 @@ Sets the components of the 3D short integer vector `v` to 0
 ### C Prototype
 `Vec3sp vec3s_zero(VEC_OUT Vec3s v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_copy
 
@@ -6434,9 +5628,6 @@ Copies the contents of a 3D short integer vector (`src`) into another 3D short i
 ### C Prototype
 `Vec3sp vec3s_copy(VEC_OUT Vec3s dest, Vec3s src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_set
 
@@ -6460,9 +5651,6 @@ Sets the values of the 3D short integer vector `dest` to the given x, y, and z v
 ### C Prototype
 `Vec3sp vec3s_set(VEC_OUT Vec3s dest, s16 x, s16 y, s16 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_add
 
@@ -6484,9 +5672,6 @@ Adds the components of the 3D short integer vector `a` to `dest`
 ### C Prototype
 `Vec3sp vec3s_add(VEC_OUT Vec3s dest, Vec3s a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_sum
 
@@ -6509,9 +5694,6 @@ Adds the components of two 3D short integer vectors `a` and `b` and stores the r
 ### C Prototype
 `Vec3sp vec3s_sum(VEC_OUT Vec3s dest, Vec3s a, Vec3s b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_sub
 
@@ -6533,9 +5715,6 @@ Subtracts the components of the 3D short integer vector `a` from `dest`
 ### C Prototype
 `Vec3sp vec3s_sub(VEC_OUT Vec3s dest, Vec3s a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_dif
 
@@ -6558,9 +5737,6 @@ Subtracts the components of the 3D short integer vector `b` from the components 
 ### C Prototype
 `Vec3sp vec3s_dif(VEC_OUT Vec3s dest, Vec3s a, Vec3s b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_mul
 
@@ -6582,9 +5758,6 @@ Multiplies each component of the 3D short integer vector `dest` by the scalar va
 ### C Prototype
 `Vec3sp vec3s_mul(VEC_OUT Vec3s dest, f32 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_mult
 
@@ -6606,9 +5779,6 @@ Multiplies the components of the 3D short integer vector `dest` with the compone
 ### C Prototype
 `Vec3sp vec3s_mult(VEC_OUT Vec3s dest, Vec3s a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_prod
 
@@ -6631,9 +5801,6 @@ Multiplies the components of two 3D short integer vectors `a` and `b` and stores
 ### C Prototype
 `Vec3sp vec3s_prod(VEC_OUT Vec3s dest, Vec3s a, Vec3s b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_div
 
@@ -6655,9 +5822,6 @@ Divides each component of the 3D short integer vector `dest` by the scalar value
 ### C Prototype
 `Vec3sp vec3s_div(VEC_OUT Vec3s dest, f32 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_length
 
@@ -6678,9 +5842,6 @@ Calculates the length (magnitude) of the 3D short integer vector `a`
 ### C Prototype
 `f32 vec3s_length(Vec3s a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_normalize
 
@@ -6701,9 +5862,6 @@ Normalizes the 3D short integer vector `v` so that its length (magnitude) become
 ### C Prototype
 `Vec3sp vec3s_normalize(VEC_OUT Vec3s v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_set_magnitude
 
@@ -6725,9 +5883,6 @@ Sets the length (magnitude) of 3D short integer vector `v`, while retaining its 
 ### C Prototype
 `Vec3sp vec3s_set_magnitude(VEC_OUT Vec3s v, f32 mag);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_dot
 
@@ -6749,9 +5904,6 @@ Computes the dot product of the two 3D short integer vectors `a` and `b`
 ### C Prototype
 `f32 vec3s_dot(Vec3s a, Vec3s b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_cross
 
@@ -6774,9 +5926,6 @@ Computes the cross product of two 3D short integer vectors `a` and `b` and store
 ### C Prototype
 `Vec3sp vec3s_cross(VEC_OUT Vec3s dest, Vec3s a, Vec3s b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_combine
 
@@ -6801,9 +5950,6 @@ Takes two 3D short integer vectors `vecA` and `vecB`, multiplies them by `sclA` 
 ### C Prototype
 `Vec3sp vec3s_combine(VEC_OUT Vec3s dest, Vec3s vecA, Vec3s vecB, f32 sclA, f32 sclB);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_dist
 
@@ -6825,9 +5971,6 @@ Calculates the distance between two 3D short integer vectors `v1` and `v2`
 ### C Prototype
 `f32 vec3s_dist(Vec3s v1, Vec3s v2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_hdist
 
@@ -6849,9 +5992,6 @@ Calculates the horizontal distance between two 3D short integer vectors `v1` and
 ### C Prototype
 `f32 vec3s_hdist(Vec3s v1, Vec3s v2);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_is_zero
 
@@ -6872,9 +6012,6 @@ Returns `true` if all components of the 3D short integer vector `v` are zero
 ### C Prototype
 `bool vec3s_is_zero(Vec3s v);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_to_vec3f
 
@@ -6896,9 +6033,6 @@ Converts a 3D short integer vector `a` into a 3D floating-point vector and store
 ### C Prototype
 `Vec3fp vec3s_to_vec3f(VEC_OUT Vec3f dest, Vec3s a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_to_vec3i
 
@@ -6920,9 +6054,6 @@ Converts a 3D short integer vector `a` into a 3D integer vector and stores the r
 ### C Prototype
 `Vec3ip vec3s_to_vec3i(VEC_OUT Vec3i dest, Vec3s a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from misc.h
@@ -6951,9 +6082,6 @@ Smoothly steps between `edge0` and `edge1` with `x` as delta
 ### C Prototype
 `float smooth_step(float edge0, float edge1, float x);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_all_mario_stars
 
@@ -6972,9 +6100,6 @@ Updates every Mario state's star count with the save file total star count
 ### C Prototype
 `void update_all_mario_stars(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clock_elapsed
 
@@ -6993,9 +6118,6 @@ Gets the current clock elapsed time
 ### C Prototype
 `f32 clock_elapsed(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clock_elapsed_f64
 
@@ -7014,9 +6136,6 @@ Gets the current clock elapsed time with double precision
 ### C Prototype
 `f64 clock_elapsed_f64(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clock_elapsed_ticks
 
@@ -7035,9 +6154,6 @@ Gets the current clock elapsed time in frames
 ### C Prototype
 `u32 clock_elapsed_ticks(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clock_is_date
 
@@ -7059,9 +6175,6 @@ Checks whether it is the day given
 ### C Prototype
 `bool clock_is_date(u8 month, u8 day);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## delta_interpolate_f32
 
@@ -7084,9 +6197,6 @@ Linearly interpolates between `a` and `b` with `delta`
 ### C Prototype
 `f32 delta_interpolate_f32(f32 a, f32 b, f32 delta);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## delta_interpolate_s32
 
@@ -7109,9 +6219,6 @@ Linearly interpolates between `a` and `b` with `delta`
 ### C Prototype
 `s32 delta_interpolate_s32(s32 a, s32 b, f32 delta);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## delta_interpolate_angle
 
@@ -7134,9 +6241,6 @@ Interpolates angle between `a` and `b` with `delta`
 ### C Prototype
 `s16 delta_interpolate_angle(s16 a, s16 b, f32 delta);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## delta_interpolate_vec3f
 
@@ -7160,9 +6264,6 @@ Linearly interpolates `res` between `a` and `b` with `delta`
 ### C Prototype
 `void delta_interpolate_vec3f(VEC_OUT Vec3f res, Vec3f a, Vec3f b, f32 delta);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## delta_interpolate_vec3s
 
@@ -7186,9 +6287,6 @@ Linearly interpolates `res` between `a` and `b` with `delta`
 ### C Prototype
 `void delta_interpolate_vec3s(VEC_OUT Vec3s res, Vec3s a, Vec3s b, f32 delta);`
 
-[:arrow_up_small:](#)
-
-<br />
 ---
 
 [< prev](functions-3.md) | [1](functions.md) | [2](functions-2.md) | [3](functions-3.md) | 4 | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-5.md)]

@@ -843,15 +843,15 @@ def doc_manual_function(function, classes, docs_dir, include_param_desc):
     fid = function['identifier']
     s = '\n## %s\n' % (fid)
 
-    s += '\n### Description\n'
+    s += '\n### Description\n\n'
     for line in function['description']:
         s +=  f'{line}\n'
 
-    s += '\n### Lua Example\n'
+    s += '\n### Lua Example\n\n'
     for line in function['lua_example']:
         s +=  f'{line}\n'
 
-    s += '\n### Parameters\n'
+    s += '\n### Parameters\n\n'
     if function['params']:
         if include_param_desc:
             s += '| Field | Type | Description |\n'
@@ -870,7 +870,7 @@ def doc_manual_function(function, classes, docs_dir, include_param_desc):
     else:
         s += '- None\n'
 
-    s += '\n### Returns\n'
+    s += '\n### Returns\n\n'
     if function['returns']:
         for ret in function['returns']:
             rname = ret['name']
@@ -881,8 +881,6 @@ def doc_manual_function(function, classes, docs_dir, include_param_desc):
                 s += '- %s\n' % get_manual_function_type(rtype, classes, docs_dir)
     else:
         s += '- None\n'
-
-    s += '\n[:arrow_up_small:](#)\n\n<br />\n'
 
     return s
 
@@ -1039,7 +1037,7 @@ def doc_function(fname, function):
     s += '\n### C Prototype\n'
     s += '`%s`\n' % function['line'].strip()
 
-    s += '\n[:arrow_up_small:](#)\n\n<br />\n'
+    s += '\n'
 
     return s
 
@@ -1208,14 +1206,13 @@ def doc_hooks(in_filename, out_filename):
     hooks, classes = read_manually_written_functions(in_filename)
 
     s  = '## [:rewind: Modding](../modding.md)\n\n'
-    s += '# Hooks\n'
+    s += '# Hooks\n\n'
     s += 'Hooks are a way for the game to trigger Lua code, whereas the functions listed in [functions](../functions.md) allow Lua to trigger SM64 code.\n\n'
 
     if hooks:
-        s += '# Supported Hooks\n'
+        s += '# Supported Hooks\n\n'
         for hook in hooks:
             s += '- [{identifier}](#{identifier})\n'.format(identifier=hook['identifier'])
-        s += '\n<br />\n'
         for hook in hooks:
             s += doc_manual_function(hook, classes, "..", True)
 

@@ -619,24 +619,24 @@
 <br />
 
 - behavior_script.h
-   - [random_u16](functions-3.md#random_u16)
-   - [random_float](functions-3.md#random_float)
-   - [random_sign](functions-3.md#random_sign)
-   - [obj_update_gfx_pos_and_angle](functions-3.md#obj_update_gfx_pos_and_angle)
-   - [position_based_random_u16](functions-3.md#position_based_random_u16)
-   - [position_based_random_float_position](functions-3.md#position_based_random_float_position)
-   - [draw_distance_scalar_is_infinite](functions-3.md#draw_distance_scalar_is_infinite)
-   - [draw_distance_scalar](functions-3.md#draw_distance_scalar)
+   - [random_u16](functions-2.md#random_u16)
+   - [random_float](functions-2.md#random_float)
+   - [random_sign](functions-2.md#random_sign)
+   - [obj_update_gfx_pos_and_angle](functions-2.md#obj_update_gfx_pos_and_angle)
+   - [position_based_random_u16](functions-2.md#position_based_random_u16)
+   - [position_based_random_float_position](functions-2.md#position_based_random_float_position)
+   - [draw_distance_scalar_is_infinite](functions-2.md#draw_distance_scalar_is_infinite)
+   - [draw_distance_scalar](functions-2.md#draw_distance_scalar)
 
 <br />
 
 - behavior_table.h
-   - [get_id_from_behavior](functions-3.md#get_id_from_behavior)
-   - [get_id_from_vanilla_behavior](functions-3.md#get_id_from_vanilla_behavior)
-   - [get_behavior_from_id](functions-3.md#get_behavior_from_id)
-   - [get_vanilla_behavior_from_id](functions-3.md#get_vanilla_behavior_from_id)
-   - [get_behavior_name_from_id](functions-3.md#get_behavior_name_from_id)
-   - [get_id_from_behavior_name](functions-3.md#get_id_from_behavior_name)
+   - [get_id_from_behavior](functions-2.md#get_id_from_behavior)
+   - [get_id_from_vanilla_behavior](functions-2.md#get_id_from_vanilla_behavior)
+   - [get_behavior_from_id](functions-2.md#get_behavior_from_id)
+   - [get_vanilla_behavior_from_id](functions-2.md#get_vanilla_behavior_from_id)
+   - [get_behavior_name_from_id](functions-2.md#get_behavior_name_from_id)
+   - [get_id_from_behavior_name](functions-2.md#get_id_from_behavior_name)
 
 <br />
 
@@ -1019,7 +1019,7 @@
 <br />
 
 - load.h
-   - [set_sound_bank_override](functions-4.md#set_sound_bank_override)
+   - [set_sound_bank_override](functions-3.md#set_sound_bank_override)
 
 <br />
 
@@ -1555,236 +1555,236 @@
 <br />
 
 - object_helpers.c
-   - [clear_move_flag](functions-6.md#clear_move_flag)
-   - [set_room_override](functions-6.md#set_room_override)
-   - [obj_update_pos_from_parent_transformation](functions-6.md#obj_update_pos_from_parent_transformation)
-   - [obj_apply_scale_to_matrix](functions-6.md#obj_apply_scale_to_matrix)
-   - [create_transformation_from_matrices](functions-6.md#create_transformation_from_matrices)
-   - [obj_set_held_state](functions-6.md#obj_set_held_state)
-   - [lateral_dist_between_objects](functions-6.md#lateral_dist_between_objects)
-   - [dist_between_objects](functions-6.md#dist_between_objects)
-   - [dist_between_object_and_point](functions-6.md#dist_between_object_and_point)
-   - [cur_obj_forward_vel_approach_upward](functions-6.md#cur_obj_forward_vel_approach_upward)
-   - [approach_f32_signed](functions-6.md#approach_f32_signed)
-   - [approach_f32_symmetric](functions-6.md#approach_f32_symmetric)
-   - [approach_s16_symmetric](functions-6.md#approach_s16_symmetric)
-   - [cur_obj_rotate_yaw_toward](functions-6.md#cur_obj_rotate_yaw_toward)
-   - [obj_angle_to_object](functions-6.md#obj_angle_to_object)
-   - [obj_pitch_to_object](functions-6.md#obj_pitch_to_object)
-   - [obj_angle_to_point](functions-6.md#obj_angle_to_point)
-   - [obj_turn_toward_object](functions-6.md#obj_turn_toward_object)
-   - [obj_set_parent_relative_pos](functions-6.md#obj_set_parent_relative_pos)
-   - [obj_set_pos](functions-6.md#obj_set_pos)
-   - [obj_set_angle](functions-6.md#obj_set_angle)
-   - [obj_set_move_angle](functions-6.md#obj_set_move_angle)
-   - [obj_set_face_angle](functions-6.md#obj_set_face_angle)
-   - [obj_set_gfx_angle](functions-6.md#obj_set_gfx_angle)
-   - [obj_set_gfx_pos](functions-6.md#obj_set_gfx_pos)
-   - [obj_set_gfx_scale](functions-6.md#obj_set_gfx_scale)
-   - [spawn_water_droplet](functions-6.md#spawn_water_droplet)
-   - [obj_build_relative_transform](functions-6.md#obj_build_relative_transform)
-   - [cur_obj_move_using_vel](functions-6.md#cur_obj_move_using_vel)
-   - [obj_copy_graph_y_offset](functions-6.md#obj_copy_graph_y_offset)
-   - [obj_copy_pos_and_angle](functions-6.md#obj_copy_pos_and_angle)
-   - [obj_copy_pos](functions-6.md#obj_copy_pos)
-   - [obj_copy_angle](functions-6.md#obj_copy_angle)
-   - [obj_set_gfx_pos_from_pos](functions-6.md#obj_set_gfx_pos_from_pos)
-   - [obj_init_animation](functions-6.md#obj_init_animation)
-   - [linear_mtxf_mul_vec3f](functions-6.md#linear_mtxf_mul_vec3f)
-   - [linear_mtxf_transpose_mul_vec3f](functions-6.md#linear_mtxf_transpose_mul_vec3f)
-   - [obj_apply_scale_to_transform](functions-6.md#obj_apply_scale_to_transform)
-   - [obj_copy_scale](functions-6.md#obj_copy_scale)
-   - [obj_scale_xyz](functions-6.md#obj_scale_xyz)
-   - [obj_scale](functions-6.md#obj_scale)
-   - [cur_obj_scale](functions-6.md#cur_obj_scale)
-   - [cur_obj_init_animation](functions-6.md#cur_obj_init_animation)
-   - [cur_obj_init_animation_with_sound](functions-6.md#cur_obj_init_animation_with_sound)
-   - [obj_init_animation_with_accel_and_sound](functions-6.md#obj_init_animation_with_accel_and_sound)
-   - [cur_obj_init_animation_with_accel_and_sound](functions-6.md#cur_obj_init_animation_with_accel_and_sound)
-   - [cur_obj_enable_rendering_and_become_tangible](functions-6.md#cur_obj_enable_rendering_and_become_tangible)
-   - [cur_obj_enable_rendering](functions-6.md#cur_obj_enable_rendering)
-   - [cur_obj_disable_rendering_and_become_intangible](functions-6.md#cur_obj_disable_rendering_and_become_intangible)
-   - [cur_obj_disable_rendering](functions-6.md#cur_obj_disable_rendering)
-   - [cur_obj_unhide](functions-6.md#cur_obj_unhide)
-   - [cur_obj_hide](functions-6.md#cur_obj_hide)
-   - [cur_obj_set_pos_relative](functions-6.md#cur_obj_set_pos_relative)
-   - [cur_obj_set_pos_relative_to_parent](functions-6.md#cur_obj_set_pos_relative_to_parent)
-   - [cur_obj_unused_init_on_floor](functions-6.md#cur_obj_unused_init_on_floor)
-   - [obj_set_face_angle_to_move_angle](functions-6.md#obj_set_face_angle_to_move_angle)
-   - [get_object_list_from_behavior](functions-6.md#get_object_list_from_behavior)
-   - [cur_obj_nearest_object_with_behavior](functions-6.md#cur_obj_nearest_object_with_behavior)
-   - [cur_obj_dist_to_nearest_object_with_behavior](functions-6.md#cur_obj_dist_to_nearest_object_with_behavior)
-   - [cur_obj_find_nearest_pole](functions-6.md#cur_obj_find_nearest_pole)
-   - [cur_obj_find_nearest_object_with_behavior](functions-6.md#cur_obj_find_nearest_object_with_behavior)
-   - [cur_obj_count_objects_with_behavior](functions-6.md#cur_obj_count_objects_with_behavior)
-   - [find_unimportant_object](functions-6.md#find_unimportant_object)
-   - [count_unimportant_objects](functions-6.md#count_unimportant_objects)
-   - [count_objects_with_behavior](functions-6.md#count_objects_with_behavior)
-   - [delete_all_objects_with_behavior](functions-6.md#delete_all_objects_with_behavior)
-   - [find_object_with_behavior](functions-6.md#find_object_with_behavior)
-   - [cur_obj_find_nearby_held_actor](functions-6.md#cur_obj_find_nearby_held_actor)
-   - [cur_obj_reset_timer_and_subaction](functions-6.md#cur_obj_reset_timer_and_subaction)
-   - [cur_obj_change_action](functions-6.md#cur_obj_change_action)
-   - [cur_obj_set_vel_from_mario_vel](functions-6.md#cur_obj_set_vel_from_mario_vel)
-   - [cur_obj_reverse_animation](functions-6.md#cur_obj_reverse_animation)
-   - [cur_obj_extend_animation_if_at_end](functions-6.md#cur_obj_extend_animation_if_at_end)
-   - [cur_obj_check_if_near_animation_end](functions-6.md#cur_obj_check_if_near_animation_end)
-   - [cur_obj_check_if_at_animation_end](functions-6.md#cur_obj_check_if_at_animation_end)
-   - [cur_obj_check_anim_frame](functions-6.md#cur_obj_check_anim_frame)
-   - [cur_obj_check_anim_frame_in_range](functions-6.md#cur_obj_check_anim_frame_in_range)
-   - [mario_is_in_air_action](functions-6.md#mario_is_in_air_action)
-   - [mario_is_dive_sliding](functions-6.md#mario_is_dive_sliding)
-   - [cur_obj_set_y_vel_and_animation](functions-6.md#cur_obj_set_y_vel_and_animation)
-   - [cur_obj_unrender_and_reset_state](functions-6.md#cur_obj_unrender_and_reset_state)
-   - [cur_obj_move_after_thrown_or_dropped](functions-6.md#cur_obj_move_after_thrown_or_dropped)
-   - [cur_obj_get_thrown_or_placed](functions-6.md#cur_obj_get_thrown_or_placed)
-   - [cur_obj_get_dropped](functions-6.md#cur_obj_get_dropped)
-   - [mario_set_flag](functions-6.md#mario_set_flag)
-   - [cur_obj_clear_interact_status_flag](functions-6.md#cur_obj_clear_interact_status_flag)
-   - [obj_mark_for_deletion](functions-6.md#obj_mark_for_deletion)
-   - [cur_obj_disable](functions-6.md#cur_obj_disable)
-   - [cur_obj_become_intangible](functions-6.md#cur_obj_become_intangible)
-   - [cur_obj_become_tangible](functions-6.md#cur_obj_become_tangible)
-   - [obj_become_tangible](functions-6.md#obj_become_tangible)
-   - [cur_obj_update_floor_height](functions-6.md#cur_obj_update_floor_height)
-   - [cur_obj_update_floor_height_and_get_floor](functions-6.md#cur_obj_update_floor_height_and_get_floor)
-   - [apply_drag_to_value](functions-6.md#apply_drag_to_value)
-   - [cur_obj_apply_drag_xz](functions-6.md#cur_obj_apply_drag_xz)
-   - [cur_obj_move_xz](functions-6.md#cur_obj_move_xz)
-   - [cur_obj_move_update_underwater_flags](functions-6.md#cur_obj_move_update_underwater_flags)
-   - [cur_obj_move_update_ground_air_flags](functions-6.md#cur_obj_move_update_ground_air_flags)
-   - [cur_obj_move_y_and_get_water_level](functions-6.md#cur_obj_move_y_and_get_water_level)
-   - [cur_obj_move_y](functions-6.md#cur_obj_move_y)
-   - [cur_obj_unused_resolve_wall_collisions](functions-6.md#cur_obj_unused_resolve_wall_collisions)
-   - [abs_angle_diff](functions-6.md#abs_angle_diff)
-   - [cur_obj_move_xz_using_fvel_and_yaw](functions-6.md#cur_obj_move_xz_using_fvel_and_yaw)
-   - [cur_obj_move_y_with_terminal_vel](functions-6.md#cur_obj_move_y_with_terminal_vel)
-   - [cur_obj_compute_vel_xz](functions-6.md#cur_obj_compute_vel_xz)
-   - [increment_velocity_toward_range](functions-6.md#increment_velocity_toward_range)
-   - [obj_check_if_collided_with_object](functions-6.md#obj_check_if_collided_with_object)
-   - [cur_obj_set_behavior](functions-6.md#cur_obj_set_behavior)
-   - [obj_set_behavior](functions-6.md#obj_set_behavior)
-   - [cur_obj_has_behavior](functions-6.md#cur_obj_has_behavior)
-   - [obj_has_behavior](functions-6.md#obj_has_behavior)
-   - [cur_obj_lateral_dist_from_obj_to_home](functions-6.md#cur_obj_lateral_dist_from_obj_to_home)
-   - [cur_obj_lateral_dist_from_mario_to_home](functions-6.md#cur_obj_lateral_dist_from_mario_to_home)
-   - [cur_obj_lateral_dist_to_home](functions-6.md#cur_obj_lateral_dist_to_home)
-   - [cur_obj_outside_home_square](functions-6.md#cur_obj_outside_home_square)
-   - [cur_obj_outside_home_rectangle](functions-6.md#cur_obj_outside_home_rectangle)
-   - [cur_obj_set_pos_to_home](functions-6.md#cur_obj_set_pos_to_home)
-   - [cur_obj_set_pos_to_home_and_stop](functions-6.md#cur_obj_set_pos_to_home_and_stop)
-   - [cur_obj_shake_y](functions-6.md#cur_obj_shake_y)
-   - [cur_obj_start_cam_event](functions-6.md#cur_obj_start_cam_event)
-   - [set_mario_interact_hoot_if_in_range](functions-6.md#set_mario_interact_hoot_if_in_range)
-   - [obj_set_billboard](functions-6.md#obj_set_billboard)
-   - [obj_set_cylboard](functions-6.md#obj_set_cylboard)
-   - [cur_obj_set_billboard_if_vanilla_cam](functions-6.md#cur_obj_set_billboard_if_vanilla_cam)
-   - [obj_set_hitbox_radius_and_height](functions-6.md#obj_set_hitbox_radius_and_height)
-   - [obj_set_hurtbox_radius_and_height](functions-6.md#obj_set_hurtbox_radius_and_height)
-   - [cur_obj_set_hitbox_radius_and_height](functions-6.md#cur_obj_set_hitbox_radius_and_height)
-   - [cur_obj_set_hurtbox_radius_and_height](functions-6.md#cur_obj_set_hurtbox_radius_and_height)
-   - [obj_spawn_loot_coins](functions-6.md#obj_spawn_loot_coins)
-   - [obj_spawn_loot_blue_coins](functions-6.md#obj_spawn_loot_blue_coins)
-   - [obj_spawn_loot_yellow_coins](functions-6.md#obj_spawn_loot_yellow_coins)
-   - [cur_obj_spawn_loot_coin_at_mario_pos](functions-6.md#cur_obj_spawn_loot_coin_at_mario_pos)
-   - [cur_obj_abs_y_dist_to_home](functions-6.md#cur_obj_abs_y_dist_to_home)
-   - [cur_obj_advance_looping_anim](functions-6.md#cur_obj_advance_looping_anim)
-   - [cur_obj_detect_steep_floor](functions-6.md#cur_obj_detect_steep_floor)
-   - [cur_obj_resolve_wall_collisions](functions-6.md#cur_obj_resolve_wall_collisions)
-   - [cur_obj_update_floor](functions-6.md#cur_obj_update_floor)
-   - [cur_obj_update_floor_and_resolve_wall_collisions](functions-6.md#cur_obj_update_floor_and_resolve_wall_collisions)
-   - [cur_obj_update_floor_and_walls](functions-6.md#cur_obj_update_floor_and_walls)
-   - [cur_obj_move_standard](functions-6.md#cur_obj_move_standard)
-   - [cur_obj_within_12k_bounds](functions-6.md#cur_obj_within_12k_bounds)
-   - [cur_obj_move_using_vel_and_gravity](functions-6.md#cur_obj_move_using_vel_and_gravity)
-   - [cur_obj_move_using_fvel_and_gravity](functions-6.md#cur_obj_move_using_fvel_and_gravity)
-   - [obj_set_pos_relative](functions-6.md#obj_set_pos_relative)
-   - [cur_obj_angle_to_home](functions-6.md#cur_obj_angle_to_home)
-   - [obj_set_gfx_pos_at_obj_pos](functions-6.md#obj_set_gfx_pos_at_obj_pos)
-   - [obj_translate_local](functions-6.md#obj_translate_local)
-   - [obj_build_transform_from_pos_and_angle](functions-6.md#obj_build_transform_from_pos_and_angle)
-   - [obj_set_throw_matrix_from_transform](functions-6.md#obj_set_throw_matrix_from_transform)
-   - [obj_build_transform_relative_to_parent](functions-6.md#obj_build_transform_relative_to_parent)
-   - [obj_create_transform_from_self](functions-6.md#obj_create_transform_from_self)
-   - [cur_obj_rotate_move_angle_using_vel](functions-6.md#cur_obj_rotate_move_angle_using_vel)
-   - [cur_obj_rotate_face_angle_using_vel](functions-6.md#cur_obj_rotate_face_angle_using_vel)
-   - [cur_obj_set_face_angle_to_move_angle](functions-6.md#cur_obj_set_face_angle_to_move_angle)
-   - [cur_obj_follow_path](functions-6.md#cur_obj_follow_path)
-   - [chain_segment_init](functions-6.md#chain_segment_init)
-   - [random_f32_around_zero](functions-6.md#random_f32_around_zero)
-   - [obj_scale_random](functions-6.md#obj_scale_random)
-   - [obj_translate_xyz_random](functions-6.md#obj_translate_xyz_random)
-   - [obj_translate_xz_random](functions-6.md#obj_translate_xz_random)
-   - [obj_build_vel_from_transform](functions-6.md#obj_build_vel_from_transform)
-   - [cur_obj_set_pos_via_transform](functions-6.md#cur_obj_set_pos_via_transform)
-   - [cur_obj_reflect_move_angle_off_wall](functions-6.md#cur_obj_reflect_move_angle_off_wall)
-   - [cur_obj_spawn_particles](functions-6.md#cur_obj_spawn_particles)
-   - [obj_set_hitbox](functions-6.md#obj_set_hitbox)
-   - [signum_positive](functions-6.md#signum_positive)
-   - [cur_obj_wait_then_blink](functions-6.md#cur_obj_wait_then_blink)
-   - [cur_obj_is_mario_ground_pounding_platform](functions-6.md#cur_obj_is_mario_ground_pounding_platform)
-   - [obj_is_mario_ground_pounding_platform](functions-6.md#obj_is_mario_ground_pounding_platform)
-   - [spawn_mist_particles](functions-6.md#spawn_mist_particles)
-   - [spawn_mist_particles_with_sound](functions-6.md#spawn_mist_particles_with_sound)
-   - [cur_obj_push_mario_away](functions-6.md#cur_obj_push_mario_away)
-   - [cur_obj_push_mario_away_from_cylinder](functions-6.md#cur_obj_push_mario_away_from_cylinder)
-   - [bhv_dust_smoke_loop](functions-6.md#bhv_dust_smoke_loop)
-   - [cur_obj_scale_over_time](functions-6.md#cur_obj_scale_over_time)
-   - [cur_obj_set_pos_to_home_with_debug](functions-6.md#cur_obj_set_pos_to_home_with_debug)
-   - [cur_obj_is_mario_on_platform](functions-6.md#cur_obj_is_mario_on_platform)
-   - [cur_obj_is_any_player_on_platform](functions-6.md#cur_obj_is_any_player_on_platform)
-   - [cur_obj_shake_y_until](functions-6.md#cur_obj_shake_y_until)
-   - [cur_obj_move_up_and_down](functions-6.md#cur_obj_move_up_and_down)
-   - [spawn_star_with_no_lvl_exit](functions-6.md#spawn_star_with_no_lvl_exit)
-   - [spawn_base_star_with_no_lvl_exit](functions-6.md#spawn_base_star_with_no_lvl_exit)
-   - [cur_obj_mario_far_away](functions-6.md#cur_obj_mario_far_away)
-   - [is_mario_moving_fast_or_in_air](functions-6.md#is_mario_moving_fast_or_in_air)
-   - [is_item_in_array](functions-6.md#is_item_in_array)
-   - [bhv_init_room](functions-6.md#bhv_init_room)
-   - [cur_obj_enable_rendering_if_mario_in_room](functions-6.md#cur_obj_enable_rendering_if_mario_in_room)
-   - [cur_obj_set_hitbox_and_die_if_attacked](functions-6.md#cur_obj_set_hitbox_and_die_if_attacked)
-   - [obj_explode_and_spawn_coins](functions-6.md#obj_explode_and_spawn_coins)
-   - [cur_obj_if_hit_wall_bounce_away](functions-6.md#cur_obj_if_hit_wall_bounce_away)
-   - [cur_obj_hide_if_mario_far_away_y](functions-6.md#cur_obj_hide_if_mario_far_away_y)
-   - [obj_is_hidden](functions-6.md#obj_is_hidden)
-   - [enable_time_stop](functions-6.md#enable_time_stop)
-   - [enable_time_stop_if_alone](functions-6.md#enable_time_stop_if_alone)
-   - [disable_time_stop](functions-6.md#disable_time_stop)
-   - [set_time_stop_flags](functions-6.md#set_time_stop_flags)
-   - [set_time_stop_flags_if_alone](functions-6.md#set_time_stop_flags_if_alone)
-   - [clear_time_stop_flags](functions-6.md#clear_time_stop_flags)
-   - [cur_obj_can_mario_activate_textbox](functions-6.md#cur_obj_can_mario_activate_textbox)
-   - [cur_obj_end_dialog](functions-6.md#cur_obj_end_dialog)
-   - [cur_obj_has_model](functions-6.md#cur_obj_has_model)
-   - [cur_obj_align_gfx_with_floor](functions-6.md#cur_obj_align_gfx_with_floor)
-   - [mario_is_within_rectangle](functions-6.md#mario_is_within_rectangle)
-   - [cur_obj_shake_screen](functions-6.md#cur_obj_shake_screen)
-   - [obj_attack_collided_from_other_object](functions-6.md#obj_attack_collided_from_other_object)
-   - [cur_obj_was_attacked_or_ground_pounded](functions-6.md#cur_obj_was_attacked_or_ground_pounded)
-   - [obj_copy_behavior_params](functions-6.md#obj_copy_behavior_params)
-   - [cur_obj_init_animation_and_anim_frame](functions-6.md#cur_obj_init_animation_and_anim_frame)
-   - [cur_obj_init_animation_and_check_if_near_end](functions-6.md#cur_obj_init_animation_and_check_if_near_end)
-   - [cur_obj_init_animation_and_extend_if_at_end](functions-6.md#cur_obj_init_animation_and_extend_if_at_end)
-   - [cur_obj_check_grabbed_mario](functions-6.md#cur_obj_check_grabbed_mario)
-   - [player_performed_grab_escape_action](functions-6.md#player_performed_grab_escape_action)
-   - [cur_obj_unused_play_footstep_sound](functions-6.md#cur_obj_unused_play_footstep_sound)
-   - [enable_time_stop_including_mario](functions-6.md#enable_time_stop_including_mario)
-   - [disable_time_stop_including_mario](functions-6.md#disable_time_stop_including_mario)
-   - [cur_obj_check_interacted](functions-6.md#cur_obj_check_interacted)
-   - [cur_obj_spawn_loot_blue_coin](functions-6.md#cur_obj_spawn_loot_blue_coin)
-   - [cur_obj_spawn_star_at_y_offset](functions-6.md#cur_obj_spawn_star_at_y_offset)
-   - [cur_obj_set_home_once](functions-6.md#cur_obj_set_home_once)
-   - [get_trajectory_length](functions-6.md#get_trajectory_length)
+   - [clear_move_flag](functions-5.md#clear_move_flag)
+   - [set_room_override](functions-5.md#set_room_override)
+   - [obj_update_pos_from_parent_transformation](functions-5.md#obj_update_pos_from_parent_transformation)
+   - [obj_apply_scale_to_matrix](functions-5.md#obj_apply_scale_to_matrix)
+   - [create_transformation_from_matrices](functions-5.md#create_transformation_from_matrices)
+   - [obj_set_held_state](functions-5.md#obj_set_held_state)
+   - [lateral_dist_between_objects](functions-5.md#lateral_dist_between_objects)
+   - [dist_between_objects](functions-5.md#dist_between_objects)
+   - [dist_between_object_and_point](functions-5.md#dist_between_object_and_point)
+   - [cur_obj_forward_vel_approach_upward](functions-5.md#cur_obj_forward_vel_approach_upward)
+   - [approach_f32_signed](functions-5.md#approach_f32_signed)
+   - [approach_f32_symmetric](functions-5.md#approach_f32_symmetric)
+   - [approach_s16_symmetric](functions-5.md#approach_s16_symmetric)
+   - [cur_obj_rotate_yaw_toward](functions-5.md#cur_obj_rotate_yaw_toward)
+   - [obj_angle_to_object](functions-5.md#obj_angle_to_object)
+   - [obj_pitch_to_object](functions-5.md#obj_pitch_to_object)
+   - [obj_angle_to_point](functions-5.md#obj_angle_to_point)
+   - [obj_turn_toward_object](functions-5.md#obj_turn_toward_object)
+   - [obj_set_parent_relative_pos](functions-5.md#obj_set_parent_relative_pos)
+   - [obj_set_pos](functions-5.md#obj_set_pos)
+   - [obj_set_angle](functions-5.md#obj_set_angle)
+   - [obj_set_move_angle](functions-5.md#obj_set_move_angle)
+   - [obj_set_face_angle](functions-5.md#obj_set_face_angle)
+   - [obj_set_gfx_angle](functions-5.md#obj_set_gfx_angle)
+   - [obj_set_gfx_pos](functions-5.md#obj_set_gfx_pos)
+   - [obj_set_gfx_scale](functions-5.md#obj_set_gfx_scale)
+   - [spawn_water_droplet](functions-5.md#spawn_water_droplet)
+   - [obj_build_relative_transform](functions-5.md#obj_build_relative_transform)
+   - [cur_obj_move_using_vel](functions-5.md#cur_obj_move_using_vel)
+   - [obj_copy_graph_y_offset](functions-5.md#obj_copy_graph_y_offset)
+   - [obj_copy_pos_and_angle](functions-5.md#obj_copy_pos_and_angle)
+   - [obj_copy_pos](functions-5.md#obj_copy_pos)
+   - [obj_copy_angle](functions-5.md#obj_copy_angle)
+   - [obj_set_gfx_pos_from_pos](functions-5.md#obj_set_gfx_pos_from_pos)
+   - [obj_init_animation](functions-5.md#obj_init_animation)
+   - [linear_mtxf_mul_vec3f](functions-5.md#linear_mtxf_mul_vec3f)
+   - [linear_mtxf_transpose_mul_vec3f](functions-5.md#linear_mtxf_transpose_mul_vec3f)
+   - [obj_apply_scale_to_transform](functions-5.md#obj_apply_scale_to_transform)
+   - [obj_copy_scale](functions-5.md#obj_copy_scale)
+   - [obj_scale_xyz](functions-5.md#obj_scale_xyz)
+   - [obj_scale](functions-5.md#obj_scale)
+   - [cur_obj_scale](functions-5.md#cur_obj_scale)
+   - [cur_obj_init_animation](functions-5.md#cur_obj_init_animation)
+   - [cur_obj_init_animation_with_sound](functions-5.md#cur_obj_init_animation_with_sound)
+   - [obj_init_animation_with_accel_and_sound](functions-5.md#obj_init_animation_with_accel_and_sound)
+   - [cur_obj_init_animation_with_accel_and_sound](functions-5.md#cur_obj_init_animation_with_accel_and_sound)
+   - [cur_obj_enable_rendering_and_become_tangible](functions-5.md#cur_obj_enable_rendering_and_become_tangible)
+   - [cur_obj_enable_rendering](functions-5.md#cur_obj_enable_rendering)
+   - [cur_obj_disable_rendering_and_become_intangible](functions-5.md#cur_obj_disable_rendering_and_become_intangible)
+   - [cur_obj_disable_rendering](functions-5.md#cur_obj_disable_rendering)
+   - [cur_obj_unhide](functions-5.md#cur_obj_unhide)
+   - [cur_obj_hide](functions-5.md#cur_obj_hide)
+   - [cur_obj_set_pos_relative](functions-5.md#cur_obj_set_pos_relative)
+   - [cur_obj_set_pos_relative_to_parent](functions-5.md#cur_obj_set_pos_relative_to_parent)
+   - [cur_obj_unused_init_on_floor](functions-5.md#cur_obj_unused_init_on_floor)
+   - [obj_set_face_angle_to_move_angle](functions-5.md#obj_set_face_angle_to_move_angle)
+   - [get_object_list_from_behavior](functions-5.md#get_object_list_from_behavior)
+   - [cur_obj_nearest_object_with_behavior](functions-5.md#cur_obj_nearest_object_with_behavior)
+   - [cur_obj_dist_to_nearest_object_with_behavior](functions-5.md#cur_obj_dist_to_nearest_object_with_behavior)
+   - [cur_obj_find_nearest_pole](functions-5.md#cur_obj_find_nearest_pole)
+   - [cur_obj_find_nearest_object_with_behavior](functions-5.md#cur_obj_find_nearest_object_with_behavior)
+   - [cur_obj_count_objects_with_behavior](functions-5.md#cur_obj_count_objects_with_behavior)
+   - [find_unimportant_object](functions-5.md#find_unimportant_object)
+   - [count_unimportant_objects](functions-5.md#count_unimportant_objects)
+   - [count_objects_with_behavior](functions-5.md#count_objects_with_behavior)
+   - [delete_all_objects_with_behavior](functions-5.md#delete_all_objects_with_behavior)
+   - [find_object_with_behavior](functions-5.md#find_object_with_behavior)
+   - [cur_obj_find_nearby_held_actor](functions-5.md#cur_obj_find_nearby_held_actor)
+   - [cur_obj_reset_timer_and_subaction](functions-5.md#cur_obj_reset_timer_and_subaction)
+   - [cur_obj_change_action](functions-5.md#cur_obj_change_action)
+   - [cur_obj_set_vel_from_mario_vel](functions-5.md#cur_obj_set_vel_from_mario_vel)
+   - [cur_obj_reverse_animation](functions-5.md#cur_obj_reverse_animation)
+   - [cur_obj_extend_animation_if_at_end](functions-5.md#cur_obj_extend_animation_if_at_end)
+   - [cur_obj_check_if_near_animation_end](functions-5.md#cur_obj_check_if_near_animation_end)
+   - [cur_obj_check_if_at_animation_end](functions-5.md#cur_obj_check_if_at_animation_end)
+   - [cur_obj_check_anim_frame](functions-5.md#cur_obj_check_anim_frame)
+   - [cur_obj_check_anim_frame_in_range](functions-5.md#cur_obj_check_anim_frame_in_range)
+   - [mario_is_in_air_action](functions-5.md#mario_is_in_air_action)
+   - [mario_is_dive_sliding](functions-5.md#mario_is_dive_sliding)
+   - [cur_obj_set_y_vel_and_animation](functions-5.md#cur_obj_set_y_vel_and_animation)
+   - [cur_obj_unrender_and_reset_state](functions-5.md#cur_obj_unrender_and_reset_state)
+   - [cur_obj_move_after_thrown_or_dropped](functions-5.md#cur_obj_move_after_thrown_or_dropped)
+   - [cur_obj_get_thrown_or_placed](functions-5.md#cur_obj_get_thrown_or_placed)
+   - [cur_obj_get_dropped](functions-5.md#cur_obj_get_dropped)
+   - [mario_set_flag](functions-5.md#mario_set_flag)
+   - [cur_obj_clear_interact_status_flag](functions-5.md#cur_obj_clear_interact_status_flag)
+   - [obj_mark_for_deletion](functions-5.md#obj_mark_for_deletion)
+   - [cur_obj_disable](functions-5.md#cur_obj_disable)
+   - [cur_obj_become_intangible](functions-5.md#cur_obj_become_intangible)
+   - [cur_obj_become_tangible](functions-5.md#cur_obj_become_tangible)
+   - [obj_become_tangible](functions-5.md#obj_become_tangible)
+   - [cur_obj_update_floor_height](functions-5.md#cur_obj_update_floor_height)
+   - [cur_obj_update_floor_height_and_get_floor](functions-5.md#cur_obj_update_floor_height_and_get_floor)
+   - [apply_drag_to_value](functions-5.md#apply_drag_to_value)
+   - [cur_obj_apply_drag_xz](functions-5.md#cur_obj_apply_drag_xz)
+   - [cur_obj_move_xz](functions-5.md#cur_obj_move_xz)
+   - [cur_obj_move_update_underwater_flags](functions-5.md#cur_obj_move_update_underwater_flags)
+   - [cur_obj_move_update_ground_air_flags](functions-5.md#cur_obj_move_update_ground_air_flags)
+   - [cur_obj_move_y_and_get_water_level](functions-5.md#cur_obj_move_y_and_get_water_level)
+   - [cur_obj_move_y](functions-5.md#cur_obj_move_y)
+   - [cur_obj_unused_resolve_wall_collisions](functions-5.md#cur_obj_unused_resolve_wall_collisions)
+   - [abs_angle_diff](functions-5.md#abs_angle_diff)
+   - [cur_obj_move_xz_using_fvel_and_yaw](functions-5.md#cur_obj_move_xz_using_fvel_and_yaw)
+   - [cur_obj_move_y_with_terminal_vel](functions-5.md#cur_obj_move_y_with_terminal_vel)
+   - [cur_obj_compute_vel_xz](functions-5.md#cur_obj_compute_vel_xz)
+   - [increment_velocity_toward_range](functions-5.md#increment_velocity_toward_range)
+   - [obj_check_if_collided_with_object](functions-5.md#obj_check_if_collided_with_object)
+   - [cur_obj_set_behavior](functions-5.md#cur_obj_set_behavior)
+   - [obj_set_behavior](functions-5.md#obj_set_behavior)
+   - [cur_obj_has_behavior](functions-5.md#cur_obj_has_behavior)
+   - [obj_has_behavior](functions-5.md#obj_has_behavior)
+   - [cur_obj_lateral_dist_from_obj_to_home](functions-5.md#cur_obj_lateral_dist_from_obj_to_home)
+   - [cur_obj_lateral_dist_from_mario_to_home](functions-5.md#cur_obj_lateral_dist_from_mario_to_home)
+   - [cur_obj_lateral_dist_to_home](functions-5.md#cur_obj_lateral_dist_to_home)
+   - [cur_obj_outside_home_square](functions-5.md#cur_obj_outside_home_square)
+   - [cur_obj_outside_home_rectangle](functions-5.md#cur_obj_outside_home_rectangle)
+   - [cur_obj_set_pos_to_home](functions-5.md#cur_obj_set_pos_to_home)
+   - [cur_obj_set_pos_to_home_and_stop](functions-5.md#cur_obj_set_pos_to_home_and_stop)
+   - [cur_obj_shake_y](functions-5.md#cur_obj_shake_y)
+   - [cur_obj_start_cam_event](functions-5.md#cur_obj_start_cam_event)
+   - [set_mario_interact_hoot_if_in_range](functions-5.md#set_mario_interact_hoot_if_in_range)
+   - [obj_set_billboard](functions-5.md#obj_set_billboard)
+   - [obj_set_cylboard](functions-5.md#obj_set_cylboard)
+   - [cur_obj_set_billboard_if_vanilla_cam](functions-5.md#cur_obj_set_billboard_if_vanilla_cam)
+   - [obj_set_hitbox_radius_and_height](functions-5.md#obj_set_hitbox_radius_and_height)
+   - [obj_set_hurtbox_radius_and_height](functions-5.md#obj_set_hurtbox_radius_and_height)
+   - [cur_obj_set_hitbox_radius_and_height](functions-5.md#cur_obj_set_hitbox_radius_and_height)
+   - [cur_obj_set_hurtbox_radius_and_height](functions-5.md#cur_obj_set_hurtbox_radius_and_height)
+   - [obj_spawn_loot_coins](functions-5.md#obj_spawn_loot_coins)
+   - [obj_spawn_loot_blue_coins](functions-5.md#obj_spawn_loot_blue_coins)
+   - [obj_spawn_loot_yellow_coins](functions-5.md#obj_spawn_loot_yellow_coins)
+   - [cur_obj_spawn_loot_coin_at_mario_pos](functions-5.md#cur_obj_spawn_loot_coin_at_mario_pos)
+   - [cur_obj_abs_y_dist_to_home](functions-5.md#cur_obj_abs_y_dist_to_home)
+   - [cur_obj_advance_looping_anim](functions-5.md#cur_obj_advance_looping_anim)
+   - [cur_obj_detect_steep_floor](functions-5.md#cur_obj_detect_steep_floor)
+   - [cur_obj_resolve_wall_collisions](functions-5.md#cur_obj_resolve_wall_collisions)
+   - [cur_obj_update_floor](functions-5.md#cur_obj_update_floor)
+   - [cur_obj_update_floor_and_resolve_wall_collisions](functions-5.md#cur_obj_update_floor_and_resolve_wall_collisions)
+   - [cur_obj_update_floor_and_walls](functions-5.md#cur_obj_update_floor_and_walls)
+   - [cur_obj_move_standard](functions-5.md#cur_obj_move_standard)
+   - [cur_obj_within_12k_bounds](functions-5.md#cur_obj_within_12k_bounds)
+   - [cur_obj_move_using_vel_and_gravity](functions-5.md#cur_obj_move_using_vel_and_gravity)
+   - [cur_obj_move_using_fvel_and_gravity](functions-5.md#cur_obj_move_using_fvel_and_gravity)
+   - [obj_set_pos_relative](functions-5.md#obj_set_pos_relative)
+   - [cur_obj_angle_to_home](functions-5.md#cur_obj_angle_to_home)
+   - [obj_set_gfx_pos_at_obj_pos](functions-5.md#obj_set_gfx_pos_at_obj_pos)
+   - [obj_translate_local](functions-5.md#obj_translate_local)
+   - [obj_build_transform_from_pos_and_angle](functions-5.md#obj_build_transform_from_pos_and_angle)
+   - [obj_set_throw_matrix_from_transform](functions-5.md#obj_set_throw_matrix_from_transform)
+   - [obj_build_transform_relative_to_parent](functions-5.md#obj_build_transform_relative_to_parent)
+   - [obj_create_transform_from_self](functions-5.md#obj_create_transform_from_self)
+   - [cur_obj_rotate_move_angle_using_vel](functions-5.md#cur_obj_rotate_move_angle_using_vel)
+   - [cur_obj_rotate_face_angle_using_vel](functions-5.md#cur_obj_rotate_face_angle_using_vel)
+   - [cur_obj_set_face_angle_to_move_angle](functions-5.md#cur_obj_set_face_angle_to_move_angle)
+   - [cur_obj_follow_path](functions-5.md#cur_obj_follow_path)
+   - [chain_segment_init](functions-5.md#chain_segment_init)
+   - [random_f32_around_zero](functions-5.md#random_f32_around_zero)
+   - [obj_scale_random](functions-5.md#obj_scale_random)
+   - [obj_translate_xyz_random](functions-5.md#obj_translate_xyz_random)
+   - [obj_translate_xz_random](functions-5.md#obj_translate_xz_random)
+   - [obj_build_vel_from_transform](functions-5.md#obj_build_vel_from_transform)
+   - [cur_obj_set_pos_via_transform](functions-5.md#cur_obj_set_pos_via_transform)
+   - [cur_obj_reflect_move_angle_off_wall](functions-5.md#cur_obj_reflect_move_angle_off_wall)
+   - [cur_obj_spawn_particles](functions-5.md#cur_obj_spawn_particles)
+   - [obj_set_hitbox](functions-5.md#obj_set_hitbox)
+   - [signum_positive](functions-5.md#signum_positive)
+   - [cur_obj_wait_then_blink](functions-5.md#cur_obj_wait_then_blink)
+   - [cur_obj_is_mario_ground_pounding_platform](functions-5.md#cur_obj_is_mario_ground_pounding_platform)
+   - [obj_is_mario_ground_pounding_platform](functions-5.md#obj_is_mario_ground_pounding_platform)
+   - [spawn_mist_particles](functions-5.md#spawn_mist_particles)
+   - [spawn_mist_particles_with_sound](functions-5.md#spawn_mist_particles_with_sound)
+   - [cur_obj_push_mario_away](functions-5.md#cur_obj_push_mario_away)
+   - [cur_obj_push_mario_away_from_cylinder](functions-5.md#cur_obj_push_mario_away_from_cylinder)
+   - [bhv_dust_smoke_loop](functions-5.md#bhv_dust_smoke_loop)
+   - [cur_obj_scale_over_time](functions-5.md#cur_obj_scale_over_time)
+   - [cur_obj_set_pos_to_home_with_debug](functions-5.md#cur_obj_set_pos_to_home_with_debug)
+   - [cur_obj_is_mario_on_platform](functions-5.md#cur_obj_is_mario_on_platform)
+   - [cur_obj_is_any_player_on_platform](functions-5.md#cur_obj_is_any_player_on_platform)
+   - [cur_obj_shake_y_until](functions-5.md#cur_obj_shake_y_until)
+   - [cur_obj_move_up_and_down](functions-5.md#cur_obj_move_up_and_down)
+   - [spawn_star_with_no_lvl_exit](functions-5.md#spawn_star_with_no_lvl_exit)
+   - [spawn_base_star_with_no_lvl_exit](functions-5.md#spawn_base_star_with_no_lvl_exit)
+   - [cur_obj_mario_far_away](functions-5.md#cur_obj_mario_far_away)
+   - [is_mario_moving_fast_or_in_air](functions-5.md#is_mario_moving_fast_or_in_air)
+   - [is_item_in_array](functions-5.md#is_item_in_array)
+   - [bhv_init_room](functions-5.md#bhv_init_room)
+   - [cur_obj_enable_rendering_if_mario_in_room](functions-5.md#cur_obj_enable_rendering_if_mario_in_room)
+   - [cur_obj_set_hitbox_and_die_if_attacked](functions-5.md#cur_obj_set_hitbox_and_die_if_attacked)
+   - [obj_explode_and_spawn_coins](functions-5.md#obj_explode_and_spawn_coins)
+   - [cur_obj_if_hit_wall_bounce_away](functions-5.md#cur_obj_if_hit_wall_bounce_away)
+   - [cur_obj_hide_if_mario_far_away_y](functions-5.md#cur_obj_hide_if_mario_far_away_y)
+   - [obj_is_hidden](functions-5.md#obj_is_hidden)
+   - [enable_time_stop](functions-5.md#enable_time_stop)
+   - [enable_time_stop_if_alone](functions-5.md#enable_time_stop_if_alone)
+   - [disable_time_stop](functions-5.md#disable_time_stop)
+   - [set_time_stop_flags](functions-5.md#set_time_stop_flags)
+   - [set_time_stop_flags_if_alone](functions-5.md#set_time_stop_flags_if_alone)
+   - [clear_time_stop_flags](functions-5.md#clear_time_stop_flags)
+   - [cur_obj_can_mario_activate_textbox](functions-5.md#cur_obj_can_mario_activate_textbox)
+   - [cur_obj_end_dialog](functions-5.md#cur_obj_end_dialog)
+   - [cur_obj_has_model](functions-5.md#cur_obj_has_model)
+   - [cur_obj_align_gfx_with_floor](functions-5.md#cur_obj_align_gfx_with_floor)
+   - [mario_is_within_rectangle](functions-5.md#mario_is_within_rectangle)
+   - [cur_obj_shake_screen](functions-5.md#cur_obj_shake_screen)
+   - [obj_attack_collided_from_other_object](functions-5.md#obj_attack_collided_from_other_object)
+   - [cur_obj_was_attacked_or_ground_pounded](functions-5.md#cur_obj_was_attacked_or_ground_pounded)
+   - [obj_copy_behavior_params](functions-5.md#obj_copy_behavior_params)
+   - [cur_obj_init_animation_and_anim_frame](functions-5.md#cur_obj_init_animation_and_anim_frame)
+   - [cur_obj_init_animation_and_check_if_near_end](functions-5.md#cur_obj_init_animation_and_check_if_near_end)
+   - [cur_obj_init_animation_and_extend_if_at_end](functions-5.md#cur_obj_init_animation_and_extend_if_at_end)
+   - [cur_obj_check_grabbed_mario](functions-5.md#cur_obj_check_grabbed_mario)
+   - [player_performed_grab_escape_action](functions-5.md#player_performed_grab_escape_action)
+   - [cur_obj_unused_play_footstep_sound](functions-5.md#cur_obj_unused_play_footstep_sound)
+   - [enable_time_stop_including_mario](functions-5.md#enable_time_stop_including_mario)
+   - [disable_time_stop_including_mario](functions-5.md#disable_time_stop_including_mario)
+   - [cur_obj_check_interacted](functions-5.md#cur_obj_check_interacted)
+   - [cur_obj_spawn_loot_blue_coin](functions-5.md#cur_obj_spawn_loot_blue_coin)
+   - [cur_obj_spawn_star_at_y_offset](functions-5.md#cur_obj_spawn_star_at_y_offset)
+   - [cur_obj_set_home_once](functions-5.md#cur_obj_set_home_once)
+   - [get_trajectory_length](functions-5.md#get_trajectory_length)
 
 <br />
 
 - object_list_processor.h
-   - [set_object_respawn_info_bits](functions-6.md#set_object_respawn_info_bits)
+   - [set_object_respawn_info_bits](functions-5.md#set_object_respawn_info_bits)
 
 <br />
 
 - platform_displacement.h
-   - [apply_platform_displacement](functions-6.md#apply_platform_displacement)
+   - [apply_platform_displacement](functions-5.md#apply_platform_displacement)
 
 <br />
 
@@ -1956,304 +1956,304 @@
 <br />
 
 - smlua_gfx_utils.h
-   - [get_shader_flag_enabled](functions-7.md#get_shader_flag_enabled)
-   - [set_shader_flag_enabled](functions-7.md#set_shader_flag_enabled)
-   - [get_shader_flag_value](functions-7.md#get_shader_flag_value)
-   - [set_shader_flag_value](functions-7.md#set_shader_flag_value)
-   - [get_global_shader_flags_enabled](functions-7.md#get_global_shader_flags_enabled)
-   - [set_global_shader_flags_enabled](functions-7.md#set_global_shader_flags_enabled)
-   - [clear_all_shader_flags](functions-7.md#clear_all_shader_flags)
-   - [get_shading_fullbright_enabled](functions-7.md#get_shading_fullbright_enabled)
-   - [set_shading_fullbright_enabled](functions-7.md#set_shading_fullbright_enabled)
-   - [set_override_fov](functions-7.md#set_override_fov)
-   - [set_override_near](functions-7.md#set_override_near)
-   - [set_override_far](functions-7.md#set_override_far)
-   - [get_lighting_dir](functions-7.md#get_lighting_dir)
-   - [set_lighting_dir](functions-7.md#set_lighting_dir)
-   - [get_lighting_color](functions-7.md#get_lighting_color)
-   - [get_lighting_color_ambient](functions-7.md#get_lighting_color_ambient)
-   - [set_lighting_color](functions-7.md#set_lighting_color)
-   - [set_lighting_color_ambient](functions-7.md#set_lighting_color_ambient)
-   - [get_vertex_color](functions-7.md#get_vertex_color)
-   - [set_vertex_color](functions-7.md#set_vertex_color)
-   - [get_fog_color](functions-7.md#get_fog_color)
-   - [set_fog_color](functions-7.md#set_fog_color)
-   - [get_fog_intensity](functions-7.md#get_fog_intensity)
-   - [set_fog_intensity](functions-7.md#set_fog_intensity)
-   - [get_skybox](functions-7.md#get_skybox)
-   - [set_override_skybox](functions-7.md#set_override_skybox)
-   - [get_skybox_color](functions-7.md#get_skybox_color)
-   - [set_skybox_color](functions-7.md#set_skybox_color)
-   - [gfx_parse](functions-7.md#gfx_parse)
-   - [gfx_get_op](functions-7.md#gfx_get_op)
-   - [gfx_get_display_list](functions-7.md#gfx_get_display_list)
-   - [gfx_get_vertex_buffer](functions-7.md#gfx_get_vertex_buffer)
-   - [gfx_get_vertex_count](functions-7.md#gfx_get_vertex_count)
-   - [gfx_get_texture](functions-7.md#gfx_get_texture)
-   - [gfx_get_from_name](functions-7.md#gfx_get_from_name)
-   - [gfx_get_name](functions-7.md#gfx_get_name)
-   - [gfx_get_length](functions-7.md#gfx_get_length)
-   - [gfx_get_command](functions-7.md#gfx_get_command)
-   - [gfx_get_next_command](functions-7.md#gfx_get_next_command)
-   - [gfx_copy](functions-7.md#gfx_copy)
-   - [gfx_create](functions-7.md#gfx_create)
-   - [gfx_resize](functions-7.md#gfx_resize)
-   - [gfx_delete](functions-7.md#gfx_delete)
-   - [gfx_delete_all](functions-7.md#gfx_delete_all)
-   - [vtx_get_from_name](functions-7.md#vtx_get_from_name)
-   - [vtx_get_name](functions-7.md#vtx_get_name)
-   - [vtx_get_count](functions-7.md#vtx_get_count)
-   - [vtx_get_vertex](functions-7.md#vtx_get_vertex)
-   - [vtx_get_next_vertex](functions-7.md#vtx_get_next_vertex)
-   - [vtx_copy](functions-7.md#vtx_copy)
-   - [vtx_create](functions-7.md#vtx_create)
-   - [vtx_resize](functions-7.md#vtx_resize)
-   - [vtx_delete](functions-7.md#vtx_delete)
-   - [vtx_delete_all](functions-7.md#vtx_delete_all)
+   - [get_shader_flag_enabled](functions-6.md#get_shader_flag_enabled)
+   - [set_shader_flag_enabled](functions-6.md#set_shader_flag_enabled)
+   - [get_shader_flag_value](functions-6.md#get_shader_flag_value)
+   - [set_shader_flag_value](functions-6.md#set_shader_flag_value)
+   - [get_global_shader_flags_enabled](functions-6.md#get_global_shader_flags_enabled)
+   - [set_global_shader_flags_enabled](functions-6.md#set_global_shader_flags_enabled)
+   - [clear_all_shader_flags](functions-6.md#clear_all_shader_flags)
+   - [get_shading_fullbright_enabled](functions-6.md#get_shading_fullbright_enabled)
+   - [set_shading_fullbright_enabled](functions-6.md#set_shading_fullbright_enabled)
+   - [set_override_fov](functions-6.md#set_override_fov)
+   - [set_override_near](functions-6.md#set_override_near)
+   - [set_override_far](functions-6.md#set_override_far)
+   - [get_lighting_dir](functions-6.md#get_lighting_dir)
+   - [set_lighting_dir](functions-6.md#set_lighting_dir)
+   - [get_lighting_color](functions-6.md#get_lighting_color)
+   - [get_lighting_color_ambient](functions-6.md#get_lighting_color_ambient)
+   - [set_lighting_color](functions-6.md#set_lighting_color)
+   - [set_lighting_color_ambient](functions-6.md#set_lighting_color_ambient)
+   - [get_vertex_color](functions-6.md#get_vertex_color)
+   - [set_vertex_color](functions-6.md#set_vertex_color)
+   - [get_fog_color](functions-6.md#get_fog_color)
+   - [set_fog_color](functions-6.md#set_fog_color)
+   - [get_fog_intensity](functions-6.md#get_fog_intensity)
+   - [set_fog_intensity](functions-6.md#set_fog_intensity)
+   - [get_skybox](functions-6.md#get_skybox)
+   - [set_override_skybox](functions-6.md#set_override_skybox)
+   - [get_skybox_color](functions-6.md#get_skybox_color)
+   - [set_skybox_color](functions-6.md#set_skybox_color)
+   - [gfx_parse](functions-6.md#gfx_parse)
+   - [gfx_get_op](functions-6.md#gfx_get_op)
+   - [gfx_get_display_list](functions-6.md#gfx_get_display_list)
+   - [gfx_get_vertex_buffer](functions-6.md#gfx_get_vertex_buffer)
+   - [gfx_get_vertex_count](functions-6.md#gfx_get_vertex_count)
+   - [gfx_get_texture](functions-6.md#gfx_get_texture)
+   - [gfx_get_from_name](functions-6.md#gfx_get_from_name)
+   - [gfx_get_name](functions-6.md#gfx_get_name)
+   - [gfx_get_length](functions-6.md#gfx_get_length)
+   - [gfx_get_command](functions-6.md#gfx_get_command)
+   - [gfx_get_next_command](functions-6.md#gfx_get_next_command)
+   - [gfx_copy](functions-6.md#gfx_copy)
+   - [gfx_create](functions-6.md#gfx_create)
+   - [gfx_resize](functions-6.md#gfx_resize)
+   - [gfx_delete](functions-6.md#gfx_delete)
+   - [gfx_delete_all](functions-6.md#gfx_delete_all)
+   - [vtx_get_from_name](functions-6.md#vtx_get_from_name)
+   - [vtx_get_name](functions-6.md#vtx_get_name)
+   - [vtx_get_count](functions-6.md#vtx_get_count)
+   - [vtx_get_vertex](functions-6.md#vtx_get_vertex)
+   - [vtx_get_next_vertex](functions-6.md#vtx_get_next_vertex)
+   - [vtx_copy](functions-6.md#vtx_copy)
+   - [vtx_create](functions-6.md#vtx_create)
+   - [vtx_resize](functions-6.md#vtx_resize)
+   - [vtx_delete](functions-6.md#vtx_delete)
+   - [vtx_delete_all](functions-6.md#vtx_delete_all)
 
 <br />
 
 - smlua_level_utils.h
-   - [smlua_level_util_change_area](functions-7.md#smlua_level_util_change_area)
-   - [smlua_level_util_get_info](functions-7.md#smlua_level_util_get_info)
-   - [smlua_level_util_get_info_from_short_name](functions-7.md#smlua_level_util_get_info_from_short_name)
-   - [smlua_level_util_get_info_from_course_num](functions-7.md#smlua_level_util_get_info_from_course_num)
-   - [level_register](functions-7.md#level_register)
-   - [level_is_vanilla_level](functions-7.md#level_is_vanilla_level)
-   - [warp_to_warpnode](functions-7.md#warp_to_warpnode)
-   - [warp_to_level](functions-7.md#warp_to_level)
-   - [warp_restart_level](functions-7.md#warp_restart_level)
-   - [warp_to_start_level](functions-7.md#warp_to_start_level)
-   - [warp_exit_level](functions-7.md#warp_exit_level)
-   - [warp_to_castle](functions-7.md#warp_to_castle)
-   - [level_create_warp_node](functions-7.md#level_create_warp_node)
-   - [level_create_warp_node_with_object](functions-7.md#level_create_warp_node_with_object)
-   - [level_get_warp_node](functions-7.md#level_get_warp_node)
-   - [level_delete_warp_node](functions-7.md#level_delete_warp_node)
-   - [level_clear_warp_nodes](functions-7.md#level_clear_warp_nodes)
+   - [smlua_level_util_change_area](functions-6.md#smlua_level_util_change_area)
+   - [smlua_level_util_get_info](functions-6.md#smlua_level_util_get_info)
+   - [smlua_level_util_get_info_from_short_name](functions-6.md#smlua_level_util_get_info_from_short_name)
+   - [smlua_level_util_get_info_from_course_num](functions-6.md#smlua_level_util_get_info_from_course_num)
+   - [level_register](functions-6.md#level_register)
+   - [level_is_vanilla_level](functions-6.md#level_is_vanilla_level)
+   - [warp_to_warpnode](functions-6.md#warp_to_warpnode)
+   - [warp_to_level](functions-6.md#warp_to_level)
+   - [warp_restart_level](functions-6.md#warp_restart_level)
+   - [warp_to_start_level](functions-6.md#warp_to_start_level)
+   - [warp_exit_level](functions-6.md#warp_exit_level)
+   - [warp_to_castle](functions-6.md#warp_to_castle)
+   - [level_create_warp_node](functions-6.md#level_create_warp_node)
+   - [level_create_warp_node_with_object](functions-6.md#level_create_warp_node_with_object)
+   - [level_get_warp_node](functions-6.md#level_get_warp_node)
+   - [level_delete_warp_node](functions-6.md#level_delete_warp_node)
+   - [level_clear_warp_nodes](functions-6.md#level_clear_warp_nodes)
 
 <br />
 
 - smlua_misc_utils.h
-   - [get_network_area_timer](functions-7.md#get_network_area_timer)
-   - [get_network_area_random_seed](functions-7.md#get_network_area_random_seed)
-   - [get_area_update_counter](functions-7.md#get_area_update_counter)
-   - [get_temp_s32_pointer](functions-7.md#get_temp_s32_pointer)
-   - [deref_s32_pointer](functions-7.md#deref_s32_pointer)
-   - [djui_popup_create_global](functions-7.md#djui_popup_create_global)
-   - [djui_is_popup_disabled](functions-7.md#djui_is_popup_disabled)
-   - [djui_set_popup_disabled_override](functions-7.md#djui_set_popup_disabled_override)
-   - [djui_reset_popup_disabled_override](functions-7.md#djui_reset_popup_disabled_override)
-   - [djui_is_playerlist_open](functions-7.md#djui_is_playerlist_open)
-   - [djui_attempting_to_open_playerlist](functions-7.md#djui_attempting_to_open_playerlist)
-   - [djui_get_playerlist_page_index](functions-7.md#djui_get_playerlist_page_index)
-   - [djui_is_chatbox_open](functions-7.md#djui_is_chatbox_open)
-   - [djui_menu_get_font](functions-7.md#djui_menu_get_font)
-   - [djui_menu_get_theme](functions-7.md#djui_menu_get_theme)
-   - [djui_is_playerlist_ping_visible](functions-7.md#djui_is_playerlist_ping_visible)
-   - [get_dialog_box_state](functions-7.md#get_dialog_box_state)
-   - [get_dialog_id](functions-7.md#get_dialog_id)
-   - [get_last_star_or_key](functions-7.md#get_last_star_or_key)
-   - [set_last_star_or_key](functions-7.md#set_last_star_or_key)
-   - [get_last_completed_course_num](functions-7.md#get_last_completed_course_num)
-   - [set_last_completed_course_num](functions-7.md#set_last_completed_course_num)
-   - [get_last_completed_star_num](functions-7.md#get_last_completed_star_num)
-   - [set_last_completed_star_num](functions-7.md#set_last_completed_star_num)
-   - [get_got_file_coin_hi_score](functions-7.md#get_got_file_coin_hi_score)
-   - [set_got_file_coin_hi_score](functions-7.md#set_got_file_coin_hi_score)
-   - [get_save_file_modified](functions-7.md#get_save_file_modified)
-   - [set_save_file_modified](functions-7.md#set_save_file_modified)
-   - [hud_hide](functions-7.md#hud_hide)
-   - [hud_show](functions-7.md#hud_show)
-   - [hud_is_hidden](functions-7.md#hud_is_hidden)
-   - [hud_get_value](functions-7.md#hud_get_value)
-   - [hud_set_value](functions-7.md#hud_set_value)
-   - [hud_render_power_meter](functions-7.md#hud_render_power_meter)
-   - [hud_render_power_meter_interpolated](functions-7.md#hud_render_power_meter_interpolated)
-   - [hud_get_flash](functions-7.md#hud_get_flash)
-   - [hud_set_flash](functions-7.md#hud_set_flash)
-   - [act_select_hud_hide](functions-7.md#act_select_hud_hide)
-   - [act_select_hud_show](functions-7.md#act_select_hud_show)
-   - [act_select_hud_is_hidden](functions-7.md#act_select_hud_is_hidden)
-   - [is_game_paused](functions-7.md#is_game_paused)
-   - [is_pause_menu_hidden](functions-7.md#is_pause_menu_hidden)
-   - [set_pause_menu_hidden](functions-7.md#set_pause_menu_hidden)
-   - [game_pause](functions-7.md#game_pause)
-   - [game_unpause](functions-7.md#game_unpause)
-   - [is_transition_playing](functions-7.md#is_transition_playing)
-   - [get_current_play_mode](functions-7.md#get_current_play_mode)
-   - [get_delayed_warp_op](functions-7.md#get_delayed_warp_op)
-   - [allocate_mario_action](functions-7.md#allocate_mario_action)
-   - [get_hand_foot_pos_x](functions-7.md#get_hand_foot_pos_x)
-   - [get_hand_foot_pos_y](functions-7.md#get_hand_foot_pos_y)
-   - [get_hand_foot_pos_z](functions-7.md#get_hand_foot_pos_z)
-   - [get_mario_anim_part_pos](functions-7.md#get_mario_anim_part_pos)
-   - [get_mario_anim_part_rot](functions-7.md#get_mario_anim_part_rot)
-   - [get_mario_anim_part_mtx](functions-7.md#get_mario_anim_part_mtx)
-   - [get_current_save_file_num](functions-7.md#get_current_save_file_num)
-   - [save_file_get_using_backup_slot](functions-7.md#save_file_get_using_backup_slot)
-   - [save_file_set_using_backup_slot](functions-7.md#save_file_set_using_backup_slot)
-   - [movtexqc_register](functions-7.md#movtexqc_register)
-   - [get_water_level](functions-7.md#get_water_level)
-   - [set_water_level](functions-7.md#set_water_level)
-   - [course_is_main_course](functions-7.md#course_is_main_course)
-   - [get_ttc_speed_setting](functions-7.md#get_ttc_speed_setting)
-   - [set_ttc_speed_setting](functions-7.md#set_ttc_speed_setting)
-   - [get_time](functions-7.md#get_time)
-   - [get_date_and_time](functions-7.md#get_date_and_time)
-   - [get_envfx](functions-7.md#get_envfx)
-   - [set_override_envfx](functions-7.md#set_override_envfx)
-   - [get_global_timer](functions-7.md#get_global_timer)
-   - [get_dialog_response](functions-7.md#get_dialog_response)
-   - [get_time_stop_flags](functions-7.md#get_time_stop_flags)
-   - [get_local_discord_id](functions-7.md#get_local_discord_id)
-   - [get_coopnet_id](functions-7.md#get_coopnet_id)
-   - [get_volume_master](functions-7.md#get_volume_master)
-   - [get_volume_level](functions-7.md#get_volume_level)
-   - [get_volume_sfx](functions-7.md#get_volume_sfx)
-   - [get_volume_env](functions-7.md#get_volume_env)
-   - [set_volume_master](functions-7.md#set_volume_master)
-   - [set_volume_level](functions-7.md#set_volume_level)
-   - [set_volume_sfx](functions-7.md#set_volume_sfx)
-   - [set_volume_env](functions-7.md#set_volume_env)
-   - [get_environment_region](functions-7.md#get_environment_region)
-   - [set_environment_region](functions-7.md#set_environment_region)
-   - [mod_file_exists](functions-7.md#mod_file_exists)
-   - [get_active_mod](functions-7.md#get_active_mod)
-   - [get_mod_files](functions-7.md#get_mod_files)
-   - [set_window_title](functions-7.md#set_window_title)
-   - [reset_window_title](functions-7.md#reset_window_title)
-   - [get_os_name](functions-7.md#get_os_name)
-   - [geo_get_current_root](functions-7.md#geo_get_current_root)
-   - [geo_get_current_master_list](functions-7.md#geo_get_current_master_list)
-   - [geo_get_current_perspective](functions-7.md#geo_get_current_perspective)
-   - [geo_get_current_camera](functions-7.md#geo_get_current_camera)
-   - [geo_get_current_held_object](functions-7.md#geo_get_current_held_object)
-   - [geo_skip_interpolation](functions-7.md#geo_skip_interpolation)
-   - [texture_to_lua_table](functions-7.md#texture_to_lua_table)
-   - [get_texture_name](functions-7.md#get_texture_name)
+   - [get_network_area_timer](functions-6.md#get_network_area_timer)
+   - [get_network_area_random_seed](functions-6.md#get_network_area_random_seed)
+   - [get_area_update_counter](functions-6.md#get_area_update_counter)
+   - [get_temp_s32_pointer](functions-6.md#get_temp_s32_pointer)
+   - [deref_s32_pointer](functions-6.md#deref_s32_pointer)
+   - [djui_popup_create_global](functions-6.md#djui_popup_create_global)
+   - [djui_is_popup_disabled](functions-6.md#djui_is_popup_disabled)
+   - [djui_set_popup_disabled_override](functions-6.md#djui_set_popup_disabled_override)
+   - [djui_reset_popup_disabled_override](functions-6.md#djui_reset_popup_disabled_override)
+   - [djui_is_playerlist_open](functions-6.md#djui_is_playerlist_open)
+   - [djui_attempting_to_open_playerlist](functions-6.md#djui_attempting_to_open_playerlist)
+   - [djui_get_playerlist_page_index](functions-6.md#djui_get_playerlist_page_index)
+   - [djui_is_chatbox_open](functions-6.md#djui_is_chatbox_open)
+   - [djui_menu_get_font](functions-6.md#djui_menu_get_font)
+   - [djui_menu_get_theme](functions-6.md#djui_menu_get_theme)
+   - [djui_is_playerlist_ping_visible](functions-6.md#djui_is_playerlist_ping_visible)
+   - [get_dialog_box_state](functions-6.md#get_dialog_box_state)
+   - [get_dialog_id](functions-6.md#get_dialog_id)
+   - [get_last_star_or_key](functions-6.md#get_last_star_or_key)
+   - [set_last_star_or_key](functions-6.md#set_last_star_or_key)
+   - [get_last_completed_course_num](functions-6.md#get_last_completed_course_num)
+   - [set_last_completed_course_num](functions-6.md#set_last_completed_course_num)
+   - [get_last_completed_star_num](functions-6.md#get_last_completed_star_num)
+   - [set_last_completed_star_num](functions-6.md#set_last_completed_star_num)
+   - [get_got_file_coin_hi_score](functions-6.md#get_got_file_coin_hi_score)
+   - [set_got_file_coin_hi_score](functions-6.md#set_got_file_coin_hi_score)
+   - [get_save_file_modified](functions-6.md#get_save_file_modified)
+   - [set_save_file_modified](functions-6.md#set_save_file_modified)
+   - [hud_hide](functions-6.md#hud_hide)
+   - [hud_show](functions-6.md#hud_show)
+   - [hud_is_hidden](functions-6.md#hud_is_hidden)
+   - [hud_get_value](functions-6.md#hud_get_value)
+   - [hud_set_value](functions-6.md#hud_set_value)
+   - [hud_render_power_meter](functions-6.md#hud_render_power_meter)
+   - [hud_render_power_meter_interpolated](functions-6.md#hud_render_power_meter_interpolated)
+   - [hud_get_flash](functions-6.md#hud_get_flash)
+   - [hud_set_flash](functions-6.md#hud_set_flash)
+   - [act_select_hud_hide](functions-6.md#act_select_hud_hide)
+   - [act_select_hud_show](functions-6.md#act_select_hud_show)
+   - [act_select_hud_is_hidden](functions-6.md#act_select_hud_is_hidden)
+   - [is_game_paused](functions-6.md#is_game_paused)
+   - [is_pause_menu_hidden](functions-6.md#is_pause_menu_hidden)
+   - [set_pause_menu_hidden](functions-6.md#set_pause_menu_hidden)
+   - [game_pause](functions-6.md#game_pause)
+   - [game_unpause](functions-6.md#game_unpause)
+   - [is_transition_playing](functions-6.md#is_transition_playing)
+   - [get_current_play_mode](functions-6.md#get_current_play_mode)
+   - [get_delayed_warp_op](functions-6.md#get_delayed_warp_op)
+   - [allocate_mario_action](functions-6.md#allocate_mario_action)
+   - [get_hand_foot_pos_x](functions-6.md#get_hand_foot_pos_x)
+   - [get_hand_foot_pos_y](functions-6.md#get_hand_foot_pos_y)
+   - [get_hand_foot_pos_z](functions-6.md#get_hand_foot_pos_z)
+   - [get_mario_anim_part_pos](functions-6.md#get_mario_anim_part_pos)
+   - [get_mario_anim_part_rot](functions-6.md#get_mario_anim_part_rot)
+   - [get_mario_anim_part_mtx](functions-6.md#get_mario_anim_part_mtx)
+   - [get_current_save_file_num](functions-6.md#get_current_save_file_num)
+   - [save_file_get_using_backup_slot](functions-6.md#save_file_get_using_backup_slot)
+   - [save_file_set_using_backup_slot](functions-6.md#save_file_set_using_backup_slot)
+   - [movtexqc_register](functions-6.md#movtexqc_register)
+   - [get_water_level](functions-6.md#get_water_level)
+   - [set_water_level](functions-6.md#set_water_level)
+   - [course_is_main_course](functions-6.md#course_is_main_course)
+   - [get_ttc_speed_setting](functions-6.md#get_ttc_speed_setting)
+   - [set_ttc_speed_setting](functions-6.md#set_ttc_speed_setting)
+   - [get_time](functions-6.md#get_time)
+   - [get_date_and_time](functions-6.md#get_date_and_time)
+   - [get_envfx](functions-6.md#get_envfx)
+   - [set_override_envfx](functions-6.md#set_override_envfx)
+   - [get_global_timer](functions-6.md#get_global_timer)
+   - [get_dialog_response](functions-6.md#get_dialog_response)
+   - [get_time_stop_flags](functions-6.md#get_time_stop_flags)
+   - [get_local_discord_id](functions-6.md#get_local_discord_id)
+   - [get_coopnet_id](functions-6.md#get_coopnet_id)
+   - [get_volume_master](functions-6.md#get_volume_master)
+   - [get_volume_level](functions-6.md#get_volume_level)
+   - [get_volume_sfx](functions-6.md#get_volume_sfx)
+   - [get_volume_env](functions-6.md#get_volume_env)
+   - [set_volume_master](functions-6.md#set_volume_master)
+   - [set_volume_level](functions-6.md#set_volume_level)
+   - [set_volume_sfx](functions-6.md#set_volume_sfx)
+   - [set_volume_env](functions-6.md#set_volume_env)
+   - [get_environment_region](functions-6.md#get_environment_region)
+   - [set_environment_region](functions-6.md#set_environment_region)
+   - [mod_file_exists](functions-6.md#mod_file_exists)
+   - [get_active_mod](functions-6.md#get_active_mod)
+   - [get_mod_files](functions-6.md#get_mod_files)
+   - [set_window_title](functions-6.md#set_window_title)
+   - [reset_window_title](functions-6.md#reset_window_title)
+   - [get_os_name](functions-6.md#get_os_name)
+   - [geo_get_current_root](functions-6.md#geo_get_current_root)
+   - [geo_get_current_master_list](functions-6.md#geo_get_current_master_list)
+   - [geo_get_current_perspective](functions-6.md#geo_get_current_perspective)
+   - [geo_get_current_camera](functions-6.md#geo_get_current_camera)
+   - [geo_get_current_held_object](functions-6.md#geo_get_current_held_object)
+   - [geo_skip_interpolation](functions-6.md#geo_skip_interpolation)
+   - [texture_to_lua_table](functions-6.md#texture_to_lua_table)
+   - [get_texture_name](functions-6.md#get_texture_name)
 
 <br />
 
 - smlua_model_utils.h
-   - [smlua_model_util_get_id](functions-7.md#smlua_model_util_get_id)
+   - [smlua_model_util_get_id](functions-6.md#smlua_model_util_get_id)
 
 <br />
 
 - smlua_obj_utils.h
-   - [spawn_sync_object](functions-7.md#spawn_sync_object)
-   - [spawn_non_sync_object](functions-7.md#spawn_non_sync_object)
-   - [obj_has_behavior_id](functions-7.md#obj_has_behavior_id)
-   - [obj_has_model_extended](functions-7.md#obj_has_model_extended)
-   - [obj_get_model_id_extended](functions-7.md#obj_get_model_id_extended)
-   - [obj_set_model_extended](functions-7.md#obj_set_model_extended)
-   - [get_trajectory](functions-7.md#get_trajectory)
-   - [geo_get_current_object](functions-7.md#geo_get_current_object)
-   - [get_current_object](functions-7.md#get_current_object)
-   - [get_dialog_object](functions-7.md#get_dialog_object)
-   - [get_cutscene_focus](functions-7.md#get_cutscene_focus)
-   - [get_secondary_camera_focus](functions-7.md#get_secondary_camera_focus)
-   - [set_cutscene_focus](functions-7.md#set_cutscene_focus)
-   - [set_secondary_camera_focus](functions-7.md#set_secondary_camera_focus)
-   - [obj_get_first](functions-7.md#obj_get_first)
-   - [obj_get_first_with_behavior_id](functions-7.md#obj_get_first_with_behavior_id)
-   - [obj_get_first_with_behavior_id_and_field_s32](functions-7.md#obj_get_first_with_behavior_id_and_field_s32)
-   - [obj_get_first_with_behavior_id_and_field_f32](functions-7.md#obj_get_first_with_behavior_id_and_field_f32)
-   - [obj_get_next](functions-7.md#obj_get_next)
-   - [obj_get_next_with_same_behavior_id](functions-7.md#obj_get_next_with_same_behavior_id)
-   - [obj_get_next_with_same_behavior_id_and_field_s32](functions-7.md#obj_get_next_with_same_behavior_id_and_field_s32)
-   - [obj_get_next_with_same_behavior_id_and_field_f32](functions-7.md#obj_get_next_with_same_behavior_id_and_field_f32)
-   - [obj_get_nearest_object_with_behavior_id](functions-7.md#obj_get_nearest_object_with_behavior_id)
-   - [obj_count_objects_with_behavior_id](functions-7.md#obj_count_objects_with_behavior_id)
-   - [obj_get_collided_object](functions-7.md#obj_get_collided_object)
-   - [obj_get_field_u32](functions-7.md#obj_get_field_u32)
-   - [obj_get_field_s32](functions-7.md#obj_get_field_s32)
-   - [obj_get_field_f32](functions-7.md#obj_get_field_f32)
-   - [obj_get_field_s16](functions-7.md#obj_get_field_s16)
-   - [obj_set_field_u32](functions-7.md#obj_set_field_u32)
-   - [obj_set_field_s32](functions-7.md#obj_set_field_s32)
-   - [obj_set_field_f32](functions-7.md#obj_set_field_f32)
-   - [obj_set_field_s16](functions-7.md#obj_set_field_s16)
-   - [obj_get_field_info_from_name](functions-7.md#obj_get_field_info_from_name)
-   - [obj_get_temp_spawn_particles_info](functions-7.md#obj_get_temp_spawn_particles_info)
-   - [obj_get_temp_water_droplet_params](functions-7.md#obj_get_temp_water_droplet_params)
-   - [get_temp_object_hitbox](functions-7.md#get_temp_object_hitbox)
-   - [obj_is_attackable](functions-7.md#obj_is_attackable)
-   - [obj_is_breakable_object](functions-7.md#obj_is_breakable_object)
-   - [obj_is_bully](functions-7.md#obj_is_bully)
-   - [obj_is_coin](functions-7.md#obj_is_coin)
-   - [obj_is_exclamation_box](functions-7.md#obj_is_exclamation_box)
-   - [obj_is_grabbable](functions-7.md#obj_is_grabbable)
-   - [obj_is_mushroom_1up](functions-7.md#obj_is_mushroom_1up)
-   - [obj_is_secret](functions-7.md#obj_is_secret)
-   - [obj_is_valid_for_interaction](functions-7.md#obj_is_valid_for_interaction)
-   - [obj_check_hitbox_overlap](functions-7.md#obj_check_hitbox_overlap)
-   - [obj_check_overlap_with_hitbox_params](functions-7.md#obj_check_overlap_with_hitbox_params)
-   - [obj_set_vel](functions-7.md#obj_set_vel)
-   - [obj_move_xyz](functions-7.md#obj_move_xyz)
-   - [set_whirlpools](functions-7.md#set_whirlpools)
-   - [obj_skip_interpolation](functions-7.md#obj_skip_interpolation)
-   - [obj_anim_skip_interpolation](functions-7.md#obj_anim_skip_interpolation)
+   - [spawn_sync_object](functions-6.md#spawn_sync_object)
+   - [spawn_non_sync_object](functions-6.md#spawn_non_sync_object)
+   - [obj_has_behavior_id](functions-6.md#obj_has_behavior_id)
+   - [obj_has_model_extended](functions-6.md#obj_has_model_extended)
+   - [obj_get_model_id_extended](functions-6.md#obj_get_model_id_extended)
+   - [obj_set_model_extended](functions-6.md#obj_set_model_extended)
+   - [get_trajectory](functions-6.md#get_trajectory)
+   - [geo_get_current_object](functions-6.md#geo_get_current_object)
+   - [get_current_object](functions-6.md#get_current_object)
+   - [get_dialog_object](functions-6.md#get_dialog_object)
+   - [get_cutscene_focus](functions-6.md#get_cutscene_focus)
+   - [get_secondary_camera_focus](functions-6.md#get_secondary_camera_focus)
+   - [set_cutscene_focus](functions-6.md#set_cutscene_focus)
+   - [set_secondary_camera_focus](functions-6.md#set_secondary_camera_focus)
+   - [obj_get_first](functions-6.md#obj_get_first)
+   - [obj_get_first_with_behavior_id](functions-6.md#obj_get_first_with_behavior_id)
+   - [obj_get_first_with_behavior_id_and_field_s32](functions-6.md#obj_get_first_with_behavior_id_and_field_s32)
+   - [obj_get_first_with_behavior_id_and_field_f32](functions-6.md#obj_get_first_with_behavior_id_and_field_f32)
+   - [obj_get_next](functions-6.md#obj_get_next)
+   - [obj_get_next_with_same_behavior_id](functions-6.md#obj_get_next_with_same_behavior_id)
+   - [obj_get_next_with_same_behavior_id_and_field_s32](functions-6.md#obj_get_next_with_same_behavior_id_and_field_s32)
+   - [obj_get_next_with_same_behavior_id_and_field_f32](functions-6.md#obj_get_next_with_same_behavior_id_and_field_f32)
+   - [obj_get_nearest_object_with_behavior_id](functions-6.md#obj_get_nearest_object_with_behavior_id)
+   - [obj_count_objects_with_behavior_id](functions-6.md#obj_count_objects_with_behavior_id)
+   - [obj_get_collided_object](functions-6.md#obj_get_collided_object)
+   - [obj_get_field_u32](functions-6.md#obj_get_field_u32)
+   - [obj_get_field_s32](functions-6.md#obj_get_field_s32)
+   - [obj_get_field_f32](functions-6.md#obj_get_field_f32)
+   - [obj_get_field_s16](functions-6.md#obj_get_field_s16)
+   - [obj_set_field_u32](functions-6.md#obj_set_field_u32)
+   - [obj_set_field_s32](functions-6.md#obj_set_field_s32)
+   - [obj_set_field_f32](functions-6.md#obj_set_field_f32)
+   - [obj_set_field_s16](functions-6.md#obj_set_field_s16)
+   - [obj_get_field_info_from_name](functions-6.md#obj_get_field_info_from_name)
+   - [obj_get_temp_spawn_particles_info](functions-6.md#obj_get_temp_spawn_particles_info)
+   - [obj_get_temp_water_droplet_params](functions-6.md#obj_get_temp_water_droplet_params)
+   - [get_temp_object_hitbox](functions-6.md#get_temp_object_hitbox)
+   - [obj_is_attackable](functions-6.md#obj_is_attackable)
+   - [obj_is_breakable_object](functions-6.md#obj_is_breakable_object)
+   - [obj_is_bully](functions-6.md#obj_is_bully)
+   - [obj_is_coin](functions-6.md#obj_is_coin)
+   - [obj_is_exclamation_box](functions-6.md#obj_is_exclamation_box)
+   - [obj_is_grabbable](functions-6.md#obj_is_grabbable)
+   - [obj_is_mushroom_1up](functions-6.md#obj_is_mushroom_1up)
+   - [obj_is_secret](functions-6.md#obj_is_secret)
+   - [obj_is_valid_for_interaction](functions-6.md#obj_is_valid_for_interaction)
+   - [obj_check_hitbox_overlap](functions-6.md#obj_check_hitbox_overlap)
+   - [obj_check_overlap_with_hitbox_params](functions-6.md#obj_check_overlap_with_hitbox_params)
+   - [obj_set_vel](functions-6.md#obj_set_vel)
+   - [obj_move_xyz](functions-6.md#obj_move_xyz)
+   - [set_whirlpools](functions-6.md#set_whirlpools)
+   - [obj_skip_interpolation](functions-6.md#obj_skip_interpolation)
+   - [obj_anim_skip_interpolation](functions-6.md#obj_anim_skip_interpolation)
 
 <br />
 
 - smlua_text_utils.h
-   - [smlua_text_utils_reset_all](functions-7.md#smlua_text_utils_reset_all)
-   - [smlua_text_utils_dialog_get](functions-7.md#smlua_text_utils_dialog_get)
-   - [smlua_text_utils_dialog_replace](functions-7.md#smlua_text_utils_dialog_replace)
-   - [smlua_text_utils_dialog_restore](functions-7.md#smlua_text_utils_dialog_restore)
-   - [smlua_text_utils_dialog_is_replaced](functions-7.md#smlua_text_utils_dialog_is_replaced)
-   - [smlua_text_utils_allocate_dialog](functions-7.md#smlua_text_utils_allocate_dialog)
-   - [smlua_text_utils_dialog_get_type](functions-7.md#smlua_text_utils_dialog_get_type)
-   - [smlua_text_utils_dialog_set_type](functions-7.md#smlua_text_utils_dialog_set_type)
-   - [smlua_text_utils_dialog_reset_type](functions-7.md#smlua_text_utils_dialog_reset_type)
-   - [smlua_text_utils_course_acts_replace](functions-7.md#smlua_text_utils_course_acts_replace)
-   - [smlua_text_utils_secret_star_replace](functions-7.md#smlua_text_utils_secret_star_replace)
-   - [smlua_text_utils_course_name_replace](functions-7.md#smlua_text_utils_course_name_replace)
-   - [smlua_text_utils_course_name_get](functions-7.md#smlua_text_utils_course_name_get)
-   - [smlua_text_utils_course_name_mod_index](functions-7.md#smlua_text_utils_course_name_mod_index)
-   - [smlua_text_utils_course_name_reset](functions-7.md#smlua_text_utils_course_name_reset)
-   - [smlua_text_utils_act_name_replace](functions-7.md#smlua_text_utils_act_name_replace)
-   - [smlua_text_utils_act_name_get](functions-7.md#smlua_text_utils_act_name_get)
-   - [smlua_text_utils_act_name_mod_index](functions-7.md#smlua_text_utils_act_name_mod_index)
-   - [smlua_text_utils_act_name_reset](functions-7.md#smlua_text_utils_act_name_reset)
-   - [smlua_text_utils_castle_secret_stars_replace](functions-7.md#smlua_text_utils_castle_secret_stars_replace)
-   - [smlua_text_utils_castle_secret_stars_get](functions-7.md#smlua_text_utils_castle_secret_stars_get)
-   - [smlua_text_utils_castle_secret_stars_mod_index](functions-7.md#smlua_text_utils_castle_secret_stars_mod_index)
-   - [smlua_text_utils_castle_secret_stars_reset](functions-7.md#smlua_text_utils_castle_secret_stars_reset)
-   - [smlua_text_utils_extra_text_replace](functions-7.md#smlua_text_utils_extra_text_replace)
-   - [smlua_text_utils_extra_text_get](functions-7.md#smlua_text_utils_extra_text_get)
-   - [smlua_text_utils_extra_text_mod_index](functions-7.md#smlua_text_utils_extra_text_mod_index)
-   - [smlua_text_utils_extra_text_reset](functions-7.md#smlua_text_utils_extra_text_reset)
-   - [smlua_text_utils_get_language](functions-7.md#smlua_text_utils_get_language)
+   - [smlua_text_utils_reset_all](functions-6.md#smlua_text_utils_reset_all)
+   - [smlua_text_utils_dialog_get](functions-6.md#smlua_text_utils_dialog_get)
+   - [smlua_text_utils_dialog_replace](functions-6.md#smlua_text_utils_dialog_replace)
+   - [smlua_text_utils_dialog_restore](functions-6.md#smlua_text_utils_dialog_restore)
+   - [smlua_text_utils_dialog_is_replaced](functions-6.md#smlua_text_utils_dialog_is_replaced)
+   - [smlua_text_utils_allocate_dialog](functions-6.md#smlua_text_utils_allocate_dialog)
+   - [smlua_text_utils_dialog_get_type](functions-6.md#smlua_text_utils_dialog_get_type)
+   - [smlua_text_utils_dialog_set_type](functions-6.md#smlua_text_utils_dialog_set_type)
+   - [smlua_text_utils_dialog_reset_type](functions-6.md#smlua_text_utils_dialog_reset_type)
+   - [smlua_text_utils_course_acts_replace](functions-6.md#smlua_text_utils_course_acts_replace)
+   - [smlua_text_utils_secret_star_replace](functions-6.md#smlua_text_utils_secret_star_replace)
+   - [smlua_text_utils_course_name_replace](functions-6.md#smlua_text_utils_course_name_replace)
+   - [smlua_text_utils_course_name_get](functions-6.md#smlua_text_utils_course_name_get)
+   - [smlua_text_utils_course_name_mod_index](functions-6.md#smlua_text_utils_course_name_mod_index)
+   - [smlua_text_utils_course_name_reset](functions-6.md#smlua_text_utils_course_name_reset)
+   - [smlua_text_utils_act_name_replace](functions-6.md#smlua_text_utils_act_name_replace)
+   - [smlua_text_utils_act_name_get](functions-6.md#smlua_text_utils_act_name_get)
+   - [smlua_text_utils_act_name_mod_index](functions-6.md#smlua_text_utils_act_name_mod_index)
+   - [smlua_text_utils_act_name_reset](functions-6.md#smlua_text_utils_act_name_reset)
+   - [smlua_text_utils_castle_secret_stars_replace](functions-6.md#smlua_text_utils_castle_secret_stars_replace)
+   - [smlua_text_utils_castle_secret_stars_get](functions-6.md#smlua_text_utils_castle_secret_stars_get)
+   - [smlua_text_utils_castle_secret_stars_mod_index](functions-6.md#smlua_text_utils_castle_secret_stars_mod_index)
+   - [smlua_text_utils_castle_secret_stars_reset](functions-6.md#smlua_text_utils_castle_secret_stars_reset)
+   - [smlua_text_utils_extra_text_replace](functions-6.md#smlua_text_utils_extra_text_replace)
+   - [smlua_text_utils_extra_text_get](functions-6.md#smlua_text_utils_extra_text_get)
+   - [smlua_text_utils_extra_text_mod_index](functions-6.md#smlua_text_utils_extra_text_mod_index)
+   - [smlua_text_utils_extra_text_reset](functions-6.md#smlua_text_utils_extra_text_reset)
+   - [smlua_text_utils_get_language](functions-6.md#smlua_text_utils_get_language)
 
 <br />
 
 - sound_init.h
-   - [reset_volume](functions-7.md#reset_volume)
-   - [raise_background_noise](functions-7.md#raise_background_noise)
-   - [lower_background_noise](functions-7.md#lower_background_noise)
-   - [disable_background_sound](functions-7.md#disable_background_sound)
-   - [enable_background_sound](functions-7.md#enable_background_sound)
-   - [play_menu_sounds](functions-7.md#play_menu_sounds)
-   - [play_painting_eject_sound](functions-7.md#play_painting_eject_sound)
-   - [play_infinite_stairs_music](functions-7.md#play_infinite_stairs_music)
-   - [set_background_music](functions-7.md#set_background_music)
-   - [fadeout_music](functions-7.md#fadeout_music)
-   - [fadeout_level_music](functions-7.md#fadeout_level_music)
-   - [play_cutscene_music](functions-7.md#play_cutscene_music)
-   - [play_shell_music](functions-7.md#play_shell_music)
-   - [stop_shell_music](functions-7.md#stop_shell_music)
-   - [play_cap_music](functions-7.md#play_cap_music)
-   - [fadeout_cap_music](functions-7.md#fadeout_cap_music)
-   - [stop_cap_music](functions-7.md#stop_cap_music)
+   - [reset_volume](functions-6.md#reset_volume)
+   - [raise_background_noise](functions-6.md#raise_background_noise)
+   - [lower_background_noise](functions-6.md#lower_background_noise)
+   - [disable_background_sound](functions-6.md#disable_background_sound)
+   - [enable_background_sound](functions-6.md#enable_background_sound)
+   - [play_menu_sounds](functions-6.md#play_menu_sounds)
+   - [play_painting_eject_sound](functions-6.md#play_painting_eject_sound)
+   - [play_infinite_stairs_music](functions-6.md#play_infinite_stairs_music)
+   - [set_background_music](functions-6.md#set_background_music)
+   - [fadeout_music](functions-6.md#fadeout_music)
+   - [fadeout_level_music](functions-6.md#fadeout_level_music)
+   - [play_cutscene_music](functions-6.md#play_cutscene_music)
+   - [play_shell_music](functions-6.md#play_shell_music)
+   - [stop_shell_music](functions-6.md#stop_shell_music)
+   - [play_cap_music](functions-6.md#play_cap_music)
+   - [fadeout_cap_music](functions-6.md#fadeout_cap_music)
+   - [stop_cap_music](functions-6.md#stop_cap_music)
 
 <br />
 
 - spawn_sound.h
-   - [cur_obj_play_sound_if_visible](functions-7.md#cur_obj_play_sound_if_visible)
-   - [cur_obj_play_sound_and_rumble_if_visible](functions-7.md#cur_obj_play_sound_and_rumble_if_visible)
-   - [create_sound_spawner](functions-7.md#create_sound_spawner)
+   - [cur_obj_play_sound_if_visible](functions-6.md#cur_obj_play_sound_if_visible)
+   - [cur_obj_play_sound_and_rumble_if_visible](functions-6.md#cur_obj_play_sound_and_rumble_if_visible)
+   - [create_sound_spawner](functions-6.md#create_sound_spawner)
 
 <br />
 
@@ -2296,12 +2296,14 @@
 ## define_custom_obj_fields
 
 ### Description
+
 Defines a custom set of overlapping object fields.
 
 - The `fieldTable` table's keys must start with the letter `o` and the values must be either `"u32"`, `"s32"`, `"f32"` or a table with fields `type` and `global`, for example `{ type = "u32", global = true }`.
 - If, for a field, `global` is `true`, the field will be defined for all mods.
 
 ### Lua Example
+
 ```lua
 define_custom_obj_fields({
     oCustomField1 = 'u32',
@@ -2314,20 +2316,19 @@ define_custom_obj_fields({
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | objFieldTable | `table` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## network_init_object
 
 ### Description
+
 Enables synchronization on an object.
 
 - Setting `standardSync` to `true` will automatically synchronize the object at a rate that is determined based on player distance. The commonly used object fields will be automatically synchronized.
@@ -2335,11 +2336,13 @@ Enables synchronization on an object.
 - The `fieldTable` parameter can be `nil`, or a list of object fields.
 
 ### Lua Example
+
 ```lua
 network_init_object(obj, true, { 'oCustomField1', 'oCustomField2', 'oCustomField3' })
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | object | [Object](./structs.md#Object) |
@@ -2347,77 +2350,77 @@ network_init_object(obj, true, { 'oCustomField1', 'oCustomField2', 'oCustomField
 | fieldTable | `table` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## network_send_object
 
 ### Description
+
 Sends a packet that synchronizes an object. This does not need to be called when `standardSync` is enabled.
 
 - The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
 
 ### Lua Example
+
 ```lua
 network_send_object(obj, false)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | object | [Object](./structs.md#Object) |
 | reliable | `bool` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## network_send
 
 ### Description
+
 Sends a global Lua packet with the values of `dataTable`. Received with the `HOOK_ON_PACKET_RECEIVE` hook.
 
 - `dataTable` can only contain strings, integers, numbers, booleans, and nil.
 - The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
 
 ### Lua Example
+
 ```lua
 network_send(reliable, { data1 = 'hello', data2 = 10 })
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | reliable | `bool` |
 | dataTable | `table` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## network_send_to
 
 ### Description
+
 Sends a Lua packet with the values of `dataTable` to a specific client through local indices. Received with the `HOOK_ON_PACKET_RECEIVE` hook.
 
 - `dataTable` can only contain strings, integers, numbers, booleans, and nil.
 - The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
 
 ### Lua Example
+
 ```lua
 network_send_to(localPlayerIndex, reliable, { data1 = 'hello', data2 = 10 })
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | toLocalIndex | `integer` |
@@ -2425,20 +2428,19 @@ network_send_to(localPlayerIndex, reliable, { data1 = 'hello', data2 = 10 })
 | dataTable | `table` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## network_send_bytestring
 
 ### Description
+
 Sends a global Lua packet with the bytestring of `bytestring`. Received with the `HOOK_ON_PACKET_BYTESTRING_RECEIVE` hook.
 
 - The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
 
 ### Lua Example
+
 ```lua
 local bytestring = ''
     -------------- PACKET ID --------------
@@ -2452,26 +2454,26 @@ network_send_bytestring(reliable, bytestring)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | reliable | `bool` |
 | bytestring | `string` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## network_send_bytestring_to
 
 ### Description
+
 Sends a Lua packet with the bytestring of `bytestring` to a specific client through local indices. Received with the `HOOK_ON_PACKET_BYTESTRING_RECEIVE` hook.
 
 - The `reliable` field will ensure that the packet arrives, but should be used sparingly and only when missing a packet would cause a desync.
 
 ### Lua Example
+
 ```lua
 local bytestring = ''
     -------------- PACKET ID --------------
@@ -2485,6 +2487,7 @@ network_send_bytestring_to(localPlayerIndex, reliable, bytestring)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | toLocalIndex | `integer` |
@@ -2492,85 +2495,83 @@ network_send_bytestring_to(localPlayerIndex, reliable, bytestring)
 | bytestring | `string` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_texture_info
 
 ### Description
+
 Gets the `TextureInfo` of a texture by name.
 - Note: This also works with vanilla textures.
 
 ### Lua Example
+
 ```lua
 local texinfo = get_texture_info(textureName)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | textureName | `string` |
 
 ### Returns
+
 - [TextureInfo](./structs.md#TextureInfo)
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## texture_override_set
 
 ### Description
+
 Overrides a texture with a custom `TextureInfo`.
 - `textureName` must be the codename of a vanilla texture, you can find these in `data/dynos_mgr_builtin_tex.cpp`
 - `overrideTexInfo` can be any `TextureInfo`
 
 ### Lua Example
+
 ```lua
 texture_override_set("outside_09004000", overrideTexInfo)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | textureName | `string` |
 | overrideTexInfo | [TextureInfo](./structs.md#TextureInfo) |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## texture_override_reset
 
 ### Description
+
 Resets an overridden texture.
 
 ### Lua Example
+
 ```lua
 texture_override_reset("outside_09004000")
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | textureName | `string` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## level_parse_script
 
 ### Description
+
 Parses a level script and passes level data to a function.<br>
 When `func` is called, the parameter `levelData` is filled with level data depending on the level command.<br>
 `levelData` is a table of tables and its structure is the following:
@@ -2923,6 +2924,7 @@ When `func` is called, the parameter `levelData` is filled with level data depen
 Not all fields are filled at the same time. Make sure to `nil`-check tables before reading the fields.
 
 ### Lua Example
+
 ```lua
 function table.print(t, indent, step)
     for k, v in pairs(t) do
@@ -2949,29 +2951,30 @@ hook_event(HOOK_ON_LEVEL_INIT, on_level_entry)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | levelNum | [enum LevelNum](./constants.md#enum-LevelNum) \| `integer` |
 | func | `function` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## smlua_anim_util_register_animation
 
 ### Description
+
 Registers an animation that can be used in objects if `smlua_anim_util_set_animation` is called.
 
 ### Lua Example
+
 ```lua
 smlua_anim_util_register_animation("apparition_idle", 0, 189, 0, 0, 0x5A, values, index)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | name | `string` |
@@ -2984,69 +2987,69 @@ smlua_anim_util_register_animation("apparition_idle", 0, 189, 0, 0, 0x5A, values
 | index | `table` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## log_to_console
 
 ### Description
+
 Logs a message to the in-game console.
 
 ### Lua Example
+
 ```lua
 log_to_console("sm64coopdx FTW", CONSOLE_MESSAGE_INFO)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | message | `string` |
 | level | [enum ConsoleMessageLevel](./constants.md#enum-ConsoleMessageLevel) |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## add_scroll_target
 
 ### Description
+
 Registers a vertex buffer to be used for a scrolling texture. Should be used with `RM_Scroll_Texture` or `editor_Scroll_Texture`.
 
 ### Lua Example
+
 ```lua
 add_scroll_target(0, "arena_rainbow_dl_StarRoad_mesh_layer_5_vtx_0")
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | index | `integer` |
 | name | `string` |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## collision_find_surface_on_ray
 
 ### Description
+
 Shoots a raycast from `startX`, `startY`, and `startZ` in the direction of `dirX`, `dirY`, and `dirZ`.
 
 ### Lua Example
+
 ```lua
 local hit = collision_find_surface_on_ray(0, 0, 0, 50, 100, 50, 3.0)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | startX | `number` |
@@ -3058,15 +3061,13 @@ local hit = collision_find_surface_on_ray(0, 0, 0, 50, 100, 50, 3.0)
 | precision | `number` |
 
 ### Returns
+
 - [RayIntersectionInfo](./structs.md#RayIntersectionInfo)
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_exclamation_box_contents
 
 ### Description
+
 Sets the contents that the exclamation box spawns.
 A single content has 5 keys: `id`, `unused`, `firstByte`, `model`, and `behavior`:
 - `id`: Required; what value the box's oBehParams2ndByte needs to be to spawn this object.
@@ -3076,6 +3077,7 @@ A single content has 5 keys: `id`, `unused`, `firstByte`, `model`, and `behavior
 - `behavior`: Required; The behavior ID that the object will spawn with. Uses `BehaviorId`.
 
 ### Lua Example
+
 ```lua
 set_exclamation_box_contents({
    {id = 0, unused = 0, firstByte = 0, model = E_MODEL_GOOMBA, behavior = id_bhvGoomba}, -- Uses both optional fields
@@ -3086,20 +3088,19 @@ set_exclamation_box_contents({
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | contents | `table` of [ExclamationBoxContent](./structs.md#ExclamationBoxContent) |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_exclamation_box_contents
 
 ### Description
+
 Gets the contents that the exclamation box spawns.
 A single content has 5 keys: `id`, `unused`, `firstByte`, `model`, and `behavior`:
 - `id`: Required; what value the box's oBehParams2ndByte needs to be to spawn this object.
@@ -3109,6 +3110,7 @@ A single content has 5 keys: `id`, `unused`, `firstByte`, `model`, and `behavior
 - `behavior`: Required; The behavior ID that the object will spawn with. Uses `BehaviorId`.
 
 ### Lua Example
+
 ```lua
 local contents = get_exclamation_box_contents()
 for index, content in pairs(contents) do -- Enter the main table
@@ -3120,22 +3122,22 @@ end
 ```
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `table` of [ExclamationBoxContent](./structs.md#ExclamationBoxContent)
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## cast_graph_node
 
 ### Description
+
 Returns the specific GraphNode(...) the node is part of.
 Basically the reverse of `.node` or `.fnNode`.
 
 ### Lua Example
+
 ```lua
 local marioGfx = gMarioStates[0].marioObj.header.gfx -- GraphNodeObject
 local node = marioGfx.node -- GraphNode
@@ -3144,42 +3146,41 @@ print(marioGfx == cast_graph_node(node)) -- true
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | node | [GraphNode](./structs.md#GraphNode) \| [FnGraphNode](./structs.md#FnGraphNode) |
 
 ### Returns
+
 - [GraphNode](./structs.md#GraphNode) \| [GraphNodeAnimatedPart](./structs.md#GraphNodeAnimatedPart) \| [GraphNodeBackground](./structs.md#GraphNodeBackground) \| [GraphNodeBillboard](./structs.md#GraphNodeBillboard) \| [GraphNodeCamera](./structs.md#GraphNodeCamera) \| [GraphNodeCullingRadius](./structs.md#GraphNodeCullingRadius) \| [GraphNodeDisplayList](./structs.md#GraphNodeDisplayList) \| [GraphNodeGenerated](./structs.md#GraphNodeGenerated) \| [GraphNodeHeldObject](./structs.md#GraphNodeHeldObject) \| [GraphNodeLevelOfDetail](./structs.md#GraphNodeLevelOfDetail) \| [GraphNodeMasterList](./structs.md#GraphNodeMasterList) \| [GraphNodeObject](./structs.md#GraphNodeObject) \| [GraphNodeObjectParent](./structs.md#GraphNodeObjectParent) \| [GraphNodeOrthoProjection](./structs.md#GraphNodeOrthoProjection) \| [GraphNodePerspective](./structs.md#GraphNodePerspective) \| [GraphNodeRotation](./structs.md#GraphNodeRotation) \| [GraphNodeScale](./structs.md#GraphNodeScale) \| [GraphNodeShadow](./structs.md#GraphNodeShadow) \| [GraphNodeStart](./structs.md#GraphNodeStart) \| [GraphNodeSwitchCase](./structs.md#GraphNodeSwitchCase) \| [GraphNodeTranslation](./structs.md#GraphNodeTranslation) \| [GraphNodeTranslationRotation](./structs.md#GraphNodeTranslationRotation) \| [GraphNodeBone](./structs.md#GraphNodeBone)
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_uncolored_string
 
 ### Description
+
 Removes color codes from a string.
 
 ### Lua Example
+
 ```lua
 print(get_uncolored_string("\\#210059\\Colored \\#FF086F\\String")) -- "Colored String"
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | str | `string` |
 
 ### Returns
+
 - `string`
-
-[:arrow_up_small:](#)
-
-<br />
 
 ## gfx_set_command
 
 ### Description
+
 Sets a display list command on the display list given.
 
 If `command` includes parameter specifiers (subsequences beginning with `%`), the additional arguments following `command` are converted and inserted in `command` replacing their respective specifiers.
@@ -3194,6 +3195,7 @@ The following specifiers are allowed:
 - `%g` for a `Gfx` parameter
 
 ### Lua Example
+
 Plain string:
 ```lua
 gfx_set_command(gfx, "gsDPSetEnvColor(0x00, 0xFF, 0x00, 0xFF)")
@@ -3206,6 +3208,7 @@ gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, %i)", r, g, b, a)
 ```
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | gfx | [Gfx](./structs.md#Gfx) |
@@ -3213,11 +3216,8 @@ gfx_set_command(gfx, "gsDPSetEnvColor(%i, %i, %i, %i)", r, g, b, a)
 | parameters... | `integer` \| `string` \| [Gfx](./structs.md#Gfx) \| [Texture](./structs.md#Texture) \| [Vtx](./structs.md#Vtx) |
 
 ### Returns
+
 - None
-
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from area.h
@@ -3244,9 +3244,6 @@ Derives a `MARIO_SPAWN_*` constant from `o`
 ### C Prototype
 `u32 get_mario_spawn_type(struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## area_get_warp_node
 
@@ -3268,9 +3265,6 @@ Useful for locating a specific warp point in the level, such as teleportation zo
 ### C Prototype
 `struct ObjectWarpNode *area_get_warp_node(u8 id);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## area_get_any_warp_node
 
@@ -3289,9 +3283,6 @@ Gets the first warp node found in the area, otherwise returns nil
 ### C Prototype
 `struct ObjectWarpNode *area_get_any_warp_node(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## area_get_warp_node_from_params
 
@@ -3313,9 +3304,6 @@ Useful for associating an object (like a door or warp pipe) with its correspondi
 ### C Prototype
 `struct ObjectWarpNode *area_get_warp_node_from_params(struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_transition
 
@@ -3340,9 +3328,6 @@ Plays a screen transition
 ### C Prototype
 `void play_transition(s16 transType, s16 time, u8 red, u8 green, u8 blue);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_transition_after_delay
 
@@ -3368,9 +3353,6 @@ Plays a screen transition after a `delay` in frames
 ### C Prototype
 `void play_transition_after_delay(s16 transType, s16 time, u8 red, u8 green, u8 blue, s16 delay);`
 
-[:arrow_up_small:](#)
-
-<br />
 ---
 
 1 | [2](functions-2.md) | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-2.md)]

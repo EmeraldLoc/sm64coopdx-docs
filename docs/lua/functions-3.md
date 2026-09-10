@@ -6,326 +6,6 @@
 
 
 ---
-# functions from behavior_script.h
-
-<br />
-
-
-## random_u16
-
-### Description
-Generates a pseudo random integer between 0 and 65535
-
-### Lua Example
-`local integerValue = random_u16()`
-
-### Parameters
-- None
-
-### Returns
-- `integer`
-
-### C Prototype
-`u16 random_u16(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## random_float
-
-### Description
-Generates a pseudo random float between 0.0 and 1.0
-
-### Lua Example
-`local numberValue = random_float()`
-
-### Parameters
-- None
-
-### Returns
-- `number`
-
-### C Prototype
-`float random_float(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## random_sign
-
-### Description
-Returns either 1 or -1 with a pseudo 50:50 chance
-
-### Lua Example
-`local integerValue = random_sign()`
-
-### Parameters
-- None
-
-### Returns
-- `integer`
-
-### C Prototype
-`s32 random_sign(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## obj_update_gfx_pos_and_angle
-
-### Description
-Updates an object's graphical position and angle
-
-### Lua Example
-`obj_update_gfx_pos_and_angle(obj)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| obj | [Object](structs.md#Object) |
-
-### Returns
-- None
-
-### C Prototype
-`void obj_update_gfx_pos_and_angle(struct Object *obj);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## position_based_random_u16
-
-### Description
-Sets the current object's position to random integers between 0 and 65536
-
-### Lua Example
-`local integerValue = position_based_random_u16()`
-
-### Parameters
-- None
-
-### Returns
-- `integer`
-
-### C Prototype
-`u16 position_based_random_u16(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## position_based_random_float_position
-
-### Description
-Sets the current object's position to random floats between 0.0 and 1.0
-
-### Lua Example
-`local numberValue = position_based_random_float_position()`
-
-### Parameters
-- None
-
-### Returns
-- `number`
-
-### C Prototype
-`f32 position_based_random_float_position(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## draw_distance_scalar_is_infinite
-
-### Description
-Checks if the draw distance scalar is infinite
-
-### Lua Example
-`local booleanValue = draw_distance_scalar_is_infinite()`
-
-### Parameters
-- None
-
-### Returns
-- `boolean`
-
-### C Prototype
-`bool draw_distance_scalar_is_infinite(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## draw_distance_scalar
-
-### Description
-Gets the draw distance scalar
-
-### Lua Example
-`local numberValue = draw_distance_scalar()`
-
-### Parameters
-- None
-
-### Returns
-- `number`
-
-### C Prototype
-`f32 draw_distance_scalar(void);`
-
-[:arrow_up_small:](#)
-
-<br />
-
----
-# functions from behavior_table.h
-
-<br />
-
-
-## get_id_from_behavior
-
-### Description
-Gets the behavior ID of the provided `behavior`
-
-### Lua Example
-`local enumValue = get_id_from_behavior(behavior)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| behavior | `Pointer` <`BehaviorScript`> |
-
-### Returns
-- [enum BehaviorId](constants.md#enum-BehaviorId)
-
-### C Prototype
-`enum BehaviorId get_id_from_behavior(const BehaviorScript* behavior);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## get_id_from_vanilla_behavior
-
-### Description
-Gets the behavior ID of the provided `behavior` if it's a vanilla behavior, `id_bhv_max_count` otherwise
-
-### Lua Example
-`local enumValue = get_id_from_vanilla_behavior(behavior)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| behavior | `Pointer` <`BehaviorScript`> |
-
-### Returns
-- [enum BehaviorId](constants.md#enum-BehaviorId)
-
-### C Prototype
-`enum BehaviorId get_id_from_vanilla_behavior(const BehaviorScript* behavior);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## get_behavior_from_id
-
-### Description
-Gets the behavior script corresponding to the provided `id`
-
-### Lua Example
-`local pointerValue = get_behavior_from_id(id)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| id | [enum BehaviorId](constants.md#enum-BehaviorId) |
-
-### Returns
-- `Pointer` <`BehaviorScript`>
-
-### C Prototype
-`const BehaviorScript* get_behavior_from_id(enum BehaviorId id);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## get_vanilla_behavior_from_id
-
-### Description
-Gets the behavior script corresponding to the provided `id` if it's a vanilla behavior, `nil` otherwise
-
-### Lua Example
-`local pointerValue = get_vanilla_behavior_from_id(id)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| id | [enum BehaviorId](constants.md#enum-BehaviorId) |
-
-### Returns
-- `Pointer` <`BehaviorScript`>
-
-### C Prototype
-`const BehaviorScript* get_vanilla_behavior_from_id(enum BehaviorId id);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## get_behavior_name_from_id
-
-### Description
-Gets the behavior name from the provided `id` (bhvMyGreatMODCustom004)
-
-### Lua Example
-`local stringValue = get_behavior_name_from_id(id)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| id | [enum BehaviorId](constants.md#enum-BehaviorId) |
-
-### Returns
-- `string`
-
-### C Prototype
-`const char* get_behavior_name_from_id(enum BehaviorId id);`
-
-[:arrow_up_small:](#)
-
-<br />
-
-## get_id_from_behavior_name
-
-### Description
-Gets the behavior ID corresponding to the provided `name`
-
-### Lua Example
-`local enumValue = get_id_from_behavior_name(name)`
-
-### Parameters
-| Field | Type |
-| ----- | ---- |
-| name | `string` |
-
-### Returns
-- [enum BehaviorId](constants.md#enum-BehaviorId)
-
-### C Prototype
-`enum BehaviorId get_id_from_behavior_name(const char* name);`
-
-[:arrow_up_small:](#)
-
-<br />
-
----
 # functions from camera.h
 
 <br />
@@ -349,9 +29,6 @@ Useful for immediate changes in camera state or position without smooth transiti
 ### C Prototype
 `void skip_camera_interpolation(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_shake_from_hit
 
@@ -373,9 +50,6 @@ Different shake types simulate various impacts, such as attacks, falls, or shock
 ### C Prototype
 `void set_camera_shake_from_hit(s16 shake);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_environmental_camera_shake
 
@@ -397,9 +71,6 @@ Handles predefined shake types triggered by environmental events like explosions
 ### C Prototype
 `void set_environmental_camera_shake(s16 shake);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_shake_from_point
 
@@ -424,9 +95,6 @@ The intensity decreases with distance from the point
 ### C Prototype
 `void set_camera_shake_from_point(s16 shake, f32 posX, f32 posY, f32 posZ);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## move_mario_head_c_up
 
@@ -448,9 +116,6 @@ This function aligns the camera to match the head movement for consistency
 ### C Prototype
 `void move_mario_head_c_up(UNUSED struct Camera *c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## transition_next_state
 
@@ -473,9 +138,6 @@ This is typically used for cutscenes or scripted sequences
 ### C Prototype
 `void transition_next_state(UNUSED struct Camera *c, s16 frames);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_mode
 
@@ -499,9 +161,6 @@ Useful for transitioning between different camera behaviors dynamically
 ### C Prototype
 `void set_camera_mode(struct Camera *c, s16 mode, s16 frames);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## soft_reset_camera
 
@@ -523,9 +182,6 @@ This is often used when soft-resetting gameplay without reinitialization
 ### C Prototype
 `void soft_reset_camera(struct Camera* c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## reset_camera
 
@@ -547,9 +203,6 @@ This is typically used when restarting gameplay or loading a new area
 ### C Prototype
 `void reset_camera(struct Camera *c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## select_mario_cam_mode
 
@@ -569,9 +222,6 @@ Adapts camera behavior dynamically to match Mario's environment or state
 ### C Prototype
 `void select_mario_cam_mode(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## object_pos_to_vec3f
 
@@ -594,9 +244,6 @@ Useful for aligning object behaviors or interactions with the camera system
 ### C Prototype
 `void object_pos_to_vec3f(VEC_OUT Vec3f dst, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3f_to_object_pos
 
@@ -619,9 +266,6 @@ Useful for syncing 3D positions between objects and the game world
 ### C Prototype
 `void vec3f_to_object_pos(struct Object *o, Vec3f src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## object_face_angle_to_vec3s
 
@@ -643,9 +287,6 @@ Converts an object's face angle to a `Vec3s` format
 ### C Prototype
 `void object_face_angle_to_vec3s(VEC_OUT Vec3s dst, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_to_object_face_angle
 
@@ -667,9 +308,6 @@ Converts a `Vec3s` angle to an object's face angle internal format
 ### C Prototype
 `void vec3s_to_object_face_angle(struct Object *o, Vec3s src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## object_move_angle_to_vec3s
 
@@ -691,9 +329,6 @@ Converts an object's move angle to a `Vec3s` format
 ### C Prototype
 `void object_move_angle_to_vec3s(VEC_OUT Vec3s dst, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## vec3s_to_object_move_angle
 
@@ -715,9 +350,6 @@ Converts a `Vec3s` angle to an object's move angle internal format
 ### C Prototype
 `void vec3s_to_object_move_angle(struct Object *o, Vec3s src);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cam_select_alt_mode
 
@@ -739,9 +371,6 @@ Used to toggle between predefined camera modes dynamically
 ### C Prototype
 `s32 cam_select_alt_mode(s32 angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_cam_angle
 
@@ -763,9 +392,6 @@ Handles rotation and focus adjustments for predefined camera behaviors
 ### C Prototype
 `s32 set_cam_angle(s32 mode);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_handheld_shake
 
@@ -787,9 +413,6 @@ Can be used to simulate dynamic, realistic camera movement
 ### C Prototype
 `void set_handheld_shake(u8 mode);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## shake_camera_handheld
 
@@ -812,9 +435,6 @@ Calculates positional and focus adjustments to simulate manual movement
 ### C Prototype
 `void shake_camera_handheld(Vec3f pos, VEC_OUT Vec3f focus);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## find_c_buttons_pressed
 
@@ -838,9 +458,6 @@ Returns a bitmask indicating the active buttons for camera control
 ### C Prototype
 `s32 find_c_buttons_pressed(u16 currentState, u16 buttonsPressed, u16 buttonsDown);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## collide_with_walls
 
@@ -864,9 +481,6 @@ Adjusts the camera's position to avoid clipping into walls or obstacles
 ### C Prototype
 `s32 collide_with_walls(VEC_OUT Vec3f pos, f32 offsetY, f32 radius);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clamp_pitch
 
@@ -891,9 +505,6 @@ Prevents over-rotation and maintains a consistent viewing angle
 ### C Prototype
 `s32 clamp_pitch(Vec3f from, VEC_OUT Vec3f to, s16 maxPitch, s16 minPitch);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## is_within_100_units_of_mario
 
@@ -917,9 +528,6 @@ Returns true if the position is within the specified radius and false otherwise
 ### C Prototype
 `s32 is_within_100_units_of_mario(f32 posX, f32 posY, f32 posZ);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_or_approach_f32_asymptotic
 
@@ -945,9 +553,6 @@ Returns FALSE if `dst` reaches `goal`
 ### C Prototype
 `s32 set_or_approach_f32_asymptotic(INOUT f32 *dst, f32 goal, f32 scale);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_f32_asymptotic_bool
 
@@ -972,9 +577,6 @@ Returns FALSE if `current` reaches the `target`
 ### C Prototype
 `s32 approach_f32_asymptotic_bool(INOUT f32 *current, f32 target, f32 multiplier);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_f32_asymptotic
 
@@ -999,9 +601,6 @@ Useful for smoothly adjusting camera parameters like field-of-view or position
 ### C Prototype
 `f32 approach_f32_asymptotic(f32 current, f32 target, f32 multiplier);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_s16_asymptotic_bool
 
@@ -1026,9 +625,6 @@ Returns FALSE if `current` reaches `target`
 ### C Prototype
 `s32 approach_s16_asymptotic_bool(INOUT s16 *current, s16 target, s16 divisor);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_s16_asymptotic
 
@@ -1053,9 +649,6 @@ Useful for adjusting angles or positions smoothly
 ### C Prototype
 `s32 approach_s16_asymptotic(s16 current, s16 target, s16 divisor);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_vec3f_asymptotic
 
@@ -1081,9 +674,6 @@ Scaling values (the `Mul` variables) for x, y, and z axes determine the speed of
 ### C Prototype
 `void approach_vec3f_asymptotic(VEC_OUT Vec3f current, Vec3f target, f32 xMul, f32 yMul, f32 zMul);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_or_approach_vec3f_asymptotic
 
@@ -1109,9 +699,6 @@ Allows gradual or instantaneous alignment of 3D positions. Scaling values (the `
 ### C Prototype
 `void set_or_approach_vec3f_asymptotic(VEC_OUT Vec3f dst, Vec3f goal, f32 xMul, f32 yMul, f32 zMul);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## camera_approach_s16_symmetric_bool
 
@@ -1136,9 +723,6 @@ Returns FALSE if `current` reaches the `target`
 ### C Prototype
 `s32 camera_approach_s16_symmetric_bool(INOUT s16 *current, s16 target, s16 increment);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_or_approach_s16_symmetric
 
@@ -1164,9 +748,6 @@ Returns FALSE if `current` reaches the `target`
 ### C Prototype
 `s32 set_or_approach_s16_symmetric(INOUT s16 *current, s16 target, s16 increment);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## camera_approach_f32_symmetric_bool
 
@@ -1191,9 +772,6 @@ Returns FALSE if `current` reaches the `target`
 ### C Prototype
 `s32 camera_approach_f32_symmetric_bool(INOUT f32 *current, f32 target, f32 increment);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## camera_approach_f32_symmetric
 
@@ -1217,9 +795,6 @@ Limits the rate of change to ensure gradual transitions
 ### C Prototype
 `f32 camera_approach_f32_symmetric(f32 value, f32 target, f32 increment);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## random_vec3s
 
@@ -1244,9 +819,6 @@ Useful for randomized offsets or environmental effects
 ### C Prototype
 `void random_vec3s(VEC_OUT Vec3s dst, s16 xRange, s16 yRange, s16 zRange);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clamp_positions_and_find_yaw
 
@@ -1273,9 +845,6 @@ Prevents the camera from moving outside of the designated area
 ### C Prototype
 `s32 clamp_positions_and_find_yaw(VEC_OUT Vec3f pos, Vec3f origin, f32 xMax, f32 xMin, f32 zMax, f32 zMin);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## is_range_behind_surface
 
@@ -1301,9 +870,6 @@ Returns true if the range is behind the specified surface
 ### C Prototype
 `s32 is_range_behind_surface(Vec3f from, Vec3f to, struct Surface *surf, s16 range, s16 surfType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## scale_along_line
 
@@ -1329,9 +895,6 @@ The result is stored in the destination vector (`dest`)
 ### C Prototype
 `void scale_along_line(VEC_OUT Vec3f dest, Vec3f from, Vec3f to, f32 scale);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## calculate_pitch
 
@@ -1354,9 +917,6 @@ Returns the pitch as a signed 16-bit integer
 ### C Prototype
 `s16 calculate_pitch(Vec3f from, Vec3f to);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## calculate_yaw
 
@@ -1379,9 +939,6 @@ Returns the yaw as a signed 16-bit integer
 ### C Prototype
 `s16 calculate_yaw(Vec3f from, Vec3f to);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## calculate_angles
 
@@ -1404,9 +961,6 @@ Calculates and returns the pitch and yaw angles from one 3D position (`from`) to
 ### C Prototype
 `void calculate_angles(Vec3f from, Vec3f to, RET s16 *pitch, RET s16 *yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## calc_abs_dist
 
@@ -1430,9 +984,6 @@ Useful for determining proximity between objects in 3D space
 ### C Prototype
 `f32 calc_abs_dist(Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## calc_hor_dist
 
@@ -1456,9 +1007,6 @@ Useful for terrain navigation or collision detection
 ### C Prototype
 `f32 calc_hor_dist(Vec3f a, Vec3f b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## rotate_in_xz
 
@@ -1483,9 +1031,6 @@ Useful for rotating camera positions or object coordinates horizontally
 ### C Prototype
 `void rotate_in_xz(VEC_OUT Vec3f dst, Vec3f src, s16 yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## rotate_in_yz
 
@@ -1510,9 +1055,6 @@ Useful for vertical camera rotations or object transformations
 ### C Prototype
 `void rotate_in_yz(VEC_OUT Vec3f dst, Vec3f src, s16 pitch);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_pitch_shake
 
@@ -1537,9 +1079,6 @@ Simulates vertical disturbances like impacts or explosions
 ### C Prototype
 `void set_camera_pitch_shake(s16 mag, s16 decay, s16 inc);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_yaw_shake
 
@@ -1563,9 +1102,6 @@ Simulates horizontal vibrations or rotational impacts
 ### C Prototype
 `void set_camera_yaw_shake(s16 mag, s16 decay, s16 inc);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_roll_shake
 
@@ -1589,9 +1125,6 @@ Simulates rotational disturbances for dynamic camera effects
 ### C Prototype
 `void set_camera_roll_shake(s16 mag, s16 decay, s16 inc);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_pitch_shake_from_point
 
@@ -1619,9 +1152,6 @@ Simulates vibrations with intensity decreasing further from the point
 ### C Prototype
 `void set_pitch_shake_from_point(s16 mag, s16 decay, s16 inc, f32 maxDist, f32 posX, f32 posY, f32 posZ);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## shake_camera_pitch
 
@@ -1644,9 +1174,6 @@ Adds vertical vibrational movement to the camera's behavior
 ### C Prototype
 `void shake_camera_pitch(Vec3f pos, VEC_OUT Vec3f focus);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## shake_camera_yaw
 
@@ -1669,9 +1196,6 @@ Adds horizontal vibrational movement to the camera's behavior
 ### C Prototype
 `void shake_camera_yaw(Vec3f pos, VEC_OUT Vec3f focus);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## shake_camera_roll
 
@@ -1693,9 +1217,6 @@ Simulates rotational disturbances caused by impacts or other events
 ### C Prototype
 `void shake_camera_roll(INOUT s16 *roll);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## offset_yaw_outward_radial
 
@@ -1718,9 +1239,6 @@ Returns the offset yaw, used for positioning or alignment
 ### C Prototype
 `s32 offset_yaw_outward_radial(struct Camera *c, s16 areaYaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_camera_buzz_if_cdown
 
@@ -1740,9 +1258,6 @@ Provides feedback for invalid C-Down input actions
 ### C Prototype
 `void play_camera_buzz_if_cdown(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_camera_buzz_if_cbutton
 
@@ -1762,9 +1277,6 @@ Used to signal invalid input or restricted camera movement
 ### C Prototype
 `void play_camera_buzz_if_cbutton(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_camera_buzz_if_c_sideways
 
@@ -1784,9 +1296,6 @@ Used as audio feedback for incorrect camera behavior
 ### C Prototype
 `void play_camera_buzz_if_c_sideways(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_cbutton_up
 
@@ -1806,9 +1315,6 @@ Provides feedback for vertical camera adjustments
 ### C Prototype
 `void play_sound_cbutton_up(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_cbutton_down
 
@@ -1828,9 +1334,6 @@ Provides auditory feedback for valid camera input
 ### C Prototype
 `void play_sound_cbutton_down(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_cbutton_side
 
@@ -1850,9 +1353,6 @@ Used as audio feedback for horizontal adjustments to the camera
 ### C Prototype
 `void play_sound_cbutton_side(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_button_change_blocked
 
@@ -1872,9 +1372,6 @@ This provides feedback for invalid attempts to switch the camera state
 ### C Prototype
 `void play_sound_button_change_blocked(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_rbutton_changed
 
@@ -1894,9 +1391,6 @@ Provides feedback for toggling camera behaviors
 ### C Prototype
 `void play_sound_rbutton_changed(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_if_cam_switched_to_lakitu_or_mario
 
@@ -1916,9 +1410,6 @@ Signals a successful change in camera mode
 ### C Prototype
 `void play_sound_if_cam_switched_to_lakitu_or_mario(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## radial_camera_input
 
@@ -1941,9 +1432,6 @@ Updates the camera's position or orientation accordingly
 ### C Prototype
 `s32 radial_camera_input(struct Camera *c, UNUSED f32 unused);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## trigger_cutscene_dialog
 
@@ -1965,9 +1453,6 @@ The dialog is synchronized with the camera's position and movement
 ### C Prototype
 `s32 trigger_cutscene_dialog(s32 trigger);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## handle_c_button_movement
 
@@ -1989,9 +1474,6 @@ Updates the camera's position or angle to match directional player input
 ### C Prototype
 `void handle_c_button_movement(struct Camera *c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## start_cutscene
 
@@ -2014,9 +1496,6 @@ The camera transitions to predefined behaviors for the duration of the cutscene
 ### C Prototype
 `void start_cutscene(struct Camera *c, u8 cutscene);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_cutscene_from_mario_status
 
@@ -2038,9 +1517,6 @@ This function helps determine transitions for cinematic or scripted sequences
 ### C Prototype
 `u8 get_cutscene_from_mario_status(struct Camera *c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## warp_camera
 
@@ -2064,9 +1540,6 @@ This function handles transitions between levels or areas seamlessly
 ### C Prototype
 `void warp_camera(f32 displacementX, f32 displacementY, f32 displacementZ);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## approach_camera_height
 
@@ -2090,9 +1563,6 @@ This is really wonky and probably shouldn't be used, prefer `gLakituStates`
 ### C Prototype
 `void approach_camera_height(struct Camera *c, f32 goal, f32 inc);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## offset_rotated
 
@@ -2117,9 +1587,6 @@ This is useful for creating radial effects or dynamic transformations
 ### C Prototype
 `void offset_rotated(VEC_OUT Vec3f dst, Vec3f from, Vec3f to, Vec3s rotation);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## next_lakitu_state
 
@@ -2147,9 +1614,6 @@ This function handles smooth transitions between different gameplay scenarios
 ### C Prototype
 `s16 next_lakitu_state(VEC_OUT Vec3f newPos, VEC_OUT Vec3f newFoc, Vec3f curPos, Vec3f curFoc, Vec3f oldPos, Vec3f oldFoc, s16 yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_fixed_cam_axis_sa_lobby
 
@@ -2170,9 +1634,6 @@ Set the fixed camera base pos depending on the current level area
 ### C Prototype
 `void set_fixed_cam_axis_sa_lobby(UNUSED s16 preset);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## camera_course_processing
 
@@ -2194,9 +1655,6 @@ Adjusts the camera to match the design and gameplay requirements of the current 
 ### C Prototype
 `s16 camera_course_processing(struct Camera *c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## resolve_geometry_collisions
 
@@ -2219,9 +1677,6 @@ Adjusts the camera's position to prevent clipping or intersecting with objects
 ### C Prototype
 `void resolve_geometry_collisions(VEC_OUT Vec3f pos, UNUSED Vec3f lastGood);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## rotate_camera_around_walls
 
@@ -2247,9 +1702,6 @@ Ensures clear visibility of the player or target objects
 ### C Prototype
 `s32 rotate_camera_around_walls(struct Camera *c, Vec3f cPos, INOUT s16 *avoidYaw, s16 yawRange);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## start_object_cutscene_without_focus
 
@@ -2271,9 +1723,6 @@ This is useful for dynamic events where the camera adjusts freely
 ### C Prototype
 `u8 start_object_cutscene_without_focus(u8 cutscene);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_object_with_dialog
 
@@ -2297,9 +1746,6 @@ The camera focuses on the object while synchronizing dialog with the scene
 ### C Prototype
 `s16 cutscene_object_with_dialog(u8 cutscene, struct Object *o, s32 dialogID);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_object_without_dialog
 
@@ -2322,9 +1768,6 @@ The camera transitions smoothly to focus on the object
 ### C Prototype
 `s16 cutscene_object_without_dialog(u8 cutscene, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_object
 
@@ -2347,9 +1790,6 @@ The camera transitions smoothly to the object, adapting its position as needed
 ### C Prototype
 `s16 cutscene_object(u8 cutscene, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_cutscene
 
@@ -2371,9 +1811,6 @@ The camera transitions dynamically to follow the scripted sequence
 ### C Prototype
 `void play_cutscene(struct Camera *c);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_spawn_obj
 
@@ -2396,9 +1833,6 @@ Returns the spawned object's reference for further manipulation
 ### C Prototype
 `s32 cutscene_spawn_obj(u32 obj, s16 frame);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_fov_shake
 
@@ -2422,9 +1856,6 @@ Shake parameters, such as amplitude and decay, control the intensity
 ### C Prototype
 `void set_fov_shake(s16 amplitude, s16 decay, s16 shakeSpeed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_fov_function
 
@@ -2446,9 +1877,6 @@ This allows precise control over the camera's zoom behavior during gameplay
 ### C Prototype
 `void set_fov_function(u8 func);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cutscene_set_fov_shake_preset
 
@@ -2470,9 +1898,6 @@ This creates dynamic visual effects, such as zoom or focus disruptions
 ### C Prototype
 `void cutscene_set_fov_shake_preset(u8 preset);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_fov_shake_from_point_preset
 
@@ -2497,9 +1922,6 @@ The intensity diminishes as the distance from the point increases
 ### C Prototype
 `void set_fov_shake_from_point_preset(u8 preset, f32 posX, f32 posY, f32 posZ);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## obj_rotate_towards_point
 
@@ -2526,9 +1948,6 @@ Gradually updates the object's pitch and yaw angles to face the target
 ### C Prototype
 `void obj_rotate_towards_point(struct Object *o, Vec3f point, s16 pitchOff, s16 yawOff, s16 pitchDiv, s16 yawDiv);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_camera_mode_fixed
 
@@ -2553,9 +1972,6 @@ This is useful for predefined static views in specific areas
 ### C Prototype
 `s32 set_camera_mode_fixed(struct Camera* c, s16 x, s16 y, s16 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## snap_to_45_degrees
 
@@ -2577,9 +1993,6 @@ Useful when needing to align angles (camera, yaw, etc.)
 ### C Prototype
 `s32 snap_to_45_degrees(s16 angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## camera_set_use_course_specific_settings
 
@@ -2601,9 +2014,6 @@ This is useful for enabling or disabling custom behaviors in specific courses or
 ### C Prototype
 `void camera_set_use_course_specific_settings(u8 enable);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## center_rom_hack_camera
 
@@ -2623,9 +2033,6 @@ This function is designed for non-standard level layouts and modded game environ
 ### C Prototype
 `void center_rom_hack_camera(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from characters.h
@@ -2652,9 +2059,6 @@ Gets a Character struct from `m`
 ### C Prototype
 `struct Character* get_character(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_character_sound
 
@@ -2677,9 +2081,6 @@ Useful for triggering sound effects for actions like jumping or interacting with
 ### C Prototype
 `void play_character_sound(struct MarioState* m, enum CharacterSound characterSound);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_character_sound_offset
 
@@ -2703,9 +2104,6 @@ Useful for adding dynamic sound effects or syncing sounds to specific animations
 ### C Prototype
 `void play_character_sound_offset(struct MarioState* m, enum CharacterSound characterSound, u32 offset);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_character_sound_if_no_flag
 
@@ -2729,9 +2127,6 @@ Useful for avoiding duplicate sound effects in rapid succession or conditional a
 ### C Prototype
 `void play_character_sound_if_no_flag(struct MarioState* m, enum CharacterSound characterSound, u32 flags);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_character_anim_offset
 
@@ -2753,9 +2148,6 @@ Useful for smoothly syncing Mario's model height or positional adjustments durin
 ### C Prototype
 `f32 get_character_anim_offset(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_character_anim
 
@@ -2778,9 +2170,6 @@ Useful for determining which animation to play for actions like walking, jumping
 ### C Prototype
 `s32 get_character_anim(struct MarioState* m, enum CharacterAnimID characterAnim);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_character_anim_offset
 
@@ -2802,9 +2191,6 @@ Useful for keeping Mario's animations visually aligned, particularly when transi
 ### C Prototype
 `void update_character_anim_offset(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from commands.h
@@ -2836,9 +2222,6 @@ If ran independently of any hook, it decides on where to output by checking if t
 ### C Prototype
 `void command_message_create(const char *message, OPTIONAL enum ConsoleMessageLevel level);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_chat_message.h
@@ -2865,9 +2248,6 @@ Creates a `message` in the game's chat box
 ### C Prototype
 `void djui_chat_message_create(const char* message);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_console.h
@@ -2892,9 +2272,6 @@ Toggles the visibility of the DJUI console
 ### C Prototype
 `void djui_console_toggle(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_console_is_open
 
@@ -2913,9 +2290,6 @@ Returns whether the DJUI console is currently open or not
 ### C Prototype
 `bool djui_console_is_open(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_gfx.h
@@ -2940,9 +2314,6 @@ Gets the current visual scaling factor of DJUI
 ### C Prototype
 `f32 djui_gfx_get_scale(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_hud_utils.h
@@ -2967,9 +2338,6 @@ Gets the current DJUI HUD resolution
 ### C Prototype
 `u8 djui_hud_get_resolution(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_resolution
 
@@ -2990,9 +2358,6 @@ Sets the current DJUI HUD resolution
 ### C Prototype
 `void djui_hud_set_resolution(enum HudUtilsResolution resolutionType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_filter
 
@@ -3011,9 +2376,6 @@ Gets the current DJUI HUD texture filter
 ### C Prototype
 `u8 djui_hud_get_filter(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_filter
 
@@ -3034,9 +2396,6 @@ Sets the current DJUI HUD texture filter
 ### C Prototype
 `void djui_hud_set_filter(enum HudUtilsFilter filterType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_font
 
@@ -3055,9 +2414,6 @@ Gets the current DJUI HUD font
 ### C Prototype
 `s8 djui_hud_get_font(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_font
 
@@ -3078,9 +2434,6 @@ Sets the current DJUI HUD font
 ### C Prototype
 `void djui_hud_set_font(s8 fontType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_color
 
@@ -3099,9 +2452,6 @@ Gets the current DJUI HUD global color
 ### C Prototype
 `struct DjuiColor* djui_hud_get_color(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_color
 
@@ -3125,9 +2475,6 @@ Sets the current DJUI HUD global color
 ### C Prototype
 `void djui_hud_set_color(u8 r, u8 g, u8 b, u8 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_reset_color
 
@@ -3146,9 +2493,6 @@ Resets the current DJUI HUD global color
 ### C Prototype
 `void djui_hud_reset_color(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_text_color
 
@@ -3167,9 +2511,6 @@ Gets the current DJUI HUD text default color. This color is overridden by color 
 ### C Prototype
 `struct DjuiColor* djui_hud_get_text_color(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_text_color
 
@@ -3193,9 +2534,6 @@ Sets the current DJUI HUD text default color. This color is overridden by color 
 ### C Prototype
 `void djui_hud_set_text_color(u8 r, u8 g, u8 b, u8 a);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_reset_text_color
 
@@ -3214,9 +2552,6 @@ Resets the current DJUI HUD text default color. This color is overridden by colo
 ### C Prototype
 `void djui_hud_reset_text_color(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_rotation
 
@@ -3237,9 +2572,6 @@ Gets the current DJUI HUD rotation
 ### C Prototype
 `void djui_hud_get_rotation(RET s16 *rotation, RET f32 *pivotX, RET f32 *pivotY);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_rotation
 
@@ -3262,9 +2594,6 @@ Sets the current DJUI HUD rotation
 ### C Prototype
 `void djui_hud_set_rotation(s16 rotation, f32 pivotX, f32 pivotY);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_rotation_interpolated
 
@@ -3290,9 +2619,6 @@ Sets the current DJUI HUD rotation interpolated
 ### C Prototype
 `void djui_hud_set_rotation_interpolated(s16 prevRotation, f32 prevPivotX, f32 prevPivotY, s16 rotation, f32 pivotX, f32 pivotY);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_text_alignment
 
@@ -3312,9 +2638,6 @@ Gets the current DJUI HUD text alignment
 ### C Prototype
 `void djui_hud_get_text_alignment(RET f32 *textHAlign, RET f32 *textVAlign);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_text_alignment
 
@@ -3336,9 +2659,6 @@ Sets the current DJUI HUD text alignment
 ### C Prototype
 `void djui_hud_set_text_alignment(f32 textHAlign, f32 textVAlign);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_text_alignment_interpolated
 
@@ -3362,9 +2682,6 @@ Sets the current DJUI HUD text alignment interpolated
 ### C Prototype
 `void djui_hud_set_text_alignment_interpolated(f32 prevTextHAlign, f32 prevTextVAlign, f32 textHAlign, f32 textVAlign);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_screen_width
 
@@ -3383,9 +2700,6 @@ Gets the screen width in the current DJUI HUD resolution
 ### C Prototype
 `u32 djui_hud_get_screen_width(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_screen_height
 
@@ -3404,9 +2718,6 @@ Gets the screen height in the current DJUI HUD resolution
 ### C Prototype
 `u32 djui_hud_get_screen_height(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_x
 
@@ -3425,9 +2736,6 @@ Returns the x coordinate of the mouse relative to the window
 ### C Prototype
 `f32 djui_hud_get_mouse_x(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_y
 
@@ -3446,9 +2754,6 @@ Returns the y coordinate of the mouse relative to the window
 ### C Prototype
 `f32 djui_hud_get_mouse_y(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_raw_mouse_x
 
@@ -3467,9 +2772,6 @@ Returns the x coordinate of the mouse relative to the screen
 ### C Prototype
 `f32 djui_hud_get_raw_mouse_x(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_raw_mouse_y
 
@@ -3488,9 +2790,6 @@ Returns the y coordinate of the mouse relative to the screen
 ### C Prototype
 `f32 djui_hud_get_raw_mouse_y(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_is_mouse_locked
 
@@ -3509,9 +2808,6 @@ Checks if the cursor is locked to the window
 ### C Prototype
 `bool djui_hud_is_mouse_locked(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_mouse_locked
 
@@ -3532,9 +2828,6 @@ Locks (or unlocks) the cursor to the window
 ### C Prototype
 `void djui_hud_set_mouse_locked(bool locked);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_buttons_down
 
@@ -3553,9 +2846,6 @@ Returns the flags of the mouse buttons held down
 ### C Prototype
 `u8 djui_hud_get_mouse_buttons_down(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_buttons_pressed
 
@@ -3574,9 +2864,6 @@ Returns the flags of the mouse buttons clicked
 ### C Prototype
 `u8 djui_hud_get_mouse_buttons_pressed(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_buttons_released
 
@@ -3595,9 +2882,6 @@ Returns the flags of the mouse buttons released
 ### C Prototype
 `u8 djui_hud_get_mouse_buttons_released(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_scroll_x
 
@@ -3616,9 +2900,6 @@ Returns the amount scrolled horizontally (-left/right+)
 ### C Prototype
 `f32 djui_hud_get_mouse_scroll_x(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_mouse_scroll_y
 
@@ -3637,9 +2918,6 @@ Returns the amount scrolled vertically (-down/up+)
 ### C Prototype
 `f32 djui_hud_get_mouse_scroll_y(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_viewport
 
@@ -3663,9 +2941,6 @@ Sets the viewport to the specified corners (upper left, lower right), this will 
 ### C Prototype
 `void djui_hud_set_viewport(f32 ulx, f32 uly, f32 lrx, f32 lry);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_viewport_interpolated
 
@@ -3693,9 +2968,6 @@ Interpolates the viewport to the specified corners (upper left, lower right), th
 ### C Prototype
 `void djui_hud_set_viewport_interpolated(f32 pulx, f32 puly, f32 plrx, f32 plry, f32 ulx, f32 uly, f32 lrx, f32 lry);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_reset_viewport
 
@@ -3714,9 +2986,6 @@ Resets the viewport to a fullscreen state
 ### C Prototype
 `void djui_hud_reset_viewport(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_scissor
 
@@ -3740,9 +3009,6 @@ Sets the scissor rectangle to the specified corners (upper left, lower right), t
 ### C Prototype
 `void djui_hud_set_scissor(f32 ulx, f32 uly, f32 lrx, f32 lry);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_set_scissor_interpolated
 
@@ -3770,9 +3036,6 @@ Interpolates the scissor rectangle to the specified corners (upper left, lower r
 ### C Prototype
 `void djui_hud_set_scissor_interpolated(f32 pulx, f32 puly, f32 plrx, f32 plry, f32 ulx, f32 uly, f32 lrx, f32 lry);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_reset_scissor
 
@@ -3791,9 +3054,6 @@ Resets the scissor rectangle to a fullscreen state
 ### C Prototype
 `void djui_hud_reset_scissor(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_measure_text
 
@@ -3815,9 +3075,6 @@ Measures the width and height of `message` in the current font
 ### C Prototype
 `void djui_hud_measure_text(const char* message, RET f32 *width, RET f32 *height);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_print_text
 
@@ -3842,7 +3099,9 @@ Prints DJUI HUD text onto the screen
 ### C Prototype
 `void djui_hud_print_text(const char* message, f32 x, f32 y, f32 scaleX, f32 scaleY);`
 
----
+
+## djui_hud_print_text
+
 ### Description
 Prints DJUI HUD text onto the screen
 
@@ -3863,9 +3122,6 @@ Prints DJUI HUD text onto the screen
 ### C Prototype
 `void djui_hud_print_text_uniform(const char* message, f32 x, f32 y, f32 scale);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_print_text_interpolated
 
@@ -3894,7 +3150,9 @@ Prints interpolated DJUI HUD text onto the screen
 ### C Prototype
 `void djui_hud_print_text_interpolated(const char* message, f32 prevX, f32 prevY, f32 prevScaleX, f32 prevScaleY, f32 x, f32 y, f32 scaleX, f32 scaleY);`
 
----
+
+## djui_hud_print_text_interpolated
+
 ### Description
 Prints interpolated DJUI HUD text onto the screen
 
@@ -3918,9 +3176,6 @@ Prints interpolated DJUI HUD text onto the screen
 ### C Prototype
 `void djui_hud_print_text_interpolated_uniform(const char* message, f32 prevX, f32 prevY, f32 prevScale, f32 x, f32 y, f32 scale);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_texture
 
@@ -3945,9 +3200,6 @@ Renders a DJUI HUD texture onto the screen
 ### C Prototype
 `void djui_hud_render_texture(struct TextureInfo* texInfo, f32 x, f32 y, f32 scaleW, f32 scaleH);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_texture_tile
 
@@ -3976,9 +3228,6 @@ Renders a DJUI HUD texture tile onto the screen
 ### C Prototype
 `void djui_hud_render_texture_tile(struct TextureInfo* texInfo, f32 x, f32 y, f32 scaleW, f32 scaleH, u32 tileX, u32 tileY, u32 tileW, u32 tileH);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_texture_interpolated
 
@@ -4007,9 +3256,6 @@ Renders an interpolated DJUI HUD texture onto the screen
 ### C Prototype
 `void djui_hud_render_texture_interpolated(struct TextureInfo* texInfo, f32 prevX, f32 prevY, f32 prevScaleW, f32 prevScaleH, f32 x, f32 y, f32 scaleW, f32 scaleH);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_texture_tile_interpolated
 
@@ -4042,9 +3288,6 @@ Renders an interpolated DJUI HUD texture tile onto the screen
 ### C Prototype
 `void djui_hud_render_texture_tile_interpolated(struct TextureInfo* texInfo, f32 prevX, f32 prevY, f32 prevScaleW, f32 prevScaleH, f32 x, f32 y, f32 scaleW, f32 scaleH, u32 tileX, u32 tileY, u32 tileW, u32 tileH);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_rect
 
@@ -4068,9 +3311,6 @@ Renders a DJUI HUD rect onto the screen
 ### C Prototype
 `void djui_hud_render_rect(f32 x, f32 y, f32 width, f32 height);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_rect_interpolated
 
@@ -4098,9 +3338,6 @@ Renders an interpolated DJUI HUD rect onto the screen
 ### C Prototype
 `void djui_hud_render_rect_interpolated(f32 prevX, f32 prevY, f32 prevWidth, f32 prevHeight, f32 x, f32 y, f32 width, f32 height);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_render_line
 
@@ -4125,9 +3362,6 @@ Renders an DJUI HUD line onto the screen
 ### C Prototype
 `void djui_hud_render_line(f32 p1X, f32 p1Y, f32 p2X, f32 p2Y, f32 size);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_current_fov
 
@@ -4146,9 +3380,6 @@ Gets the current camera FOV
 ### C Prototype
 `f32 get_current_fov();`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_get_fov_coeff
 
@@ -4167,9 +3398,6 @@ Gets the camera FOV coefficient
 ### C Prototype
 `f32 djui_hud_get_fov_coeff();`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_world_pos_to_screen_pos
 
@@ -4191,9 +3419,6 @@ Converts a world position to screen position
 ### C Prototype
 `bool djui_hud_world_pos_to_screen_pos(Vec3f pos, VEC_OUT Vec3f out);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_hud_is_pause_menu_created
 
@@ -4212,9 +3437,6 @@ Checks if the DJUI pause menu is created
 ### C Prototype
 `bool djui_hud_is_pause_menu_created(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## djui_open_pause_menu
 
@@ -4233,9 +3455,6 @@ Opens the DJUI pause menu
 ### C Prototype
 `void djui_open_pause_menu(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_language.h
@@ -4263,9 +3482,6 @@ Gets a language `key` from a `section`
 ### C Prototype
 `char* djui_language_get(const char *section, const char *key);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_panel_menu.h
@@ -4292,9 +3508,6 @@ Gets the header hex color code from a `DJUI_RAINBOW_COLOR_*` constant
 ### C Prototype
 `char* djui_menu_get_rainbow_string_color(enum DjuiRainbowColor color);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from djui_popup.h
@@ -4322,9 +3535,6 @@ Creates a popup that says `message` and has `lines`
 ### C Prototype
 `void djui_popup_create(const char* message, int lines);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from external.h
@@ -4352,9 +3562,6 @@ Plays a sound (`soundBits`) at `pos` (usually `gGlobalSoundSource` or `m.header.
 ### C Prototype
 `void play_sound(s32 soundBits, f32 *pos);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_sound_with_freq_scale
 
@@ -4377,9 +3584,6 @@ Plays a sound (`soundBits`) with `freqScale` at `pos` (usually `gGlobalSoundSour
 ### C Prototype
 `void play_sound_with_freq_scale(s32 soundBits, f32* pos, f32 freqScale);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## seq_player_fade_out
 
@@ -4401,9 +3605,6 @@ Fades out `player` with `fadeDuration`
 ### C Prototype
 `void seq_player_fade_out(u8 player, u16 fadeDuration);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## fade_volume_scale
 
@@ -4426,9 +3627,6 @@ Fades the volume of `player` to `targetScale` (0-127) over `fadeDuration`
 ### C Prototype
 `void fade_volume_scale(u8 player, u8 targetScale, u16 fadeDuration);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## seq_player_lower_volume
 
@@ -4451,9 +3649,6 @@ Fades the volume of `player` to `percentage` over `fadeDuration`
 ### C Prototype
 `void seq_player_lower_volume(u8 player, u16 fadeDuration, u8 percentage);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## seq_player_unlower_volume
 
@@ -4475,9 +3670,6 @@ Unfades the volume of `player` over `fadeDuration`
 ### C Prototype
 `void seq_player_unlower_volume(u8 player, u16 fadeDuration);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_audio_muted
 
@@ -4498,9 +3690,6 @@ Sets the muted status of all sequence players
 ### C Prototype
 `void set_audio_muted(u8 muted);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stop_sound
 
@@ -4522,9 +3711,6 @@ Stops a sound (`soundBits`) at `pos` (usually `gGlobalSoundSource` or `m.header.
 ### C Prototype
 `void stop_sound(u32 soundBits, f32 *pos);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stop_sounds_from_source
 
@@ -4545,9 +3731,6 @@ Stops sounds from `pos` (usually `gGlobalSoundSource` or `m.header.gfx.cameraToO
 ### C Prototype
 `void stop_sounds_from_source(f32 *pos);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stop_sounds_in_continuous_banks
 
@@ -4566,9 +3749,6 @@ Stops sounds in sound banks moving, env, and air
 ### C Prototype
 `void stop_sounds_in_continuous_banks(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sound_banks_disable
 
@@ -4590,9 +3770,6 @@ Enables `bankMask` soundbanks in `player`
 ### C Prototype
 `void sound_banks_disable(u8 player, u16 bankMask);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sound_banks_enable
 
@@ -4614,9 +3791,6 @@ Disables `bankMask` soundbanks in `player`
 ### C Prototype
 `void sound_banks_enable(u8 player, u16 bankMask);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_sound_moving_speed
 
@@ -4638,9 +3812,6 @@ Sets the `speed` of moving `bank`
 ### C Prototype
 `void set_sound_moving_speed(u8 bank, u8 speed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_dialog_sound
 
@@ -4661,9 +3832,6 @@ Plays a dialog sound corresponding to `dialogID`
 ### C Prototype
 `void play_dialog_sound(s32 dialogID);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_music
 
@@ -4686,9 +3854,6 @@ Plays fading in music (`seqArgs`) on `player` over `fadeTimer`
 ### C Prototype
 `void play_music(u8 player, u16 seqArgs, u16 fadeTimer);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stop_background_music
 
@@ -4709,9 +3874,6 @@ Stops background music `seqId`
 ### C Prototype
 `void stop_background_music(u16 seqId);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## fadeout_background_music
 
@@ -4733,9 +3895,6 @@ Fades out background music `seqId` over `fadeOut`
 ### C Prototype
 `void fadeout_background_music(u16 seqId, u16 fadeOut);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## drop_queued_background_music
 
@@ -4754,9 +3913,6 @@ Drops any queued background music
 ### C Prototype
 `void drop_queued_background_music(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_current_background_music
 
@@ -4775,9 +3931,6 @@ Gets the current background music
 ### C Prototype
 `u16 get_current_background_music(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_current_background_music_default_volume
 
@@ -4796,9 +3949,6 @@ Gets the current background music's default volume
 ### C Prototype
 `u8 get_current_background_music_default_volume(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_current_background_music_target_volume
 
@@ -4817,9 +3967,6 @@ Gets the current target volume
 ### C Prototype
 `u8 get_current_background_music_target_volume(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_current_background_music_max_target_volume
 
@@ -4838,9 +3985,6 @@ Gets the current max target volume
 ### C Prototype
 `u8 get_current_background_music_max_target_volume(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## is_current_background_music_volume_lowered
 
@@ -4859,9 +4003,6 @@ Checks if the current background music is lowered
 ### C Prototype
 `u8 is_current_background_music_volume_lowered(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_secondary_music
 
@@ -4885,9 +4026,6 @@ Plays fading in secondary music `seqId` at `volume` over `fadeTimer` and sets th
 ### C Prototype
 `void play_secondary_music(u8 seqId, u8 bgMusicVolume, u8 volume, u16 fadeTimer);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## stop_secondary_music
 
@@ -4908,9 +4046,6 @@ Fades out secondary music over `fadeTimer`
 ### C Prototype
 `void stop_secondary_music(u16 fadeTimer);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_audio_fadeout
 
@@ -4931,9 +4066,6 @@ Sets the `fadeOutTime` of audio
 ### C Prototype
 `void set_audio_fadeout(u16 fadeOutTime);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_course_clear
 
@@ -4952,9 +4084,6 @@ Plays the star collect fanfare (this function's name was mixed up with the other
 ### C Prototype
 `void play_course_clear(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_peachs_jingle
 
@@ -4973,9 +4102,6 @@ Plays Peach's letter jingle
 ### C Prototype
 `void play_peachs_jingle(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_puzzle_jingle
 
@@ -4994,9 +4120,6 @@ Plays the puzzle jingle
 ### C Prototype
 `void play_puzzle_jingle(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_star_fanfare
 
@@ -5015,9 +4138,6 @@ Plays the course clear fanfare (this function's name was mixed up with the other
 ### C Prototype
 `void play_star_fanfare(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_power_star_jingle
 
@@ -5038,9 +4158,6 @@ Plays the power star jingle, set `keepBackgroundMusic` to 0 to mute background m
 ### C Prototype
 `void play_power_star_jingle(u8 keepBackgroundMusic);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_race_fanfare
 
@@ -5059,9 +4176,6 @@ Plays the race fanfare when a race is started
 ### C Prototype
 `void play_race_fanfare(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_toads_jingle
 
@@ -5080,9 +4194,6 @@ Plays Toad's jingle
 ### C Prototype
 `void play_toads_jingle(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sound_reset_background_music_default_volume
 
@@ -5103,9 +4214,6 @@ Resets a sequence's (`seqId`) volume back to the default volume
 ### C Prototype
 `void sound_reset_background_music_default_volume(u8 seqId);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sound_set_background_music_default_volume
 
@@ -5127,9 +4235,6 @@ Sets a sequence's (`seqId`) volume to `volume`
 ### C Prototype
 `void sound_set_background_music_default_volume(u8 seqId, u8 volume);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_sound_pan
 
@@ -5151,9 +4256,6 @@ Gets a sound left/right pan using `x` and `z`
 ### C Prototype
 `f32 get_sound_pan(f32 x, f32 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## sound_get_level_intensity
 
@@ -5174,9 +4276,6 @@ Gets a sound level intensity based on `distance`
 ### C Prototype
 `f32 sound_get_level_intensity(f32 distance);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from first_person_cam.h
@@ -5203,9 +4302,6 @@ Checks common cancels for first person
 ### C Prototype
 `bool first_person_check_cancels(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_first_person_enabled
 
@@ -5224,9 +4320,6 @@ Checks if first person is enabled
 ### C Prototype
 `bool get_first_person_enabled(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_first_person_enabled
 
@@ -5247,9 +4340,6 @@ Sets if first person is enabled
 ### C Prototype
 `void set_first_person_enabled(bool enable);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## first_person_reset
 
@@ -5268,9 +4358,6 @@ Resets first person
 ### C Prototype
 `void first_person_reset(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from ingame_menu.h
@@ -5297,9 +4384,6 @@ Creates a dialog box with a dialog ID that rotates into view
 ### C Prototype
 `void create_dialog_box(s32 dialog);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## create_dialog_box_with_var
 
@@ -5321,9 +4405,6 @@ Creates a dialog box with a dialog variable
 ### C Prototype
 `void create_dialog_box_with_var(s32 dialog, s32 dialogVar);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## create_dialog_inverted_box
 
@@ -5344,9 +4425,6 @@ Creates a dialog box with a dialog ID that zooms into view
 ### C Prototype
 `void create_dialog_inverted_box(s32 dialog);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## create_dialog_box_with_response
 
@@ -5367,9 +4445,6 @@ Creates a dialog box with a response
 ### C Prototype
 `void create_dialog_box_with_response(s32 dialog);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## reset_dialog_render_state
 
@@ -5388,9 +4463,6 @@ Resets the dialog box's state including dialog ID and open state
 ### C Prototype
 `void reset_dialog_render_state(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_menu_mode
 
@@ -5411,9 +4483,6 @@ Sets the in-game menu state. 0-1 is the courses box with the castle secret stars
 ### C Prototype
 `void set_menu_mode(s16 mode);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## handle_special_dialog_text
 
@@ -5434,9 +4503,6 @@ The internal function used by SM64 which plays a tune whenever boss, KtQ, etc di
 ### C Prototype
 `void handle_special_dialog_text(s32 dialogID);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_min_dialog_width
 
@@ -5457,9 +4523,6 @@ Dialog box customization: Sets the minimum width for a dialog box
 ### C Prototype
 `void set_min_dialog_width(s16 width);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_dialog_override_pos
 
@@ -5481,9 +4544,6 @@ Dialog box customization: Sets the override position for a dialog box
 ### C Prototype
 `void set_dialog_override_pos(s16 x, s16 y);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## reset_dialog_override_pos
 
@@ -5502,9 +4562,6 @@ Dialog box customization: Resets the override position for a dialog box
 ### C Prototype
 `void reset_dialog_override_pos();`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_dialog_override_color
 
@@ -5532,9 +4589,6 @@ Dialog box customization: Sets the override color for a dialog box
 ### C Prototype
 `void set_dialog_override_color(u8 bgR, u8 bgG, u8 bgB, u8 bgA, u8 textR, u8 textG, u8 textB, u8 textA);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## reset_dialog_override_color
 
@@ -5553,9 +4607,6 @@ Dialog box customization: Resets the override color for a dialog box
 ### C Prototype
 `void reset_dialog_override_color();`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## set_dialog_box_state
 
@@ -5576,9 +4627,6 @@ Sets the state for a dialog box (`DIALOG_STATE_*`)
 ### C Prototype
 `void set_dialog_box_state(u8 state);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from interaction.h
@@ -5608,9 +4656,6 @@ Useful for score, and coin management
 ### C Prototype
 `u32 interact_coin(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_water_ring
 
@@ -5634,9 +4679,6 @@ Useful for underwater stages
 ### C Prototype
 `u32 interact_water_ring(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_star_or_key
 
@@ -5660,9 +4702,6 @@ Useful for the main progression system of collecting Stars and unlocking new are
 ### C Prototype
 `u32 interact_star_or_key(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_bbh_entrance
 
@@ -5685,9 +4724,6 @@ Handles Mario's interaction with the Boo's Big Haunt (BBH) entrance object. When
 ### C Prototype
 `u32 interact_bbh_entrance(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_warp
 
@@ -5711,9 +4747,6 @@ Useful for connecting different parts of the game world and controlling transiti
 ### C Prototype
 `u32 interact_warp(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_warp_door
 
@@ -5737,9 +4770,6 @@ Useful for restricting access to certain areas based on progression
 ### C Prototype
 `u32 interact_warp_door(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_door
 
@@ -5763,9 +4793,6 @@ Useful for controlling access to locked areas and providing progression gating i
 ### C Prototype
 `u32 interact_door(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_cannon_base
 
@@ -5789,9 +4816,6 @@ Useful for transitioning to cannon-aiming mode and enabling cannon travel within
 ### C Prototype
 `u32 interact_cannon_base(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_player
 
@@ -5816,9 +4840,6 @@ Useful for multiplayer interactions, such as PvP or cooperative gameplay mechani
 ### C Prototype
 `u32 interact_player(struct MarioState* m, UNUSED u32 interactType, struct Object* o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_igloo_barrier
 
@@ -5842,9 +4863,6 @@ Useful for enforcing require-caps to access certain areas
 ### C Prototype
 `u32 interact_igloo_barrier(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_tornado
 
@@ -5868,9 +4886,6 @@ Useful for desert levels or areas where environmental hazards lift Mario into th
 ### C Prototype
 `u32 interact_tornado(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_whirlpool
 
@@ -5894,9 +4909,6 @@ Useful for hazards that trap Mario like whirlpools
 ### C Prototype
 `u32 interact_whirlpool(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_strong_wind
 
@@ -5920,9 +4932,6 @@ Useful for environmental wind hazards
 ### C Prototype
 `u32 interact_strong_wind(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_flame
 
@@ -5946,9 +4955,6 @@ Useful for simulating fire damage and hazards in levels
 ### C Prototype
 `u32 interact_flame(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_snufit_bullet
 
@@ -5971,9 +4977,6 @@ Handles interaction with Snufit bullets (projectiles fired by certain enemies). 
 ### C Prototype
 `u32 interact_snufit_bullet(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_clam_or_bubba
 
@@ -5997,9 +5000,6 @@ If Bubba eats Mario, it triggers a unique "caught" action. Otherwise, it deals d
 ### C Prototype
 `u32 interact_clam_or_bubba(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_bully
 
@@ -6023,9 +5023,6 @@ Useful for enemy encounters that involve pushing and shoving mechanics rather th
 ### C Prototype
 `u32 interact_bully(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_shock
 
@@ -6049,9 +5046,6 @@ Useful for electric-themed enemies and obstacles
 ### C Prototype
 `u32 interact_shock(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_mr_blizzard
 
@@ -6075,9 +5069,6 @@ If Mario is attacked or collides with Mr. Blizzard, it applies damage and knockb
 ### C Prototype
 `u32 interact_mr_blizzard(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_hit_from_below
 
@@ -6101,9 +5092,6 @@ Useful for handling upward attacks, hitting coin blocks, or interacting with cer
 ### C Prototype
 `u32 interact_hit_from_below(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_bounce_top
 
@@ -6128,9 +5116,6 @@ Useful for enemy defeat mechanics and platform bouncing
 ### C Prototype
 `u32 interact_bounce_top(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_spiny_walking
 
@@ -6154,9 +5139,6 @@ Useful for enemies that cannot be stomped from above and require direct attacks
 ### C Prototype
 `u32 interact_spiny_walking(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_damage
 
@@ -6180,9 +5162,6 @@ Useful for enemy attacks, environmental hazards, and managing damage related beh
 ### C Prototype
 `u32 interact_damage(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_breakable
 
@@ -6206,9 +5185,6 @@ Useful for managing collectible items hidden in breakable objects and level prog
 ### C Prototype
 `u32 interact_breakable(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_koopa_shell
 
@@ -6232,9 +5208,6 @@ Useful for implementing Koopa Shell behavior
 ### C Prototype
 `u32 interact_koopa_shell(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_pole
 
@@ -6258,9 +5231,6 @@ Useful for platforming mechanics
 ### C Prototype
 `u32 interact_pole(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_hoot
 
@@ -6284,9 +5254,6 @@ Useful for special traversal mechanics and shortcuts within a course
 ### C Prototype
 `u32 interact_hoot(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_cap
 
@@ -6311,9 +5278,6 @@ Useful for managing cap statuses
 ### C Prototype
 `u32 interact_cap(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_grabbable
 
@@ -6337,9 +5301,6 @@ Useful for course mechanics, throwing items, and Bowser
 ### C Prototype
 `u32 interact_grabbable(struct MarioState *m, u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## interact_text
 
@@ -6363,9 +5324,6 @@ Useful for managing hints, story elements, or gameplay instructions through in-g
 ### C Prototype
 `u32 interact_text(struct MarioState *m, UNUSED u32 interactType, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_obj_angle_to_object
 
@@ -6388,9 +5346,6 @@ Useful for deciding directions between Mario and NPCs
 ### C Prototype
 `s16 mario_obj_angle_to_object(struct MarioState *m, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_stop_riding_object
 
@@ -6412,9 +5367,6 @@ Useful for cleanly dismounting ridden objects
 ### C Prototype
 `void mario_stop_riding_object(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_grab_used_object
 
@@ -6437,9 +5389,6 @@ Useful for handling the moment Mario successfully picks up an object
 ### C Prototype
 `void mario_grab_used_object(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_drop_held_object
 
@@ -6461,9 +5410,6 @@ Useful for releasing carried objects, such as throwing Bob-ombs or setting down 
 ### C Prototype
 `void mario_drop_held_object(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_throw_held_object
 
@@ -6485,9 +5431,6 @@ Useful for attacking enemies with thrown objects, solving puzzles by throwing cr
 ### C Prototype
 `void mario_throw_held_object(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_stop_riding_and_holding
 
@@ -6510,9 +5453,6 @@ Useful when changing Mario's state after certain actions, transitions, or to pre
 ### C Prototype
 `void mario_stop_riding_and_holding(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## does_mario_have_normal_cap_on_head
 
@@ -6535,9 +5475,6 @@ Useful for determining Mario's cap status
 ### C Prototype
 `u32 does_mario_have_normal_cap_on_head(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## does_mario_have_blown_cap
 
@@ -6560,9 +5497,6 @@ Useful to check if a blown cap exists in the level currently.
 ### C Prototype
 `bool does_mario_have_blown_cap(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_blow_off_cap
 
@@ -6586,9 +5520,6 @@ Useful for simulating events where Mario loses his cap due to enemy attacks or e
 ### C Prototype
 `void mario_blow_off_cap(struct MarioState *m, f32 capSpeed);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_lose_cap_to_enemy
 
@@ -6612,9 +5543,6 @@ Useful for scenarios where enemies steal Mario's cap
 ### C Prototype
 `u32 mario_lose_cap_to_enemy(struct MarioState* m, u32 arg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_retrieve_cap
 
@@ -6637,9 +5565,6 @@ Useful when Mario recovers his normal cap from enemies, finds it in a level, or 
 ### C Prototype
 `void mario_retrieve_cap(struct MarioState* m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_get_collided_object
 
@@ -6662,9 +5587,6 @@ Useful for determining which object Mario has come into contact with
 ### C Prototype
 `struct Object *mario_get_collided_object(struct MarioState *m, u32 interactType);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_check_object_grab
 
@@ -6686,9 +5608,6 @@ Useful for picking up objects, throwing enemies, or grabbing special items
 ### C Prototype
 `u32 mario_check_object_grab(struct MarioState *m);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_door_save_file_flag
 
@@ -6710,9 +5629,6 @@ Used to check if the player has unlocked certain star doors or progressed far en
 ### C Prototype
 `u32 get_door_save_file_flag(struct Object *door);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## passes_pvp_interaction_checks
 
@@ -6736,9 +5652,6 @@ Useful for multiplayer where players can harm each other
 ### C Prototype
 `u8 passes_pvp_interaction_checks(struct MarioState* attacker, struct MarioState* victim);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## should_push_or_pull_door
 
@@ -6761,9 +5674,6 @@ Useful for animating door interactions realistically, depending on which side Ma
 ### C Prototype
 `u32 should_push_or_pull_door(struct MarioState *m, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## take_damage_and_knock_back
 
@@ -6787,9 +5697,6 @@ Useful for implementing enemy attacks, hazards, and ensuring Mario receives prop
 ### C Prototype
 `u32 take_damage_and_knock_back(struct MarioState *m, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_mario_cap_flag
 
@@ -6811,9 +5718,6 @@ Useful for handling the logic of picking up, wearing, or losing different kinds 
 ### C Prototype
 `u32 get_mario_cap_flag(struct Object *capObject);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## determine_interaction
 
@@ -6837,9 +5741,6 @@ Useful for handling different types of player-object collisions, attacks, and ob
 ### C Prototype
 `u32 determine_interaction(struct MarioState *m, struct Object *o);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from lag_compensation.h
@@ -6864,9 +5765,6 @@ Stores the local Mario's current state in lag compensation history
 ### C Prototype
 `void lag_compensation_store(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## lag_compensation_get_local_state
 
@@ -6887,9 +5785,6 @@ Gets the local Mario's state stored in lag compensation history
 ### C Prototype
 `struct MarioState* lag_compensation_get_local_state(struct NetworkPlayer* otherNp);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## lag_compensation_get_local_state_ready
 
@@ -6908,9 +5803,6 @@ Checks if lag compensation history is ready
 ### C Prototype
 `bool lag_compensation_get_local_state_ready(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## lag_compensation_get_local_state_index
 
@@ -6929,9 +5821,6 @@ Gets the local Mario's state index
 ### C Prototype
 `u32 lag_compensation_get_local_state_index(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from level_info.h
@@ -6962,9 +5851,6 @@ Set `charCase` to 1 to capitalize or -1 to decapitalize the returned string
 ### C Prototype
 `const char *get_level_name_ascii(s16 courseNum, s16 levelNum, s16 areaIndex, s16 charCase);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_level_name_sm64
 
@@ -6990,9 +5876,6 @@ Set `charCase` to 1 to capitalize or -1 to decapitalize the returned string
 ### C Prototype
 `const u8 *get_level_name_sm64(s16 courseNum, s16 levelNum, s16 areaIndex, s16 charCase);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_level_name
 
@@ -7015,9 +5898,6 @@ Returns the name of the level corresponding to `courseNum`, `levelNum` and `area
 ### C Prototype
 `const char *get_level_name(s16 courseNum, s16 levelNum, s16 areaIndex);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_star_name_ascii
 
@@ -7041,9 +5921,6 @@ Set `charCase` to 1 to capitalize or -1 to decapitalize the returned string
 ### C Prototype
 `const char *get_star_name_ascii(s16 courseNum, s16 starNum, s16 charCase);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_star_name_sm64
 
@@ -7068,9 +5945,6 @@ Set `charCase` to 1 to capitalize or -1 to decapitalize the returned string
 ### C Prototype
 `const u8 *get_star_name_sm64(s16 courseNum, s16 starNum, s16 charCase);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_star_name
 
@@ -7092,9 +5966,6 @@ Returns the name of the star corresponding to `courseNum` and `starNum` as a dec
 ### C Prototype
 `const char *get_star_name(s16 courseNum, s16 starNum);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from level_update.h
@@ -7119,9 +5990,6 @@ Returns if the level timer is running
 ### C Prototype
 `u8 level_control_timer_running(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## pressed_pause
 
@@ -7140,9 +6008,6 @@ Checks if the start button has been pressed as well as some other conditions for
 ### C Prototype
 `bool pressed_pause(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## fade_into_special_warp
 
@@ -7164,9 +6029,6 @@ Fades into a special warp with `arg` and using `color`
 ### C Prototype
 `void fade_into_special_warp(enum SpecialWarpDestination arg, u32 color);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_instant_warp
 
@@ -7187,9 +6049,6 @@ Gets an instant warp from the current area's instant warp array (0-3)
 ### C Prototype
 `struct InstantWarp *get_instant_warp(u8 index);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## get_painting_warp_node
 
@@ -7208,9 +6067,6 @@ Gets a painting warp node from the local mario's floor type
 ### C Prototype
 `struct WarpNode *get_painting_warp_node(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## initiate_painting_warp
 
@@ -7231,9 +6087,6 @@ Initiates a painting warp of `paintingIndex`
 ### C Prototype
 `void initiate_painting_warp(s16 paintingIndex);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## level_trigger_warp
 
@@ -7255,9 +6108,6 @@ Triggers a warp (WARP_OP_*) for the level. Pass in `gMarioStates[0]` for `m`
 ### C Prototype
 `s16 level_trigger_warp(struct MarioState *m, enum WarpOperation warpOp);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## warp_special
 
@@ -7278,9 +6128,6 @@ Special warps to arg (`WARP_SPECIAL_*`)
 ### C Prototype
 `void warp_special(enum SpecialWarpDestination arg);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## initiate_warp
 
@@ -7304,9 +6151,6 @@ Initiates a warp to `destLevel` in `destArea` at `destWarpNode` with `warpFlags`
 ### C Prototype
 `void initiate_warp(s16 destLevel, s16 destArea, s16 destWarpNode, s32 warpFlags);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## lvl_set_current_level
 
@@ -7328,9 +6172,6 @@ Sets the level number and handles the act select screen. `param` is used for ove
 ### C Prototype
 `s32 lvl_set_current_level(s16 param, s16 levelNum);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ---
 # functions from lighting_engine.h
@@ -7355,9 +6196,6 @@ Gets whether the lighting engine has been enabled or not. It becomes enabled onc
 ### C Prototype
 `bool le_is_enabled(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_mode
 
@@ -7378,9 +6216,6 @@ Sets the lighting engine mode to `mode`
 ### C Prototype
 `void le_set_mode(enum LEMode mode);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_mode
 
@@ -7399,9 +6234,6 @@ Gets the lighting engine mode
 ### C Prototype
 `enum LEMode le_get_mode(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_tone_mapping
 
@@ -7422,9 +6254,6 @@ Sets the lighting engine's tone mapping mode to `toneMapping`
 ### C Prototype
 `void le_set_tone_mapping(enum LEToneMapping toneMapping);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_ambient_color
 
@@ -7445,9 +6274,6 @@ Outputs the lighting engine's ambient color to `out`
 ### C Prototype
 `void le_get_ambient_color(VEC_OUT Color out);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_ambient_color
 
@@ -7470,9 +6296,6 @@ Sets the lighting engine ambient color
 ### C Prototype
 `void le_set_ambient_color(u8 r, u8 g, u8 b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_max_lights_per_vertex
 
@@ -7493,9 +6316,6 @@ Sets the max amount of lights that can affect a vertex
 ### C Prototype
 `void le_set_max_lights_per_vertex(u8 count);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_enabled
 
@@ -7516,9 +6336,6 @@ This will let the user control the lighting engine in real time to disable or en
 ### C Prototype
 `void le_set_enabled(bool value);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_calculate_lighting_color
 
@@ -7541,9 +6358,6 @@ Calculates the lighting with `lightIntensityScalar` at a position and outputs th
 ### C Prototype
 `void le_calculate_lighting_color(Vec3f pos, VEC_OUT Color out, f32 lightIntensityScalar);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_calculate_lighting_color_with_normal
 
@@ -7567,9 +6381,6 @@ Calculates the lighting with `lightIntensityScalar` at a position and with a nor
 ### C Prototype
 `void le_calculate_lighting_color_with_normal(Vec3f pos, Vec3f normal, VEC_OUT Color out, f32 lightIntensityScalar);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_calculate_lighting_dir
 
@@ -7591,9 +6402,6 @@ Calculates the lighting direction from a position and outputs the result in `out
 ### C Prototype
 `void le_calculate_lighting_dir(Vec3f pos, VEC_OUT Vec3f out);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_add_light
 
@@ -7621,9 +6429,6 @@ Adds a lighting engine point light at `x`, `y`, `z` with color `r`, `g`, `b` and
 ### C Prototype
 `s16 le_add_light(f32 x, f32 y, f32 z, u8 r, u8 g, u8 b, f32 radius, f32 intensity);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_remove_light
 
@@ -7644,9 +6449,6 @@ Removes a lighting engine point light corresponding to `id`
 ### C Prototype
 `void le_remove_light(s16 id);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_light_count
 
@@ -7665,9 +6467,6 @@ Gets the total number of lights currently loaded in the lighting engine
 ### C Prototype
 `s16 le_get_light_count(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_light_exists
 
@@ -7688,9 +6487,6 @@ Checks if a lighting engine point light corresponding to `id` exists
 ### C Prototype
 `bool le_light_exists(s16 id);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_light_pos
 
@@ -7712,9 +6508,6 @@ Outputs a lighting engine point light's position to `out`
 ### C Prototype
 `void le_get_light_pos(s16 id, VEC_OUT Vec3f out);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_light_pos
 
@@ -7738,9 +6531,6 @@ Sets a lighting engine point light's position to `x`, `y`, `z`
 ### C Prototype
 `void le_set_light_pos(s16 id, f32 x, f32 y, f32 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_light_color
 
@@ -7762,9 +6552,6 @@ Outputs a lighting engine point light's color to `out`
 ### C Prototype
 `void le_get_light_color(s16 id, VEC_OUT Color out);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_light_color
 
@@ -7788,9 +6575,6 @@ Sets a lighting engine point light's color to `r`, `g`, `b`
 ### C Prototype
 `void le_set_light_color(s16 id, u8 r, u8 g, u8 b);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_light_radius
 
@@ -7811,9 +6595,6 @@ Gets a lighting engine point light's `radius`
 ### C Prototype
 `f32 le_get_light_radius(s16 id);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_light_radius
 
@@ -7835,9 +6616,6 @@ Sets a lighting engine point light's `radius`
 ### C Prototype
 `void le_set_light_radius(s16 id, f32 radius);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_light_intensity
 
@@ -7858,9 +6636,6 @@ Gets a lighting engine point light's `intensity`
 ### C Prototype
 `f32 le_get_light_intensity(s16 id);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_light_intensity
 
@@ -7882,9 +6657,6 @@ Sets a lighting engine point light's `intensity`
 ### C Prototype
 `void le_set_light_intensity(s16 id, f32 intensity);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_get_light_use_surface_normals
 
@@ -7905,9 +6677,6 @@ Gets whether a lighting engine point light will use a surface's normals to deter
 ### C Prototype
 `bool le_get_light_use_surface_normals(s16 id);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## le_set_light_use_surface_normals
 
@@ -7929,9 +6698,32 @@ Sets whether a lighting engine point light will use a surface's normals to deter
 ### C Prototype
 `void le_set_light_use_surface_normals(s16 id, bool useSurfaceNormals);`
 
-[:arrow_up_small:](#)
+
+---
+# functions from load.h
 
 <br />
+
+
+## set_sound_bank_override
+
+### Description
+Overrides the soundbank, set to -1 to reset
+
+### Lua Example
+`set_sound_bank_override(bank)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| bank | `integer` |
+
+### Returns
+- None
+
+### C Prototype
+`void set_sound_bank_override(s32 bank);`
+
 ---
 
 [< prev](functions-2.md) | [1](functions.md) | [2](functions-2.md) | 3 | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-4.md)]

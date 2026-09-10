@@ -32,9 +32,6 @@ Spawns mist particles around the current object
 ### C Prototype
 `void spawn_mist_particles_variable(s32 count, s32 offsetY, f32 size);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spawn_star_no_level_exit
 
@@ -57,9 +54,6 @@ Spawns a Star parented to `object` that won't make Mario exit the level with an 
 ### C Prototype
 `void bhv_spawn_star_no_level_exit(struct Object* object, u32 params, u8 networkSendEvent);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_triangle_break_particles
 
@@ -83,9 +77,6 @@ Spawns triangle break particles around the current object
 ### C Prototype
 `void spawn_triangle_break_particles(s16 numTris, s16 triModel, f32 triSize, s16 triAnimState);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_mist_from_global
 
@@ -104,9 +95,6 @@ Spawns mist particles around the current object
 ### C Prototype
 `void spawn_mist_from_global(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## clear_particle_flags
 
@@ -127,9 +115,6 @@ Clears the particle flags of the current object
 ### C Prototype
 `void clear_particle_flags(u32 flags);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_wind_particles
 
@@ -151,9 +136,6 @@ Spawns wind particles around the current object
 ### C Prototype
 `void spawn_wind_particles(s16 pitch, s16 yaw);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## check_if_moving_over_floor
 
@@ -175,9 +157,6 @@ Checks if the current object is moving `distance` units over a floor and within 
 ### C Prototype
 `s32 check_if_moving_over_floor(f32 maxDistToFloor, f32 distance);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## arc_to_goal_pos
 
@@ -201,9 +180,6 @@ Calculates the time it takes for the current object to follow an arc from `pos` 
 ### C Prototype
 `s32 arc_to_goal_pos(Vec3f goal, Vec3f pos, f32 yVel, f32 gravity);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## tox_box_move
 
@@ -227,9 +203,6 @@ Moves Tox Box
 ### C Prototype
 `void tox_box_move(f32 forwardVel, f32 a1, s16 deltaPitch, s16 deltaRoll);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## play_penguin_walking_sound
 
@@ -250,9 +223,6 @@ Plays the penguin walking sound
 ### C Prototype
 `void play_penguin_walking_sound(s32 walk);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## update_angle_from_move_flags
 
@@ -274,9 +244,6 @@ Computes and returns an angle depending on the current object's angle and move f
 ### C Prototype
 `s32 update_angle_from_move_flags(INOUT s32 *angle);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## cur_obj_spawn_strong_wind_particles
 
@@ -301,9 +268,6 @@ Spawns strong wind particles relative to the current object
 ### C Prototype
 `void cur_obj_spawn_strong_wind_particles(s32 windSpread, f32 scale, f32 relPosX, f32 relPosY, f32 relPosZ);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_star_door_loop_update_render_state
 
@@ -322,9 +286,6 @@ Behavior loop function for Star Door, which updates its render state
 ### C Prototype
 `void bhv_star_door_loop_update_render_state(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cap_switch_loop
 
@@ -343,9 +304,6 @@ Behavior loop function for Cap Switch
 ### C Prototype
 `void bhv_cap_switch_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tiny_star_particles_init
 
@@ -364,9 +322,6 @@ Behavior init function for tiny Star particles
 ### C Prototype
 `void bhv_tiny_star_particles_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_grindel_thwomp_loop
 
@@ -385,9 +340,6 @@ Behavior loop function for Grindel and Thwomp
 ### C Prototype
 `void bhv_grindel_thwomp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_koopa_shell_underwater_loop
 
@@ -406,9 +358,6 @@ Behavior loop function for Koopa Shell underwater
 ### C Prototype
 `void bhv_koopa_shell_underwater_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_door_init
 
@@ -427,9 +376,6 @@ Behavior init function for door
 ### C Prototype
 `void bhv_door_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_door_loop
 
@@ -448,9 +394,6 @@ Behavior loop function for door
 ### C Prototype
 `void bhv_door_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_star_door_loop
 
@@ -469,9 +412,6 @@ Behavior loop function for Star Door
 ### C Prototype
 `void bhv_star_door_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mr_i_loop
 
@@ -490,9 +430,6 @@ Behavior loop function for Mr. I
 ### C Prototype
 `void bhv_mr_i_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mr_i_body_loop
 
@@ -511,9 +448,6 @@ Behavior loop function for Mr. I body
 ### C Prototype
 `void bhv_mr_i_body_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mr_i_particle_loop
 
@@ -532,9 +466,6 @@ Behavior loop function for Mr. I particle
 ### C Prototype
 `void bhv_mr_i_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_piranha_particle_loop
 
@@ -553,9 +484,6 @@ Behavior loop function for Piranha particle
 ### C Prototype
 `void bhv_piranha_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_giant_pole_loop
 
@@ -574,9 +502,6 @@ Behavior loop function for giant pole
 ### C Prototype
 `void bhv_giant_pole_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pole_init
 
@@ -595,9 +520,6 @@ Behavior init function for pole
 ### C Prototype
 `void bhv_pole_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pole_base_loop
 
@@ -616,9 +538,6 @@ Behavior loop function for pole base
 ### C Prototype
 `void bhv_pole_base_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_thi_huge_island_top_loop
 
@@ -637,9 +556,6 @@ Behavior loop function for Tiny Huge Island huge island top
 ### C Prototype
 `void bhv_thi_huge_island_top_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_thi_tiny_island_top_loop
 
@@ -658,9 +574,6 @@ Behavior loop function for Tiny Huge Island tiny island top
 ### C Prototype
 `void bhv_thi_tiny_island_top_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_king_bobomb_loop
 
@@ -679,9 +592,6 @@ Behavior loop function for King Bob-omb
 ### C Prototype
 `void bhv_king_bobomb_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_anchor_mario_loop
 
@@ -700,9 +610,6 @@ Behavior loop function for Bob-omb anchor mario
 ### C Prototype
 `void bhv_bobomb_anchor_mario_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_chest_bottom_init
 
@@ -721,9 +628,6 @@ Behavior init function for beta chest bottom
 ### C Prototype
 `void bhv_beta_chest_bottom_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_chest_bottom_loop
 
@@ -742,9 +646,6 @@ Behavior loop function for beta chest bottom
 ### C Prototype
 `void bhv_beta_chest_bottom_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_chest_lid_loop
 
@@ -763,9 +664,6 @@ Behavior loop function for beta chest lid
 ### C Prototype
 `void bhv_beta_chest_lid_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bubble_wave_init
 
@@ -784,9 +682,6 @@ Behavior init function for bubble wave
 ### C Prototype
 `void bhv_bubble_wave_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bubble_maybe_loop
 
@@ -805,9 +700,6 @@ Behavior loop function for bubble maybe
 ### C Prototype
 `void bhv_bubble_maybe_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bubble_player_loop
 
@@ -826,9 +718,6 @@ Behavior loop function for bubble player
 ### C Prototype
 `void bhv_bubble_player_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_air_bubble_init
 
@@ -847,9 +736,6 @@ Behavior init function for water air bubble
 ### C Prototype
 `void bhv_water_air_bubble_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_air_bubble_loop
 
@@ -868,9 +754,6 @@ Behavior loop function for water air bubble
 ### C Prototype
 `void bhv_water_air_bubble_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_particle_init
 
@@ -889,9 +772,6 @@ Behavior init function for particle
 ### C Prototype
 `void bhv_particle_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_particle_loop
 
@@ -910,9 +790,6 @@ Behavior loop function for particle
 ### C Prototype
 `void bhv_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_waves_init
 
@@ -931,9 +808,6 @@ Behavior init function for water waves
 ### C Prototype
 `void bhv_water_waves_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_bubbles_loop
 
@@ -952,9 +826,6 @@ Behavior loop function for small bubbles
 ### C Prototype
 `void bhv_small_bubbles_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fish_group_loop
 
@@ -973,9 +844,6 @@ Behavior loop function for fish group
 ### C Prototype
 `void bhv_fish_group_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cannon_base_loop
 
@@ -994,9 +862,6 @@ Behavior loop function for cannon base
 ### C Prototype
 `void bhv_cannon_base_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cannon_barrel_loop
 
@@ -1015,9 +880,6 @@ Behavior loop function for cannon barrel
 ### C Prototype
 `void bhv_cannon_barrel_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cannon_base_unused_loop
 
@@ -1036,9 +898,6 @@ Behavior loop function for cannon base unused
 ### C Prototype
 `void bhv_cannon_base_unused_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## common_anchor_mario_behavior
 
@@ -1061,9 +920,6 @@ Common behavior for an object when grabbing Mario. Used by King Bob-omb and Chuc
 ### C Prototype
 `void common_anchor_mario_behavior(f32 forwardVel, f32 upwardsVel, s32 interactStatusFlags);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_chuckya_loop
 
@@ -1082,9 +938,6 @@ Behavior loop function for Chuckya
 ### C Prototype
 `void bhv_chuckya_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_chuckya_anchor_mario_loop
 
@@ -1103,9 +956,6 @@ Behavior loop function for Chuckya mario anchor
 ### C Prototype
 `void bhv_chuckya_anchor_mario_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rotating_platform_loop
 
@@ -1124,9 +974,6 @@ Behavior loop function for rotating platform
 ### C Prototype
 `void bhv_rotating_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_breakable_wall_loop
 
@@ -1145,9 +992,6 @@ Behavior loop function for Whomp's Fortress breakable wall
 ### C Prototype
 `void bhv_wf_breakable_wall_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_kickable_board_loop
 
@@ -1166,9 +1010,6 @@ Behavior loop function for Whomp's Fortress kickable board
 ### C Prototype
 `void bhv_kickable_board_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tower_door_loop
 
@@ -1187,9 +1028,6 @@ Behavior loop function for Whomp's Fortress tower door
 ### C Prototype
 `void bhv_tower_door_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_rotating_wooden_platform_init
 
@@ -1208,9 +1046,6 @@ Behavior init function for Whomp's Fortress rotating wooden platform
 ### C Prototype
 `void bhv_wf_rotating_wooden_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_rotating_wooden_platform_loop
 
@@ -1229,9 +1064,6 @@ Behavior loop function for Whomp's Fortress rotating wooden platform
 ### C Prototype
 `void bhv_wf_rotating_wooden_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fading_warp_loop
 
@@ -1250,9 +1082,6 @@ Behavior loop function for fading warp
 ### C Prototype
 `void bhv_fading_warp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_warp_loop
 
@@ -1271,9 +1100,6 @@ Behavior loop function for warp
 ### C Prototype
 `void bhv_warp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_white_puff_exploding_loop
 
@@ -1292,9 +1118,6 @@ Behavior loop function for white puff exploding
 ### C Prototype
 `void bhv_white_puff_exploding_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spawned_star_init
 
@@ -1313,9 +1136,6 @@ Behavior init function for spawned star
 ### C Prototype
 `void bhv_spawned_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spawned_star_loop
 
@@ -1334,9 +1154,6 @@ Behavior loop function for Spawned star
 ### C Prototype
 `void bhv_spawned_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_init
 
@@ -1355,9 +1172,6 @@ Behavior init function for Coin
 ### C Prototype
 `void bhv_coin_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_loop
 
@@ -1376,9 +1190,6 @@ Behavior loop function for Coin
 ### C Prototype
 `void bhv_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_inside_boo_loop
 
@@ -1397,9 +1208,6 @@ Behavior loop function for Coin inside Boo
 ### C Prototype
 `void bhv_coin_inside_boo_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_formation_init
 
@@ -1418,9 +1226,6 @@ Behavior init function for Coin formation
 ### C Prototype
 `void bhv_coin_formation_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_formation_spawn_loop
 
@@ -1439,9 +1244,6 @@ Behavior loop function for Coin formation spawn
 ### C Prototype
 `void bhv_coin_formation_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_formation_loop
 
@@ -1460,9 +1262,6 @@ Behavior loop function for Coin formation
 ### C Prototype
 `void bhv_coin_formation_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_temp_coin_loop
 
@@ -1481,9 +1280,6 @@ Behavior loop function for despawning Coin
 ### C Prototype
 `void bhv_temp_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coin_sparkles_loop
 
@@ -1502,9 +1298,6 @@ Behavior loop function for Coin sparkles
 ### C Prototype
 `void bhv_coin_sparkles_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_golden_coin_sparkles_loop
 
@@ -1523,9 +1316,6 @@ Behavior loop function for golden Coin sparkles
 ### C Prototype
 `void bhv_golden_coin_sparkles_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wall_tiny_star_particle_loop
 
@@ -1544,9 +1334,6 @@ Behavior loop function for tiny wall star particle
 ### C Prototype
 `void bhv_wall_tiny_star_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pound_tiny_star_particle_loop
 
@@ -1565,9 +1352,6 @@ Behavior loop function for tiny pound star particle
 ### C Prototype
 `void bhv_pound_tiny_star_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pound_tiny_star_particle_init
 
@@ -1586,9 +1370,6 @@ Behavior init function for tiny pound star particle
 ### C Prototype
 `void bhv_pound_tiny_star_particle_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_punch_tiny_triangle_loop
 
@@ -1607,9 +1388,6 @@ Behavior loop function for tiny punch triangle
 ### C Prototype
 `void bhv_punch_tiny_triangle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_punch_tiny_triangle_init
 
@@ -1628,9 +1406,6 @@ Behavior init function for tiny punch triangle
 ### C Prototype
 `void bhv_punch_tiny_triangle_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tumbling_bridge_platform_loop
 
@@ -1649,9 +1424,6 @@ Behavior loop function for tumbling bridge platform
 ### C Prototype
 `void bhv_tumbling_bridge_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tumbling_bridge_loop
 
@@ -1670,9 +1442,6 @@ Behavior loop function for tumbling bridge
 ### C Prototype
 `void bhv_tumbling_bridge_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_elevator_init
 
@@ -1691,9 +1460,6 @@ Behavior init function for elevator
 ### C Prototype
 `void bhv_elevator_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_elevator_loop
 
@@ -1712,9 +1478,6 @@ Behavior loop function for elevator
 ### C Prototype
 `void bhv_elevator_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_mist_loop
 
@@ -1733,9 +1496,6 @@ Behavior loop function for water mist
 ### C Prototype
 `void bhv_water_mist_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_mist_spawn_loop
 
@@ -1754,9 +1514,6 @@ Behavior loop function for water mist spawn
 ### C Prototype
 `void bhv_water_mist_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_mist_2_loop
 
@@ -1775,9 +1532,6 @@ Behavior loop function for water mist 2
 ### C Prototype
 `void bhv_water_mist_2_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pound_white_puffs_init
 
@@ -1796,9 +1550,6 @@ Behavior init function for pound white puffs
 ### C Prototype
 `void bhv_pound_white_puffs_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ground_sand_init
 
@@ -1817,9 +1568,6 @@ Behavior init function for ground sand
 ### C Prototype
 `void bhv_ground_sand_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ground_snow_init
 
@@ -1838,9 +1586,6 @@ Behavior init function for ground snow
 ### C Prototype
 `void bhv_ground_snow_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wind_loop
 
@@ -1859,9 +1604,6 @@ Behavior loop function for wind
 ### C Prototype
 `void bhv_wind_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unused_particle_spawn_loop
 
@@ -1880,9 +1622,6 @@ Behavior loop function for unused particle spawn
 ### C Prototype
 `void bhv_unused_particle_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ukiki_cage_star_loop
 
@@ -1901,9 +1640,6 @@ Behavior loop function for Ukiki cage Star
 ### C Prototype
 `void bhv_ukiki_cage_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ukiki_cage_loop
 
@@ -1922,9 +1658,6 @@ Behavior loop function for Ukiki cage
 ### C Prototype
 `void bhv_ukiki_cage_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bitfs_sinking_platform_loop
 
@@ -1943,9 +1676,6 @@ Behavior loop function for Bowser in the Fire Sea sinking platform
 ### C Prototype
 `void bhv_bitfs_sinking_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bitfs_sinking_cage_platform_loop
 
@@ -1964,9 +1694,6 @@ Behavior loop function for Bowser in the Fire Sea sinking cage platform
 ### C Prototype
 `void bhv_bitfs_sinking_cage_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ddd_moving_pole_loop
 
@@ -1985,9 +1712,6 @@ Behavior loop function for Dire Dire Docks moving pole
 ### C Prototype
 `void bhv_ddd_moving_pole_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_platform_normals_init
 
@@ -2006,9 +1730,6 @@ Behavior init function for Bowser in the Dark World, Lethal Lava Land, and Bowse
 ### C Prototype
 `void bhv_platform_normals_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tilting_inverted_pyramid_loop
 
@@ -2027,9 +1748,6 @@ Behavior loop function for Lethal Lava Land and Bowser in the Fire Sea tilting i
 ### C Prototype
 `void bhv_tilting_inverted_pyramid_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_squishable_platform_loop
 
@@ -2048,9 +1766,6 @@ Behavior loop function for squishable platform
 ### C Prototype
 `void bhv_squishable_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_moving_flames_spawn_loop
 
@@ -2069,9 +1784,6 @@ Behavior loop function for beta moving flames spawn
 ### C Prototype
 `void bhv_beta_moving_flames_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_moving_flames_loop
 
@@ -2090,9 +1802,6 @@ Behavior loop function for beta moving flames
 ### C Prototype
 `void bhv_beta_moving_flames_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rr_rotating_bridge_platform_loop
 
@@ -2111,9 +1820,6 @@ Behavior loop function for Rainbow Ride rotating bridge platform
 ### C Prototype
 `void bhv_rr_rotating_bridge_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flamethrower_loop
 
@@ -2132,9 +1838,6 @@ Behavior loop function for flamethrower
 ### C Prototype
 `void bhv_flamethrower_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flamethrower_flame_loop
 
@@ -2153,9 +1856,6 @@ Behavior loop function for flamethrower flame
 ### C Prototype
 `void bhv_flamethrower_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bouncing_fireball_loop
 
@@ -2174,9 +1874,6 @@ Behavior loop function for bouncing fireball
 ### C Prototype
 `void bhv_bouncing_fireball_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bouncing_fireball_flame_loop
 
@@ -2195,9 +1892,6 @@ Behavior loop function for bouncing fireball flame
 ### C Prototype
 `void bhv_bouncing_fireball_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_shock_wave_loop
 
@@ -2216,9 +1910,6 @@ Behavior loop function for Bowser shock wave
 ### C Prototype
 `void bhv_bowser_shock_wave_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_mario_loop
 
@@ -2237,9 +1928,6 @@ Behavior loop function for flame Mario
 ### C Prototype
 `void bhv_flame_mario_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_black_smoke_mario_loop
 
@@ -2258,9 +1946,6 @@ Behavior loop function for black smoke Mario
 ### C Prototype
 `void bhv_black_smoke_mario_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_black_smoke_bowser_loop
 
@@ -2279,9 +1964,6 @@ Behavior loop function for black smoke Bowser
 ### C Prototype
 `void bhv_black_smoke_bowser_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_black_smoke_upward_loop
 
@@ -2300,9 +1982,6 @@ Behavior loop function for black smoke upward
 ### C Prototype
 `void bhv_black_smoke_upward_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_fish_splash_spawner_loop
 
@@ -2321,9 +2000,6 @@ Behavior loop function for beta fish splash spawner
 ### C Prototype
 `void bhv_beta_fish_splash_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spindrift_loop
 
@@ -2342,9 +2018,6 @@ Behavior loop function for Spindrift
 ### C Prototype
 `void bhv_spindrift_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tower_platform_group_init
 
@@ -2363,9 +2036,6 @@ Behavior init function for Whomp's Fortress tower platform group
 ### C Prototype
 `void bhv_tower_platform_group_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tower_platform_group_loop
 
@@ -2384,9 +2054,6 @@ Behavior loop function for Whomp's Fortress tower platform group
 ### C Prototype
 `void bhv_tower_platform_group_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_sliding_tower_platform_loop
 
@@ -2405,9 +2072,6 @@ Behavior loop function for Whomp's Fortress sliding tower platform
 ### C Prototype
 `void bhv_wf_sliding_tower_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_elevator_tower_platform_loop
 
@@ -2426,9 +2090,6 @@ Behavior loop function for Whomp's Fortress elevator tower platform
 ### C Prototype
 `void bhv_wf_elevator_tower_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_solid_tower_platform_loop
 
@@ -2447,9 +2108,6 @@ Behavior loop function for Whomp's Fortress solid tower platform
 ### C Prototype
 `void bhv_wf_solid_tower_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snow_leaf_particle_spawn_init
 
@@ -2468,9 +2126,6 @@ Behavior init function for snow leaf particle spawn
 ### C Prototype
 `void bhv_snow_leaf_particle_spawn_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tree_snow_or_leaf_loop
 
@@ -2489,9 +2144,6 @@ Behavior loop function for tree snow or leaf particle
 ### C Prototype
 `void bhv_tree_snow_or_leaf_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_piranha_plant_bubble_loop
 
@@ -2510,9 +2162,6 @@ Behavior loop function for Piranha Plant bubble
 ### C Prototype
 `void bhv_piranha_plant_bubble_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_piranha_plant_waking_bubbles_loop
 
@@ -2531,9 +2180,6 @@ Behavior loop function for Piranha Plant waking bubbles
 ### C Prototype
 `void bhv_piranha_plant_waking_bubbles_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_purple_switch_loop
 
@@ -2552,9 +2198,6 @@ Behavior loop function for Purple Switch
 ### C Prototype
 `void bhv_purple_switch_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_object_loop
 
@@ -2573,9 +2216,6 @@ Behavior loop function for Wet Dry World hidden breakable box
 ### C Prototype
 `void bhv_hidden_object_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_breakable_box_loop
 
@@ -2594,9 +2234,6 @@ Behavior loop function for breakable box
 ### C Prototype
 `void bhv_breakable_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pushable_loop
 
@@ -2615,9 +2252,6 @@ Behavior loop function for pushable metal box
 ### C Prototype
 `void bhv_pushable_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_water_wave_loop
 
@@ -2636,9 +2270,6 @@ Behavior loop function for small water wave
 ### C Prototype
 `void bhv_small_water_wave_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_yellow_coin_init
 
@@ -2657,9 +2288,6 @@ Behavior init function for Yellow Coin
 ### C Prototype
 `void bhv_yellow_coin_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_yellow_coin_loop
 
@@ -2678,9 +2306,6 @@ Behavior loop function for Yellow Coin
 ### C Prototype
 `void bhv_yellow_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_squarish_path_moving_loop
 
@@ -2699,9 +2324,6 @@ Behavior loop function for Bowser in the Dark World squarish path moving
 ### C Prototype
 `void bhv_squarish_path_moving_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_squarish_path_parent_init
 
@@ -2720,9 +2342,6 @@ Behavior init function for Bowser in the Dark World squarish path parent
 ### C Prototype
 `void bhv_squarish_path_parent_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_squarish_path_parent_loop
 
@@ -2741,9 +2360,6 @@ Behavior loop function for Bowser in the Dark World Ssuarish path parent
 ### C Prototype
 `void bhv_squarish_path_parent_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_heave_ho_loop
 
@@ -2762,9 +2378,6 @@ Behavior loop function for Heave ho
 ### C Prototype
 `void bhv_heave_ho_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_heave_ho_throw_mario_loop
 
@@ -2783,9 +2396,6 @@ Behavior loop function for Heave ho throwing Mario
 ### C Prototype
 `void bhv_heave_ho_throw_mario_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ccm_touched_star_spawn_loop
 
@@ -2804,9 +2414,6 @@ Behavior loop function for Cool, Cool Mountain touched Star spawn
 ### C Prototype
 `void bhv_ccm_touched_star_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unused_poundable_platform
 
@@ -2825,9 +2432,6 @@ Behavior loop function for unused poundable platform
 ### C Prototype
 `void bhv_unused_poundable_platform(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_trampoline_top_loop
 
@@ -2846,9 +2450,6 @@ Behavior loop function for beta trampoline top
 ### C Prototype
 `void bhv_beta_trampoline_top_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_trampoline_spring_loop
 
@@ -2867,9 +2468,6 @@ Behavior loop function for beta trampoline spring
 ### C Prototype
 `void bhv_beta_trampoline_spring_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jumping_box_loop
 
@@ -2888,9 +2486,6 @@ Behavior loop function for jumping box
 ### C Prototype
 `void bhv_jumping_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_cage_init
 
@@ -2909,9 +2504,6 @@ Behavior init function for Boo cage
 ### C Prototype
 `void bhv_boo_cage_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_cage_loop
 
@@ -2930,9 +2522,6 @@ Behavior loop function for Boo cage
 ### C Prototype
 `void bhv_boo_cage_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_key_init
 
@@ -2951,9 +2540,6 @@ Behavior init function for Bowser key
 ### C Prototype
 `void bhv_bowser_key_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_key_loop
 
@@ -2972,9 +2558,6 @@ Behavior loop function for Bowser key
 ### C Prototype
 `void bhv_bowser_key_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_grand_star_init
 
@@ -2993,9 +2576,6 @@ Behavior init function for Grand Star
 ### C Prototype
 `void bhv_grand_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_grand_star_loop
 
@@ -3014,9 +2594,6 @@ Behavior loop function for Grand Star
 ### C Prototype
 `void bhv_grand_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_boo_key_loop
 
@@ -3035,9 +2612,6 @@ Behavior loop function for beta boo key
 ### C Prototype
 `void bhv_beta_boo_key_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_alpha_boo_key_loop
 
@@ -3056,9 +2630,6 @@ Behavior loop function for alpha boo key
 ### C Prototype
 `void bhv_alpha_boo_key_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bullet_bill_init
 
@@ -3077,9 +2648,6 @@ Behavior init function for Bullet Bill
 ### C Prototype
 `void bhv_bullet_bill_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bullet_bill_loop
 
@@ -3098,9 +2666,6 @@ Behavior loop function for Bullet Bill
 ### C Prototype
 `void bhv_bullet_bill_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_white_puff_smoke_init
 
@@ -3119,9 +2684,6 @@ Behavior init function for White puff smoke
 ### C Prototype
 `void bhv_white_puff_smoke_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_tail_anchor_init
 
@@ -3140,9 +2702,6 @@ Behavior init function for Bowser tail anchor
 ### C Prototype
 `void bhv_bowser_tail_anchor_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_tail_anchor_loop
 
@@ -3161,9 +2720,6 @@ Behavior loop function for Bowser tail anchor
 ### C Prototype
 `void bhv_bowser_tail_anchor_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_init
 
@@ -3182,9 +2738,6 @@ Behavior init function for Bowser
 ### C Prototype
 `void bhv_bowser_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_loop
 
@@ -3203,9 +2756,6 @@ Behavior loop function for Bowser
 ### C Prototype
 `void bhv_bowser_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_body_anchor_init
 
@@ -3224,9 +2774,6 @@ Behavior init function for Bowser body anchor
 ### C Prototype
 `void bhv_bowser_body_anchor_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_body_anchor_loop
 
@@ -3245,9 +2792,6 @@ Behavior loop function for Bowser body anchor
 ### C Prototype
 `void bhv_bowser_body_anchor_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_flame_spawn_loop
 
@@ -3266,9 +2810,6 @@ Behavior loop function for Bowser flame spawn
 ### C Prototype
 `void bhv_bowser_flame_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tilting_bowser_lava_platform_init
 
@@ -3287,9 +2828,6 @@ Behavior init function for tilting Bowser in the Fire Sea arena platform
 ### C Prototype
 `void bhv_tilting_bowser_lava_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_falling_bowser_platform_loop
 
@@ -3308,9 +2846,6 @@ Behavior loop function for falling Bowser in the Sky arena platform
 ### C Prototype
 `void bhv_falling_bowser_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_bowser_flame_init
 
@@ -3329,9 +2864,6 @@ Behavior init function for Blue Bowser flame
 ### C Prototype
 `void bhv_blue_bowser_flame_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_bowser_flame_loop
 
@@ -3350,9 +2882,6 @@ Behavior loop function for Blue Bowser flame
 ### C Prototype
 `void bhv_blue_bowser_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_floating_landing_init
 
@@ -3371,9 +2900,6 @@ Behavior init function for flame floating landing
 ### C Prototype
 `void bhv_flame_floating_landing_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_floating_landing_loop
 
@@ -3392,9 +2918,6 @@ Behavior loop function for flame floating landing
 ### C Prototype
 `void bhv_flame_floating_landing_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_flames_group_loop
 
@@ -3413,9 +2936,6 @@ Behavior loop function for blue flames group
 ### C Prototype
 `void bhv_blue_flames_group_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_bouncing_init
 
@@ -3434,9 +2954,6 @@ Behavior init function for flame bouncing
 ### C Prototype
 `void bhv_flame_bouncing_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_bouncing_loop
 
@@ -3455,9 +2972,6 @@ Behavior loop function for flame bouncing
 ### C Prototype
 `void bhv_flame_bouncing_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_moving_forward_growing_init
 
@@ -3476,9 +2990,6 @@ Behavior init function for flame moving forward growing
 ### C Prototype
 `void bhv_flame_moving_forward_growing_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_moving_forward_growing_loop
 
@@ -3497,9 +3008,6 @@ Behavior loop function for flame moving forward growing
 ### C Prototype
 `void bhv_flame_moving_forward_growing_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_bowser_init
 
@@ -3518,9 +3026,6 @@ Behavior init function for Bowser flame
 ### C Prototype
 `void bhv_flame_bowser_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_bowser_loop
 
@@ -3539,9 +3044,6 @@ Behavior loop function for Bowser flame
 ### C Prototype
 `void bhv_flame_bowser_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flame_large_burning_out_init
 
@@ -3560,9 +3062,6 @@ Behavior init function for large flame burning out
 ### C Prototype
 `void bhv_flame_large_burning_out_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_fish_movement_loop
 
@@ -3581,9 +3080,6 @@ Behavior loop function for blue fish movement
 ### C Prototype
 `void bhv_blue_fish_movement_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tank_fish_group_loop
 
@@ -3602,9 +3098,6 @@ Behavior loop function for tank fish group
 ### C Prototype
 `void bhv_tank_fish_group_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_checkerboard_elevator_group_init
 
@@ -3623,9 +3116,6 @@ Behavior init function for checkerboard elevator group
 ### C Prototype
 `void bhv_checkerboard_elevator_group_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_checkerboard_elevator_group_loop
 
@@ -3644,9 +3134,6 @@ Behavior loop function for checkerboard elevator group
 ### C Prototype
 `void bhv_checkerboard_elevator_group_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_checkerboard_platform_init
 
@@ -3665,9 +3152,6 @@ Behavior init function for checkerboard platform
 ### C Prototype
 `void bhv_checkerboard_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_checkerboard_platform_loop
 
@@ -3686,9 +3170,6 @@ Behavior loop function for checkerboard platform
 ### C Prototype
 `void bhv_checkerboard_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_key_unlock_door_loop
 
@@ -3707,9 +3188,6 @@ Behavior loop function for Bowser key unlock door
 ### C Prototype
 `void bhv_bowser_key_unlock_door_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_key_course_exit_loop
 
@@ -3728,9 +3206,6 @@ Behavior loop function for Bowser key course exit
 ### C Prototype
 `void bhv_bowser_key_course_exit_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_invisible_objects_under_bridge_init
 
@@ -3749,9 +3224,6 @@ Behavior init function for invisible objects under the Castle bridge
 ### C Prototype
 `void bhv_invisible_objects_under_bridge_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_invisible_objects_under_bridge_loop
 
@@ -3770,9 +3242,6 @@ Behavior loop function for Invisible objects under the Castle bridge
 ### C Prototype
 `void bhv_invisible_objects_under_bridge_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_level_pillar_init
 
@@ -3791,9 +3260,6 @@ Behavior init function for Castle Basement water level pillar
 ### C Prototype
 `void bhv_water_level_pillar_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_level_pillar_loop
 
@@ -3812,9 +3278,6 @@ Behavior loop function for Castle Basement water level pillar
 ### C Prototype
 `void bhv_water_level_pillar_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ddd_warp_loop
 
@@ -3833,9 +3296,6 @@ Behavior loop function for Castle Basement Dire Dire Docks warp collision
 ### C Prototype
 `void bhv_ddd_warp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moat_grills_loop
 
@@ -3854,9 +3314,6 @@ Behavior loop function for moat grills
 ### C Prototype
 `void bhv_moat_grills_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rotating_clock_arm_loop
 
@@ -3875,9 +3332,6 @@ Behavior loop function for rotating clock arm
 ### C Prototype
 `void bhv_rotating_clock_arm_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ukiki_init
 
@@ -3896,9 +3350,6 @@ Behavior init function for Ukiki
 ### C Prototype
 `void bhv_ukiki_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ukiki_loop
 
@@ -3917,9 +3368,6 @@ Behavior loop function for Ukiki
 ### C Prototype
 `void bhv_ukiki_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_sinking_rock_block_loop
 
@@ -3938,9 +3386,6 @@ Behavior loop function for Lethal Lava Land sinking rock block
 ### C Prototype
 `void bhv_lll_sinking_rock_block_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_moving_octagonal_mesh_platform_loop
 
@@ -3959,9 +3404,6 @@ Behavior loop function for Lethal Lava Land moving octagonal mesh platform
 ### C Prototype
 `void bhv_lll_moving_octagonal_mesh_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_rotating_block_fire_bars_loop
 
@@ -3980,9 +3422,6 @@ Behavior loop function for Lethal Lava Land rotating block fire bars
 ### C Prototype
 `void bhv_lll_rotating_block_fire_bars_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_rotating_hex_flame_loop
 
@@ -4001,9 +3440,6 @@ Behavior loop function for Lethal Lava Land rotating hex flame
 ### C Prototype
 `void bhv_lll_rotating_hex_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_wood_piece_loop
 
@@ -4022,9 +3458,6 @@ Behavior loop function for Lethal Lava Land wood piece
 ### C Prototype
 `void bhv_lll_wood_piece_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_floating_wood_bridge_loop
 
@@ -4043,9 +3476,6 @@ Behavior loop function for Lethal Lava Land floating wood bridge
 ### C Prototype
 `void bhv_lll_floating_wood_bridge_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_volcano_flames_loop
 
@@ -4064,9 +3494,6 @@ Behavior loop function for Volcano flames
 ### C Prototype
 `void bhv_volcano_flames_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_rotating_hexagonal_ring_loop
 
@@ -4085,9 +3512,6 @@ Behavior loop function for Lethal Lava Land rotating hexagonal ring
 ### C Prototype
 `void bhv_lll_rotating_hexagonal_ring_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_sinking_rectangular_platform_loop
 
@@ -4106,9 +3530,6 @@ Behavior loop function for Lethal Lava Land sinking rectangular platform
 ### C Prototype
 `void bhv_lll_sinking_rectangular_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_sinking_square_platforms_loop
 
@@ -4127,9 +3548,6 @@ Behavior loop function for Lethal Lava Land sinking square platforms
 ### C Prototype
 `void bhv_lll_sinking_square_platforms_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_koopa_shell_loop
 
@@ -4148,9 +3566,6 @@ Behavior loop function for Koopa Shell
 ### C Prototype
 `void bhv_koopa_shell_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_koopa_shell_flame_loop
 
@@ -4169,9 +3584,6 @@ Behavior loop function for Koopa Shell flame
 ### C Prototype
 `void bhv_koopa_shell_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tox_box_loop
 
@@ -4190,9 +3602,6 @@ Behavior loop function for Tox Box
 ### C Prototype
 `void bhv_tox_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## mario_moving_fast_enough_to_make_piranha_plant_bite
 
@@ -4212,9 +3621,6 @@ This one is a mouthful
 ### C Prototype
 `s32 mario_moving_fast_enough_to_make_piranha_plant_bite(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_piranha_plant_loop
 
@@ -4233,9 +3639,6 @@ Behavior loop function for Piranha Plant
 ### C Prototype
 `void bhv_piranha_plant_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_bowser_puzzle_piece_loop
 
@@ -4254,9 +3657,6 @@ Behavior loop function for Lethal Lava Land bowser puzzle piece
 ### C Prototype
 `void bhv_lll_bowser_puzzle_piece_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_bowser_puzzle_loop
 
@@ -4275,9 +3675,6 @@ Behavior loop function for Lethal Lava Land bowser puzzle
 ### C Prototype
 `void bhv_lll_bowser_puzzle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tuxies_mother_loop
 
@@ -4296,9 +3693,6 @@ Behavior loop function for Tuxie's mother
 ### C Prototype
 `void bhv_tuxies_mother_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_penguin_loop
 
@@ -4317,9 +3711,6 @@ Behavior loop function for small penguin
 ### C Prototype
 `void bhv_small_penguin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fish_spawner_loop
 
@@ -4338,9 +3729,6 @@ Behavior loop function for fish spawner
 ### C Prototype
 `void bhv_fish_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fish_loop
 
@@ -4359,9 +3747,6 @@ Behavior loop function for fish
 ### C Prototype
 `void bhv_fish_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wdw_express_elevator_loop
 
@@ -4380,9 +3765,6 @@ Behavior loop function for Wet Dry World express elevator
 ### C Prototype
 `void bhv_wdw_express_elevator_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bub_spawner_loop
 
@@ -4401,9 +3783,6 @@ Behavior loop function for Bub spawner
 ### C Prototype
 `void bhv_bub_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bub_loop
 
@@ -4422,9 +3801,6 @@ Behavior loop function for Bub
 ### C Prototype
 `void bhv_bub_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_exclamation_box_init
 
@@ -4443,9 +3819,6 @@ Behavior init function for Exclamation Box
 ### C Prototype
 `void bhv_exclamation_box_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_exclamation_box_loop
 
@@ -4464,9 +3837,6 @@ Behavior loop function for Exclamation Box
 ### C Prototype
 `void bhv_exclamation_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rotating_exclamation_box_loop
 
@@ -4485,9 +3855,6 @@ Behavior loop function for rotating exclamation mark
 ### C Prototype
 `void bhv_rotating_exclamation_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sound_spawner_init
 
@@ -4506,9 +3873,6 @@ Behavior init function for sound spawner
 ### C Prototype
 `void bhv_sound_spawner_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowsers_sub_loop
 
@@ -4527,9 +3891,6 @@ Behavior loop function for Bowser's submarine
 ### C Prototype
 `void bhv_bowsers_sub_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sushi_shark_loop
 
@@ -4548,9 +3909,6 @@ Behavior loop function for Sushi Shark
 ### C Prototype
 `void bhv_sushi_shark_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sushi_shark_collision_loop
 
@@ -4569,9 +3927,6 @@ Behavior loop function for Sushi Shark collision
 ### C Prototype
 `void bhv_sushi_shark_collision_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jrb_sliding_box_loop
 
@@ -4590,9 +3945,6 @@ Behavior loop function for Jolly Roger Bay sliding box
 ### C Prototype
 `void bhv_jrb_sliding_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ship_part_3_loop
 
@@ -4611,9 +3963,6 @@ Behavior loop function for Jolly Roger Bay ship part 3
 ### C Prototype
 `void bhv_ship_part_3_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sunken_ship_part_loop
 
@@ -4632,9 +3981,6 @@ Behavior loop function for Jolly Roger Bay sunken ship part
 ### C Prototype
 `void bhv_sunken_ship_part_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_white_puff_1_loop
 
@@ -4653,9 +3999,6 @@ Behavior loop function for white puff 1
 ### C Prototype
 `void bhv_white_puff_1_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_white_puff_2_loop
 
@@ -4674,9 +4017,6 @@ Behavior loop function for white puff 2
 ### C Prototype
 `void bhv_white_puff_2_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_coin_number_loop
 
@@ -4695,9 +4035,6 @@ Behavior loop function for Blue Coin number
 ### C Prototype
 `void bhv_blue_coin_number_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_coin_switch_init
 
@@ -4716,9 +4053,6 @@ Behavior init function for Blue Coin switch
 ### C Prototype
 `void bhv_blue_coin_switch_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_coin_switch_loop
 
@@ -4737,9 +4071,6 @@ Behavior loop function for Blue Coin switch
 ### C Prototype
 `void bhv_blue_coin_switch_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_blue_coin_loop
 
@@ -4758,9 +4089,6 @@ Behavior loop function for hidden Blue Coin
 ### C Prototype
 `void bhv_hidden_blue_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_openable_cage_door_loop
 
@@ -4779,9 +4107,6 @@ Behavior loop function for openable cage door
 ### C Prototype
 `void bhv_openable_cage_door_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_openable_grill_loop
 
@@ -4800,9 +4125,6 @@ Behavior loop function for openable grill
 ### C Prototype
 `void bhv_openable_grill_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_level_diamond_loop
 
@@ -4821,9 +4143,6 @@ Behavior loop function for Wet Dry World water level diamond
 ### C Prototype
 `void bhv_water_level_diamond_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_init_changing_water_level_loop
 
@@ -4842,9 +4161,6 @@ Behavior init function for changing water level, called when Wet Dry World is lo
 ### C Prototype
 `void bhv_init_changing_water_level_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tweester_sand_particle_loop
 
@@ -4863,9 +4179,6 @@ Behavior loop function for Tweester sand particle
 ### C Prototype
 `void bhv_tweester_sand_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_tweester_loop
 
@@ -4884,9 +4197,6 @@ Behavior loop function for Tweester
 ### C Prototype
 `void bhv_tweester_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_merry_go_round_boo_manager_loop
 
@@ -4905,9 +4215,6 @@ Behavior loop function for Merry Go Round Boo manager
 ### C Prototype
 `void bhv_merry_go_round_boo_manager_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_animated_texture_loop
 
@@ -4926,9 +4233,6 @@ Behavior loop function for animated texture
 ### C Prototype
 `void bhv_animated_texture_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_in_castle_loop
 
@@ -4947,9 +4251,6 @@ Behavior loop function for the Boo inside the Castle
 ### C Prototype
 `void bhv_boo_in_castle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_with_cage_init
 
@@ -4968,9 +4269,6 @@ Behavior init function for Boo with cage
 ### C Prototype
 `void bhv_boo_with_cage_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_with_cage_loop
 
@@ -4989,9 +4287,6 @@ Behavior loop function for Boo with cage
 ### C Prototype
 `void bhv_boo_with_cage_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_init
 
@@ -5010,9 +4305,6 @@ Behavior init function for Boo
 ### C Prototype
 `void bhv_boo_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_boo_loop
 
@@ -5031,9 +4323,6 @@ Behavior loop function for Big Boo
 ### C Prototype
 `void bhv_big_boo_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_courtyard_boo_triplet_init
 
@@ -5052,9 +4341,6 @@ Behavior init function for Courtyard Boo triplet
 ### C Prototype
 `void bhv_courtyard_boo_triplet_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## obj_set_secondary_camera_focus
 
@@ -5073,9 +4359,6 @@ Sets the secondary camera focus
 ### C Prototype
 `void obj_set_secondary_camera_focus(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_loop
 
@@ -5094,9 +4377,6 @@ Behavior loop function for Boo
 ### C Prototype
 `void bhv_boo_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_boo_boss_spawned_bridge_loop
 
@@ -5115,9 +4395,6 @@ Behavior loop function for Boo boss spawned bridge
 ### C Prototype
 `void bhv_boo_boss_spawned_bridge_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bbh_tilting_trap_platform_loop
 
@@ -5136,9 +4413,6 @@ Behavior loop function for Big Boo's Haunt tilting trap platform
 ### C Prototype
 `void bhv_bbh_tilting_trap_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_haunted_bookshelf_loop
 
@@ -5157,9 +4431,6 @@ Behavior loop function for Big Boo's Haunt haunted bookshelf
 ### C Prototype
 `void bhv_haunted_bookshelf_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_merry_go_round_loop
 
@@ -5178,9 +4449,6 @@ Behavior loop function for Big Boo's Haunt Merry Go Round
 ### C Prototype
 `void bhv_merry_go_round_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_play_music_track_when_touched_loop
 
@@ -5199,9 +4467,6 @@ Behavior loop function for playing a jingle when in a 200 unit radius
 ### C Prototype
 `void bhv_play_music_track_when_touched_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_bowser_anchor_loop
 
@@ -5220,9 +4485,6 @@ Behavior loop function for beta Bowser anchor
 ### C Prototype
 `void bhv_beta_bowser_anchor_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_static_checkered_platform_loop
 
@@ -5241,9 +4503,6 @@ Behavior loop function for static checkered platform
 ### C Prototype
 `void bhv_static_checkered_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_castle_floor_trap_init
 
@@ -5262,9 +4521,6 @@ Behavior init function for Bowser in the Dark World floor trap manager
 ### C Prototype
 `void bhv_castle_floor_trap_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_castle_floor_trap_loop
 
@@ -5283,9 +4539,6 @@ Behavior loop function for Bowser in the Dark World floor trap manager
 ### C Prototype
 `void bhv_castle_floor_trap_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_floor_trap_in_castle_loop
 
@@ -5304,9 +4557,6 @@ Behavior loop function for Bowser in the Dark World floor trap
 ### C Prototype
 `void bhv_floor_trap_in_castle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sparkle_spawn_loop
 
@@ -5325,9 +4575,6 @@ Behavior loop function for sparkle spawner
 ### C Prototype
 `void bhv_sparkle_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_scuttlebug_loop
 
@@ -5346,9 +4593,6 @@ Behavior loop function for Scuttlebug
 ### C Prototype
 `void bhv_scuttlebug_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_scuttlebug_spawn_loop
 
@@ -5367,9 +4611,6 @@ Behavior loop function for Scuttlebug spawner
 ### C Prototype
 `void bhv_scuttlebug_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_whomp_loop
 
@@ -5388,9 +4629,6 @@ Behavior loop function for Whomp
 ### C Prototype
 `void bhv_whomp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_splash_spawn_droplets
 
@@ -5409,9 +4647,6 @@ Behavior init function for spawning water splash droplets
 ### C Prototype
 `void bhv_water_splash_spawn_droplets(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_droplet_loop
 
@@ -5430,9 +4665,6 @@ Behavior loop function for water droplet
 ### C Prototype
 `void bhv_water_droplet_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_droplet_splash_init
 
@@ -5451,9 +4683,6 @@ Behavior init function for water droplet splash
 ### C Prototype
 `void bhv_water_droplet_splash_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bubble_splash_init
 
@@ -5472,9 +4701,6 @@ Behavior init function for bubble splash
 ### C Prototype
 `void bhv_bubble_splash_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_idle_water_wave_loop
 
@@ -5493,9 +4719,6 @@ Behavior loop function for idle water wave
 ### C Prototype
 `void bhv_idle_water_wave_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_shallow_water_splash_init
 
@@ -5514,9 +4737,6 @@ Behavior init function for shallow water splash
 ### C Prototype
 `void bhv_shallow_water_splash_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wave_trail_shrink
 
@@ -5535,9 +4755,6 @@ Behavior loop function for shrinking water trail
 ### C Prototype
 `void bhv_wave_trail_shrink(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_strong_wind_particle_loop
 
@@ -5556,9 +4773,6 @@ Behavior loop function for strong wind particle
 ### C Prototype
 `void bhv_strong_wind_particle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sl_snowman_wind_loop
 
@@ -5577,9 +4791,6 @@ Behavior loop function for Snowman's Land snowman wind
 ### C Prototype
 `void bhv_sl_snowman_wind_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sl_walking_penguin_loop
 
@@ -5598,9 +4809,6 @@ Behavior loop function for Snowman's Land walking penguin
 ### C Prototype
 `void bhv_sl_walking_penguin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_menu_button_init
 
@@ -5619,9 +4827,6 @@ Behavior init function for File Select button
 ### C Prototype
 `void bhv_menu_button_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_menu_button_loop
 
@@ -5640,9 +4845,6 @@ Behavior loop function for File Select button
 ### C Prototype
 `void bhv_menu_button_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_menu_button_manager_init
 
@@ -5661,9 +4863,6 @@ Behavior init function for File Select button manager
 ### C Prototype
 `void bhv_menu_button_manager_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_menu_button_manager_loop
 
@@ -5682,9 +4881,6 @@ Behavior loop function for File Select button manager
 ### C Prototype
 `void bhv_menu_button_manager_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_act_selector_star_type_loop
 
@@ -5703,9 +4899,6 @@ Behavior loop function for Act Selector star type
 ### C Prototype
 `void bhv_act_selector_star_type_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_act_selector_init
 
@@ -5724,9 +4917,6 @@ Behavior init function for Act Selector
 ### C Prototype
 `void bhv_act_selector_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_act_selector_loop
 
@@ -5745,9 +4935,6 @@ Behavior loop function for Act Selector
 ### C Prototype
 `void bhv_act_selector_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moving_yellow_coin_init
 
@@ -5766,9 +4953,6 @@ Behavior init function for moving Yellow Coin
 ### C Prototype
 `void bhv_moving_yellow_coin_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moving_yellow_coin_loop
 
@@ -5787,9 +4971,6 @@ Behavior loop function for moving Yellow Coin
 ### C Prototype
 `void bhv_moving_yellow_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moving_blue_coin_init
 
@@ -5808,9 +4989,6 @@ Behavior init function for moving Blue Coin
 ### C Prototype
 `void bhv_moving_blue_coin_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moving_blue_coin_loop
 
@@ -5829,9 +5007,6 @@ Behavior loop function for moving Blue Coin
 ### C Prototype
 `void bhv_moving_blue_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_coin_sliding_jumping_init
 
@@ -5850,9 +5025,6 @@ Behavior init function for Blue Coin sliding jumping
 ### C Prototype
 `void bhv_blue_coin_sliding_jumping_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_coin_sliding_loop
 
@@ -5871,9 +5043,6 @@ Behavior loop function for Blue Coin sliding
 ### C Prototype
 `void bhv_blue_coin_sliding_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_blue_coin_jumping_loop
 
@@ -5892,9 +5061,6 @@ Behavior loop function for Blue Coin jumping
 ### C Prototype
 `void bhv_blue_coin_jumping_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_seaweed_init
 
@@ -5913,9 +5079,6 @@ Behavior init function for seaweed
 ### C Prototype
 `void bhv_seaweed_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_seaweed_bundle_init
 
@@ -5934,9 +5097,6 @@ Behavior init function for seaweed bundle
 ### C Prototype
 `void bhv_seaweed_bundle_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_init
 
@@ -5955,9 +5115,6 @@ Behavior init function for Bob-omb
 ### C Prototype
 `void bhv_bobomb_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_loop
 
@@ -5976,9 +5133,6 @@ Behavior loop function for Bob-omb
 ### C Prototype
 `void bhv_bobomb_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_fuse_smoke_init
 
@@ -5997,9 +5151,6 @@ Behavior init function for Bob-omb fuse smoke
 ### C Prototype
 `void bhv_bobomb_fuse_smoke_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_buddy_init
 
@@ -6018,9 +5169,6 @@ Behavior init function for Bob-omb buddy
 ### C Prototype
 `void bhv_bobomb_buddy_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_buddy_loop
 
@@ -6039,9 +5187,6 @@ Behavior loop function for Bob-omb buddy
 ### C Prototype
 `void bhv_bobomb_buddy_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cannon_closed_init
 
@@ -6060,9 +5205,6 @@ Behavior init function for cannon closed
 ### C Prototype
 `void bhv_cannon_closed_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cannon_closed_loop
 
@@ -6081,9 +5223,6 @@ Behavior loop function for cannon closed
 ### C Prototype
 `void bhv_cannon_closed_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_whirlpool_init
 
@@ -6102,9 +5241,6 @@ Behavior init function for whirlpool
 ### C Prototype
 `void bhv_whirlpool_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_whirlpool_loop
 
@@ -6123,9 +5259,6 @@ Behavior loop function for whirlpool
 ### C Prototype
 `void bhv_whirlpool_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jet_stream_loop
 
@@ -6144,9 +5277,6 @@ Behavior loop function for jet stream
 ### C Prototype
 `void bhv_jet_stream_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_homing_amp_init
 
@@ -6165,9 +5295,6 @@ Behavior init function for Homing Amp
 ### C Prototype
 `void bhv_homing_amp_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_homing_amp_loop
 
@@ -6186,9 +5313,6 @@ Behavior loop function for Homing Amp
 ### C Prototype
 `void bhv_homing_amp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_circling_amp_init
 
@@ -6207,9 +5331,6 @@ Behavior init function for Circling Amp
 ### C Prototype
 `void bhv_circling_amp_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_circling_amp_loop
 
@@ -6228,9 +5349,6 @@ Behavior loop function for Circling Amp
 ### C Prototype
 `void bhv_circling_amp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_butterfly_init
 
@@ -6249,9 +5367,6 @@ Behavior init function for Butterfly
 ### C Prototype
 `void bhv_butterfly_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_butterfly_loop
 
@@ -6270,9 +5385,6 @@ Behavior loop function for Butterfly
 ### C Prototype
 `void bhv_butterfly_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hoot_init
 
@@ -6291,9 +5403,6 @@ Behavior init function for Hoot
 ### C Prototype
 `void bhv_hoot_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hoot_loop
 
@@ -6312,9 +5421,6 @@ Behavior loop function for Hoot
 ### C Prototype
 `void bhv_hoot_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_holdable_object_init
 
@@ -6333,9 +5439,6 @@ Behavior init function for beta holdable object
 ### C Prototype
 `void bhv_beta_holdable_object_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_beta_holdable_object_loop
 
@@ -6354,9 +5457,6 @@ Behavior loop function for beta holdable object
 ### C Prototype
 `void bhv_beta_holdable_object_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_object_bubble_init
 
@@ -6375,9 +5475,6 @@ Behavior init function for bubble object
 ### C Prototype
 `void bhv_object_bubble_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_object_bubble_loop
 
@@ -6396,9 +5493,6 @@ Behavior loop function for bubble object
 ### C Prototype
 `void bhv_object_bubble_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_object_water_wave_init
 
@@ -6417,9 +5511,6 @@ Behavior init function for water wave object
 ### C Prototype
 `void bhv_object_water_wave_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_object_water_wave_loop
 
@@ -6438,9 +5529,6 @@ Behavior loop function for water wave object
 ### C Prototype
 `void bhv_object_water_wave_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_explosion_init
 
@@ -6459,9 +5547,6 @@ Behavior init function for explosion
 ### C Prototype
 `void bhv_explosion_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_explosion_loop
 
@@ -6480,9 +5565,6 @@ Behavior loop function for explosion
 ### C Prototype
 `void bhv_explosion_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_bully_death_smoke_init
 
@@ -6501,9 +5583,6 @@ Behavior init function for Bob-omb and Bully death smoke
 ### C Prototype
 `void bhv_bobomb_bully_death_smoke_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_explosion_bubble_init
 
@@ -6522,9 +5601,6 @@ Behavior init function for Bob-omb explosion bubble
 ### C Prototype
 `void bhv_bobomb_explosion_bubble_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bobomb_explosion_bubble_loop
 
@@ -6543,9 +5619,6 @@ Behavior loop function for Bob-omb explosion bubble
 ### C Prototype
 `void bhv_bobomb_explosion_bubble_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_respawner_loop
 
@@ -6564,9 +5637,6 @@ Behavior loop function for respawner
 ### C Prototype
 `void bhv_respawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_bully_init
 
@@ -6585,9 +5655,6 @@ Behavior init function for Small Bully
 ### C Prototype
 `void bhv_small_bully_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bully_loop
 
@@ -6606,9 +5673,6 @@ Behavior loop function for Bully
 ### C Prototype
 `void bhv_bully_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_bully_init
 
@@ -6627,9 +5691,6 @@ Behavior init function for Big Bully
 ### C Prototype
 `void bhv_big_bully_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_bully_with_minions_init
 
@@ -6648,9 +5709,6 @@ Behavior init function for Big Bully with minions
 ### C Prototype
 `void bhv_big_bully_with_minions_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_bully_with_minions_loop
 
@@ -6669,9 +5727,6 @@ Behavior loop function for Big Bully with minions
 ### C Prototype
 `void bhv_big_bully_with_minions_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jet_stream_ring_spawner_loop
 
@@ -6690,9 +5745,6 @@ Behavior loop function for jet stream ring spawner
 ### C Prototype
 `void bhv_jet_stream_ring_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jet_stream_water_ring_init
 
@@ -6711,9 +5763,6 @@ Behavior init function for jet stream water ring
 ### C Prototype
 `void bhv_jet_stream_water_ring_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jet_stream_water_ring_loop
 
@@ -6732,9 +5781,6 @@ Behavior loop function for jet stream water ring
 ### C Prototype
 `void bhv_jet_stream_water_ring_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_manta_ray_water_ring_init
 
@@ -6753,9 +5799,6 @@ Behavior init function for Manta Ray water ring
 ### C Prototype
 `void bhv_manta_ray_water_ring_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_manta_ray_water_ring_loop
 
@@ -6774,9 +5817,6 @@ Behavior loop function for Manta Ray water ring
 ### C Prototype
 `void bhv_manta_ray_water_ring_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_bomb_loop
 
@@ -6795,9 +5835,6 @@ Behavior loop function for Bowser bomb
 ### C Prototype
 `void bhv_bowser_bomb_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_bomb_explosion_loop
 
@@ -6816,9 +5853,6 @@ Behavior loop function for Bowser bomb explosion
 ### C Prototype
 `void bhv_bowser_bomb_explosion_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_bomb_smoke_loop
 
@@ -6837,9 +5871,6 @@ Behavior loop function for Bowser bomb smoke
 ### C Prototype
 `void bhv_bowser_bomb_smoke_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_celebration_star_init
 
@@ -6858,9 +5889,6 @@ Behavior init function for Celebration Star
 ### C Prototype
 `void bhv_celebration_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_celebration_star_loop
 
@@ -6879,9 +5907,6 @@ Behavior loop function for Celebration Star
 ### C Prototype
 `void bhv_celebration_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_celebration_star_sparkle_loop
 
@@ -6900,9 +5925,6 @@ Behavior loop function for Celebration Star sparkle
 ### C Prototype
 `void bhv_celebration_star_sparkle_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_star_key_collection_puff_spawner_loop
 
@@ -6921,9 +5943,6 @@ Behavior loop function for Star and key collection puff spawner
 ### C Prototype
 `void bhv_star_key_collection_puff_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_drawbridge_spawner_init
 
@@ -6942,9 +5961,6 @@ Behavior init function for Lethal Lava Land drawbridge spawner
 ### C Prototype
 `void bhv_lll_drawbridge_spawner_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_drawbridge_spawner_loop
 
@@ -6963,9 +5979,6 @@ Behavior loop function for Lethal Lava Land drawbridge spawner
 ### C Prototype
 `void bhv_lll_drawbridge_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_drawbridge_loop
 
@@ -6984,9 +5997,6 @@ Behavior loop function for Lethal Lava Land drawbridge
 ### C Prototype
 `void bhv_lll_drawbridge_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_bomp_init
 
@@ -7005,9 +6015,6 @@ Behavior init function for Small Bomp (Whomp's Fortress moving wall with eyes)
 ### C Prototype
 `void bhv_small_bomp_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_bomp_loop
 
@@ -7026,9 +6033,6 @@ Behavior loop function for Small Bomp (Whomp's Fortress moving wall with eyes)
 ### C Prototype
 `void bhv_small_bomp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_large_bomp_init
 
@@ -7047,9 +6051,6 @@ Behavior init function for Large Bomp (Whomp's Fortress moving wall with eyes)
 ### C Prototype
 `void bhv_large_bomp_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_large_bomp_loop
 
@@ -7068,9 +6069,6 @@ Behavior loop function for Large Bomp (Whomp's Fortress moving wall with eyes)
 ### C Prototype
 `void bhv_large_bomp_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_sliding_platform_init
 
@@ -7089,9 +6087,6 @@ Behavior init function for Whomp's Fortress sliding platform
 ### C Prototype
 `void bhv_wf_sliding_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wf_sliding_platform_loop
 
@@ -7110,9 +6105,6 @@ Behavior loop function for Whomp's Fortress sliding platform
 ### C Prototype
 `void bhv_wf_sliding_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moneybag_init
 
@@ -7131,9 +6123,6 @@ Behavior init function for Moneybag
 ### C Prototype
 `void bhv_moneybag_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moneybag_loop
 
@@ -7152,9 +6141,6 @@ Behavior loop function for Moneybag
 ### C Prototype
 `void bhv_moneybag_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_moneybag_hidden_loop
 
@@ -7173,9 +6159,6 @@ Behavior loop function for Moneybag hidden
 ### C Prototype
 `void bhv_moneybag_hidden_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bob_pit_bowling_ball_init
 
@@ -7194,9 +6177,6 @@ Behavior init function for Bob-omb Battlefield pit bowling ball
 ### C Prototype
 `void bhv_bob_pit_bowling_ball_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bob_pit_bowling_ball_loop
 
@@ -7215,9 +6195,6 @@ Behavior loop function for Bob-omb Battlefield pit bowling ball
 ### C Prototype
 `void bhv_bob_pit_bowling_ball_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_free_bowling_ball_init
 
@@ -7236,9 +6213,6 @@ Behavior init function for free bowling ball
 ### C Prototype
 `void bhv_free_bowling_ball_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_free_bowling_ball_loop
 
@@ -7257,9 +6231,6 @@ Behavior loop function for free bowling ball
 ### C Prototype
 `void bhv_free_bowling_ball_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowling_ball_init
 
@@ -7278,9 +6249,6 @@ Behavior init function for bowling ball
 ### C Prototype
 `void bhv_bowling_ball_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowling_ball_loop
 
@@ -7299,9 +6267,6 @@ Behavior loop function for bowling ball
 ### C Prototype
 `void bhv_bowling_ball_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_generic_bowling_ball_spawner_init
 
@@ -7320,9 +6285,6 @@ Behavior init function for generic bowling ball spawner
 ### C Prototype
 `void bhv_generic_bowling_ball_spawner_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_generic_bowling_ball_spawner_loop
 
@@ -7341,9 +6303,6 @@ Behavior loop function for generic bowling ball spawner
 ### C Prototype
 `void bhv_generic_bowling_ball_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_thi_bowling_ball_spawner_loop
 
@@ -7362,9 +6321,6 @@ Behavior loop function for Tiny Huge Island bowling ball spawner
 ### C Prototype
 `void bhv_thi_bowling_ball_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rr_cruiser_wing_init
 
@@ -7383,9 +6339,6 @@ Behavior init function for Rainbow Ride cruiser wing
 ### C Prototype
 `void bhv_rr_cruiser_wing_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rr_cruiser_wing_loop
 
@@ -7404,9 +6357,6 @@ Behavior loop function for Rainbow Ride cruiser wing
 ### C Prototype
 `void bhv_rr_cruiser_wing_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spindel_init
 
@@ -7425,9 +6375,6 @@ Behavior init function for Spindel
 ### C Prototype
 `void bhv_spindel_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spindel_loop
 
@@ -7446,9 +6393,6 @@ Behavior loop function for Spindel
 ### C Prototype
 `void bhv_spindel_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ssl_moving_pyramid_wall_init
 
@@ -7467,9 +6411,6 @@ Behavior init function for Ssl moving pyramid wall
 ### C Prototype
 `void bhv_ssl_moving_pyramid_wall_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ssl_moving_pyramid_wall_loop
 
@@ -7488,9 +6429,6 @@ Behavior loop function for Ssl moving pyramid wall
 ### C Prototype
 `void bhv_ssl_moving_pyramid_wall_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_elevator_init
 
@@ -7509,9 +6447,6 @@ Behavior init function for Pyramid elevator
 ### C Prototype
 `void bhv_pyramid_elevator_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_elevator_loop
 
@@ -7530,9 +6465,6 @@ Behavior loop function for Pyramid elevator
 ### C Prototype
 `void bhv_pyramid_elevator_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_elevator_trajectory_marker_ball_loop
 
@@ -7551,9 +6483,6 @@ Behavior loop function for Pyramid elevator trajectory marker ball
 ### C Prototype
 `void bhv_pyramid_elevator_trajectory_marker_ball_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_top_init
 
@@ -7572,9 +6501,6 @@ Behavior init function for Pyramid top
 ### C Prototype
 `void bhv_pyramid_top_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_top_loop
 
@@ -7593,9 +6519,6 @@ Behavior loop function for Pyramid top
 ### C Prototype
 `void bhv_pyramid_top_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_top_fragment_init
 
@@ -7614,9 +6537,6 @@ Behavior init function for Pyramid top fragment
 ### C Prototype
 `void bhv_pyramid_top_fragment_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_top_fragment_loop
 
@@ -7635,9 +6555,6 @@ Behavior loop function for Pyramid top fragment
 ### C Prototype
 `void bhv_pyramid_top_fragment_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pyramid_pillar_touch_detector_loop
 
@@ -7656,9 +6573,6 @@ Behavior loop function for Pyramid pillar touch detector
 ### C Prototype
 `void bhv_pyramid_pillar_touch_detector_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_waterfall_sound_loop
 
@@ -7677,9 +6591,6 @@ Behavior loop function for waterfall sound
 ### C Prototype
 `void bhv_waterfall_sound_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_volcano_sound_loop
 
@@ -7698,9 +6609,6 @@ Behavior loop function for volcano sound
 ### C Prototype
 `void bhv_volcano_sound_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_castle_flag_init
 
@@ -7719,9 +6627,6 @@ Behavior init function for castle flag
 ### C Prototype
 `void bhv_castle_flag_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_birds_sound_loop
 
@@ -7740,9 +6645,6 @@ Behavior loop function for birds sound
 ### C Prototype
 `void bhv_birds_sound_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ambient_sounds_init
 
@@ -7761,9 +6663,6 @@ Behavior init function for ambient sounds
 ### C Prototype
 `void bhv_ambient_sounds_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sand_sound_loop
 
@@ -7782,9 +6681,6 @@ Behavior loop function for sand sound
 ### C Prototype
 `void bhv_sand_sound_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_castle_cannon_grate_init
 
@@ -7803,9 +6699,6 @@ Behavior init function for Castle cannon grate
 ### C Prototype
 `void bhv_castle_cannon_grate_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snowmans_bottom_init
 
@@ -7824,9 +6717,6 @@ Behavior init function for Snowman's bottom
 ### C Prototype
 `void bhv_snowmans_bottom_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snowmans_bottom_loop
 
@@ -7845,9 +6735,6 @@ Behavior loop function for Snowman's bottom
 ### C Prototype
 `void bhv_snowmans_bottom_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snowmans_head_init
 
@@ -7866,9 +6753,6 @@ Behavior init function for Snowman's head
 ### C Prototype
 `void bhv_snowmans_head_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snowmans_head_loop
 
@@ -7887,9 +6771,6 @@ Behavior loop function for Snowman's head
 ### C Prototype
 `void bhv_snowmans_head_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snowmans_body_checkpoint_loop
 
@@ -7908,9 +6789,6 @@ Behavior loop function for Snowman's body checkpoint
 ### C Prototype
 `void bhv_snowmans_body_checkpoint_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_boulder_init
 
@@ -7929,9 +6807,6 @@ Behavior init function for big boulder
 ### C Prototype
 `void bhv_big_boulder_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_boulder_loop
 
@@ -7950,9 +6825,6 @@ Behavior loop function for big boulder
 ### C Prototype
 `void bhv_big_boulder_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_big_boulder_generator_loop
 
@@ -7971,9 +6843,6 @@ Behavior loop function for big boulder generator
 ### C Prototype
 `void bhv_big_boulder_generator_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wing_cap_init
 
@@ -7992,9 +6861,6 @@ Behavior init function for Wing Cap
 ### C Prototype
 `void bhv_wing_cap_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wing_vanish_cap_loop
 
@@ -8013,9 +6879,6 @@ Behavior loop function for Wing and Vanish caps
 ### C Prototype
 `void bhv_wing_vanish_cap_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_metal_cap_init
 
@@ -8034,9 +6897,6 @@ Behavior init function for Metal Cap
 ### C Prototype
 `void bhv_metal_cap_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_metal_cap_loop
 
@@ -8055,9 +6915,6 @@ Behavior loop function for Metal Cap
 ### C Prototype
 `void bhv_metal_cap_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_normal_cap_init
 
@@ -8076,9 +6933,6 @@ Behavior init function for Normal Cap
 ### C Prototype
 `void bhv_normal_cap_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_normal_cap_loop
 
@@ -8097,9 +6951,6 @@ Behavior loop function for Normal Cap
 ### C Prototype
 `void bhv_normal_cap_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_vanish_cap_init
 
@@ -8118,9 +6969,6 @@ Behavior init function for Vanish Cap
 ### C Prototype
 `void bhv_vanish_cap_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_star_number_loop
 
@@ -8139,9 +6987,6 @@ Behavior loop function for Star number
 ### C Prototype
 `void bhv_star_number_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_star_number
 
@@ -8160,9 +7005,6 @@ Spawns a star number
 ### C Prototype
 `void spawn_star_number(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_collect_star_init
 
@@ -8181,9 +7023,6 @@ Behavior init function for collectable Star
 ### C Prototype
 `void bhv_collect_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_collect_star_loop
 
@@ -8202,9 +7041,6 @@ Behavior loop function for collectable Star
 ### C Prototype
 `void bhv_collect_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_star_spawn_init
 
@@ -8223,9 +7059,6 @@ Behavior init function for Star spawn
 ### C Prototype
 `void bhv_star_spawn_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_star_spawn_loop
 
@@ -8244,9 +7077,6 @@ Behavior loop function for Star spawn
 ### C Prototype
 `void bhv_star_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_red_coin_star_init
 
@@ -8265,9 +7095,6 @@ Behavior init function for Hidden Red Coin Star
 ### C Prototype
 `void bhv_hidden_red_coin_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_red_coin_star_loop
 
@@ -8286,9 +7113,6 @@ Behavior loop function for Hidden Red Coin Star
 ### C Prototype
 `void bhv_hidden_red_coin_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_red_coin_init
 
@@ -8307,9 +7131,6 @@ Behavior init function for Red Coin
 ### C Prototype
 `void bhv_red_coin_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_red_coin_loop
 
@@ -8328,9 +7149,6 @@ Behavior loop function for Red Coin
 ### C Prototype
 `void bhv_red_coin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bowser_course_red_coin_star_loop
 
@@ -8349,9 +7167,6 @@ Behavior loop function for Bowser course Red Coin Star
 ### C Prototype
 `void bhv_bowser_course_red_coin_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_star_init
 
@@ -8370,9 +7185,6 @@ Behavior init function for Secret Star
 ### C Prototype
 `void bhv_hidden_star_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_star_loop
 
@@ -8391,9 +7203,6 @@ Behavior loop function for Secret Star
 ### C Prototype
 `void bhv_hidden_star_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_hidden_star_trigger_loop
 
@@ -8412,9 +7221,6 @@ Behavior loop function for Secrets
 ### C Prototype
 `void bhv_hidden_star_trigger_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttm_rolling_log_init
 
@@ -8433,9 +7239,6 @@ Behavior init function for Tall, Tall Mountain rolling log
 ### C Prototype
 `void bhv_ttm_rolling_log_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rolling_log_loop
 
@@ -8454,9 +7257,6 @@ Behavior loop function for rolling log
 ### C Prototype
 `void bhv_rolling_log_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_lll_rolling_log_init
 
@@ -8475,9 +7275,6 @@ Behavior init function for Lethal Lava Land rolling log
 ### C Prototype
 `void bhv_lll_rolling_log_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_trigger_init
 
@@ -8496,9 +7293,6 @@ Behavior init function for 1-Up trigger
 ### C Prototype
 `void bhv_1up_trigger_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_common_init
 
@@ -8517,9 +7311,6 @@ Behavior init function for common 1-Up
 ### C Prototype
 `void bhv_1up_common_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_walking_loop
 
@@ -8538,9 +7329,6 @@ Behavior loop function for walking 1-Up
 ### C Prototype
 `void bhv_1up_walking_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_running_away_loop
 
@@ -8559,9 +7347,6 @@ Behavior loop function for running away 1-Up
 ### C Prototype
 `void bhv_1up_running_away_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_sliding_loop
 
@@ -8580,9 +7365,6 @@ Behavior loop function for sliding 1-Up
 ### C Prototype
 `void bhv_1up_sliding_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_init
 
@@ -8601,9 +7383,6 @@ Behavior init function for 1-Up
 ### C Prototype
 `void bhv_1up_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_loop
 
@@ -8622,9 +7401,6 @@ Behavior loop function for 1-Up
 ### C Prototype
 `void bhv_1up_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_jump_on_approach_loop
 
@@ -8643,9 +7419,6 @@ Behavior loop function for jump on approach 1-Up
 ### C Prototype
 `void bhv_1up_jump_on_approach_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_hidden_loop
 
@@ -8664,9 +7437,6 @@ Behavior loop function for hidden 1-Up
 ### C Prototype
 `void bhv_1up_hidden_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_hidden_trigger_loop
 
@@ -8685,9 +7455,6 @@ Behavior loop function for hidden 1-Up trigger
 ### C Prototype
 `void bhv_1up_hidden_trigger_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_hidden_in_pole_loop
 
@@ -8706,9 +7473,6 @@ Behavior loop function for hidden 1-Up in pole (Green Demon)
 ### C Prototype
 `void bhv_1up_hidden_in_pole_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_hidden_in_pole_trigger_loop
 
@@ -8727,9 +7491,6 @@ Behavior loop function for 1-Up hidden in pole trigger
 ### C Prototype
 `void bhv_1up_hidden_in_pole_trigger_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_1up_hidden_in_pole_spawner_loop
 
@@ -8748,9 +7509,6 @@ Behavior loop function for 1-Up hidden in pole spawner
 ### C Prototype
 `void bhv_1up_hidden_in_pole_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_controllable_platform_init
 
@@ -8769,9 +7527,6 @@ Behavior init function for controllable platform
 ### C Prototype
 `void bhv_controllable_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_controllable_platform_loop
 
@@ -8790,9 +7545,6 @@ Behavior loop function for controllable platform
 ### C Prototype
 `void bhv_controllable_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_controllable_platform_sub_loop
 
@@ -8811,9 +7563,6 @@ Behavior loop function for controllable sub platform
 ### C Prototype
 `void bhv_controllable_platform_sub_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_breakable_box_small_init
 
@@ -8832,9 +7581,6 @@ Behavior init function for small breakable box
 ### C Prototype
 `void bhv_breakable_box_small_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_breakable_box_small_loop
 
@@ -8853,9 +7599,6 @@ Behavior loop function for small breakable box
 ### C Prototype
 `void bhv_breakable_box_small_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sliding_snow_mound_loop
 
@@ -8874,9 +7617,6 @@ Behavior loop function for sliding snow mound
 ### C Prototype
 `void bhv_sliding_snow_mound_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snow_mound_spawn_loop
 
@@ -8895,9 +7635,6 @@ Behavior loop function for snow mound spawn
 ### C Prototype
 `void bhv_snow_mound_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_floating_platform_loop
 
@@ -8916,9 +7653,6 @@ Behavior loop function for floating platform
 ### C Prototype
 `void bhv_floating_platform_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_arrow_lift_loop
 
@@ -8937,9 +7671,6 @@ Behavior loop function for Wet Dry World arrow lift
 ### C Prototype
 `void bhv_arrow_lift_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_orange_number_init
 
@@ -8958,9 +7689,6 @@ Behavior init function for orange number
 ### C Prototype
 `void bhv_orange_number_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_orange_number_loop
 
@@ -8979,9 +7707,6 @@ Behavior loop function for orange number
 ### C Prototype
 `void bhv_orange_number_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_manta_ray_init
 
@@ -9000,9 +7725,6 @@ Behavior init function for Manta Ray
 ### C Prototype
 `void bhv_manta_ray_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_manta_ray_loop
 
@@ -9021,9 +7743,6 @@ Behavior loop function for Manta Ray
 ### C Prototype
 `void bhv_manta_ray_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_falling_pillar_init
 
@@ -9042,9 +7761,6 @@ Behavior init function for Jolly Roger Bay falling pillar
 ### C Prototype
 `void bhv_falling_pillar_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_falling_pillar_loop
 
@@ -9063,9 +7779,6 @@ Behavior loop function for Jolly Roger Bay falling pillar
 ### C Prototype
 `void bhv_falling_pillar_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_falling_pillar_hitbox_loop
 
@@ -9084,9 +7797,6 @@ Behavior loop function for Jolly Roger Bay falling pillar hitbox
 ### C Prototype
 `void bhv_falling_pillar_hitbox_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_jrb_floating_box_loop
 
@@ -9105,9 +7815,6 @@ Behavior loop function for Jolly Roger Bay floating box
 ### C Prototype
 `void bhv_jrb_floating_box_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_decorative_pendulum_init
 
@@ -9126,9 +7833,6 @@ Behavior init function for decorative pendulum
 ### C Prototype
 `void bhv_decorative_pendulum_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_decorative_pendulum_loop
 
@@ -9147,9 +7851,6 @@ Behavior loop function for decorative pendulum
 ### C Prototype
 `void bhv_decorative_pendulum_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_ship_init
 
@@ -9168,9 +7869,6 @@ Behavior init function for treasure chest ship
 ### C Prototype
 `void bhv_treasure_chest_ship_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_ship_loop
 
@@ -9189,9 +7887,6 @@ Behavior loop function for treasure chest ship
 ### C Prototype
 `void bhv_treasure_chest_ship_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_jrb_init
 
@@ -9210,9 +7905,6 @@ Behavior init function for treasure chest jrb
 ### C Prototype
 `void bhv_treasure_chest_jrb_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_jrb_loop
 
@@ -9231,9 +7923,6 @@ Behavior loop function for treasure chest jrb
 ### C Prototype
 `void bhv_treasure_chest_jrb_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_init
 
@@ -9252,9 +7941,6 @@ Behavior init function for treasure chest
 ### C Prototype
 `void bhv_treasure_chest_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_loop
 
@@ -9273,9 +7959,6 @@ Behavior loop function for treasure chest
 ### C Prototype
 `void bhv_treasure_chest_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_bottom_init
 
@@ -9294,9 +7977,6 @@ Behavior init function for treasure chest bottom
 ### C Prototype
 `void bhv_treasure_chest_bottom_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_bottom_loop
 
@@ -9315,9 +7995,6 @@ Behavior loop function for treasure chest bottom
 ### C Prototype
 `void bhv_treasure_chest_bottom_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_treasure_chest_top_loop
 
@@ -9336,9 +8013,6 @@ Behavior loop function for treasure chest top
 ### C Prototype
 `void bhv_treasure_chest_top_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mips_init
 
@@ -9357,9 +8031,6 @@ Behavior init function for Mips
 ### C Prototype
 `void bhv_mips_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mips_loop
 
@@ -9378,9 +8049,6 @@ Behavior loop function for Mips
 ### C Prototype
 `void bhv_mips_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_yoshi_init
 
@@ -9399,9 +8067,6 @@ Behavior init function for Yoshi
 ### C Prototype
 `void bhv_yoshi_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_koopa_init
 
@@ -9420,9 +8085,6 @@ Behavior init function for Koopa
 ### C Prototype
 `void bhv_koopa_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_koopa_update
 
@@ -9441,9 +8103,6 @@ Behavior loop function for Koopa
 ### C Prototype
 `void bhv_koopa_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_koopa_race_endpoint_update
 
@@ -9462,9 +8121,6 @@ Behavior loop function for Koopa race endpoint
 ### C Prototype
 `void bhv_koopa_race_endpoint_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pokey_update
 
@@ -9483,9 +8139,6 @@ Behavior loop function for Pokey
 ### C Prototype
 `void bhv_pokey_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_pokey_body_part_update
 
@@ -9504,9 +8157,6 @@ Behavior loop function for Pokey body part
 ### C Prototype
 `void bhv_pokey_body_part_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_swoop_update
 
@@ -9525,9 +8175,6 @@ Behavior loop function for Swoop
 ### C Prototype
 `void bhv_swoop_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fly_guy_update
 
@@ -9546,9 +8193,6 @@ Behavior loop function for Fly Guy
 ### C Prototype
 `void bhv_fly_guy_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_goomba_init
 
@@ -9567,9 +8211,6 @@ Behavior init function for Goomba
 ### C Prototype
 `void bhv_goomba_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_goomba_update
 
@@ -9588,9 +8229,6 @@ Behavior loop function for Goomba
 ### C Prototype
 `void bhv_goomba_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_goomba_triplet_spawner_update
 
@@ -9609,9 +8247,6 @@ Behavior loop function for Goomba triplet spawner
 ### C Prototype
 `void bhv_goomba_triplet_spawner_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_chain_chomp_update
 
@@ -9630,9 +8265,6 @@ Behavior loop function for Chain Chomp
 ### C Prototype
 `void bhv_chain_chomp_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_chain_chomp_chain_part_update
 
@@ -9651,9 +8283,6 @@ Behavior loop function for Chain Chomp chain part
 ### C Prototype
 `void bhv_chain_chomp_chain_part_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wooden_post_update
 
@@ -9672,9 +8301,6 @@ Behavior loop function for ground poundable wooden post
 ### C Prototype
 `void bhv_wooden_post_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_chain_chomp_gate_init
 
@@ -9693,9 +8319,6 @@ Behavior init function for Chain Chomp gate
 ### C Prototype
 `void bhv_chain_chomp_gate_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_chain_chomp_gate_update
 
@@ -9714,9 +8337,6 @@ Behavior loop function for Chain Chomp gate
 ### C Prototype
 `void bhv_chain_chomp_gate_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wiggler_update
 
@@ -9735,9 +8355,6 @@ Behavior loop function for Wiggler
 ### C Prototype
 `void bhv_wiggler_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_wiggler_body_part_update
 
@@ -9756,9 +8373,6 @@ Behavior loop function for Wiggler body part
 ### C Prototype
 `void bhv_wiggler_body_part_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_enemy_lakitu_update
 
@@ -9777,9 +8391,6 @@ Behavior loop function for Enemy Lakitu
 ### C Prototype
 `void bhv_enemy_lakitu_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_camera_lakitu_init
 
@@ -9798,9 +8409,6 @@ Behavior init function for Camera Lakitu
 ### C Prototype
 `void bhv_camera_lakitu_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_camera_lakitu_update
 
@@ -9819,9 +8427,6 @@ Behavior loop function for Camera Lakitu
 ### C Prototype
 `void bhv_camera_lakitu_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cloud_update
 
@@ -9840,9 +8445,6 @@ Behavior loop function for cloud
 ### C Prototype
 `void bhv_cloud_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_cloud_part_update
 
@@ -9861,9 +8463,6 @@ Behavior loop function for cloud part
 ### C Prototype
 `void bhv_cloud_part_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_spiny_update
 
@@ -9882,9 +8481,6 @@ Behavior loop function for Spiny
 ### C Prototype
 `void bhv_spiny_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_monty_mole_init
 
@@ -9903,9 +8499,6 @@ Behavior init function for Monty Mole
 ### C Prototype
 `void bhv_monty_mole_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_monty_mole_update
 
@@ -9924,9 +8517,6 @@ Behavior loop function for Monty Mole
 ### C Prototype
 `void bhv_monty_mole_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_monty_mole_hole_update
 
@@ -9945,9 +8535,6 @@ Behavior loop function for Monty Mole hole
 ### C Prototype
 `void bhv_monty_mole_hole_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_monty_mole_rock_update
 
@@ -9966,9 +8553,6 @@ Behavior loop function for Monty Mole rock
 ### C Prototype
 `void bhv_monty_mole_rock_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_platform_on_track_init
 
@@ -9987,9 +8571,6 @@ Behavior init function for platform on track
 ### C Prototype
 `void bhv_platform_on_track_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_platform_on_track_update
 
@@ -10008,9 +8589,6 @@ Behavior loop function for platform on track
 ### C Prototype
 `void bhv_platform_on_track_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_track_ball_update
 
@@ -10029,9 +8607,6 @@ Behavior loop function for track ball
 ### C Prototype
 `void bhv_track_ball_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_seesaw_platform_init
 
@@ -10050,9 +8625,6 @@ Behavior init function for seesaw platform
 ### C Prototype
 `void bhv_seesaw_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_seesaw_platform_update
 
@@ -10071,9 +8643,6 @@ Behavior loop function for seesaw platform
 ### C Prototype
 `void bhv_seesaw_platform_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ferris_wheel_axle_init
 
@@ -10092,9 +8661,6 @@ Behavior init function for ferris wheel axle
 ### C Prototype
 `void bhv_ferris_wheel_axle_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ferris_wheel_platform_init
 
@@ -10113,9 +8679,6 @@ Behavior init function for ferris wheel platform
 ### C Prototype
 `void bhv_ferris_wheel_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ferris_wheel_platform_update
 
@@ -10134,9 +8697,6 @@ Behavior loop function for ferris wheel platform
 ### C Prototype
 `void bhv_ferris_wheel_platform_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_bomb_spawner_update
 
@@ -10155,9 +8715,6 @@ Behavior loop function for water bomb spawner
 ### C Prototype
 `void bhv_water_bomb_spawner_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_bomb_update
 
@@ -10176,9 +8733,6 @@ Behavior loop function for water bomb
 ### C Prototype
 `void bhv_water_bomb_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_bomb_shadow_update
 
@@ -10197,9 +8751,6 @@ Behavior loop function for water bomb shadow
 ### C Prototype
 `void bhv_water_bomb_shadow_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_rotating_solid_init
 
@@ -10218,9 +8769,6 @@ Behavior init function for Tick Tock Clock rotating solid
 ### C Prototype
 `void bhv_ttc_rotating_solid_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_rotating_solid_update
 
@@ -10239,9 +8787,6 @@ Behavior loop function for Tick Tock Clock rotating solid
 ### C Prototype
 `void bhv_ttc_rotating_solid_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_pendulum_init
 
@@ -10260,9 +8805,6 @@ Behavior init function for Tick Tock Clock pendulum
 ### C Prototype
 `void bhv_ttc_pendulum_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_pendulum_update
 
@@ -10281,9 +8823,6 @@ Behavior loop function for Tick Tock Clock pendulum
 ### C Prototype
 `void bhv_ttc_pendulum_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_treadmill_init
 
@@ -10302,9 +8841,6 @@ Behavior init function for Tick Tock Clock treadmill
 ### C Prototype
 `void bhv_ttc_treadmill_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_treadmill_update
 
@@ -10323,9 +8859,6 @@ Behavior loop function for Tick Tock Clock treadmill
 ### C Prototype
 `void bhv_ttc_treadmill_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_moving_bar_init
 
@@ -10344,9 +8877,6 @@ Behavior init function for Tick Tock Clock moving bar
 ### C Prototype
 `void bhv_ttc_moving_bar_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_moving_bar_update
 
@@ -10365,9 +8895,6 @@ Behavior loop function for Tick Tock Clock moving bar
 ### C Prototype
 `void bhv_ttc_moving_bar_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_cog_init
 
@@ -10386,9 +8913,6 @@ Behavior init function for Tick Tock Clock cog
 ### C Prototype
 `void bhv_ttc_cog_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_cog_update
 
@@ -10407,9 +8931,6 @@ Behavior loop function for Tick Tock Clock cog
 ### C Prototype
 `void bhv_ttc_cog_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_pit_block_init
 
@@ -10428,9 +8949,6 @@ Behavior init function for Tick Tock Clock pit block
 ### C Prototype
 `void bhv_ttc_pit_block_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_pit_block_update
 
@@ -10449,9 +8967,6 @@ Behavior loop function for Tick Tock Clock pit block
 ### C Prototype
 `void bhv_ttc_pit_block_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_elevator_init
 
@@ -10470,9 +8985,6 @@ Behavior init function for Tick Tock Clock elevator
 ### C Prototype
 `void bhv_ttc_elevator_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_elevator_update
 
@@ -10491,9 +9003,6 @@ Behavior loop function for Tick Tock Clock elevator
 ### C Prototype
 `void bhv_ttc_elevator_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_2d_rotator_init
 
@@ -10512,9 +9021,6 @@ Behavior init function for Tick Tock Clock 2D rotator
 ### C Prototype
 `void bhv_ttc_2d_rotator_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_2d_rotator_update
 
@@ -10533,9 +9039,6 @@ Behavior loop function for Tick Tock Clock 2D rotator
 ### C Prototype
 `void bhv_ttc_2d_rotator_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ttc_spinner_update
 
@@ -10554,9 +9057,6 @@ Behavior loop function for Tick Tock Clock spinner
 ### C Prototype
 `void bhv_ttc_spinner_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mr_blizzard_init
 
@@ -10575,9 +9075,6 @@ Behavior init function for Mr. Blizzard
 ### C Prototype
 `void bhv_mr_blizzard_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mr_blizzard_update
 
@@ -10596,9 +9093,6 @@ Behavior loop function for Mr. Blizzard
 ### C Prototype
 `void bhv_mr_blizzard_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mr_blizzard_snowball
 
@@ -10617,9 +9111,6 @@ Behavior loop function for Mr. Blizzard's snowball
 ### C Prototype
 `void bhv_mr_blizzard_snowball(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sliding_plat_2_init
 
@@ -10638,9 +9129,6 @@ Behavior init function for sliding platform 2 in Rainbow Ride and Bowser courses
 ### C Prototype
 `void bhv_sliding_plat_2_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_sliding_plat_2_loop
 
@@ -10659,9 +9147,6 @@ Behavior loop function for sliding platform 2 in Rainbow Ride and Bowser courses
 ### C Prototype
 `void bhv_sliding_plat_2_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rotating_octagonal_plat_init
 
@@ -10680,9 +9165,6 @@ Behavior init function for Rotating octagonal platform in Rainbow Ride and Bowse
 ### C Prototype
 `void bhv_rotating_octagonal_plat_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_rotating_octagonal_plat_loop
 
@@ -10701,9 +9183,6 @@ Behavior loop function for Rotating octagonal platform in Rainbow Ride and Bowse
 ### C Prototype
 `void bhv_rotating_octagonal_plat_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_animates_on_floor_switch_press_init
 
@@ -10722,9 +9201,6 @@ Behavior init function for animates on floor switch press in Rainbow Ride and Bo
 ### C Prototype
 `void bhv_animates_on_floor_switch_press_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_animates_on_floor_switch_press_loop
 
@@ -10743,9 +9219,6 @@ Behavior loop function for animates on floor switch press in Rainbow Ride and Bo
 ### C Prototype
 `void bhv_animates_on_floor_switch_press_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_activated_back_and_forth_platform_init
 
@@ -10764,9 +9237,6 @@ Behavior init function for activated back and forth platform in Bowser courses
 ### C Prototype
 `void bhv_activated_back_and_forth_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_activated_back_and_forth_platform_update
 
@@ -10785,9 +9255,6 @@ Behavior loop function for activated back and forth platform in Bowser courses
 ### C Prototype
 `void bhv_activated_back_and_forth_platform_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_recovery_heart_loop
 
@@ -10806,9 +9273,6 @@ Behavior loop function for Recovery Heart
 ### C Prototype
 `void bhv_recovery_heart_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_water_bomb_cannon_loop
 
@@ -10827,9 +9291,6 @@ Behavior loop function for water bomb cannon
 ### C Prototype
 `void bhv_water_bomb_cannon_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bubble_cannon_barrel_loop
 
@@ -10848,9 +9309,6 @@ Behavior loop function for bubble cannon barrel
 ### C Prototype
 `void bhv_bubble_cannon_barrel_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unagi_init
 
@@ -10869,9 +9327,6 @@ Behavior init function for Unagi
 ### C Prototype
 `void bhv_unagi_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unagi_loop
 
@@ -10890,9 +9345,6 @@ Behavior loop function for Unagi
 ### C Prototype
 `void bhv_unagi_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_unagi_subobject_loop
 
@@ -10911,9 +9363,6 @@ Behavior loop function for Unagi subobject
 ### C Prototype
 `void bhv_unagi_subobject_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_dorrie_update
 
@@ -10932,9 +9381,6 @@ Behavior loop function for Dorrie
 ### C Prototype
 `void bhv_dorrie_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_haunted_chair_init
 
@@ -10953,9 +9399,6 @@ Behavior init function for Haunted Chair
 ### C Prototype
 `void bhv_haunted_chair_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_haunted_chair_loop
 
@@ -10974,9 +9417,6 @@ Behavior loop function for Haunted Chair
 ### C Prototype
 `void bhv_haunted_chair_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_mad_piano_update
 
@@ -10995,9 +9435,6 @@ Behavior loop function for Mad Piano
 ### C Prototype
 `void bhv_mad_piano_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_flying_bookend_loop
 
@@ -11016,9 +9453,6 @@ Behavior loop function for flying bookend
 ### C Prototype
 `void bhv_flying_bookend_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bookend_spawn_loop
 
@@ -11037,9 +9471,6 @@ Behavior loop function for Bookend spawn
 ### C Prototype
 `void bhv_bookend_spawn_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_haunted_bookshelf_manager_loop
 
@@ -11058,9 +9489,6 @@ Behavior loop function for haunted bookshelf manager
 ### C Prototype
 `void bhv_haunted_bookshelf_manager_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_book_switch_loop
 
@@ -11079,9 +9507,6 @@ Behavior loop function for Book switch
 ### C Prototype
 `void bhv_book_switch_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fire_piranha_plant_init
 
@@ -11100,9 +9525,6 @@ Behavior init function for Fire Piranha Plant
 ### C Prototype
 `void bhv_fire_piranha_plant_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fire_piranha_plant_update
 
@@ -11121,9 +9543,6 @@ Behavior loop function for Fire Piranha Plant
 ### C Prototype
 `void bhv_fire_piranha_plant_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_small_piranha_flame_loop
 
@@ -11142,9 +9561,6 @@ Behavior loop function for Small Piranha flame
 ### C Prototype
 `void bhv_small_piranha_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fire_spitter_update
 
@@ -11163,9 +9579,6 @@ Behavior loop function for Fire spitter
 ### C Prototype
 `void bhv_fire_spitter_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_fly_guy_flame_loop
 
@@ -11184,9 +9597,6 @@ Behavior loop function for Fly Guy flame
 ### C Prototype
 `void bhv_fly_guy_flame_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snufit_loop
 
@@ -11205,9 +9615,6 @@ Behavior loop function for Snufit
 ### C Prototype
 `void bhv_snufit_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_snufit_balls_loop
 
@@ -11226,9 +9633,6 @@ Behavior loop function for Snufit balls
 ### C Prototype
 `void bhv_snufit_balls_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_horizontal_grindel_init
 
@@ -11247,9 +9651,6 @@ Behavior init function for horizontal Grindel
 ### C Prototype
 `void bhv_horizontal_grindel_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_horizontal_grindel_update
 
@@ -11268,9 +9669,6 @@ Behavior loop function for horizontal Grindel
 ### C Prototype
 `void bhv_horizontal_grindel_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_eyerok_boss_init
 
@@ -11289,9 +9687,6 @@ Behavior init function for Eyerok boss
 ### C Prototype
 `void bhv_eyerok_boss_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_eyerok_boss_loop
 
@@ -11310,9 +9705,6 @@ Behavior loop function for Eyerok boss
 ### C Prototype
 `void bhv_eyerok_boss_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_eyerok_hand_loop
 
@@ -11331,9 +9723,6 @@ Behavior loop function for Eyerok hand
 ### C Prototype
 `void bhv_eyerok_hand_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_klepto_init
 
@@ -11352,9 +9741,6 @@ Behavior init function for Klepto
 ### C Prototype
 `void bhv_klepto_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_klepto_update
 
@@ -11373,9 +9759,6 @@ Behavior loop function for Klepto
 ### C Prototype
 `void bhv_klepto_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bird_update
 
@@ -11394,9 +9777,6 @@ Behavior loop function for bird
 ### C Prototype
 `void bhv_bird_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_racing_penguin_init
 
@@ -11415,9 +9795,6 @@ Behavior init function for Racing Penguin
 ### C Prototype
 `void bhv_racing_penguin_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_racing_penguin_update
 
@@ -11436,9 +9813,6 @@ Behavior loop function for Racing Penguin
 ### C Prototype
 `void bhv_racing_penguin_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_penguin_race_finish_line_update
 
@@ -11457,9 +9831,6 @@ Behavior loop function for Penguin race finish line
 ### C Prototype
 `void bhv_penguin_race_finish_line_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_penguin_race_shortcut_check_update
 
@@ -11478,9 +9849,6 @@ Behavior loop function for Penguin race shortcut check
 ### C Prototype
 `void bhv_penguin_race_shortcut_check_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coffin_spawner_loop
 
@@ -11499,9 +9867,6 @@ Behavior loop function for coffin spawner
 ### C Prototype
 `void bhv_coffin_spawner_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_coffin_loop
 
@@ -11520,9 +9885,6 @@ Behavior loop function for coffin
 ### C Prototype
 `void bhv_coffin_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_clam_loop
 
@@ -11541,9 +9903,6 @@ Behavior loop function for Clam
 ### C Prototype
 `void bhv_clam_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_skeeter_update
 
@@ -11562,9 +9921,6 @@ Behavior loop function for Skeeter
 ### C Prototype
 `void bhv_skeeter_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_skeeter_wave_update
 
@@ -11583,9 +9939,6 @@ Behavior loop function for Skeeter wave
 ### C Prototype
 `void bhv_skeeter_wave_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_swing_platform_init
 
@@ -11604,9 +9957,6 @@ Behavior init function for swing platform
 ### C Prototype
 `void bhv_swing_platform_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_swing_platform_update
 
@@ -11625,9 +9975,6 @@ Behavior loop function for swing platform
 ### C Prototype
 `void bhv_swing_platform_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_donut_platform_spawner_update
 
@@ -11646,9 +9993,6 @@ Behavior loop function for donut platform spawner
 ### C Prototype
 `void bhv_donut_platform_spawner_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_donut_platform_update
 
@@ -11667,9 +10011,6 @@ Behavior loop function for donut platform
 ### C Prototype
 `void bhv_donut_platform_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ddd_pole_init
 
@@ -11688,9 +10029,6 @@ Behavior init function for Dire Dire Docks pole
 ### C Prototype
 `void bhv_ddd_pole_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ddd_pole_update
 
@@ -11709,9 +10047,6 @@ Behavior loop function for Dire Dire Docks pole
 ### C Prototype
 `void bhv_ddd_pole_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_red_coin_star_marker_init
 
@@ -11730,9 +10065,6 @@ Behavior init function for Red Coin Star marker
 ### C Prototype
 `void bhv_red_coin_star_marker_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_triplet_butterfly_update
 
@@ -11751,9 +10083,6 @@ Behavior loop function for a triplet of butterflies
 ### C Prototype
 `void bhv_triplet_butterfly_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_bubba_loop
 
@@ -11772,9 +10101,6 @@ Behavior loop function for Bubba
 ### C Prototype
 `void bhv_bubba_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_intro_lakitu_loop
 
@@ -11793,9 +10119,6 @@ Behavior loop function for intro Lakitu
 ### C Prototype
 `void bhv_intro_lakitu_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_intro_peach_loop
 
@@ -11814,9 +10137,6 @@ Behavior loop function for intro Peach
 ### C Prototype
 `void bhv_intro_peach_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_end_birds_1_loop
 
@@ -11835,9 +10155,6 @@ Behavior loop function for first end birds
 ### C Prototype
 `void bhv_end_birds_1_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_end_birds_2_loop
 
@@ -11856,9 +10173,6 @@ Behavior loop function for second end birds
 ### C Prototype
 `void bhv_end_birds_2_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_intro_scene_loop
 
@@ -11877,9 +10191,6 @@ Behavior loop function for intro scene
 ### C Prototype
 `void bhv_intro_scene_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_yoshi_loop
 
@@ -11898,9 +10209,6 @@ Behavior loop function for Yoshi
 ### C Prototype
 `void bhv_yoshi_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_volcano_trap_loop
 
@@ -11919,9 +10227,6 @@ Behavior loop function for volcano trap
 ### C Prototype
 `void bhv_volcano_trap_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## uv_update_scroll
 
@@ -11940,9 +10245,6 @@ Behavior loop function for UV texture scrolling
 ### C Prototype
 `void uv_update_scroll(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_ambient_light_update
 
@@ -11961,9 +10263,6 @@ Behavior loop function for the lighting engine ambient light. Takes the first 3 
 ### C Prototype
 `void bhv_ambient_light_update(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_point_light_init
 
@@ -11982,9 +10281,6 @@ Behavior init function for the lighting engine point light. Takes the first 3 be
 ### C Prototype
 `void bhv_point_light_init(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## bhv_point_light_loop
 
@@ -12003,9 +10299,6 @@ Behavior loop function for the lighting engine point light
 ### C Prototype
 `void bhv_point_light_loop(void);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_default_star
 
@@ -12028,9 +10321,6 @@ Spawns a Star with an ID corresponding to the current object's first behavior pa
 ### C Prototype
 `struct Object* spawn_default_star(f32 x, f32 y, f32 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_red_coin_cutscene_star
 
@@ -12053,9 +10343,6 @@ Spawns a Red Coin cutscene star with an ID corresponding to the current object's
 ### C Prototype
 `struct Object* spawn_red_coin_cutscene_star(f32 x, f32 y, f32 z);`
 
-[:arrow_up_small:](#)
-
-<br />
 
 ## spawn_no_exit_star
 
@@ -12078,9 +10365,284 @@ Spawns a Star that won't make Mario exit the level with an ID corresponding to t
 ### C Prototype
 `struct Object* spawn_no_exit_star(f32 x, f32 y, f32 z);`
 
-[:arrow_up_small:](#)
+
+---
+# functions from behavior_script.h
 
 <br />
+
+
+## random_u16
+
+### Description
+Generates a pseudo random integer between 0 and 65535
+
+### Lua Example
+`local integerValue = random_u16()`
+
+### Parameters
+- None
+
+### Returns
+- `integer`
+
+### C Prototype
+`u16 random_u16(void);`
+
+
+## random_float
+
+### Description
+Generates a pseudo random float between 0.0 and 1.0
+
+### Lua Example
+`local numberValue = random_float()`
+
+### Parameters
+- None
+
+### Returns
+- `number`
+
+### C Prototype
+`float random_float(void);`
+
+
+## random_sign
+
+### Description
+Returns either 1 or -1 with a pseudo 50:50 chance
+
+### Lua Example
+`local integerValue = random_sign()`
+
+### Parameters
+- None
+
+### Returns
+- `integer`
+
+### C Prototype
+`s32 random_sign(void);`
+
+
+## obj_update_gfx_pos_and_angle
+
+### Description
+Updates an object's graphical position and angle
+
+### Lua Example
+`obj_update_gfx_pos_and_angle(obj)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| obj | [Object](structs.md#Object) |
+
+### Returns
+- None
+
+### C Prototype
+`void obj_update_gfx_pos_and_angle(struct Object *obj);`
+
+
+## position_based_random_u16
+
+### Description
+Sets the current object's position to random integers between 0 and 65536
+
+### Lua Example
+`local integerValue = position_based_random_u16()`
+
+### Parameters
+- None
+
+### Returns
+- `integer`
+
+### C Prototype
+`u16 position_based_random_u16(void);`
+
+
+## position_based_random_float_position
+
+### Description
+Sets the current object's position to random floats between 0.0 and 1.0
+
+### Lua Example
+`local numberValue = position_based_random_float_position()`
+
+### Parameters
+- None
+
+### Returns
+- `number`
+
+### C Prototype
+`f32 position_based_random_float_position(void);`
+
+
+## draw_distance_scalar_is_infinite
+
+### Description
+Checks if the draw distance scalar is infinite
+
+### Lua Example
+`local booleanValue = draw_distance_scalar_is_infinite()`
+
+### Parameters
+- None
+
+### Returns
+- `boolean`
+
+### C Prototype
+`bool draw_distance_scalar_is_infinite(void);`
+
+
+## draw_distance_scalar
+
+### Description
+Gets the draw distance scalar
+
+### Lua Example
+`local numberValue = draw_distance_scalar()`
+
+### Parameters
+- None
+
+### Returns
+- `number`
+
+### C Prototype
+`f32 draw_distance_scalar(void);`
+
+
+---
+# functions from behavior_table.h
+
+<br />
+
+
+## get_id_from_behavior
+
+### Description
+Gets the behavior ID of the provided `behavior`
+
+### Lua Example
+`local enumValue = get_id_from_behavior(behavior)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| behavior | `Pointer` <`BehaviorScript`> |
+
+### Returns
+- [enum BehaviorId](constants.md#enum-BehaviorId)
+
+### C Prototype
+`enum BehaviorId get_id_from_behavior(const BehaviorScript* behavior);`
+
+
+## get_id_from_vanilla_behavior
+
+### Description
+Gets the behavior ID of the provided `behavior` if it's a vanilla behavior, `id_bhv_max_count` otherwise
+
+### Lua Example
+`local enumValue = get_id_from_vanilla_behavior(behavior)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| behavior | `Pointer` <`BehaviorScript`> |
+
+### Returns
+- [enum BehaviorId](constants.md#enum-BehaviorId)
+
+### C Prototype
+`enum BehaviorId get_id_from_vanilla_behavior(const BehaviorScript* behavior);`
+
+
+## get_behavior_from_id
+
+### Description
+Gets the behavior script corresponding to the provided `id`
+
+### Lua Example
+`local pointerValue = get_behavior_from_id(id)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| id | [enum BehaviorId](constants.md#enum-BehaviorId) |
+
+### Returns
+- `Pointer` <`BehaviorScript`>
+
+### C Prototype
+`const BehaviorScript* get_behavior_from_id(enum BehaviorId id);`
+
+
+## get_vanilla_behavior_from_id
+
+### Description
+Gets the behavior script corresponding to the provided `id` if it's a vanilla behavior, `nil` otherwise
+
+### Lua Example
+`local pointerValue = get_vanilla_behavior_from_id(id)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| id | [enum BehaviorId](constants.md#enum-BehaviorId) |
+
+### Returns
+- `Pointer` <`BehaviorScript`>
+
+### C Prototype
+`const BehaviorScript* get_vanilla_behavior_from_id(enum BehaviorId id);`
+
+
+## get_behavior_name_from_id
+
+### Description
+Gets the behavior name from the provided `id` (bhvMyGreatMODCustom004)
+
+### Lua Example
+`local stringValue = get_behavior_name_from_id(id)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| id | [enum BehaviorId](constants.md#enum-BehaviorId) |
+
+### Returns
+- `string`
+
+### C Prototype
+`const char* get_behavior_name_from_id(enum BehaviorId id);`
+
+
+## get_id_from_behavior_name
+
+### Description
+Gets the behavior ID corresponding to the provided `name`
+
+### Lua Example
+`local enumValue = get_id_from_behavior_name(name)`
+
+### Parameters
+| Field | Type |
+| ----- | ---- |
+| name | `string` |
+
+### Returns
+- [enum BehaviorId](constants.md#enum-BehaviorId)
+
+### C Prototype
+`enum BehaviorId get_id_from_behavior_name(const char* name);`
+
 ---
 
 [< prev](functions.md) | [1](functions.md) | 2 | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-3.md)]
