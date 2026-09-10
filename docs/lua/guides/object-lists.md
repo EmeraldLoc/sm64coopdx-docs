@@ -1,4 +1,4 @@
-## [:rewind: Lua Reference](../modding.md)
+## [:rewind: Modding](../modding.md)
 
 # Every Behavior's Object List
 
