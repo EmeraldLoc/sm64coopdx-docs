@@ -1,5 +1,16 @@
 # Modding
 
+## Starting Out
+
+If you're just starting out, there's a couple of important guides to take a look at:
+
+- [Setting up Visual Studio Code](guides/vs-code-setup.md)
+- [Creating a Mod](guides/creating-mod.md)
+
+## Asking for Help
+
+Help should be asked for in the [modding server](https://mods.sm64coopdx.com) or the [Discord server](https://discord.gg/TJVKHS4). You will have better luck getting help in the [Discord server](https://discord.gg/TJVKHS4).
+
 ## Tips
 
 TODO: Figure out if this is OK
@@ -20,7 +31,7 @@ TODO: Figure out if this is OK
 ### Guides
 
 - [Setting up Visual Studio Code](guides/vs-code-setup.md)
-- [Creating a mod](guides/creating-mod.md) TODO: This should be splattered somewhere more prevalent
+- [Creating a Mod](guides/creating-mod.md)
 - [Hooks](guides/hooks.md)
 - [gMarioStates](guides/mario-state.md)
 - [Behavior Object Lists](guides/object-lists.md)

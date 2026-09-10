@@ -1,6 +1,6 @@
 ## [:rewind: Modding](../modding.md)
 
-## [Hook Event Types](#Hook-Event-Types)
+## Hook Event Types
 
 | Type | Description | Parameters |
 | :--- | :---------- | :--------- |

@@ -1,4 +1,4 @@
-## [:rewind: Modding](../modding.md)
+## [:rewind: Lua Reference](../modding.md)
 
 # How to use `gMarioStates`
 
@@ -92,26 +92,27 @@ The `MarioState` structure contains 76 different variables, this guide will try 
 |`dialogID`|`integer`|The id of the current dialog Mario is in. The default value for not being in any dialog is -1.
 
 ## Section 3: When should I use `gMarioStates`?
+
 Most of the time you won't be using `gMarioStates[0]` to access your Mario, but rather use a hook. A lot of hooks pass `m` through the function. What does this mean? Well, here is a example with comments to explain it as well as possible:
 
 ```lua
 -- m here is gMarioStates with the index being 0...16, one of those, so you are not always modifying your own mario.
-function mario_update(m)
-	-- Refer to section 2 of this guide to know what playerIndex is
+local function mario_update(m)
+    -- Refer to section 2 of this guide to know what playerIndex is
 
-	-- Remember how gMarioStates[0] is the local mario? Well the playerIndex is the same way! This means that if the playerIndex is not 0, then it's not the local mario, thus we can't do anything with it! So, when we return here, that means that we dont do anything below the return within that function
+    -- Remember how gMarioStates[0] is the local mario? Well the playerIndex is the same way! This means that if the playerIndex is not 0, then it's not the local mario, thus we can't do anything with it! So, when we return here, that means that we dont do anything below the return within that function
 
-	-- This means, if not the local Mario, stop executing the function (return nothing).
-	if m.playerIndex ~= 0 then return end
+    -- This means, if not the local Mario, stop executing the function (return nothing).
+    if m.playerIndex ~= 0 then return end
 end
 
--- Create the hook here, to understand this better, refer to the guide on hooks. NOTE: There are more hooks you can use to do specific things, however HOOK_MARIO_UPDATE is the most common hook to be used.
-
--- While it isn't mandatory to use "mario_update" as the function name, it is highly recommended and a common practice.
+-- Create the hook here. To understand this better, refer to the guide on hooks.
+-- NOTE: There are more hooks you can use to do specific things, however HOOK_MARIO_UPDATE is the most common hook to be used.
 hook_event(HOOK_MARIO_UPDATE, mario_update)
 ```
 
 The only time you should use `gMarioStates[0]` is if the hook you are using does not have `m` as a parameter, otherwise, do as shown above with your own function names.
 
 ## Section 4: Wrapping Up
+
 Hopefully, you were now able to learn more about how `gMarioStates` works.

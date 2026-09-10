@@ -1,9 +1,9 @@
-## [:rewind: Modding](../modding.md)
+## [:rewind: Lua Reference](../modding.md)
 
 # Every Behavior's Object List
 
-| Behavior | Object List |
-| -------- | ----------- |
+|Behavior|Object List|
+|--------|-----------|
 |`bhvStarDoor`|`OBJ_LIST_SURFACE`|
 |`bhvMrI`|`OBJ_LIST_GENACTOR`|
 |`bhvMrIBody`|`OBJ_LIST_DEFAULT`|

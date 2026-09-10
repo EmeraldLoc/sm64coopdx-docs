@@ -8,8 +8,10 @@ It's recommended to use a markdown editor that can use [`markdownlint`](https://
 
 We follow the rules laid out by [`markdownlint`](https://github.com/DavidAnson/markdownlint#rules--aliases) with the following exceptions:
 
+- `MD013` may be ignored. It is recommended to enable word wrapping when writing documentation
+- `MD024` may be ignored if the duplicate header does not have the same parent
 - `MD035 no-bare-urls` can be ignored
-- `MD041 first-line-heading/first-line-h1` may be ignored if first line heading is a back button, or an image. It is disabled project wide due to the common nature of back buttons.
+- `MD041 first-line-heading/first-line-h1` may be ignored if first line heading is a back button, or an image. It is disabled project wide due to the common nature of back buttons
 - `MD-059 descriptive-link-text` can be ignored
 
 View the [configuration file](../.markdownlint.json) to see every single rule ignored.
@@ -20,6 +22,23 @@ View the [configuration file](../.markdownlint.json) to see every single rule ig
 
 ```md
 ## [:rewind: Modding](../modding.md)
+```
+
+- Title and header capitalization uses title case. Specifically, we use the [APA style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)
+- In a bullet like this, do not end off the final sentence with a `.`. For example, this sentence is the last, so there will not be a period, but the previous sentence was not the last so it had a period
+- Refrain from using inline HTML
+- Tables should have pipes separated with a space:
+
+```md
+Do:
+
+| Name | Description |
+| mario | he's so cool! |
+
+Don't do:
+
+|Name|Description|
+|mario|he's so cool!|
 ```
 
 ## TODO: Add documentation on actually contributing with a PR

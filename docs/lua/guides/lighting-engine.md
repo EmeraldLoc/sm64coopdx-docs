@@ -2,7 +2,7 @@
 
 # How to use the Lighting Engine
 
-## Section 1: Preparation
+## Preparation
 
 The Lighting Engine is a vertex point lighting system built directly into sm64coopdx and its renderer. It works on all backends and is relatively easy to use.
 
@@ -10,7 +10,7 @@ To use the Lighting Engine, you need to figure out how you want to approach usin
 
 If you want to make a vertex buffer not be affected by the lighting engine even when it's enabled, you can use `gsSPVertexNonGlobal` in the displaylist instead of `gsSPVertex`. This tells the renderer to not apply any of the effects Lua can do.
 
-## Section 2: Modes
+## Modes
 
 The lighting engine has 3 modes you can switch between using `le_set_mode(mode)`.
 
@@ -24,7 +24,7 @@ The lighting engine has 3 modes you can switch between using `le_set_mode(mode)`
 
 I recommend you use `LE_MODE_AFFECT_ALL_SHADED_AND_COLORED` since that generally covers everything and doesn't require any additional effort like manually adding the lighting engine flag to everything.
 
-## Section 3: Tonemapping
+## Tonemapping
 
 The lighting engine has 4 tonemapping modes you can switch between using `le_set_tone_mapping(toneMapping)`.
 
@@ -43,9 +43,11 @@ You can see the visual differences of the different tonemappings in [this video]
 There are two ways you can set the ambient color for the scene.
 
 ### 1. `le_set_ambient_color(r, g, b)`
+
 To set the ambient color directly through code.
 
 ### 2. `bhvAmbientLight` object with `0xRRGGBB00` behavior parameters
+
 The first 3 bytes are for the red, green, and blue values. This will set the ambient color once on init but not on loop so changing the ambient color is possible.
 
 **Be mindful of an annoying SM64 engine quirk**: If you set the third byte to 255, which the game uses to store respawn bit information, it will think the light has already been spawned and it won't spawn. There isn't really a way around this except using 254 instead of 255, but `le_set_ambient_color` does not have this quirk and you can use 255 for the third value.
@@ -55,6 +57,7 @@ The first 3 bytes are for the red, green, and blue values. This will set the amb
 There are two ways you can add point lights in the scene.
 
 ### 1. `le_add_light(x, y, z, r, g, b, radius, intensity)`
+
 To spawn a point light directly through code.
 
 | Parameter | Description |
@@ -69,6 +72,7 @@ To spawn a point light directly through code.
 | `intensity` | How much influence/brightness the light has, 2.0 recommended. |
 
 ### 2. `bhvPointLight` object with `0xRRGGBBWW` behavior parameters
+
 The first 3 bytes are for the red, green, and blue values. The Ws are an arbitrary letter I picked for the fourth byte to represent radius. Due to only having one byte to represent radius, I opted to make it so whatever you have for radius in the 4th byte gets multiplied by 10 for a bigger range. If you have `0x64` (100) then your light will have a radius of 1000. The default intensity is 2.
 
 The point light object has some special exclusive behavior made possible from it being tied to the object system instead of a separate list. If you give it a parent object, the light will copy its position to the parent and delete itself when the parent is deleted. Other than that, changing the position of the light object will change the actual light's position but you are able to modify the other properties without it being forced by the object.
