@@ -611,15 +611,15 @@ def doc_find_function_link(function):
     return function_links.get(function, '')
 
 def doc_struct_index(structs):
-    s = '# Supported Structs\n'
+    s = '# Supported Structs\n\n'
     for struct in structs:
         sid = struct['identifier']
         if sid in structs_excluded:
             continue
-        s += '- [%s](#%s)\n' % (sid, sid)
+        s += '- [%s](#%s)\n' % (sid, sid.lower())
         global total_structs
         total_structs += 1
-    s += '\n<br />\n\n'
+    s += '\n'
     return s
 
 def doc_struct_field(struct, field):
@@ -646,29 +646,32 @@ def doc_struct_field(struct, field):
 
     restrictions = []
 
-    if fimmutable == 'true': restrictions.append('read-only')
-    if is_c_array: restrictions.append('starts at index 0')
+    if fimmutable == 'true': restrictions.append(' read-only ')
+    if is_c_array: restrictions.append(' starts at index 0 ')
 
     restrictions = ", ".join(restrictions)
+
+    if not restrictions:
+        restrictions = ' '
 
     global total_fields
     total_fields += 1
 
     if flink:
-        return '| %s | [%s](%s) | %s |\n'  % (fid, ftype, flink, restrictions), False
+        return '| %s | [%s](%s) |%s|\n'  % (fid, ftype, flink, restrictions), False
 
-    return '| %s | %s | %s |\n'  % (fid, ftype, restrictions), False
+    return '| %s | %s |%s|\n'  % (fid, ftype, restrictions), False
 
 
 def doc_struct_object_fields(struct):
     fields = extract_object_fields()
 
-    s = '\n### Object-Independent Data Fields\n'
+    s = '\n### Object-Independent Data Fields\n\n'
     s += "| Field | Type | Access |\n"
     s += "| ----- | ---- | ------ |\n"
     for field in fields:
         if field['identifier'] == 'oPathedStartWaypoint':
-            s += '\n### Object-Dependent Data Fields\n'
+            s += '\n### Object-Dependent Data Fields\n\n'
             s += "| Field | Type | Access |\n"
             s += "| ----- | ---- | ------ |\n"
 
