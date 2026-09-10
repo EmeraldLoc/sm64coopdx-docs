@@ -38,8 +38,12 @@ Do:
 Don't do:
 
 |Name|Description|
-|----| -----------|
+|----|-----------|
 |mario|he's so cool!|
 ```
 
-## TODO: Add documentation on actually contributing with a PR
+## Contributing
+
+When contributing to the documentation, follow the normal [contribution guidelines](../CONTRIBUTING.md).
+
+Always target the `dev` branch with documentation. We hope to improve on this system in the future so things can be pushed immediately if the documentation isn't on a dev-specific feature, but as it stands this is the current way we do things.

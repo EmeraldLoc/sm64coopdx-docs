@@ -16,7 +16,7 @@ More reviews means a pull request can be merged quicker, so the more the merrier
 
 ## AI Usage
 
-AI is allowed, however if a PR isn't deemed to be useful, we reserve the right to close that PR as we please
+AI is allowed, however if a PR isn't deemed to be useful, we reserve the right to close that PR as we please.
 
 ## Documentation
 
