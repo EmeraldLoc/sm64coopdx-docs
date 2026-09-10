@@ -188,6 +188,7 @@ Assigns a callback function to a game hook [event](hook-events.md#Hook-Event-Typ
 ### Lua Example
 
 The following example will print out a message 16 times per frame (once for every possible player).
+
 ```lua
 function mario_update(m)
     print("Mario update was called for player index ", m.playerIndex)
@@ -214,6 +215,7 @@ hook_event(HOOK_MARIO_UPDATE, mario_update)
 Allows Lua mods to create new actions or override existing ones.
 If a function table is used, it must be in the form of `{ action_hook = [func], ... }`.
 Possible `action_hook`s include:
+
 - `every_frame`: Main action code, called once per frame. Returns `true` if action cancelled, else `false`
 - `gravity`: Called inside `apply_gravity` when in action
 
@@ -294,13 +296,14 @@ hook_mario_action(ACT_WALL_SLIDE, { every_frame = act_wall_slide, gravity = act_
 ### Description
 
 Allows Lua mods to react to sync table changes.
+
 - `syncTable` parameter must be a sync table, e.g. [gGlobalSyncTable](../globals.md#gGlobalSyncTable), [gPlayerSyncTable[]](../globals.md#gPlayerSyncTable), or one of their child tables.
 - `field` parameter must be one of the fields in the `SyncTable`.
 - `tag` parameter can be any type, and is automatically passed to the callback.
 - `func` parameter must be a function with three parameters: `tag`, `oldVal`, and `newVal`.
-  - `tag` will be the same `tag` passed into `hook_on_sync_table_change()`.
-  - `oldVal` will be the value before it was set.
-  - `newVal` will be the value that it was set to.
+    - `tag` will be the same `tag` passed into `hook_on_sync_table_change()`.
+    - `oldVal` will be the value before it was set.
+    - `newVal` will be the value that it was set to.
 
 ### Lua Example
 
