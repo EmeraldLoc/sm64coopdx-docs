@@ -12,6 +12,10 @@ Unlike previous multiplayer projects, this one synchronizes enemies and events. 
 
 Interestingly enough though, the goal of the project has slowly evolved over time from simply just making a Super Mario 64 multiplayer mod to constantly maintaining and improving the project (notably the Lua API.)
 
+## Frequently Asked Questions
+
+A list of frequently asked questions can be found [here](FAQ.md). If you're having a problem or can't figure out how to do something, look there first!
+
 ## Documentation
 
 sm64coopdx is moddable via Lua, similar to Roblox and Garry's Mod's Lua APIs. Documentation for it and other portions of the project can be found in the [documentation](docs/docs.md).

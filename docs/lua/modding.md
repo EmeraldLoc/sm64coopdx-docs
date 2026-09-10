@@ -1,17 +1,5 @@
 # Modding
 
-## How to install mods
-
-TODO: Should be redone
-
-Lua scripts you make can be placed either the `mods` folder in the base directory, or in `<SAVE FILE LOCATION>/mods`. You can also drag and drop mods into the window to install them.
-
-Save file locations:
-
-- Windows: `%appdata%/sm64coopdx`
-- Linux: `~/.local/share/sm64coopdx`
-- MacOS: `~/Library/Application Support/sm64coopdx`
-
 ## Tips
 
 TODO: Figure out if this is OK
