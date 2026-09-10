@@ -38,6 +38,7 @@ Do:
 Don't do:
 
 |Name|Description|
+|----| -----------|
 |mario|he's so cool!|
 ```
 
