@@ -4,7 +4,7 @@
 
 --- @param objFieldTable table<any, "u32"|"s32"|"f32"|table> Table of object field names and types
 --- Defines a custom set of overlapping object fields.
---- 
+---
 --- - The `fieldTable` table's keys must start with the letter `o` and the values must be either `"u32"`, `"s32"`, `"f32"` or a table with fields `type` and `global`, for example `{ type = "u32", global = true }`.
 --- - If, for a field, `global` is `true`, the field will be defined for all mods.
 ---
@@ -27,7 +27,7 @@ end
 --- @param standardSync boolean Automatically syncs common fields and syncs with distance. If `false`, all syncing must be done with `network_send_object`
 --- @param fieldTable table<string> The fields to sync
 --- Enables synchronization on an object.
---- 
+---
 --- - Setting `standardSync` to `true` will automatically synchronize the object at a rate that is determined based on player distance. The commonly used object fields will be automatically synchronized.
 --- - Setting `standardSync` to `false` will not automatically synchronize the object, or add commonly used object fields. The mod must manually call `network_send_object()` when fields have changed.
 --- - The `fieldTable` parameter can be `nil`, or a list of object fields.
@@ -133,6 +133,7 @@ end
 --- @param textureName string The texture name
 --- @return TextureInfo
 --- Gets the `TextureInfo` of a texture by name.
+---
 --- - Note: This also works with vanilla textures.
 ---
 --- ### Lua Example
@@ -146,6 +147,7 @@ end
 --- @param textureName string The name of the texture
 --- @param overrideTexInfo TextureInfo The texture to override with
 --- Overrides a texture with a custom `TextureInfo`.
+---
 --- - `textureName` must be the codename of a vanilla texture, you can find these in `data/dynos_mgr_builtin_tex.cpp`
 --- - `overrideTexInfo` can be any `TextureInfo`
 ---
@@ -177,7 +179,7 @@ end
 --- Parses a level script and passes level data to a function.<br>
 --- When `func` is called, the parameter `levelData` is filled with level data depending on the level command.<br>
 --- `levelData` is a table of tables and its structure is the following:
---- 
+---
 --- <table>
 ---     <thead>
 ---         <tr>
@@ -522,7 +524,7 @@ end
 ---         </tr>
 ---     </tbody>
 --- </table>
---- 
+---
 --- Not all fields are filled at the same time. Make sure to `nil`-check tables before reading the fields.
 ---
 --- ### Lua Example
@@ -537,17 +539,17 @@ end
 ---         end
 ---     end
 --- end
---- 
+---
 --- local function print_level_data(levelData)
 ---     table.print(levelData)
 --- end
---- 
+---
 --- local function on_level_entry()
 ---     local levelNum = gNetworkPlayers[0].currLevelNum
 ---     print("===== LEVEL " .. tostring(levelNum) .. " DATA =====")
 ---     level_parse_script(levelNum, print_level_data)
 --- end
---- 
+---
 --- hook_event(HOOK_ON_LEVEL_INIT, on_level_entry)
 --- ```
 function level_parse_script(levelNum, func)
@@ -563,7 +565,7 @@ end
 --- @param values table The table containing animation values
 --- @param index table The table containing animation indices
 --- Registers an animation that can be used in objects if `smlua_anim_util_set_animation` is called.
---- 
+---
 --- ### Lua Example
 --- ```lua
 --- smlua_anim_util_register_animation("apparition_idle", 0, 189, 0, 0, 0x5A, values, index)
@@ -617,6 +619,7 @@ end
 --- @param contents ExclamationBoxContent[] The exclamation box contents to set
 --- Sets the contents that the exclamation box spawns.
 --- A single content has 5 keys: `id`, `unused`, `firstByte`, `model`, and `behavior`:
+---
 --- - `id`: Required; what value the box's oBehParams2ndByte needs to be to spawn this object.
 --- - `unused`: Optional; unused by vanilla.
 --- - `firstByte`: Optional; Overrides the 1st byte given to the spawned object.
@@ -639,12 +642,13 @@ end
 --- @return ExclamationBoxContent[]
 --- Gets the contents that the exclamation box spawns.
 --- A single content has 5 keys: `id`, `unused`, `firstByte`, `model`, and `behavior`:
+---
 --- - `id`: Required; what value the box's oBehParams2ndByte needs to be to spawn this object.
 --- - `unused`: Optional; unused by vanilla.
 --- - `firstByte`: Optional; Overrides the 1st byte given to the spawned object.
 --- - `model`: Required; The model that the object will spawn with. Uses `ModelExtendedId`.
 --- - `behavior`: Required; The behavior ID that the object will spawn with. Uses `BehaviorId`.
---- 
+---
 --- ### Lua Example
 --- ```lua
 --- local contents = get_exclamation_box_contents()
@@ -663,12 +667,12 @@ end
 --- @return GraphNode | GraphNodeAnimatedPart | GraphNodeBackground | GraphNodeBillboard | GraphNodeCamera | GraphNodeCullingRadius | GraphNodeDisplayList | GraphNodeGenerated | GraphNodeHeldObject | GraphNodeLevelOfDetail | GraphNodeMasterList | GraphNodeObject | GraphNodeObjectParent | GraphNodeOrthoProjection | GraphNodePerspective | GraphNodeRotation | GraphNodeScale | GraphNodeShadow | GraphNodeStart | GraphNodeSwitchCase | GraphNodeTranslation | GraphNodeTranslationRotation | GraphNodeBone
 --- Returns the specific GraphNode(...) the node is part of.
 --- Basically the reverse of `.node` or `.fnNode`.
---- 
+---
 --- ### Lua Example
 --- ```lua
 --- local marioGfx = gMarioStates[0].marioObj.header.gfx -- GraphNodeObject
 --- local node = marioGfx.node -- GraphNode
---- 
+---
 --- print(marioGfx == cast_graph_node(node)) -- true
 --- ```
 function cast_graph_node(node)

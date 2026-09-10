@@ -2,24 +2,24 @@
 
 ---
 
-[< prev](functions.md) | [1](functions.md) | 2 | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-3.md)]
-
+[< prev](functions.md) | [1](functions.md) | 2 | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-3.md)
 
 ---
+
 # functions from behavior_actions.h
-
-<br />
-
 
 ## spawn_mist_particles_variable
 
 ### Description
+
 Spawns mist particles around the current object
 
 ### Lua Example
+
 `spawn_mist_particles_variable(count, offsetY, size)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | count | `integer` |
@@ -27,21 +27,25 @@ Spawns mist particles around the current object
 | size | `number` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void spawn_mist_particles_variable(s32 count, s32 offsetY, f32 size);`
 
+`void spawn_mist_particles_variable(s32 count, s32 offsetY, f32 size);`
 
 ## bhv_spawn_star_no_level_exit
 
 ### Description
+
 Spawns a Star parented to `object` that won't make Mario exit the level with an ID corresponding to `params`' first byte
 
 ### Lua Example
+
 `bhv_spawn_star_no_level_exit(object, params, networkSendEvent)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | object | [Object](structs.md#Object) |
@@ -49,21 +53,25 @@ Spawns a Star parented to `object` that won't make Mario exit the level with an 
 | networkSendEvent | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spawn_star_no_level_exit(struct Object* object, u32 params, u8 networkSendEvent);`
 
+`void bhv_spawn_star_no_level_exit(struct Object* object, u32 params, u8 networkSendEvent);`
 
 ## spawn_triangle_break_particles
 
 ### Description
+
 Spawns triangle break particles around the current object
 
 ### Lua Example
+
 `spawn_triangle_break_particles(numTris, triModel, triSize, triAnimState)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | numTris | `integer` |
@@ -72,101 +80,121 @@ Spawns triangle break particles around the current object
 | triAnimState | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void spawn_triangle_break_particles(s16 numTris, s16 triModel, f32 triSize, s16 triAnimState);`
 
+`void spawn_triangle_break_particles(s16 numTris, s16 triModel, f32 triSize, s16 triAnimState);`
 
 ## spawn_mist_from_global
 
 ### Description
+
 Spawns mist particles around the current object
 
 ### Lua Example
+
 `spawn_mist_from_global()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void spawn_mist_from_global(void);`
 
+`void spawn_mist_from_global(void);`
 
 ## clear_particle_flags
 
 ### Description
+
 Clears the particle flags of the current object
 
 ### Lua Example
+
 `clear_particle_flags(flags)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | flags | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void clear_particle_flags(u32 flags);`
 
+`void clear_particle_flags(u32 flags);`
 
 ## spawn_wind_particles
 
 ### Description
+
 Spawns wind particles around the current object
 
 ### Lua Example
+
 `spawn_wind_particles(pitch, yaw)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | pitch | `integer` |
 | yaw | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void spawn_wind_particles(s16 pitch, s16 yaw);`
 
+`void spawn_wind_particles(s16 pitch, s16 yaw);`
 
 ## check_if_moving_over_floor
 
 ### Description
+
 Checks if the current object is moving `distance` units over a floor and within a max distance to floor of `maxDistToFloor`
 
 ### Lua Example
+
 `local integerValue = check_if_moving_over_floor(maxDistToFloor, distance)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | maxDistToFloor | `number` |
 | distance | `number` |
 
 ### Returns
+
 - `integer`
 
 ### C Prototype
-`s32 check_if_moving_over_floor(f32 maxDistToFloor, f32 distance);`
 
+`s32 check_if_moving_over_floor(f32 maxDistToFloor, f32 distance);`
 
 ## arc_to_goal_pos
 
 ### Description
+
 Calculates the time it takes for the current object to follow an arc from `pos` to `goal`
 
 ### Lua Example
+
 `local integerValue = arc_to_goal_pos(goal, pos, yVel, gravity)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | goal | [Vec3f](structs.md#Vec3f) |
@@ -175,21 +203,25 @@ Calculates the time it takes for the current object to follow an arc from `pos` 
 | gravity | `number` |
 
 ### Returns
+
 - `integer`
 
 ### C Prototype
-`s32 arc_to_goal_pos(Vec3f goal, Vec3f pos, f32 yVel, f32 gravity);`
 
+`s32 arc_to_goal_pos(Vec3f goal, Vec3f pos, f32 yVel, f32 gravity);`
 
 ## tox_box_move
 
 ### Description
+
 Moves Tox Box
 
 ### Lua Example
+
 `tox_box_move(forwardVel, a1, deltaPitch, deltaRoll)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | forwardVel | `number` |
@@ -198,62 +230,74 @@ Moves Tox Box
 | deltaRoll | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void tox_box_move(f32 forwardVel, f32 a1, s16 deltaPitch, s16 deltaRoll);`
 
+`void tox_box_move(f32 forwardVel, f32 a1, s16 deltaPitch, s16 deltaRoll);`
 
 ## play_penguin_walking_sound
 
 ### Description
+
 Plays the penguin walking sound
 
 ### Lua Example
+
 `play_penguin_walking_sound(walk)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | walk | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void play_penguin_walking_sound(s32 walk);`
 
+`void play_penguin_walking_sound(s32 walk);`
 
 ## update_angle_from_move_flags
 
 ### Description
+
 Computes and returns an angle depending on the current object's angle and move flags
 
 ### Lua Example
+
 `local integerValue, angle = update_angle_from_move_flags(angle)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | angle | `integer` |
 
 ### Returns
+
 - `integer`
 - `integer`
 
 ### C Prototype
-`s32 update_angle_from_move_flags(INOUT s32 *angle);`
 
+`s32 update_angle_from_move_flags(INOUT s32 *angle);`
 
 ## cur_obj_spawn_strong_wind_particles
 
 ### Description
+
 Spawns strong wind particles relative to the current object
 
 ### Lua Example
+
 `cur_obj_spawn_strong_wind_particles(windSpread, scale, relPosX, relPosY, relPosZ)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | windSpread | `integer` |
@@ -263,651 +307,795 @@ Spawns strong wind particles relative to the current object
 | relPosZ | `number` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void cur_obj_spawn_strong_wind_particles(s32 windSpread, f32 scale, f32 relPosX, f32 relPosY, f32 relPosZ);`
 
+`void cur_obj_spawn_strong_wind_particles(s32 windSpread, f32 scale, f32 relPosX, f32 relPosY, f32 relPosZ);`
 
 ## bhv_star_door_loop_update_render_state
 
 ### Description
+
 Behavior loop function for Star Door, which updates its render state
 
 ### Lua Example
+
 `bhv_star_door_loop_update_render_state()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_star_door_loop_update_render_state(void);`
 
+`void bhv_star_door_loop_update_render_state(void);`
 
 ## bhv_cap_switch_loop
 
 ### Description
+
 Behavior loop function for Cap Switch
 
 ### Lua Example
+
 `bhv_cap_switch_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cap_switch_loop(void);`
 
+`void bhv_cap_switch_loop(void);`
 
 ## bhv_tiny_star_particles_init
 
 ### Description
+
 Behavior init function for tiny Star particles
 
 ### Lua Example
+
 `bhv_tiny_star_particles_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tiny_star_particles_init(void);`
 
+`void bhv_tiny_star_particles_init(void);`
 
 ## bhv_grindel_thwomp_loop
 
 ### Description
+
 Behavior loop function for Grindel and Thwomp
 
 ### Lua Example
+
 `bhv_grindel_thwomp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_grindel_thwomp_loop(void);`
 
+`void bhv_grindel_thwomp_loop(void);`
 
 ## bhv_koopa_shell_underwater_loop
 
 ### Description
+
 Behavior loop function for Koopa Shell underwater
 
 ### Lua Example
+
 `bhv_koopa_shell_underwater_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_koopa_shell_underwater_loop(void);`
 
+`void bhv_koopa_shell_underwater_loop(void);`
 
 ## bhv_door_init
 
 ### Description
+
 Behavior init function for door
 
 ### Lua Example
+
 `bhv_door_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_door_init(void);`
 
+`void bhv_door_init(void);`
 
 ## bhv_door_loop
 
 ### Description
+
 Behavior loop function for door
 
 ### Lua Example
+
 `bhv_door_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_door_loop(void);`
 
+`void bhv_door_loop(void);`
 
 ## bhv_star_door_loop
 
 ### Description
+
 Behavior loop function for Star Door
 
 ### Lua Example
+
 `bhv_star_door_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_star_door_loop(void);`
 
+`void bhv_star_door_loop(void);`
 
 ## bhv_mr_i_loop
 
 ### Description
+
 Behavior loop function for Mr. I
 
 ### Lua Example
+
 `bhv_mr_i_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mr_i_loop(void);`
 
+`void bhv_mr_i_loop(void);`
 
 ## bhv_mr_i_body_loop
 
 ### Description
+
 Behavior loop function for Mr. I body
 
 ### Lua Example
+
 `bhv_mr_i_body_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mr_i_body_loop(void);`
 
+`void bhv_mr_i_body_loop(void);`
 
 ## bhv_mr_i_particle_loop
 
 ### Description
+
 Behavior loop function for Mr. I particle
 
 ### Lua Example
+
 `bhv_mr_i_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mr_i_particle_loop(void);`
 
+`void bhv_mr_i_particle_loop(void);`
 
 ## bhv_piranha_particle_loop
 
 ### Description
+
 Behavior loop function for Piranha particle
 
 ### Lua Example
+
 `bhv_piranha_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_piranha_particle_loop(void);`
 
+`void bhv_piranha_particle_loop(void);`
 
 ## bhv_giant_pole_loop
 
 ### Description
+
 Behavior loop function for giant pole
 
 ### Lua Example
+
 `bhv_giant_pole_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_giant_pole_loop(void);`
 
+`void bhv_giant_pole_loop(void);`
 
 ## bhv_pole_init
 
 ### Description
+
 Behavior init function for pole
 
 ### Lua Example
+
 `bhv_pole_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pole_init(void);`
 
+`void bhv_pole_init(void);`
 
 ## bhv_pole_base_loop
 
 ### Description
+
 Behavior loop function for pole base
 
 ### Lua Example
+
 `bhv_pole_base_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pole_base_loop(void);`
 
+`void bhv_pole_base_loop(void);`
 
 ## bhv_thi_huge_island_top_loop
 
 ### Description
+
 Behavior loop function for Tiny Huge Island huge island top
 
 ### Lua Example
+
 `bhv_thi_huge_island_top_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_thi_huge_island_top_loop(void);`
 
+`void bhv_thi_huge_island_top_loop(void);`
 
 ## bhv_thi_tiny_island_top_loop
 
 ### Description
+
 Behavior loop function for Tiny Huge Island tiny island top
 
 ### Lua Example
+
 `bhv_thi_tiny_island_top_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_thi_tiny_island_top_loop(void);`
 
+`void bhv_thi_tiny_island_top_loop(void);`
 
 ## bhv_king_bobomb_loop
 
 ### Description
+
 Behavior loop function for King Bob-omb
 
 ### Lua Example
+
 `bhv_king_bobomb_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_king_bobomb_loop(void);`
 
+`void bhv_king_bobomb_loop(void);`
 
 ## bhv_bobomb_anchor_mario_loop
 
 ### Description
+
 Behavior loop function for Bob-omb anchor mario
 
 ### Lua Example
+
 `bhv_bobomb_anchor_mario_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_anchor_mario_loop(void);`
 
+`void bhv_bobomb_anchor_mario_loop(void);`
 
 ## bhv_beta_chest_bottom_init
 
 ### Description
+
 Behavior init function for beta chest bottom
 
 ### Lua Example
+
 `bhv_beta_chest_bottom_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_chest_bottom_init(void);`
 
+`void bhv_beta_chest_bottom_init(void);`
 
 ## bhv_beta_chest_bottom_loop
 
 ### Description
+
 Behavior loop function for beta chest bottom
 
 ### Lua Example
+
 `bhv_beta_chest_bottom_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_chest_bottom_loop(void);`
 
+`void bhv_beta_chest_bottom_loop(void);`
 
 ## bhv_beta_chest_lid_loop
 
 ### Description
+
 Behavior loop function for beta chest lid
 
 ### Lua Example
+
 `bhv_beta_chest_lid_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_chest_lid_loop(void);`
 
+`void bhv_beta_chest_lid_loop(void);`
 
 ## bhv_bubble_wave_init
 
 ### Description
+
 Behavior init function for bubble wave
 
 ### Lua Example
+
 `bhv_bubble_wave_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bubble_wave_init(void);`
 
+`void bhv_bubble_wave_init(void);`
 
 ## bhv_bubble_maybe_loop
 
 ### Description
+
 Behavior loop function for bubble maybe
 
 ### Lua Example
+
 `bhv_bubble_maybe_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bubble_maybe_loop(void);`
 
+`void bhv_bubble_maybe_loop(void);`
 
 ## bhv_bubble_player_loop
 
 ### Description
+
 Behavior loop function for bubble player
 
 ### Lua Example
+
 `bhv_bubble_player_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bubble_player_loop(void);`
 
+`void bhv_bubble_player_loop(void);`
 
 ## bhv_water_air_bubble_init
 
 ### Description
+
 Behavior init function for water air bubble
 
 ### Lua Example
+
 `bhv_water_air_bubble_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_air_bubble_init(void);`
 
+`void bhv_water_air_bubble_init(void);`
 
 ## bhv_water_air_bubble_loop
 
 ### Description
+
 Behavior loop function for water air bubble
 
 ### Lua Example
+
 `bhv_water_air_bubble_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_air_bubble_loop(void);`
 
+`void bhv_water_air_bubble_loop(void);`
 
 ## bhv_particle_init
 
 ### Description
+
 Behavior init function for particle
 
 ### Lua Example
+
 `bhv_particle_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_particle_init(void);`
 
+`void bhv_particle_init(void);`
 
 ## bhv_particle_loop
 
 ### Description
+
 Behavior loop function for particle
 
 ### Lua Example
+
 `bhv_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_particle_loop(void);`
 
+`void bhv_particle_loop(void);`
 
 ## bhv_water_waves_init
 
 ### Description
+
 Behavior init function for water waves
 
 ### Lua Example
+
 `bhv_water_waves_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_waves_init(void);`
 
+`void bhv_water_waves_init(void);`
 
 ## bhv_small_bubbles_loop
 
 ### Description
+
 Behavior loop function for small bubbles
 
 ### Lua Example
+
 `bhv_small_bubbles_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_bubbles_loop(void);`
 
+`void bhv_small_bubbles_loop(void);`
 
 ## bhv_fish_group_loop
 
 ### Description
+
 Behavior loop function for fish group
 
 ### Lua Example
+
 `bhv_fish_group_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fish_group_loop(void);`
 
+`void bhv_fish_group_loop(void);`
 
 ## bhv_cannon_base_loop
 
 ### Description
+
 Behavior loop function for cannon base
 
 ### Lua Example
+
 `bhv_cannon_base_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cannon_base_loop(void);`
 
+`void bhv_cannon_base_loop(void);`
 
 ## bhv_cannon_barrel_loop
 
 ### Description
+
 Behavior loop function for cannon barrel
 
 ### Lua Example
+
 `bhv_cannon_barrel_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cannon_barrel_loop(void);`
 
+`void bhv_cannon_barrel_loop(void);`
 
 ## bhv_cannon_base_unused_loop
 
 ### Description
+
 Behavior loop function for cannon base unused
 
 ### Lua Example
+
 `bhv_cannon_base_unused_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cannon_base_unused_loop(void);`
 
+`void bhv_cannon_base_unused_loop(void);`
 
 ## common_anchor_mario_behavior
 
 ### Description
+
 Common behavior for an object when grabbing Mario. Used by King Bob-omb and Chuckya anchor objects. When Mario is thrown, sets `forwardVel`, `upwardsVel` and `interactStatusFlags` to him
 
 ### Lua Example
+
 `common_anchor_mario_behavior(forwardVel, upwardsVel, interactStatusFlags)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | forwardVel | `number` |
@@ -915,9400 +1103,11488 @@ Common behavior for an object when grabbing Mario. Used by King Bob-omb and Chuc
 | interactStatusFlags | `integer` |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void common_anchor_mario_behavior(f32 forwardVel, f32 upwardsVel, s32 interactStatusFlags);`
 
+`void common_anchor_mario_behavior(f32 forwardVel, f32 upwardsVel, s32 interactStatusFlags);`
 
 ## bhv_chuckya_loop
 
 ### Description
+
 Behavior loop function for Chuckya
 
 ### Lua Example
+
 `bhv_chuckya_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_chuckya_loop(void);`
 
+`void bhv_chuckya_loop(void);`
 
 ## bhv_chuckya_anchor_mario_loop
 
 ### Description
+
 Behavior loop function for Chuckya mario anchor
 
 ### Lua Example
+
 `bhv_chuckya_anchor_mario_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_chuckya_anchor_mario_loop(void);`
 
+`void bhv_chuckya_anchor_mario_loop(void);`
 
 ## bhv_rotating_platform_loop
 
 ### Description
+
 Behavior loop function for rotating platform
 
 ### Lua Example
+
 `bhv_rotating_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rotating_platform_loop(void);`
 
+`void bhv_rotating_platform_loop(void);`
 
 ## bhv_wf_breakable_wall_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress breakable wall
 
 ### Lua Example
+
 `bhv_wf_breakable_wall_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_breakable_wall_loop(void);`
 
+`void bhv_wf_breakable_wall_loop(void);`
 
 ## bhv_kickable_board_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress kickable board
 
 ### Lua Example
+
 `bhv_kickable_board_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_kickable_board_loop(void);`
 
+`void bhv_kickable_board_loop(void);`
 
 ## bhv_tower_door_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress tower door
 
 ### Lua Example
+
 `bhv_tower_door_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tower_door_loop(void);`
 
+`void bhv_tower_door_loop(void);`
 
 ## bhv_wf_rotating_wooden_platform_init
 
 ### Description
+
 Behavior init function for Whomp's Fortress rotating wooden platform
 
 ### Lua Example
+
 `bhv_wf_rotating_wooden_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_rotating_wooden_platform_init(void);`
 
+`void bhv_wf_rotating_wooden_platform_init(void);`
 
 ## bhv_wf_rotating_wooden_platform_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress rotating wooden platform
 
 ### Lua Example
+
 `bhv_wf_rotating_wooden_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_rotating_wooden_platform_loop(void);`
 
+`void bhv_wf_rotating_wooden_platform_loop(void);`
 
 ## bhv_fading_warp_loop
 
 ### Description
+
 Behavior loop function for fading warp
 
 ### Lua Example
+
 `bhv_fading_warp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fading_warp_loop(void);`
 
+`void bhv_fading_warp_loop(void);`
 
 ## bhv_warp_loop
 
 ### Description
+
 Behavior loop function for warp
 
 ### Lua Example
+
 `bhv_warp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_warp_loop(void);`
 
+`void bhv_warp_loop(void);`
 
 ## bhv_white_puff_exploding_loop
 
 ### Description
+
 Behavior loop function for white puff exploding
 
 ### Lua Example
+
 `bhv_white_puff_exploding_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_white_puff_exploding_loop(void);`
 
+`void bhv_white_puff_exploding_loop(void);`
 
 ## bhv_spawned_star_init
 
 ### Description
+
 Behavior init function for spawned star
 
 ### Lua Example
+
 `bhv_spawned_star_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spawned_star_init(void);`
 
+`void bhv_spawned_star_init(void);`
 
 ## bhv_spawned_star_loop
 
 ### Description
+
 Behavior loop function for Spawned star
 
 ### Lua Example
+
 `bhv_spawned_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spawned_star_loop(void);`
 
+`void bhv_spawned_star_loop(void);`
 
 ## bhv_coin_init
 
 ### Description
+
 Behavior init function for Coin
 
 ### Lua Example
+
 `bhv_coin_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_init(void);`
 
+`void bhv_coin_init(void);`
 
 ## bhv_coin_loop
 
 ### Description
+
 Behavior loop function for Coin
 
 ### Lua Example
+
 `bhv_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_loop(void);`
 
+`void bhv_coin_loop(void);`
 
 ## bhv_coin_inside_boo_loop
 
 ### Description
+
 Behavior loop function for Coin inside Boo
 
 ### Lua Example
+
 `bhv_coin_inside_boo_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_inside_boo_loop(void);`
 
+`void bhv_coin_inside_boo_loop(void);`
 
 ## bhv_coin_formation_init
 
 ### Description
+
 Behavior init function for Coin formation
 
 ### Lua Example
+
 `bhv_coin_formation_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_formation_init(void);`
 
+`void bhv_coin_formation_init(void);`
 
 ## bhv_coin_formation_spawn_loop
 
 ### Description
+
 Behavior loop function for Coin formation spawn
 
 ### Lua Example
+
 `bhv_coin_formation_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_formation_spawn_loop(void);`
 
+`void bhv_coin_formation_spawn_loop(void);`
 
 ## bhv_coin_formation_loop
 
 ### Description
+
 Behavior loop function for Coin formation
 
 ### Lua Example
+
 `bhv_coin_formation_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_formation_loop(void);`
 
+`void bhv_coin_formation_loop(void);`
 
 ## bhv_temp_coin_loop
 
 ### Description
+
 Behavior loop function for despawning Coin
 
 ### Lua Example
+
 `bhv_temp_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_temp_coin_loop(void);`
 
+`void bhv_temp_coin_loop(void);`
 
 ## bhv_coin_sparkles_loop
 
 ### Description
+
 Behavior loop function for Coin sparkles
 
 ### Lua Example
+
 `bhv_coin_sparkles_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coin_sparkles_loop(void);`
 
+`void bhv_coin_sparkles_loop(void);`
 
 ## bhv_golden_coin_sparkles_loop
 
 ### Description
+
 Behavior loop function for golden Coin sparkles
 
 ### Lua Example
+
 `bhv_golden_coin_sparkles_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_golden_coin_sparkles_loop(void);`
 
+`void bhv_golden_coin_sparkles_loop(void);`
 
 ## bhv_wall_tiny_star_particle_loop
 
 ### Description
+
 Behavior loop function for tiny wall star particle
 
 ### Lua Example
+
 `bhv_wall_tiny_star_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wall_tiny_star_particle_loop(void);`
 
+`void bhv_wall_tiny_star_particle_loop(void);`
 
 ## bhv_pound_tiny_star_particle_loop
 
 ### Description
+
 Behavior loop function for tiny pound star particle
 
 ### Lua Example
+
 `bhv_pound_tiny_star_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pound_tiny_star_particle_loop(void);`
 
+`void bhv_pound_tiny_star_particle_loop(void);`
 
 ## bhv_pound_tiny_star_particle_init
 
 ### Description
+
 Behavior init function for tiny pound star particle
 
 ### Lua Example
+
 `bhv_pound_tiny_star_particle_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pound_tiny_star_particle_init(void);`
 
+`void bhv_pound_tiny_star_particle_init(void);`
 
 ## bhv_punch_tiny_triangle_loop
 
 ### Description
+
 Behavior loop function for tiny punch triangle
 
 ### Lua Example
+
 `bhv_punch_tiny_triangle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_punch_tiny_triangle_loop(void);`
 
+`void bhv_punch_tiny_triangle_loop(void);`
 
 ## bhv_punch_tiny_triangle_init
 
 ### Description
+
 Behavior init function for tiny punch triangle
 
 ### Lua Example
+
 `bhv_punch_tiny_triangle_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_punch_tiny_triangle_init(void);`
 
+`void bhv_punch_tiny_triangle_init(void);`
 
 ## bhv_tumbling_bridge_platform_loop
 
 ### Description
+
 Behavior loop function for tumbling bridge platform
 
 ### Lua Example
+
 `bhv_tumbling_bridge_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tumbling_bridge_platform_loop(void);`
 
+`void bhv_tumbling_bridge_platform_loop(void);`
 
 ## bhv_tumbling_bridge_loop
 
 ### Description
+
 Behavior loop function for tumbling bridge
 
 ### Lua Example
+
 `bhv_tumbling_bridge_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tumbling_bridge_loop(void);`
 
+`void bhv_tumbling_bridge_loop(void);`
 
 ## bhv_elevator_init
 
 ### Description
+
 Behavior init function for elevator
 
 ### Lua Example
+
 `bhv_elevator_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_elevator_init(void);`
 
+`void bhv_elevator_init(void);`
 
 ## bhv_elevator_loop
 
 ### Description
+
 Behavior loop function for elevator
 
 ### Lua Example
+
 `bhv_elevator_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_elevator_loop(void);`
 
+`void bhv_elevator_loop(void);`
 
 ## bhv_water_mist_loop
 
 ### Description
+
 Behavior loop function for water mist
 
 ### Lua Example
+
 `bhv_water_mist_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_mist_loop(void);`
 
+`void bhv_water_mist_loop(void);`
 
 ## bhv_water_mist_spawn_loop
 
 ### Description
+
 Behavior loop function for water mist spawn
 
 ### Lua Example
+
 `bhv_water_mist_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_mist_spawn_loop(void);`
 
+`void bhv_water_mist_spawn_loop(void);`
 
 ## bhv_water_mist_2_loop
 
 ### Description
+
 Behavior loop function for water mist 2
 
 ### Lua Example
+
 `bhv_water_mist_2_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_mist_2_loop(void);`
 
+`void bhv_water_mist_2_loop(void);`
 
 ## bhv_pound_white_puffs_init
 
 ### Description
+
 Behavior init function for pound white puffs
 
 ### Lua Example
+
 `bhv_pound_white_puffs_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pound_white_puffs_init(void);`
 
+`void bhv_pound_white_puffs_init(void);`
 
 ## bhv_ground_sand_init
 
 ### Description
+
 Behavior init function for ground sand
 
 ### Lua Example
+
 `bhv_ground_sand_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ground_sand_init(void);`
 
+`void bhv_ground_sand_init(void);`
 
 ## bhv_ground_snow_init
 
 ### Description
+
 Behavior init function for ground snow
 
 ### Lua Example
+
 `bhv_ground_snow_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ground_snow_init(void);`
 
+`void bhv_ground_snow_init(void);`
 
 ## bhv_wind_loop
 
 ### Description
+
 Behavior loop function for wind
 
 ### Lua Example
+
 `bhv_wind_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wind_loop(void);`
 
+`void bhv_wind_loop(void);`
 
 ## bhv_unused_particle_spawn_loop
 
 ### Description
+
 Behavior loop function for unused particle spawn
 
 ### Lua Example
+
 `bhv_unused_particle_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_unused_particle_spawn_loop(void);`
 
+`void bhv_unused_particle_spawn_loop(void);`
 
 ## bhv_ukiki_cage_star_loop
 
 ### Description
+
 Behavior loop function for Ukiki cage Star
 
 ### Lua Example
+
 `bhv_ukiki_cage_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ukiki_cage_star_loop(void);`
 
+`void bhv_ukiki_cage_star_loop(void);`
 
 ## bhv_ukiki_cage_loop
 
 ### Description
+
 Behavior loop function for Ukiki cage
 
 ### Lua Example
+
 `bhv_ukiki_cage_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ukiki_cage_loop(void);`
 
+`void bhv_ukiki_cage_loop(void);`
 
 ## bhv_bitfs_sinking_platform_loop
 
 ### Description
+
 Behavior loop function for Bowser in the Fire Sea sinking platform
 
 ### Lua Example
+
 `bhv_bitfs_sinking_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bitfs_sinking_platform_loop(void);`
 
+`void bhv_bitfs_sinking_platform_loop(void);`
 
 ## bhv_bitfs_sinking_cage_platform_loop
 
 ### Description
+
 Behavior loop function for Bowser in the Fire Sea sinking cage platform
 
 ### Lua Example
+
 `bhv_bitfs_sinking_cage_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bitfs_sinking_cage_platform_loop(void);`
 
+`void bhv_bitfs_sinking_cage_platform_loop(void);`
 
 ## bhv_ddd_moving_pole_loop
 
 ### Description
+
 Behavior loop function for Dire Dire Docks moving pole
 
 ### Lua Example
+
 `bhv_ddd_moving_pole_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ddd_moving_pole_loop(void);`
 
+`void bhv_ddd_moving_pole_loop(void);`
 
 ## bhv_platform_normals_init
 
 ### Description
+
 Behavior init function for Bowser in the Dark World, Lethal Lava Land, and Bowser in the Fire Sea platform normals
 
 ### Lua Example
+
 `bhv_platform_normals_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_platform_normals_init(void);`
 
+`void bhv_platform_normals_init(void);`
 
 ## bhv_tilting_inverted_pyramid_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land and Bowser in the Fire Sea tilting inverted pyramid
 
 ### Lua Example
+
 `bhv_tilting_inverted_pyramid_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tilting_inverted_pyramid_loop(void);`
 
+`void bhv_tilting_inverted_pyramid_loop(void);`
 
 ## bhv_squishable_platform_loop
 
 ### Description
+
 Behavior loop function for squishable platform
 
 ### Lua Example
+
 `bhv_squishable_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_squishable_platform_loop(void);`
 
+`void bhv_squishable_platform_loop(void);`
 
 ## bhv_beta_moving_flames_spawn_loop
 
 ### Description
+
 Behavior loop function for beta moving flames spawn
 
 ### Lua Example
+
 `bhv_beta_moving_flames_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_moving_flames_spawn_loop(void);`
 
+`void bhv_beta_moving_flames_spawn_loop(void);`
 
 ## bhv_beta_moving_flames_loop
 
 ### Description
+
 Behavior loop function for beta moving flames
 
 ### Lua Example
+
 `bhv_beta_moving_flames_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_moving_flames_loop(void);`
 
+`void bhv_beta_moving_flames_loop(void);`
 
 ## bhv_rr_rotating_bridge_platform_loop
 
 ### Description
+
 Behavior loop function for Rainbow Ride rotating bridge platform
 
 ### Lua Example
+
 `bhv_rr_rotating_bridge_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rr_rotating_bridge_platform_loop(void);`
 
+`void bhv_rr_rotating_bridge_platform_loop(void);`
 
 ## bhv_flamethrower_loop
 
 ### Description
+
 Behavior loop function for flamethrower
 
 ### Lua Example
+
 `bhv_flamethrower_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flamethrower_loop(void);`
 
+`void bhv_flamethrower_loop(void);`
 
 ## bhv_flamethrower_flame_loop
 
 ### Description
+
 Behavior loop function for flamethrower flame
 
 ### Lua Example
+
 `bhv_flamethrower_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flamethrower_flame_loop(void);`
 
+`void bhv_flamethrower_flame_loop(void);`
 
 ## bhv_bouncing_fireball_loop
 
 ### Description
+
 Behavior loop function for bouncing fireball
 
 ### Lua Example
+
 `bhv_bouncing_fireball_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bouncing_fireball_loop(void);`
 
+`void bhv_bouncing_fireball_loop(void);`
 
 ## bhv_bouncing_fireball_flame_loop
 
 ### Description
+
 Behavior loop function for bouncing fireball flame
 
 ### Lua Example
+
 `bhv_bouncing_fireball_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bouncing_fireball_flame_loop(void);`
 
+`void bhv_bouncing_fireball_flame_loop(void);`
 
 ## bhv_bowser_shock_wave_loop
 
 ### Description
+
 Behavior loop function for Bowser shock wave
 
 ### Lua Example
+
 `bhv_bowser_shock_wave_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_shock_wave_loop(void);`
 
+`void bhv_bowser_shock_wave_loop(void);`
 
 ## bhv_flame_mario_loop
 
 ### Description
+
 Behavior loop function for flame Mario
 
 ### Lua Example
+
 `bhv_flame_mario_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_mario_loop(void);`
 
+`void bhv_flame_mario_loop(void);`
 
 ## bhv_black_smoke_mario_loop
 
 ### Description
+
 Behavior loop function for black smoke Mario
 
 ### Lua Example
+
 `bhv_black_smoke_mario_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_black_smoke_mario_loop(void);`
 
+`void bhv_black_smoke_mario_loop(void);`
 
 ## bhv_black_smoke_bowser_loop
 
 ### Description
+
 Behavior loop function for black smoke Bowser
 
 ### Lua Example
+
 `bhv_black_smoke_bowser_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_black_smoke_bowser_loop(void);`
 
+`void bhv_black_smoke_bowser_loop(void);`
 
 ## bhv_black_smoke_upward_loop
 
 ### Description
+
 Behavior loop function for black smoke upward
 
 ### Lua Example
+
 `bhv_black_smoke_upward_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_black_smoke_upward_loop(void);`
 
+`void bhv_black_smoke_upward_loop(void);`
 
 ## bhv_beta_fish_splash_spawner_loop
 
 ### Description
+
 Behavior loop function for beta fish splash spawner
 
 ### Lua Example
+
 `bhv_beta_fish_splash_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_fish_splash_spawner_loop(void);`
 
+`void bhv_beta_fish_splash_spawner_loop(void);`
 
 ## bhv_spindrift_loop
 
 ### Description
+
 Behavior loop function for Spindrift
 
 ### Lua Example
+
 `bhv_spindrift_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spindrift_loop(void);`
 
+`void bhv_spindrift_loop(void);`
 
 ## bhv_tower_platform_group_init
 
 ### Description
+
 Behavior init function for Whomp's Fortress tower platform group
 
 ### Lua Example
+
 `bhv_tower_platform_group_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tower_platform_group_init(void);`
 
+`void bhv_tower_platform_group_init(void);`
 
 ## bhv_tower_platform_group_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress tower platform group
 
 ### Lua Example
+
 `bhv_tower_platform_group_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tower_platform_group_loop(void);`
 
+`void bhv_tower_platform_group_loop(void);`
 
 ## bhv_wf_sliding_tower_platform_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress sliding tower platform
 
 ### Lua Example
+
 `bhv_wf_sliding_tower_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_sliding_tower_platform_loop(void);`
 
+`void bhv_wf_sliding_tower_platform_loop(void);`
 
 ## bhv_wf_elevator_tower_platform_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress elevator tower platform
 
 ### Lua Example
+
 `bhv_wf_elevator_tower_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_elevator_tower_platform_loop(void);`
 
+`void bhv_wf_elevator_tower_platform_loop(void);`
 
 ## bhv_wf_solid_tower_platform_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress solid tower platform
 
 ### Lua Example
+
 `bhv_wf_solid_tower_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_solid_tower_platform_loop(void);`
 
+`void bhv_wf_solid_tower_platform_loop(void);`
 
 ## bhv_snow_leaf_particle_spawn_init
 
 ### Description
+
 Behavior init function for snow leaf particle spawn
 
 ### Lua Example
+
 `bhv_snow_leaf_particle_spawn_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snow_leaf_particle_spawn_init(void);`
 
+`void bhv_snow_leaf_particle_spawn_init(void);`
 
 ## bhv_tree_snow_or_leaf_loop
 
 ### Description
+
 Behavior loop function for tree snow or leaf particle
 
 ### Lua Example
+
 `bhv_tree_snow_or_leaf_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tree_snow_or_leaf_loop(void);`
 
+`void bhv_tree_snow_or_leaf_loop(void);`
 
 ## bhv_piranha_plant_bubble_loop
 
 ### Description
+
 Behavior loop function for Piranha Plant bubble
 
 ### Lua Example
+
 `bhv_piranha_plant_bubble_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_piranha_plant_bubble_loop(void);`
 
+`void bhv_piranha_plant_bubble_loop(void);`
 
 ## bhv_piranha_plant_waking_bubbles_loop
 
 ### Description
+
 Behavior loop function for Piranha Plant waking bubbles
 
 ### Lua Example
+
 `bhv_piranha_plant_waking_bubbles_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_piranha_plant_waking_bubbles_loop(void);`
 
+`void bhv_piranha_plant_waking_bubbles_loop(void);`
 
 ## bhv_purple_switch_loop
 
 ### Description
+
 Behavior loop function for Purple Switch
 
 ### Lua Example
+
 `bhv_purple_switch_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_purple_switch_loop(void);`
 
+`void bhv_purple_switch_loop(void);`
 
 ## bhv_hidden_object_loop
 
 ### Description
+
 Behavior loop function for Wet Dry World hidden breakable box
 
 ### Lua Example
+
 `bhv_hidden_object_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_object_loop(void);`
 
+`void bhv_hidden_object_loop(void);`
 
 ## bhv_breakable_box_loop
 
 ### Description
+
 Behavior loop function for breakable box
 
 ### Lua Example
+
 `bhv_breakable_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_breakable_box_loop(void);`
 
+`void bhv_breakable_box_loop(void);`
 
 ## bhv_pushable_loop
 
 ### Description
+
 Behavior loop function for pushable metal box
 
 ### Lua Example
+
 `bhv_pushable_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pushable_loop(void);`
 
+`void bhv_pushable_loop(void);`
 
 ## bhv_small_water_wave_loop
 
 ### Description
+
 Behavior loop function for small water wave
 
 ### Lua Example
+
 `bhv_small_water_wave_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_water_wave_loop(void);`
 
+`void bhv_small_water_wave_loop(void);`
 
 ## bhv_yellow_coin_init
 
 ### Description
+
 Behavior init function for Yellow Coin
 
 ### Lua Example
+
 `bhv_yellow_coin_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_yellow_coin_init(void);`
 
+`void bhv_yellow_coin_init(void);`
 
 ## bhv_yellow_coin_loop
 
 ### Description
+
 Behavior loop function for Yellow Coin
 
 ### Lua Example
+
 `bhv_yellow_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_yellow_coin_loop(void);`
 
+`void bhv_yellow_coin_loop(void);`
 
 ## bhv_squarish_path_moving_loop
 
 ### Description
+
 Behavior loop function for Bowser in the Dark World squarish path moving
 
 ### Lua Example
+
 `bhv_squarish_path_moving_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_squarish_path_moving_loop(void);`
 
+`void bhv_squarish_path_moving_loop(void);`
 
 ## bhv_squarish_path_parent_init
 
 ### Description
+
 Behavior init function for Bowser in the Dark World squarish path parent
 
 ### Lua Example
+
 `bhv_squarish_path_parent_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_squarish_path_parent_init(void);`
 
+`void bhv_squarish_path_parent_init(void);`
 
 ## bhv_squarish_path_parent_loop
 
 ### Description
+
 Behavior loop function for Bowser in the Dark World Ssuarish path parent
 
 ### Lua Example
+
 `bhv_squarish_path_parent_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_squarish_path_parent_loop(void);`
 
+`void bhv_squarish_path_parent_loop(void);`
 
 ## bhv_heave_ho_loop
 
 ### Description
+
 Behavior loop function for Heave ho
 
 ### Lua Example
+
 `bhv_heave_ho_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_heave_ho_loop(void);`
 
+`void bhv_heave_ho_loop(void);`
 
 ## bhv_heave_ho_throw_mario_loop
 
 ### Description
+
 Behavior loop function for Heave ho throwing Mario
 
 ### Lua Example
+
 `bhv_heave_ho_throw_mario_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_heave_ho_throw_mario_loop(void);`
 
+`void bhv_heave_ho_throw_mario_loop(void);`
 
 ## bhv_ccm_touched_star_spawn_loop
 
 ### Description
+
 Behavior loop function for Cool, Cool Mountain touched Star spawn
 
 ### Lua Example
+
 `bhv_ccm_touched_star_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ccm_touched_star_spawn_loop(void);`
 
+`void bhv_ccm_touched_star_spawn_loop(void);`
 
 ## bhv_unused_poundable_platform
 
 ### Description
+
 Behavior loop function for unused poundable platform
 
 ### Lua Example
+
 `bhv_unused_poundable_platform()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_unused_poundable_platform(void);`
 
+`void bhv_unused_poundable_platform(void);`
 
 ## bhv_beta_trampoline_top_loop
 
 ### Description
+
 Behavior loop function for beta trampoline top
 
 ### Lua Example
+
 `bhv_beta_trampoline_top_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_trampoline_top_loop(void);`
 
+`void bhv_beta_trampoline_top_loop(void);`
 
 ## bhv_beta_trampoline_spring_loop
 
 ### Description
+
 Behavior loop function for beta trampoline spring
 
 ### Lua Example
+
 `bhv_beta_trampoline_spring_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_trampoline_spring_loop(void);`
 
+`void bhv_beta_trampoline_spring_loop(void);`
 
 ## bhv_jumping_box_loop
 
 ### Description
+
 Behavior loop function for jumping box
 
 ### Lua Example
+
 `bhv_jumping_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jumping_box_loop(void);`
 
+`void bhv_jumping_box_loop(void);`
 
 ## bhv_boo_cage_init
 
 ### Description
+
 Behavior init function for Boo cage
 
 ### Lua Example
+
 `bhv_boo_cage_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_cage_init(void);`
 
+`void bhv_boo_cage_init(void);`
 
 ## bhv_boo_cage_loop
 
 ### Description
+
 Behavior loop function for Boo cage
 
 ### Lua Example
+
 `bhv_boo_cage_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_cage_loop(void);`
 
+`void bhv_boo_cage_loop(void);`
 
 ## bhv_bowser_key_init
 
 ### Description
+
 Behavior init function for Bowser key
 
 ### Lua Example
+
 `bhv_bowser_key_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_key_init(void);`
 
+`void bhv_bowser_key_init(void);`
 
 ## bhv_bowser_key_loop
 
 ### Description
+
 Behavior loop function for Bowser key
 
 ### Lua Example
+
 `bhv_bowser_key_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_key_loop(void);`
 
+`void bhv_bowser_key_loop(void);`
 
 ## bhv_grand_star_init
 
 ### Description
+
 Behavior init function for Grand Star
 
 ### Lua Example
+
 `bhv_grand_star_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_grand_star_init(void);`
 
+`void bhv_grand_star_init(void);`
 
 ## bhv_grand_star_loop
 
 ### Description
+
 Behavior loop function for Grand Star
 
 ### Lua Example
+
 `bhv_grand_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_grand_star_loop(void);`
 
+`void bhv_grand_star_loop(void);`
 
 ## bhv_beta_boo_key_loop
 
 ### Description
+
 Behavior loop function for beta boo key
 
 ### Lua Example
+
 `bhv_beta_boo_key_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_boo_key_loop(void);`
 
+`void bhv_beta_boo_key_loop(void);`
 
 ## bhv_alpha_boo_key_loop
 
 ### Description
+
 Behavior loop function for alpha boo key
 
 ### Lua Example
+
 `bhv_alpha_boo_key_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_alpha_boo_key_loop(void);`
 
+`void bhv_alpha_boo_key_loop(void);`
 
 ## bhv_bullet_bill_init
 
 ### Description
+
 Behavior init function for Bullet Bill
 
 ### Lua Example
+
 `bhv_bullet_bill_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bullet_bill_init(void);`
 
+`void bhv_bullet_bill_init(void);`
 
 ## bhv_bullet_bill_loop
 
 ### Description
+
 Behavior loop function for Bullet Bill
 
 ### Lua Example
+
 `bhv_bullet_bill_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bullet_bill_loop(void);`
 
+`void bhv_bullet_bill_loop(void);`
 
 ## bhv_white_puff_smoke_init
 
 ### Description
+
 Behavior init function for White puff smoke
 
 ### Lua Example
+
 `bhv_white_puff_smoke_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_white_puff_smoke_init(void);`
 
+`void bhv_white_puff_smoke_init(void);`
 
 ## bhv_bowser_tail_anchor_init
 
 ### Description
+
 Behavior init function for Bowser tail anchor
 
 ### Lua Example
+
 `bhv_bowser_tail_anchor_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_tail_anchor_init(void);`
 
+`void bhv_bowser_tail_anchor_init(void);`
 
 ## bhv_bowser_tail_anchor_loop
 
 ### Description
+
 Behavior loop function for Bowser tail anchor
 
 ### Lua Example
+
 `bhv_bowser_tail_anchor_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_tail_anchor_loop(void);`
 
+`void bhv_bowser_tail_anchor_loop(void);`
 
 ## bhv_bowser_init
 
 ### Description
+
 Behavior init function for Bowser
 
 ### Lua Example
+
 `bhv_bowser_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_init(void);`
 
+`void bhv_bowser_init(void);`
 
 ## bhv_bowser_loop
 
 ### Description
+
 Behavior loop function for Bowser
 
 ### Lua Example
+
 `bhv_bowser_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_loop(void);`
 
+`void bhv_bowser_loop(void);`
 
 ## bhv_bowser_body_anchor_init
 
 ### Description
+
 Behavior init function for Bowser body anchor
 
 ### Lua Example
+
 `bhv_bowser_body_anchor_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_body_anchor_init(void);`
 
+`void bhv_bowser_body_anchor_init(void);`
 
 ## bhv_bowser_body_anchor_loop
 
 ### Description
+
 Behavior loop function for Bowser body anchor
 
 ### Lua Example
+
 `bhv_bowser_body_anchor_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_body_anchor_loop(void);`
 
+`void bhv_bowser_body_anchor_loop(void);`
 
 ## bhv_bowser_flame_spawn_loop
 
 ### Description
+
 Behavior loop function for Bowser flame spawn
 
 ### Lua Example
+
 `bhv_bowser_flame_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_flame_spawn_loop(void);`
 
+`void bhv_bowser_flame_spawn_loop(void);`
 
 ## bhv_tilting_bowser_lava_platform_init
 
 ### Description
+
 Behavior init function for tilting Bowser in the Fire Sea arena platform
 
 ### Lua Example
+
 `bhv_tilting_bowser_lava_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tilting_bowser_lava_platform_init(void);`
 
+`void bhv_tilting_bowser_lava_platform_init(void);`
 
 ## bhv_falling_bowser_platform_loop
 
 ### Description
+
 Behavior loop function for falling Bowser in the Sky arena platform
 
 ### Lua Example
+
 `bhv_falling_bowser_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_falling_bowser_platform_loop(void);`
 
+`void bhv_falling_bowser_platform_loop(void);`
 
 ## bhv_blue_bowser_flame_init
 
 ### Description
+
 Behavior init function for Blue Bowser flame
 
 ### Lua Example
+
 `bhv_blue_bowser_flame_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_bowser_flame_init(void);`
 
+`void bhv_blue_bowser_flame_init(void);`
 
 ## bhv_blue_bowser_flame_loop
 
 ### Description
+
 Behavior loop function for Blue Bowser flame
 
 ### Lua Example
+
 `bhv_blue_bowser_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_bowser_flame_loop(void);`
 
+`void bhv_blue_bowser_flame_loop(void);`
 
 ## bhv_flame_floating_landing_init
 
 ### Description
+
 Behavior init function for flame floating landing
 
 ### Lua Example
+
 `bhv_flame_floating_landing_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_floating_landing_init(void);`
 
+`void bhv_flame_floating_landing_init(void);`
 
 ## bhv_flame_floating_landing_loop
 
 ### Description
+
 Behavior loop function for flame floating landing
 
 ### Lua Example
+
 `bhv_flame_floating_landing_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_floating_landing_loop(void);`
 
+`void bhv_flame_floating_landing_loop(void);`
 
 ## bhv_blue_flames_group_loop
 
 ### Description
+
 Behavior loop function for blue flames group
 
 ### Lua Example
+
 `bhv_blue_flames_group_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_flames_group_loop(void);`
 
+`void bhv_blue_flames_group_loop(void);`
 
 ## bhv_flame_bouncing_init
 
 ### Description
+
 Behavior init function for flame bouncing
 
 ### Lua Example
+
 `bhv_flame_bouncing_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_bouncing_init(void);`
 
+`void bhv_flame_bouncing_init(void);`
 
 ## bhv_flame_bouncing_loop
 
 ### Description
+
 Behavior loop function for flame bouncing
 
 ### Lua Example
+
 `bhv_flame_bouncing_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_bouncing_loop(void);`
 
+`void bhv_flame_bouncing_loop(void);`
 
 ## bhv_flame_moving_forward_growing_init
 
 ### Description
+
 Behavior init function for flame moving forward growing
 
 ### Lua Example
+
 `bhv_flame_moving_forward_growing_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_moving_forward_growing_init(void);`
 
+`void bhv_flame_moving_forward_growing_init(void);`
 
 ## bhv_flame_moving_forward_growing_loop
 
 ### Description
+
 Behavior loop function for flame moving forward growing
 
 ### Lua Example
+
 `bhv_flame_moving_forward_growing_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_moving_forward_growing_loop(void);`
 
+`void bhv_flame_moving_forward_growing_loop(void);`
 
 ## bhv_flame_bowser_init
 
 ### Description
+
 Behavior init function for Bowser flame
 
 ### Lua Example
+
 `bhv_flame_bowser_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_bowser_init(void);`
 
+`void bhv_flame_bowser_init(void);`
 
 ## bhv_flame_bowser_loop
 
 ### Description
+
 Behavior loop function for Bowser flame
 
 ### Lua Example
+
 `bhv_flame_bowser_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_bowser_loop(void);`
 
+`void bhv_flame_bowser_loop(void);`
 
 ## bhv_flame_large_burning_out_init
 
 ### Description
+
 Behavior init function for large flame burning out
 
 ### Lua Example
+
 `bhv_flame_large_burning_out_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flame_large_burning_out_init(void);`
 
+`void bhv_flame_large_burning_out_init(void);`
 
 ## bhv_blue_fish_movement_loop
 
 ### Description
+
 Behavior loop function for blue fish movement
 
 ### Lua Example
+
 `bhv_blue_fish_movement_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_fish_movement_loop(void);`
 
+`void bhv_blue_fish_movement_loop(void);`
 
 ## bhv_tank_fish_group_loop
 
 ### Description
+
 Behavior loop function for tank fish group
 
 ### Lua Example
+
 `bhv_tank_fish_group_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tank_fish_group_loop(void);`
 
+`void bhv_tank_fish_group_loop(void);`
 
 ## bhv_checkerboard_elevator_group_init
 
 ### Description
+
 Behavior init function for checkerboard elevator group
 
 ### Lua Example
+
 `bhv_checkerboard_elevator_group_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_checkerboard_elevator_group_init(void);`
 
+`void bhv_checkerboard_elevator_group_init(void);`
 
 ## bhv_checkerboard_elevator_group_loop
 
 ### Description
+
 Behavior loop function for checkerboard elevator group
 
 ### Lua Example
+
 `bhv_checkerboard_elevator_group_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_checkerboard_elevator_group_loop(void);`
 
+`void bhv_checkerboard_elevator_group_loop(void);`
 
 ## bhv_checkerboard_platform_init
 
 ### Description
+
 Behavior init function for checkerboard platform
 
 ### Lua Example
+
 `bhv_checkerboard_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_checkerboard_platform_init(void);`
 
+`void bhv_checkerboard_platform_init(void);`
 
 ## bhv_checkerboard_platform_loop
 
 ### Description
+
 Behavior loop function for checkerboard platform
 
 ### Lua Example
+
 `bhv_checkerboard_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_checkerboard_platform_loop(void);`
 
+`void bhv_checkerboard_platform_loop(void);`
 
 ## bhv_bowser_key_unlock_door_loop
 
 ### Description
+
 Behavior loop function for Bowser key unlock door
 
 ### Lua Example
+
 `bhv_bowser_key_unlock_door_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_key_unlock_door_loop(void);`
 
+`void bhv_bowser_key_unlock_door_loop(void);`
 
 ## bhv_bowser_key_course_exit_loop
 
 ### Description
+
 Behavior loop function for Bowser key course exit
 
 ### Lua Example
+
 `bhv_bowser_key_course_exit_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_key_course_exit_loop(void);`
 
+`void bhv_bowser_key_course_exit_loop(void);`
 
 ## bhv_invisible_objects_under_bridge_init
 
 ### Description
+
 Behavior init function for invisible objects under the Castle bridge
 
 ### Lua Example
+
 `bhv_invisible_objects_under_bridge_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_invisible_objects_under_bridge_init(void);`
 
+`void bhv_invisible_objects_under_bridge_init(void);`
 
 ## bhv_invisible_objects_under_bridge_loop
 
 ### Description
+
 Behavior loop function for Invisible objects under the Castle bridge
 
 ### Lua Example
+
 `bhv_invisible_objects_under_bridge_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_invisible_objects_under_bridge_loop(void);`
 
+`void bhv_invisible_objects_under_bridge_loop(void);`
 
 ## bhv_water_level_pillar_init
 
 ### Description
+
 Behavior init function for Castle Basement water level pillar
 
 ### Lua Example
+
 `bhv_water_level_pillar_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_level_pillar_init(void);`
 
+`void bhv_water_level_pillar_init(void);`
 
 ## bhv_water_level_pillar_loop
 
 ### Description
+
 Behavior loop function for Castle Basement water level pillar
 
 ### Lua Example
+
 `bhv_water_level_pillar_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_level_pillar_loop(void);`
 
+`void bhv_water_level_pillar_loop(void);`
 
 ## bhv_ddd_warp_loop
 
 ### Description
+
 Behavior loop function for Castle Basement Dire Dire Docks warp collision
 
 ### Lua Example
+
 `bhv_ddd_warp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ddd_warp_loop(void);`
 
+`void bhv_ddd_warp_loop(void);`
 
 ## bhv_moat_grills_loop
 
 ### Description
+
 Behavior loop function for moat grills
 
 ### Lua Example
+
 `bhv_moat_grills_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moat_grills_loop(void);`
 
+`void bhv_moat_grills_loop(void);`
 
 ## bhv_rotating_clock_arm_loop
 
 ### Description
+
 Behavior loop function for rotating clock arm
 
 ### Lua Example
+
 `bhv_rotating_clock_arm_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rotating_clock_arm_loop(void);`
 
+`void bhv_rotating_clock_arm_loop(void);`
 
 ## bhv_ukiki_init
 
 ### Description
+
 Behavior init function for Ukiki
 
 ### Lua Example
+
 `bhv_ukiki_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ukiki_init(void);`
 
+`void bhv_ukiki_init(void);`
 
 ## bhv_ukiki_loop
 
 ### Description
+
 Behavior loop function for Ukiki
 
 ### Lua Example
+
 `bhv_ukiki_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ukiki_loop(void);`
 
+`void bhv_ukiki_loop(void);`
 
 ## bhv_lll_sinking_rock_block_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land sinking rock block
 
 ### Lua Example
+
 `bhv_lll_sinking_rock_block_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_sinking_rock_block_loop(void);`
 
+`void bhv_lll_sinking_rock_block_loop(void);`
 
 ## bhv_lll_moving_octagonal_mesh_platform_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land moving octagonal mesh platform
 
 ### Lua Example
+
 `bhv_lll_moving_octagonal_mesh_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_moving_octagonal_mesh_platform_loop(void);`
 
+`void bhv_lll_moving_octagonal_mesh_platform_loop(void);`
 
 ## bhv_lll_rotating_block_fire_bars_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land rotating block fire bars
 
 ### Lua Example
+
 `bhv_lll_rotating_block_fire_bars_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_rotating_block_fire_bars_loop(void);`
 
+`void bhv_lll_rotating_block_fire_bars_loop(void);`
 
 ## bhv_lll_rotating_hex_flame_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land rotating hex flame
 
 ### Lua Example
+
 `bhv_lll_rotating_hex_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_rotating_hex_flame_loop(void);`
 
+`void bhv_lll_rotating_hex_flame_loop(void);`
 
 ## bhv_lll_wood_piece_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land wood piece
 
 ### Lua Example
+
 `bhv_lll_wood_piece_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_wood_piece_loop(void);`
 
+`void bhv_lll_wood_piece_loop(void);`
 
 ## bhv_lll_floating_wood_bridge_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land floating wood bridge
 
 ### Lua Example
+
 `bhv_lll_floating_wood_bridge_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_floating_wood_bridge_loop(void);`
 
+`void bhv_lll_floating_wood_bridge_loop(void);`
 
 ## bhv_volcano_flames_loop
 
 ### Description
+
 Behavior loop function for Volcano flames
 
 ### Lua Example
+
 `bhv_volcano_flames_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_volcano_flames_loop(void);`
 
+`void bhv_volcano_flames_loop(void);`
 
 ## bhv_lll_rotating_hexagonal_ring_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land rotating hexagonal ring
 
 ### Lua Example
+
 `bhv_lll_rotating_hexagonal_ring_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_rotating_hexagonal_ring_loop(void);`
 
+`void bhv_lll_rotating_hexagonal_ring_loop(void);`
 
 ## bhv_lll_sinking_rectangular_platform_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land sinking rectangular platform
 
 ### Lua Example
+
 `bhv_lll_sinking_rectangular_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_sinking_rectangular_platform_loop(void);`
 
+`void bhv_lll_sinking_rectangular_platform_loop(void);`
 
 ## bhv_lll_sinking_square_platforms_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land sinking square platforms
 
 ### Lua Example
+
 `bhv_lll_sinking_square_platforms_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_sinking_square_platforms_loop(void);`
 
+`void bhv_lll_sinking_square_platforms_loop(void);`
 
 ## bhv_koopa_shell_loop
 
 ### Description
+
 Behavior loop function for Koopa Shell
 
 ### Lua Example
+
 `bhv_koopa_shell_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_koopa_shell_loop(void);`
 
+`void bhv_koopa_shell_loop(void);`
 
 ## bhv_koopa_shell_flame_loop
 
 ### Description
+
 Behavior loop function for Koopa Shell flame
 
 ### Lua Example
+
 `bhv_koopa_shell_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_koopa_shell_flame_loop(void);`
 
+`void bhv_koopa_shell_flame_loop(void);`
 
 ## bhv_tox_box_loop
 
 ### Description
+
 Behavior loop function for Tox Box
 
 ### Lua Example
+
 `bhv_tox_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tox_box_loop(void);`
 
+`void bhv_tox_box_loop(void);`
 
 ## mario_moving_fast_enough_to_make_piranha_plant_bite
 
 ### Description
+
 Checks if Mario is moving fast enough to make Piranha Plant bite.
 This one is a mouthful
 
 ### Lua Example
+
 `local integerValue = mario_moving_fast_enough_to_make_piranha_plant_bite()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `integer`
 
 ### C Prototype
-`s32 mario_moving_fast_enough_to_make_piranha_plant_bite(void);`
 
+`s32 mario_moving_fast_enough_to_make_piranha_plant_bite(void);`
 
 ## bhv_piranha_plant_loop
 
 ### Description
+
 Behavior loop function for Piranha Plant
 
 ### Lua Example
+
 `bhv_piranha_plant_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_piranha_plant_loop(void);`
 
+`void bhv_piranha_plant_loop(void);`
 
 ## bhv_lll_bowser_puzzle_piece_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land bowser puzzle piece
 
 ### Lua Example
+
 `bhv_lll_bowser_puzzle_piece_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_bowser_puzzle_piece_loop(void);`
 
+`void bhv_lll_bowser_puzzle_piece_loop(void);`
 
 ## bhv_lll_bowser_puzzle_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land bowser puzzle
 
 ### Lua Example
+
 `bhv_lll_bowser_puzzle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_bowser_puzzle_loop(void);`
 
+`void bhv_lll_bowser_puzzle_loop(void);`
 
 ## bhv_tuxies_mother_loop
 
 ### Description
+
 Behavior loop function for Tuxie's mother
 
 ### Lua Example
+
 `bhv_tuxies_mother_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tuxies_mother_loop(void);`
 
+`void bhv_tuxies_mother_loop(void);`
 
 ## bhv_small_penguin_loop
 
 ### Description
+
 Behavior loop function for small penguin
 
 ### Lua Example
+
 `bhv_small_penguin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_penguin_loop(void);`
 
+`void bhv_small_penguin_loop(void);`
 
 ## bhv_fish_spawner_loop
 
 ### Description
+
 Behavior loop function for fish spawner
 
 ### Lua Example
+
 `bhv_fish_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fish_spawner_loop(void);`
 
+`void bhv_fish_spawner_loop(void);`
 
 ## bhv_fish_loop
 
 ### Description
+
 Behavior loop function for fish
 
 ### Lua Example
+
 `bhv_fish_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fish_loop(void);`
 
+`void bhv_fish_loop(void);`
 
 ## bhv_wdw_express_elevator_loop
 
 ### Description
+
 Behavior loop function for Wet Dry World express elevator
 
 ### Lua Example
+
 `bhv_wdw_express_elevator_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wdw_express_elevator_loop(void);`
 
+`void bhv_wdw_express_elevator_loop(void);`
 
 ## bhv_bub_spawner_loop
 
 ### Description
+
 Behavior loop function for Bub spawner
 
 ### Lua Example
+
 `bhv_bub_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bub_spawner_loop(void);`
 
+`void bhv_bub_spawner_loop(void);`
 
 ## bhv_bub_loop
 
 ### Description
+
 Behavior loop function for Bub
 
 ### Lua Example
+
 `bhv_bub_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bub_loop(void);`
 
+`void bhv_bub_loop(void);`
 
 ## bhv_exclamation_box_init
 
 ### Description
+
 Behavior init function for Exclamation Box
 
 ### Lua Example
+
 `bhv_exclamation_box_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_exclamation_box_init(void);`
 
+`void bhv_exclamation_box_init(void);`
 
 ## bhv_exclamation_box_loop
 
 ### Description
+
 Behavior loop function for Exclamation Box
 
 ### Lua Example
+
 `bhv_exclamation_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_exclamation_box_loop(void);`
 
+`void bhv_exclamation_box_loop(void);`
 
 ## bhv_rotating_exclamation_box_loop
 
 ### Description
+
 Behavior loop function for rotating exclamation mark
 
 ### Lua Example
+
 `bhv_rotating_exclamation_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rotating_exclamation_box_loop(void);`
 
+`void bhv_rotating_exclamation_box_loop(void);`
 
 ## bhv_sound_spawner_init
 
 ### Description
+
 Behavior init function for sound spawner
 
 ### Lua Example
+
 `bhv_sound_spawner_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sound_spawner_init(void);`
 
+`void bhv_sound_spawner_init(void);`
 
 ## bhv_bowsers_sub_loop
 
 ### Description
+
 Behavior loop function for Bowser's submarine
 
 ### Lua Example
+
 `bhv_bowsers_sub_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowsers_sub_loop(void);`
 
+`void bhv_bowsers_sub_loop(void);`
 
 ## bhv_sushi_shark_loop
 
 ### Description
+
 Behavior loop function for Sushi Shark
 
 ### Lua Example
+
 `bhv_sushi_shark_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sushi_shark_loop(void);`
 
+`void bhv_sushi_shark_loop(void);`
 
 ## bhv_sushi_shark_collision_loop
 
 ### Description
+
 Behavior loop function for Sushi Shark collision
 
 ### Lua Example
+
 `bhv_sushi_shark_collision_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sushi_shark_collision_loop(void);`
 
+`void bhv_sushi_shark_collision_loop(void);`
 
 ## bhv_jrb_sliding_box_loop
 
 ### Description
+
 Behavior loop function for Jolly Roger Bay sliding box
 
 ### Lua Example
+
 `bhv_jrb_sliding_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jrb_sliding_box_loop(void);`
 
+`void bhv_jrb_sliding_box_loop(void);`
 
 ## bhv_ship_part_3_loop
 
 ### Description
+
 Behavior loop function for Jolly Roger Bay ship part 3
 
 ### Lua Example
+
 `bhv_ship_part_3_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ship_part_3_loop(void);`
 
+`void bhv_ship_part_3_loop(void);`
 
 ## bhv_sunken_ship_part_loop
 
 ### Description
+
 Behavior loop function for Jolly Roger Bay sunken ship part
 
 ### Lua Example
+
 `bhv_sunken_ship_part_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sunken_ship_part_loop(void);`
 
+`void bhv_sunken_ship_part_loop(void);`
 
 ## bhv_white_puff_1_loop
 
 ### Description
+
 Behavior loop function for white puff 1
 
 ### Lua Example
+
 `bhv_white_puff_1_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_white_puff_1_loop(void);`
 
+`void bhv_white_puff_1_loop(void);`
 
 ## bhv_white_puff_2_loop
 
 ### Description
+
 Behavior loop function for white puff 2
 
 ### Lua Example
+
 `bhv_white_puff_2_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_white_puff_2_loop(void);`
 
+`void bhv_white_puff_2_loop(void);`
 
 ## bhv_blue_coin_number_loop
 
 ### Description
+
 Behavior loop function for Blue Coin number
 
 ### Lua Example
+
 `bhv_blue_coin_number_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_coin_number_loop(void);`
 
+`void bhv_blue_coin_number_loop(void);`
 
 ## bhv_blue_coin_switch_init
 
 ### Description
+
 Behavior init function for Blue Coin switch
 
 ### Lua Example
+
 `bhv_blue_coin_switch_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_coin_switch_init(void);`
 
+`void bhv_blue_coin_switch_init(void);`
 
 ## bhv_blue_coin_switch_loop
 
 ### Description
+
 Behavior loop function for Blue Coin switch
 
 ### Lua Example
+
 `bhv_blue_coin_switch_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_coin_switch_loop(void);`
 
+`void bhv_blue_coin_switch_loop(void);`
 
 ## bhv_hidden_blue_coin_loop
 
 ### Description
+
 Behavior loop function for hidden Blue Coin
 
 ### Lua Example
+
 `bhv_hidden_blue_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_blue_coin_loop(void);`
 
+`void bhv_hidden_blue_coin_loop(void);`
 
 ## bhv_openable_cage_door_loop
 
 ### Description
+
 Behavior loop function for openable cage door
 
 ### Lua Example
+
 `bhv_openable_cage_door_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_openable_cage_door_loop(void);`
 
+`void bhv_openable_cage_door_loop(void);`
 
 ## bhv_openable_grill_loop
 
 ### Description
+
 Behavior loop function for openable grill
 
 ### Lua Example
+
 `bhv_openable_grill_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_openable_grill_loop(void);`
 
+`void bhv_openable_grill_loop(void);`
 
 ## bhv_water_level_diamond_loop
 
 ### Description
+
 Behavior loop function for Wet Dry World water level diamond
 
 ### Lua Example
+
 `bhv_water_level_diamond_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_level_diamond_loop(void);`
 
+`void bhv_water_level_diamond_loop(void);`
 
 ## bhv_init_changing_water_level_loop
 
 ### Description
+
 Behavior init function for changing water level, called when Wet Dry World is loaded
 
 ### Lua Example
+
 `bhv_init_changing_water_level_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_init_changing_water_level_loop(void);`
 
+`void bhv_init_changing_water_level_loop(void);`
 
 ## bhv_tweester_sand_particle_loop
 
 ### Description
+
 Behavior loop function for Tweester sand particle
 
 ### Lua Example
+
 `bhv_tweester_sand_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tweester_sand_particle_loop(void);`
 
+`void bhv_tweester_sand_particle_loop(void);`
 
 ## bhv_tweester_loop
 
 ### Description
+
 Behavior loop function for Tweester
 
 ### Lua Example
+
 `bhv_tweester_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_tweester_loop(void);`
 
+`void bhv_tweester_loop(void);`
 
 ## bhv_merry_go_round_boo_manager_loop
 
 ### Description
+
 Behavior loop function for Merry Go Round Boo manager
 
 ### Lua Example
+
 `bhv_merry_go_round_boo_manager_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_merry_go_round_boo_manager_loop(void);`
 
+`void bhv_merry_go_round_boo_manager_loop(void);`
 
 ## bhv_animated_texture_loop
 
 ### Description
+
 Behavior loop function for animated texture
 
 ### Lua Example
+
 `bhv_animated_texture_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_animated_texture_loop(void);`
 
+`void bhv_animated_texture_loop(void);`
 
 ## bhv_boo_in_castle_loop
 
 ### Description
+
 Behavior loop function for the Boo inside the Castle
 
 ### Lua Example
+
 `bhv_boo_in_castle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_in_castle_loop(void);`
 
+`void bhv_boo_in_castle_loop(void);`
 
 ## bhv_boo_with_cage_init
 
 ### Description
+
 Behavior init function for Boo with cage
 
 ### Lua Example
+
 `bhv_boo_with_cage_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_with_cage_init(void);`
 
+`void bhv_boo_with_cage_init(void);`
 
 ## bhv_boo_with_cage_loop
 
 ### Description
+
 Behavior loop function for Boo with cage
 
 ### Lua Example
+
 `bhv_boo_with_cage_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_with_cage_loop(void);`
 
+`void bhv_boo_with_cage_loop(void);`
 
 ## bhv_boo_init
 
 ### Description
+
 Behavior init function for Boo
 
 ### Lua Example
+
 `bhv_boo_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_init(void);`
 
+`void bhv_boo_init(void);`
 
 ## bhv_big_boo_loop
 
 ### Description
+
 Behavior loop function for Big Boo
 
 ### Lua Example
+
 `bhv_big_boo_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_boo_loop(void);`
 
+`void bhv_big_boo_loop(void);`
 
 ## bhv_courtyard_boo_triplet_init
 
 ### Description
+
 Behavior init function for Courtyard Boo triplet
 
 ### Lua Example
+
 `bhv_courtyard_boo_triplet_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_courtyard_boo_triplet_init(void);`
 
+`void bhv_courtyard_boo_triplet_init(void);`
 
 ## obj_set_secondary_camera_focus
 
 ### Description
+
 Sets the secondary camera focus
 
 ### Lua Example
+
 `obj_set_secondary_camera_focus()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void obj_set_secondary_camera_focus(void);`
 
+`void obj_set_secondary_camera_focus(void);`
 
 ## bhv_boo_loop
 
 ### Description
+
 Behavior loop function for Boo
 
 ### Lua Example
+
 `bhv_boo_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_loop(void);`
 
+`void bhv_boo_loop(void);`
 
 ## bhv_boo_boss_spawned_bridge_loop
 
 ### Description
+
 Behavior loop function for Boo boss spawned bridge
 
 ### Lua Example
+
 `bhv_boo_boss_spawned_bridge_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_boo_boss_spawned_bridge_loop(void);`
 
+`void bhv_boo_boss_spawned_bridge_loop(void);`
 
 ## bhv_bbh_tilting_trap_platform_loop
 
 ### Description
+
 Behavior loop function for Big Boo's Haunt tilting trap platform
 
 ### Lua Example
+
 `bhv_bbh_tilting_trap_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bbh_tilting_trap_platform_loop(void);`
 
+`void bhv_bbh_tilting_trap_platform_loop(void);`
 
 ## bhv_haunted_bookshelf_loop
 
 ### Description
+
 Behavior loop function for Big Boo's Haunt haunted bookshelf
 
 ### Lua Example
+
 `bhv_haunted_bookshelf_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_haunted_bookshelf_loop(void);`
 
+`void bhv_haunted_bookshelf_loop(void);`
 
 ## bhv_merry_go_round_loop
 
 ### Description
+
 Behavior loop function for Big Boo's Haunt Merry Go Round
 
 ### Lua Example
+
 `bhv_merry_go_round_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_merry_go_round_loop(void);`
 
+`void bhv_merry_go_round_loop(void);`
 
 ## bhv_play_music_track_when_touched_loop
 
 ### Description
+
 Behavior loop function for playing a jingle when in a 200 unit radius
 
 ### Lua Example
+
 `bhv_play_music_track_when_touched_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_play_music_track_when_touched_loop(void);`
 
+`void bhv_play_music_track_when_touched_loop(void);`
 
 ## bhv_beta_bowser_anchor_loop
 
 ### Description
+
 Behavior loop function for beta Bowser anchor
 
 ### Lua Example
+
 `bhv_beta_bowser_anchor_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_bowser_anchor_loop(void);`
 
+`void bhv_beta_bowser_anchor_loop(void);`
 
 ## bhv_static_checkered_platform_loop
 
 ### Description
+
 Behavior loop function for static checkered platform
 
 ### Lua Example
+
 `bhv_static_checkered_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_static_checkered_platform_loop(void);`
 
+`void bhv_static_checkered_platform_loop(void);`
 
 ## bhv_castle_floor_trap_init
 
 ### Description
+
 Behavior init function for Bowser in the Dark World floor trap manager
 
 ### Lua Example
+
 `bhv_castle_floor_trap_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_castle_floor_trap_init(void);`
 
+`void bhv_castle_floor_trap_init(void);`
 
 ## bhv_castle_floor_trap_loop
 
 ### Description
+
 Behavior loop function for Bowser in the Dark World floor trap manager
 
 ### Lua Example
+
 `bhv_castle_floor_trap_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_castle_floor_trap_loop(void);`
 
+`void bhv_castle_floor_trap_loop(void);`
 
 ## bhv_floor_trap_in_castle_loop
 
 ### Description
+
 Behavior loop function for Bowser in the Dark World floor trap
 
 ### Lua Example
+
 `bhv_floor_trap_in_castle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_floor_trap_in_castle_loop(void);`
 
+`void bhv_floor_trap_in_castle_loop(void);`
 
 ## bhv_sparkle_spawn_loop
 
 ### Description
+
 Behavior loop function for sparkle spawner
 
 ### Lua Example
+
 `bhv_sparkle_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sparkle_spawn_loop(void);`
 
+`void bhv_sparkle_spawn_loop(void);`
 
 ## bhv_scuttlebug_loop
 
 ### Description
+
 Behavior loop function for Scuttlebug
 
 ### Lua Example
+
 `bhv_scuttlebug_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_scuttlebug_loop(void);`
 
+`void bhv_scuttlebug_loop(void);`
 
 ## bhv_scuttlebug_spawn_loop
 
 ### Description
+
 Behavior loop function for Scuttlebug spawner
 
 ### Lua Example
+
 `bhv_scuttlebug_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_scuttlebug_spawn_loop(void);`
 
+`void bhv_scuttlebug_spawn_loop(void);`
 
 ## bhv_whomp_loop
 
 ### Description
+
 Behavior loop function for Whomp
 
 ### Lua Example
+
 `bhv_whomp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_whomp_loop(void);`
 
+`void bhv_whomp_loop(void);`
 
 ## bhv_water_splash_spawn_droplets
 
 ### Description
+
 Behavior init function for spawning water splash droplets
 
 ### Lua Example
+
 `bhv_water_splash_spawn_droplets()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_splash_spawn_droplets(void);`
 
+`void bhv_water_splash_spawn_droplets(void);`
 
 ## bhv_water_droplet_loop
 
 ### Description
+
 Behavior loop function for water droplet
 
 ### Lua Example
+
 `bhv_water_droplet_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_droplet_loop(void);`
 
+`void bhv_water_droplet_loop(void);`
 
 ## bhv_water_droplet_splash_init
 
 ### Description
+
 Behavior init function for water droplet splash
 
 ### Lua Example
+
 `bhv_water_droplet_splash_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_droplet_splash_init(void);`
 
+`void bhv_water_droplet_splash_init(void);`
 
 ## bhv_bubble_splash_init
 
 ### Description
+
 Behavior init function for bubble splash
 
 ### Lua Example
+
 `bhv_bubble_splash_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bubble_splash_init(void);`
 
+`void bhv_bubble_splash_init(void);`
 
 ## bhv_idle_water_wave_loop
 
 ### Description
+
 Behavior loop function for idle water wave
 
 ### Lua Example
+
 `bhv_idle_water_wave_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_idle_water_wave_loop(void);`
 
+`void bhv_idle_water_wave_loop(void);`
 
 ## bhv_shallow_water_splash_init
 
 ### Description
+
 Behavior init function for shallow water splash
 
 ### Lua Example
+
 `bhv_shallow_water_splash_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_shallow_water_splash_init(void);`
 
+`void bhv_shallow_water_splash_init(void);`
 
 ## bhv_wave_trail_shrink
 
 ### Description
+
 Behavior loop function for shrinking water trail
 
 ### Lua Example
+
 `bhv_wave_trail_shrink()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wave_trail_shrink(void);`
 
+`void bhv_wave_trail_shrink(void);`
 
 ## bhv_strong_wind_particle_loop
 
 ### Description
+
 Behavior loop function for strong wind particle
 
 ### Lua Example
+
 `bhv_strong_wind_particle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_strong_wind_particle_loop(void);`
 
+`void bhv_strong_wind_particle_loop(void);`
 
 ## bhv_sl_snowman_wind_loop
 
 ### Description
+
 Behavior loop function for Snowman's Land snowman wind
 
 ### Lua Example
+
 `bhv_sl_snowman_wind_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sl_snowman_wind_loop(void);`
 
+`void bhv_sl_snowman_wind_loop(void);`
 
 ## bhv_sl_walking_penguin_loop
 
 ### Description
+
 Behavior loop function for Snowman's Land walking penguin
 
 ### Lua Example
+
 `bhv_sl_walking_penguin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sl_walking_penguin_loop(void);`
 
+`void bhv_sl_walking_penguin_loop(void);`
 
 ## bhv_menu_button_init
 
 ### Description
+
 Behavior init function for File Select button
 
 ### Lua Example
+
 `bhv_menu_button_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_menu_button_init(void);`
 
+`void bhv_menu_button_init(void);`
 
 ## bhv_menu_button_loop
 
 ### Description
+
 Behavior loop function for File Select button
 
 ### Lua Example
+
 `bhv_menu_button_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_menu_button_loop(void);`
 
+`void bhv_menu_button_loop(void);`
 
 ## bhv_menu_button_manager_init
 
 ### Description
+
 Behavior init function for File Select button manager
 
 ### Lua Example
+
 `bhv_menu_button_manager_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_menu_button_manager_init(void);`
 
+`void bhv_menu_button_manager_init(void);`
 
 ## bhv_menu_button_manager_loop
 
 ### Description
+
 Behavior loop function for File Select button manager
 
 ### Lua Example
+
 `bhv_menu_button_manager_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_menu_button_manager_loop(void);`
 
+`void bhv_menu_button_manager_loop(void);`
 
 ## bhv_act_selector_star_type_loop
 
 ### Description
+
 Behavior loop function for Act Selector star type
 
 ### Lua Example
+
 `bhv_act_selector_star_type_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_act_selector_star_type_loop(void);`
 
+`void bhv_act_selector_star_type_loop(void);`
 
 ## bhv_act_selector_init
 
 ### Description
+
 Behavior init function for Act Selector
 
 ### Lua Example
+
 `bhv_act_selector_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_act_selector_init(void);`
 
+`void bhv_act_selector_init(void);`
 
 ## bhv_act_selector_loop
 
 ### Description
+
 Behavior loop function for Act Selector
 
 ### Lua Example
+
 `bhv_act_selector_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_act_selector_loop(void);`
 
+`void bhv_act_selector_loop(void);`
 
 ## bhv_moving_yellow_coin_init
 
 ### Description
+
 Behavior init function for moving Yellow Coin
 
 ### Lua Example
+
 `bhv_moving_yellow_coin_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moving_yellow_coin_init(void);`
 
+`void bhv_moving_yellow_coin_init(void);`
 
 ## bhv_moving_yellow_coin_loop
 
 ### Description
+
 Behavior loop function for moving Yellow Coin
 
 ### Lua Example
+
 `bhv_moving_yellow_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moving_yellow_coin_loop(void);`
 
+`void bhv_moving_yellow_coin_loop(void);`
 
 ## bhv_moving_blue_coin_init
 
 ### Description
+
 Behavior init function for moving Blue Coin
 
 ### Lua Example
+
 `bhv_moving_blue_coin_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moving_blue_coin_init(void);`
 
+`void bhv_moving_blue_coin_init(void);`
 
 ## bhv_moving_blue_coin_loop
 
 ### Description
+
 Behavior loop function for moving Blue Coin
 
 ### Lua Example
+
 `bhv_moving_blue_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moving_blue_coin_loop(void);`
 
+`void bhv_moving_blue_coin_loop(void);`
 
 ## bhv_blue_coin_sliding_jumping_init
 
 ### Description
+
 Behavior init function for Blue Coin sliding jumping
 
 ### Lua Example
+
 `bhv_blue_coin_sliding_jumping_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_coin_sliding_jumping_init(void);`
 
+`void bhv_blue_coin_sliding_jumping_init(void);`
 
 ## bhv_blue_coin_sliding_loop
 
 ### Description
+
 Behavior loop function for Blue Coin sliding
 
 ### Lua Example
+
 `bhv_blue_coin_sliding_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_coin_sliding_loop(void);`
 
+`void bhv_blue_coin_sliding_loop(void);`
 
 ## bhv_blue_coin_jumping_loop
 
 ### Description
+
 Behavior loop function for Blue Coin jumping
 
 ### Lua Example
+
 `bhv_blue_coin_jumping_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_blue_coin_jumping_loop(void);`
 
+`void bhv_blue_coin_jumping_loop(void);`
 
 ## bhv_seaweed_init
 
 ### Description
+
 Behavior init function for seaweed
 
 ### Lua Example
+
 `bhv_seaweed_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_seaweed_init(void);`
 
+`void bhv_seaweed_init(void);`
 
 ## bhv_seaweed_bundle_init
 
 ### Description
+
 Behavior init function for seaweed bundle
 
 ### Lua Example
+
 `bhv_seaweed_bundle_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_seaweed_bundle_init(void);`
 
+`void bhv_seaweed_bundle_init(void);`
 
 ## bhv_bobomb_init
 
 ### Description
+
 Behavior init function for Bob-omb
 
 ### Lua Example
+
 `bhv_bobomb_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_init(void);`
 
+`void bhv_bobomb_init(void);`
 
 ## bhv_bobomb_loop
 
 ### Description
+
 Behavior loop function for Bob-omb
 
 ### Lua Example
+
 `bhv_bobomb_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_loop(void);`
 
+`void bhv_bobomb_loop(void);`
 
 ## bhv_bobomb_fuse_smoke_init
 
 ### Description
+
 Behavior init function for Bob-omb fuse smoke
 
 ### Lua Example
+
 `bhv_bobomb_fuse_smoke_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_fuse_smoke_init(void);`
 
+`void bhv_bobomb_fuse_smoke_init(void);`
 
 ## bhv_bobomb_buddy_init
 
 ### Description
+
 Behavior init function for Bob-omb buddy
 
 ### Lua Example
+
 `bhv_bobomb_buddy_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_buddy_init(void);`
 
+`void bhv_bobomb_buddy_init(void);`
 
 ## bhv_bobomb_buddy_loop
 
 ### Description
+
 Behavior loop function for Bob-omb buddy
 
 ### Lua Example
+
 `bhv_bobomb_buddy_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_buddy_loop(void);`
 
+`void bhv_bobomb_buddy_loop(void);`
 
 ## bhv_cannon_closed_init
 
 ### Description
+
 Behavior init function for cannon closed
 
 ### Lua Example
+
 `bhv_cannon_closed_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cannon_closed_init(void);`
 
+`void bhv_cannon_closed_init(void);`
 
 ## bhv_cannon_closed_loop
 
 ### Description
+
 Behavior loop function for cannon closed
 
 ### Lua Example
+
 `bhv_cannon_closed_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cannon_closed_loop(void);`
 
+`void bhv_cannon_closed_loop(void);`
 
 ## bhv_whirlpool_init
 
 ### Description
+
 Behavior init function for whirlpool
 
 ### Lua Example
+
 `bhv_whirlpool_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_whirlpool_init(void);`
 
+`void bhv_whirlpool_init(void);`
 
 ## bhv_whirlpool_loop
 
 ### Description
+
 Behavior loop function for whirlpool
 
 ### Lua Example
+
 `bhv_whirlpool_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_whirlpool_loop(void);`
 
+`void bhv_whirlpool_loop(void);`
 
 ## bhv_jet_stream_loop
 
 ### Description
+
 Behavior loop function for jet stream
 
 ### Lua Example
+
 `bhv_jet_stream_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jet_stream_loop(void);`
 
+`void bhv_jet_stream_loop(void);`
 
 ## bhv_homing_amp_init
 
 ### Description
+
 Behavior init function for Homing Amp
 
 ### Lua Example
+
 `bhv_homing_amp_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_homing_amp_init(void);`
 
+`void bhv_homing_amp_init(void);`
 
 ## bhv_homing_amp_loop
 
 ### Description
+
 Behavior loop function for Homing Amp
 
 ### Lua Example
+
 `bhv_homing_amp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_homing_amp_loop(void);`
 
+`void bhv_homing_amp_loop(void);`
 
 ## bhv_circling_amp_init
 
 ### Description
+
 Behavior init function for Circling Amp
 
 ### Lua Example
+
 `bhv_circling_amp_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_circling_amp_init(void);`
 
+`void bhv_circling_amp_init(void);`
 
 ## bhv_circling_amp_loop
 
 ### Description
+
 Behavior loop function for Circling Amp
 
 ### Lua Example
+
 `bhv_circling_amp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_circling_amp_loop(void);`
 
+`void bhv_circling_amp_loop(void);`
 
 ## bhv_butterfly_init
 
 ### Description
+
 Behavior init function for Butterfly
 
 ### Lua Example
+
 `bhv_butterfly_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_butterfly_init(void);`
 
+`void bhv_butterfly_init(void);`
 
 ## bhv_butterfly_loop
 
 ### Description
+
 Behavior loop function for Butterfly
 
 ### Lua Example
+
 `bhv_butterfly_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_butterfly_loop(void);`
 
+`void bhv_butterfly_loop(void);`
 
 ## bhv_hoot_init
 
 ### Description
+
 Behavior init function for Hoot
 
 ### Lua Example
+
 `bhv_hoot_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hoot_init(void);`
 
+`void bhv_hoot_init(void);`
 
 ## bhv_hoot_loop
 
 ### Description
+
 Behavior loop function for Hoot
 
 ### Lua Example
+
 `bhv_hoot_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hoot_loop(void);`
 
+`void bhv_hoot_loop(void);`
 
 ## bhv_beta_holdable_object_init
 
 ### Description
+
 Behavior init function for beta holdable object
 
 ### Lua Example
+
 `bhv_beta_holdable_object_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_holdable_object_init(void);`
 
+`void bhv_beta_holdable_object_init(void);`
 
 ## bhv_beta_holdable_object_loop
 
 ### Description
+
 Behavior loop function for beta holdable object
 
 ### Lua Example
+
 `bhv_beta_holdable_object_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_beta_holdable_object_loop(void);`
 
+`void bhv_beta_holdable_object_loop(void);`
 
 ## bhv_object_bubble_init
 
 ### Description
+
 Behavior init function for bubble object
 
 ### Lua Example
+
 `bhv_object_bubble_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_object_bubble_init(void);`
 
+`void bhv_object_bubble_init(void);`
 
 ## bhv_object_bubble_loop
 
 ### Description
+
 Behavior loop function for bubble object
 
 ### Lua Example
+
 `bhv_object_bubble_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_object_bubble_loop(void);`
 
+`void bhv_object_bubble_loop(void);`
 
 ## bhv_object_water_wave_init
 
 ### Description
+
 Behavior init function for water wave object
 
 ### Lua Example
+
 `bhv_object_water_wave_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_object_water_wave_init(void);`
 
+`void bhv_object_water_wave_init(void);`
 
 ## bhv_object_water_wave_loop
 
 ### Description
+
 Behavior loop function for water wave object
 
 ### Lua Example
+
 `bhv_object_water_wave_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_object_water_wave_loop(void);`
 
+`void bhv_object_water_wave_loop(void);`
 
 ## bhv_explosion_init
 
 ### Description
+
 Behavior init function for explosion
 
 ### Lua Example
+
 `bhv_explosion_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_explosion_init(void);`
 
+`void bhv_explosion_init(void);`
 
 ## bhv_explosion_loop
 
 ### Description
+
 Behavior loop function for explosion
 
 ### Lua Example
+
 `bhv_explosion_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_explosion_loop(void);`
 
+`void bhv_explosion_loop(void);`
 
 ## bhv_bobomb_bully_death_smoke_init
 
 ### Description
+
 Behavior init function for Bob-omb and Bully death smoke
 
 ### Lua Example
+
 `bhv_bobomb_bully_death_smoke_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_bully_death_smoke_init(void);`
 
+`void bhv_bobomb_bully_death_smoke_init(void);`
 
 ## bhv_bobomb_explosion_bubble_init
 
 ### Description
+
 Behavior init function for Bob-omb explosion bubble
 
 ### Lua Example
+
 `bhv_bobomb_explosion_bubble_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_explosion_bubble_init(void);`
 
+`void bhv_bobomb_explosion_bubble_init(void);`
 
 ## bhv_bobomb_explosion_bubble_loop
 
 ### Description
+
 Behavior loop function for Bob-omb explosion bubble
 
 ### Lua Example
+
 `bhv_bobomb_explosion_bubble_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bobomb_explosion_bubble_loop(void);`
 
+`void bhv_bobomb_explosion_bubble_loop(void);`
 
 ## bhv_respawner_loop
 
 ### Description
+
 Behavior loop function for respawner
 
 ### Lua Example
+
 `bhv_respawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_respawner_loop(void);`
 
+`void bhv_respawner_loop(void);`
 
 ## bhv_small_bully_init
 
 ### Description
+
 Behavior init function for Small Bully
 
 ### Lua Example
+
 `bhv_small_bully_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_bully_init(void);`
 
+`void bhv_small_bully_init(void);`
 
 ## bhv_bully_loop
 
 ### Description
+
 Behavior loop function for Bully
 
 ### Lua Example
+
 `bhv_bully_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bully_loop(void);`
 
+`void bhv_bully_loop(void);`
 
 ## bhv_big_bully_init
 
 ### Description
+
 Behavior init function for Big Bully
 
 ### Lua Example
+
 `bhv_big_bully_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_bully_init(void);`
 
+`void bhv_big_bully_init(void);`
 
 ## bhv_big_bully_with_minions_init
 
 ### Description
+
 Behavior init function for Big Bully with minions
 
 ### Lua Example
+
 `bhv_big_bully_with_minions_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_bully_with_minions_init(void);`
 
+`void bhv_big_bully_with_minions_init(void);`
 
 ## bhv_big_bully_with_minions_loop
 
 ### Description
+
 Behavior loop function for Big Bully with minions
 
 ### Lua Example
+
 `bhv_big_bully_with_minions_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_bully_with_minions_loop(void);`
 
+`void bhv_big_bully_with_minions_loop(void);`
 
 ## bhv_jet_stream_ring_spawner_loop
 
 ### Description
+
 Behavior loop function for jet stream ring spawner
 
 ### Lua Example
+
 `bhv_jet_stream_ring_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jet_stream_ring_spawner_loop(void);`
 
+`void bhv_jet_stream_ring_spawner_loop(void);`
 
 ## bhv_jet_stream_water_ring_init
 
 ### Description
+
 Behavior init function for jet stream water ring
 
 ### Lua Example
+
 `bhv_jet_stream_water_ring_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jet_stream_water_ring_init(void);`
 
+`void bhv_jet_stream_water_ring_init(void);`
 
 ## bhv_jet_stream_water_ring_loop
 
 ### Description
+
 Behavior loop function for jet stream water ring
 
 ### Lua Example
+
 `bhv_jet_stream_water_ring_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jet_stream_water_ring_loop(void);`
 
+`void bhv_jet_stream_water_ring_loop(void);`
 
 ## bhv_manta_ray_water_ring_init
 
 ### Description
+
 Behavior init function for Manta Ray water ring
 
 ### Lua Example
+
 `bhv_manta_ray_water_ring_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_manta_ray_water_ring_init(void);`
 
+`void bhv_manta_ray_water_ring_init(void);`
 
 ## bhv_manta_ray_water_ring_loop
 
 ### Description
+
 Behavior loop function for Manta Ray water ring
 
 ### Lua Example
+
 `bhv_manta_ray_water_ring_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_manta_ray_water_ring_loop(void);`
 
+`void bhv_manta_ray_water_ring_loop(void);`
 
 ## bhv_bowser_bomb_loop
 
 ### Description
+
 Behavior loop function for Bowser bomb
 
 ### Lua Example
+
 `bhv_bowser_bomb_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_bomb_loop(void);`
 
+`void bhv_bowser_bomb_loop(void);`
 
 ## bhv_bowser_bomb_explosion_loop
 
 ### Description
+
 Behavior loop function for Bowser bomb explosion
 
 ### Lua Example
+
 `bhv_bowser_bomb_explosion_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_bomb_explosion_loop(void);`
 
+`void bhv_bowser_bomb_explosion_loop(void);`
 
 ## bhv_bowser_bomb_smoke_loop
 
 ### Description
+
 Behavior loop function for Bowser bomb smoke
 
 ### Lua Example
+
 `bhv_bowser_bomb_smoke_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_bomb_smoke_loop(void);`
 
+`void bhv_bowser_bomb_smoke_loop(void);`
 
 ## bhv_celebration_star_init
 
 ### Description
+
 Behavior init function for Celebration Star
 
 ### Lua Example
+
 `bhv_celebration_star_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_celebration_star_init(void);`
 
+`void bhv_celebration_star_init(void);`
 
 ## bhv_celebration_star_loop
 
 ### Description
+
 Behavior loop function for Celebration Star
 
 ### Lua Example
+
 `bhv_celebration_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_celebration_star_loop(void);`
 
+`void bhv_celebration_star_loop(void);`
 
 ## bhv_celebration_star_sparkle_loop
 
 ### Description
+
 Behavior loop function for Celebration Star sparkle
 
 ### Lua Example
+
 `bhv_celebration_star_sparkle_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_celebration_star_sparkle_loop(void);`
 
+`void bhv_celebration_star_sparkle_loop(void);`
 
 ## bhv_star_key_collection_puff_spawner_loop
 
 ### Description
+
 Behavior loop function for Star and key collection puff spawner
 
 ### Lua Example
+
 `bhv_star_key_collection_puff_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_star_key_collection_puff_spawner_loop(void);`
 
+`void bhv_star_key_collection_puff_spawner_loop(void);`
 
 ## bhv_lll_drawbridge_spawner_init
 
 ### Description
+
 Behavior init function for Lethal Lava Land drawbridge spawner
 
 ### Lua Example
+
 `bhv_lll_drawbridge_spawner_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_drawbridge_spawner_init(void);`
 
+`void bhv_lll_drawbridge_spawner_init(void);`
 
 ## bhv_lll_drawbridge_spawner_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land drawbridge spawner
 
 ### Lua Example
+
 `bhv_lll_drawbridge_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_drawbridge_spawner_loop(void);`
 
+`void bhv_lll_drawbridge_spawner_loop(void);`
 
 ## bhv_lll_drawbridge_loop
 
 ### Description
+
 Behavior loop function for Lethal Lava Land drawbridge
 
 ### Lua Example
+
 `bhv_lll_drawbridge_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_drawbridge_loop(void);`
 
+`void bhv_lll_drawbridge_loop(void);`
 
 ## bhv_small_bomp_init
 
 ### Description
+
 Behavior init function for Small Bomp (Whomp's Fortress moving wall with eyes)
 
 ### Lua Example
+
 `bhv_small_bomp_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_bomp_init(void);`
 
+`void bhv_small_bomp_init(void);`
 
 ## bhv_small_bomp_loop
 
 ### Description
+
 Behavior loop function for Small Bomp (Whomp's Fortress moving wall with eyes)
 
 ### Lua Example
+
 `bhv_small_bomp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_bomp_loop(void);`
 
+`void bhv_small_bomp_loop(void);`
 
 ## bhv_large_bomp_init
 
 ### Description
+
 Behavior init function for Large Bomp (Whomp's Fortress moving wall with eyes)
 
 ### Lua Example
+
 `bhv_large_bomp_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_large_bomp_init(void);`
 
+`void bhv_large_bomp_init(void);`
 
 ## bhv_large_bomp_loop
 
 ### Description
+
 Behavior loop function for Large Bomp (Whomp's Fortress moving wall with eyes)
 
 ### Lua Example
+
 `bhv_large_bomp_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_large_bomp_loop(void);`
 
+`void bhv_large_bomp_loop(void);`
 
 ## bhv_wf_sliding_platform_init
 
 ### Description
+
 Behavior init function for Whomp's Fortress sliding platform
 
 ### Lua Example
+
 `bhv_wf_sliding_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_sliding_platform_init(void);`
 
+`void bhv_wf_sliding_platform_init(void);`
 
 ## bhv_wf_sliding_platform_loop
 
 ### Description
+
 Behavior loop function for Whomp's Fortress sliding platform
 
 ### Lua Example
+
 `bhv_wf_sliding_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wf_sliding_platform_loop(void);`
 
+`void bhv_wf_sliding_platform_loop(void);`
 
 ## bhv_moneybag_init
 
 ### Description
+
 Behavior init function for Moneybag
 
 ### Lua Example
+
 `bhv_moneybag_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moneybag_init(void);`
 
+`void bhv_moneybag_init(void);`
 
 ## bhv_moneybag_loop
 
 ### Description
+
 Behavior loop function for Moneybag
 
 ### Lua Example
+
 `bhv_moneybag_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moneybag_loop(void);`
 
+`void bhv_moneybag_loop(void);`
 
 ## bhv_moneybag_hidden_loop
 
 ### Description
+
 Behavior loop function for Moneybag hidden
 
 ### Lua Example
+
 `bhv_moneybag_hidden_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_moneybag_hidden_loop(void);`
 
+`void bhv_moneybag_hidden_loop(void);`
 
 ## bhv_bob_pit_bowling_ball_init
 
 ### Description
+
 Behavior init function for Bob-omb Battlefield pit bowling ball
 
 ### Lua Example
+
 `bhv_bob_pit_bowling_ball_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bob_pit_bowling_ball_init(void);`
 
+`void bhv_bob_pit_bowling_ball_init(void);`
 
 ## bhv_bob_pit_bowling_ball_loop
 
 ### Description
+
 Behavior loop function for Bob-omb Battlefield pit bowling ball
 
 ### Lua Example
+
 `bhv_bob_pit_bowling_ball_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bob_pit_bowling_ball_loop(void);`
 
+`void bhv_bob_pit_bowling_ball_loop(void);`
 
 ## bhv_free_bowling_ball_init
 
 ### Description
+
 Behavior init function for free bowling ball
 
 ### Lua Example
+
 `bhv_free_bowling_ball_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_free_bowling_ball_init(void);`
 
+`void bhv_free_bowling_ball_init(void);`
 
 ## bhv_free_bowling_ball_loop
 
 ### Description
+
 Behavior loop function for free bowling ball
 
 ### Lua Example
+
 `bhv_free_bowling_ball_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_free_bowling_ball_loop(void);`
 
+`void bhv_free_bowling_ball_loop(void);`
 
 ## bhv_bowling_ball_init
 
 ### Description
+
 Behavior init function for bowling ball
 
 ### Lua Example
+
 `bhv_bowling_ball_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowling_ball_init(void);`
 
+`void bhv_bowling_ball_init(void);`
 
 ## bhv_bowling_ball_loop
 
 ### Description
+
 Behavior loop function for bowling ball
 
 ### Lua Example
+
 `bhv_bowling_ball_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowling_ball_loop(void);`
 
+`void bhv_bowling_ball_loop(void);`
 
 ## bhv_generic_bowling_ball_spawner_init
 
 ### Description
+
 Behavior init function for generic bowling ball spawner
 
 ### Lua Example
+
 `bhv_generic_bowling_ball_spawner_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_generic_bowling_ball_spawner_init(void);`
 
+`void bhv_generic_bowling_ball_spawner_init(void);`
 
 ## bhv_generic_bowling_ball_spawner_loop
 
 ### Description
+
 Behavior loop function for generic bowling ball spawner
 
 ### Lua Example
+
 `bhv_generic_bowling_ball_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_generic_bowling_ball_spawner_loop(void);`
 
+`void bhv_generic_bowling_ball_spawner_loop(void);`
 
 ## bhv_thi_bowling_ball_spawner_loop
 
 ### Description
+
 Behavior loop function for Tiny Huge Island bowling ball spawner
 
 ### Lua Example
+
 `bhv_thi_bowling_ball_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_thi_bowling_ball_spawner_loop(void);`
 
+`void bhv_thi_bowling_ball_spawner_loop(void);`
 
 ## bhv_rr_cruiser_wing_init
 
 ### Description
+
 Behavior init function for Rainbow Ride cruiser wing
 
 ### Lua Example
+
 `bhv_rr_cruiser_wing_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rr_cruiser_wing_init(void);`
 
+`void bhv_rr_cruiser_wing_init(void);`
 
 ## bhv_rr_cruiser_wing_loop
 
 ### Description
+
 Behavior loop function for Rainbow Ride cruiser wing
 
 ### Lua Example
+
 `bhv_rr_cruiser_wing_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rr_cruiser_wing_loop(void);`
 
+`void bhv_rr_cruiser_wing_loop(void);`
 
 ## bhv_spindel_init
 
 ### Description
+
 Behavior init function for Spindel
 
 ### Lua Example
+
 `bhv_spindel_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spindel_init(void);`
 
+`void bhv_spindel_init(void);`
 
 ## bhv_spindel_loop
 
 ### Description
+
 Behavior loop function for Spindel
 
 ### Lua Example
+
 `bhv_spindel_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spindel_loop(void);`
 
+`void bhv_spindel_loop(void);`
 
 ## bhv_ssl_moving_pyramid_wall_init
 
 ### Description
+
 Behavior init function for Ssl moving pyramid wall
 
 ### Lua Example
+
 `bhv_ssl_moving_pyramid_wall_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ssl_moving_pyramid_wall_init(void);`
 
+`void bhv_ssl_moving_pyramid_wall_init(void);`
 
 ## bhv_ssl_moving_pyramid_wall_loop
 
 ### Description
+
 Behavior loop function for Ssl moving pyramid wall
 
 ### Lua Example
+
 `bhv_ssl_moving_pyramid_wall_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ssl_moving_pyramid_wall_loop(void);`
 
+`void bhv_ssl_moving_pyramid_wall_loop(void);`
 
 ## bhv_pyramid_elevator_init
 
 ### Description
+
 Behavior init function for Pyramid elevator
 
 ### Lua Example
+
 `bhv_pyramid_elevator_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_elevator_init(void);`
 
+`void bhv_pyramid_elevator_init(void);`
 
 ## bhv_pyramid_elevator_loop
 
 ### Description
+
 Behavior loop function for Pyramid elevator
 
 ### Lua Example
+
 `bhv_pyramid_elevator_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_elevator_loop(void);`
 
+`void bhv_pyramid_elevator_loop(void);`
 
 ## bhv_pyramid_elevator_trajectory_marker_ball_loop
 
 ### Description
+
 Behavior loop function for Pyramid elevator trajectory marker ball
 
 ### Lua Example
+
 `bhv_pyramid_elevator_trajectory_marker_ball_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_elevator_trajectory_marker_ball_loop(void);`
 
+`void bhv_pyramid_elevator_trajectory_marker_ball_loop(void);`
 
 ## bhv_pyramid_top_init
 
 ### Description
+
 Behavior init function for Pyramid top
 
 ### Lua Example
+
 `bhv_pyramid_top_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_top_init(void);`
 
+`void bhv_pyramid_top_init(void);`
 
 ## bhv_pyramid_top_loop
 
 ### Description
+
 Behavior loop function for Pyramid top
 
 ### Lua Example
+
 `bhv_pyramid_top_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_top_loop(void);`
 
+`void bhv_pyramid_top_loop(void);`
 
 ## bhv_pyramid_top_fragment_init
 
 ### Description
+
 Behavior init function for Pyramid top fragment
 
 ### Lua Example
+
 `bhv_pyramid_top_fragment_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_top_fragment_init(void);`
 
+`void bhv_pyramid_top_fragment_init(void);`
 
 ## bhv_pyramid_top_fragment_loop
 
 ### Description
+
 Behavior loop function for Pyramid top fragment
 
 ### Lua Example
+
 `bhv_pyramid_top_fragment_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_top_fragment_loop(void);`
 
+`void bhv_pyramid_top_fragment_loop(void);`
 
 ## bhv_pyramid_pillar_touch_detector_loop
 
 ### Description
+
 Behavior loop function for Pyramid pillar touch detector
 
 ### Lua Example
+
 `bhv_pyramid_pillar_touch_detector_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pyramid_pillar_touch_detector_loop(void);`
 
+`void bhv_pyramid_pillar_touch_detector_loop(void);`
 
 ## bhv_waterfall_sound_loop
 
 ### Description
+
 Behavior loop function for waterfall sound
 
 ### Lua Example
+
 `bhv_waterfall_sound_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_waterfall_sound_loop(void);`
 
+`void bhv_waterfall_sound_loop(void);`
 
 ## bhv_volcano_sound_loop
 
 ### Description
+
 Behavior loop function for volcano sound
 
 ### Lua Example
+
 `bhv_volcano_sound_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_volcano_sound_loop(void);`
 
+`void bhv_volcano_sound_loop(void);`
 
 ## bhv_castle_flag_init
 
 ### Description
+
 Behavior init function for castle flag
 
 ### Lua Example
+
 `bhv_castle_flag_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_castle_flag_init(void);`
 
+`void bhv_castle_flag_init(void);`
 
 ## bhv_birds_sound_loop
 
 ### Description
+
 Behavior loop function for birds sound
 
 ### Lua Example
+
 `bhv_birds_sound_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_birds_sound_loop(void);`
 
+`void bhv_birds_sound_loop(void);`
 
 ## bhv_ambient_sounds_init
 
 ### Description
+
 Behavior init function for ambient sounds
 
 ### Lua Example
+
 `bhv_ambient_sounds_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ambient_sounds_init(void);`
 
+`void bhv_ambient_sounds_init(void);`
 
 ## bhv_sand_sound_loop
 
 ### Description
+
 Behavior loop function for sand sound
 
 ### Lua Example
+
 `bhv_sand_sound_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sand_sound_loop(void);`
 
+`void bhv_sand_sound_loop(void);`
 
 ## bhv_castle_cannon_grate_init
 
 ### Description
+
 Behavior init function for Castle cannon grate
 
 ### Lua Example
+
 `bhv_castle_cannon_grate_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_castle_cannon_grate_init(void);`
 
+`void bhv_castle_cannon_grate_init(void);`
 
 ## bhv_snowmans_bottom_init
 
 ### Description
+
 Behavior init function for Snowman's bottom
 
 ### Lua Example
+
 `bhv_snowmans_bottom_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snowmans_bottom_init(void);`
 
+`void bhv_snowmans_bottom_init(void);`
 
 ## bhv_snowmans_bottom_loop
 
 ### Description
+
 Behavior loop function for Snowman's bottom
 
 ### Lua Example
+
 `bhv_snowmans_bottom_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snowmans_bottom_loop(void);`
 
+`void bhv_snowmans_bottom_loop(void);`
 
 ## bhv_snowmans_head_init
 
 ### Description
+
 Behavior init function for Snowman's head
 
 ### Lua Example
+
 `bhv_snowmans_head_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snowmans_head_init(void);`
 
+`void bhv_snowmans_head_init(void);`
 
 ## bhv_snowmans_head_loop
 
 ### Description
+
 Behavior loop function for Snowman's head
 
 ### Lua Example
+
 `bhv_snowmans_head_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snowmans_head_loop(void);`
 
+`void bhv_snowmans_head_loop(void);`
 
 ## bhv_snowmans_body_checkpoint_loop
 
 ### Description
+
 Behavior loop function for Snowman's body checkpoint
 
 ### Lua Example
+
 `bhv_snowmans_body_checkpoint_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snowmans_body_checkpoint_loop(void);`
 
+`void bhv_snowmans_body_checkpoint_loop(void);`
 
 ## bhv_big_boulder_init
 
 ### Description
+
 Behavior init function for big boulder
 
 ### Lua Example
+
 `bhv_big_boulder_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_boulder_init(void);`
 
+`void bhv_big_boulder_init(void);`
 
 ## bhv_big_boulder_loop
 
 ### Description
+
 Behavior loop function for big boulder
 
 ### Lua Example
+
 `bhv_big_boulder_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_boulder_loop(void);`
 
+`void bhv_big_boulder_loop(void);`
 
 ## bhv_big_boulder_generator_loop
 
 ### Description
+
 Behavior loop function for big boulder generator
 
 ### Lua Example
+
 `bhv_big_boulder_generator_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_big_boulder_generator_loop(void);`
 
+`void bhv_big_boulder_generator_loop(void);`
 
 ## bhv_wing_cap_init
 
 ### Description
+
 Behavior init function for Wing Cap
 
 ### Lua Example
+
 `bhv_wing_cap_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wing_cap_init(void);`
 
+`void bhv_wing_cap_init(void);`
 
 ## bhv_wing_vanish_cap_loop
 
 ### Description
+
 Behavior loop function for Wing and Vanish caps
 
 ### Lua Example
+
 `bhv_wing_vanish_cap_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wing_vanish_cap_loop(void);`
 
+`void bhv_wing_vanish_cap_loop(void);`
 
 ## bhv_metal_cap_init
 
 ### Description
+
 Behavior init function for Metal Cap
 
 ### Lua Example
+
 `bhv_metal_cap_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_metal_cap_init(void);`
 
+`void bhv_metal_cap_init(void);`
 
 ## bhv_metal_cap_loop
 
 ### Description
+
 Behavior loop function for Metal Cap
 
 ### Lua Example
+
 `bhv_metal_cap_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_metal_cap_loop(void);`
 
+`void bhv_metal_cap_loop(void);`
 
 ## bhv_normal_cap_init
 
 ### Description
+
 Behavior init function for Normal Cap
 
 ### Lua Example
+
 `bhv_normal_cap_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_normal_cap_init(void);`
 
+`void bhv_normal_cap_init(void);`
 
 ## bhv_normal_cap_loop
 
 ### Description
+
 Behavior loop function for Normal Cap
 
 ### Lua Example
+
 `bhv_normal_cap_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_normal_cap_loop(void);`
 
+`void bhv_normal_cap_loop(void);`
 
 ## bhv_vanish_cap_init
 
 ### Description
+
 Behavior init function for Vanish Cap
 
 ### Lua Example
+
 `bhv_vanish_cap_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_vanish_cap_init(void);`
 
+`void bhv_vanish_cap_init(void);`
 
 ## bhv_star_number_loop
 
 ### Description
+
 Behavior loop function for Star number
 
 ### Lua Example
+
 `bhv_star_number_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_star_number_loop(void);`
 
+`void bhv_star_number_loop(void);`
 
 ## spawn_star_number
 
 ### Description
+
 Spawns a star number
 
 ### Lua Example
+
 `spawn_star_number()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void spawn_star_number(void);`
 
+`void spawn_star_number(void);`
 
 ## bhv_collect_star_init
 
 ### Description
+
 Behavior init function for collectable Star
 
 ### Lua Example
+
 `bhv_collect_star_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_collect_star_init(void);`
 
+`void bhv_collect_star_init(void);`
 
 ## bhv_collect_star_loop
 
 ### Description
+
 Behavior loop function for collectable Star
 
 ### Lua Example
+
 `bhv_collect_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_collect_star_loop(void);`
 
+`void bhv_collect_star_loop(void);`
 
 ## bhv_star_spawn_init
 
 ### Description
+
 Behavior init function for Star spawn
 
 ### Lua Example
+
 `bhv_star_spawn_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_star_spawn_init(void);`
 
+`void bhv_star_spawn_init(void);`
 
 ## bhv_star_spawn_loop
 
 ### Description
+
 Behavior loop function for Star spawn
 
 ### Lua Example
+
 `bhv_star_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_star_spawn_loop(void);`
 
+`void bhv_star_spawn_loop(void);`
 
 ## bhv_hidden_red_coin_star_init
 
 ### Description
+
 Behavior init function for Hidden Red Coin Star
 
 ### Lua Example
+
 `bhv_hidden_red_coin_star_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_red_coin_star_init(void);`
 
+`void bhv_hidden_red_coin_star_init(void);`
 
 ## bhv_hidden_red_coin_star_loop
 
 ### Description
+
 Behavior loop function for Hidden Red Coin Star
 
 ### Lua Example
+
 `bhv_hidden_red_coin_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_red_coin_star_loop(void);`
 
+`void bhv_hidden_red_coin_star_loop(void);`
 
 ## bhv_red_coin_init
 
 ### Description
+
 Behavior init function for Red Coin
 
 ### Lua Example
+
 `bhv_red_coin_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_red_coin_init(void);`
 
+`void bhv_red_coin_init(void);`
 
 ## bhv_red_coin_loop
 
 ### Description
+
 Behavior loop function for Red Coin
 
 ### Lua Example
+
 `bhv_red_coin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_red_coin_loop(void);`
 
+`void bhv_red_coin_loop(void);`
 
 ## bhv_bowser_course_red_coin_star_loop
 
 ### Description
+
 Behavior loop function for Bowser course Red Coin Star
 
 ### Lua Example
+
 `bhv_bowser_course_red_coin_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bowser_course_red_coin_star_loop(void);`
 
+`void bhv_bowser_course_red_coin_star_loop(void);`
 
 ## bhv_hidden_star_init
 
 ### Description
+
 Behavior init function for Secret Star
 
 ### Lua Example
+
 `bhv_hidden_star_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_star_init(void);`
 
+`void bhv_hidden_star_init(void);`
 
 ## bhv_hidden_star_loop
 
 ### Description
+
 Behavior loop function for Secret Star
 
 ### Lua Example
+
 `bhv_hidden_star_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_star_loop(void);`
 
+`void bhv_hidden_star_loop(void);`
 
 ## bhv_hidden_star_trigger_loop
 
 ### Description
+
 Behavior loop function for Secrets
 
 ### Lua Example
+
 `bhv_hidden_star_trigger_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_hidden_star_trigger_loop(void);`
 
+`void bhv_hidden_star_trigger_loop(void);`
 
 ## bhv_ttm_rolling_log_init
 
 ### Description
+
 Behavior init function for Tall, Tall Mountain rolling log
 
 ### Lua Example
+
 `bhv_ttm_rolling_log_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttm_rolling_log_init(void);`
 
+`void bhv_ttm_rolling_log_init(void);`
 
 ## bhv_rolling_log_loop
 
 ### Description
+
 Behavior loop function for rolling log
 
 ### Lua Example
+
 `bhv_rolling_log_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rolling_log_loop(void);`
 
+`void bhv_rolling_log_loop(void);`
 
 ## bhv_lll_rolling_log_init
 
 ### Description
+
 Behavior init function for Lethal Lava Land rolling log
 
 ### Lua Example
+
 `bhv_lll_rolling_log_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_lll_rolling_log_init(void);`
 
+`void bhv_lll_rolling_log_init(void);`
 
 ## bhv_1up_trigger_init
 
 ### Description
+
 Behavior init function for 1-Up trigger
 
 ### Lua Example
+
 `bhv_1up_trigger_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_trigger_init(void);`
 
+`void bhv_1up_trigger_init(void);`
 
 ## bhv_1up_common_init
 
 ### Description
+
 Behavior init function for common 1-Up
 
 ### Lua Example
+
 `bhv_1up_common_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_common_init(void);`
 
+`void bhv_1up_common_init(void);`
 
 ## bhv_1up_walking_loop
 
 ### Description
+
 Behavior loop function for walking 1-Up
 
 ### Lua Example
+
 `bhv_1up_walking_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_walking_loop(void);`
 
+`void bhv_1up_walking_loop(void);`
 
 ## bhv_1up_running_away_loop
 
 ### Description
+
 Behavior loop function for running away 1-Up
 
 ### Lua Example
+
 `bhv_1up_running_away_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_running_away_loop(void);`
 
+`void bhv_1up_running_away_loop(void);`
 
 ## bhv_1up_sliding_loop
 
 ### Description
+
 Behavior loop function for sliding 1-Up
 
 ### Lua Example
+
 `bhv_1up_sliding_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_sliding_loop(void);`
 
+`void bhv_1up_sliding_loop(void);`
 
 ## bhv_1up_init
 
 ### Description
+
 Behavior init function for 1-Up
 
 ### Lua Example
+
 `bhv_1up_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_init(void);`
 
+`void bhv_1up_init(void);`
 
 ## bhv_1up_loop
 
 ### Description
+
 Behavior loop function for 1-Up
 
 ### Lua Example
+
 `bhv_1up_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_loop(void);`
 
+`void bhv_1up_loop(void);`
 
 ## bhv_1up_jump_on_approach_loop
 
 ### Description
+
 Behavior loop function for jump on approach 1-Up
 
 ### Lua Example
+
 `bhv_1up_jump_on_approach_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_jump_on_approach_loop(void);`
 
+`void bhv_1up_jump_on_approach_loop(void);`
 
 ## bhv_1up_hidden_loop
 
 ### Description
+
 Behavior loop function for hidden 1-Up
 
 ### Lua Example
+
 `bhv_1up_hidden_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_hidden_loop(void);`
 
+`void bhv_1up_hidden_loop(void);`
 
 ## bhv_1up_hidden_trigger_loop
 
 ### Description
+
 Behavior loop function for hidden 1-Up trigger
 
 ### Lua Example
+
 `bhv_1up_hidden_trigger_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_hidden_trigger_loop(void);`
 
+`void bhv_1up_hidden_trigger_loop(void);`
 
 ## bhv_1up_hidden_in_pole_loop
 
 ### Description
+
 Behavior loop function for hidden 1-Up in pole (Green Demon)
 
 ### Lua Example
+
 `bhv_1up_hidden_in_pole_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_hidden_in_pole_loop(void);`
 
+`void bhv_1up_hidden_in_pole_loop(void);`
 
 ## bhv_1up_hidden_in_pole_trigger_loop
 
 ### Description
+
 Behavior loop function for 1-Up hidden in pole trigger
 
 ### Lua Example
+
 `bhv_1up_hidden_in_pole_trigger_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_hidden_in_pole_trigger_loop(void);`
 
+`void bhv_1up_hidden_in_pole_trigger_loop(void);`
 
 ## bhv_1up_hidden_in_pole_spawner_loop
 
 ### Description
+
 Behavior loop function for 1-Up hidden in pole spawner
 
 ### Lua Example
+
 `bhv_1up_hidden_in_pole_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_1up_hidden_in_pole_spawner_loop(void);`
 
+`void bhv_1up_hidden_in_pole_spawner_loop(void);`
 
 ## bhv_controllable_platform_init
 
 ### Description
+
 Behavior init function for controllable platform
 
 ### Lua Example
+
 `bhv_controllable_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_controllable_platform_init(void);`
 
+`void bhv_controllable_platform_init(void);`
 
 ## bhv_controllable_platform_loop
 
 ### Description
+
 Behavior loop function for controllable platform
 
 ### Lua Example
+
 `bhv_controllable_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_controllable_platform_loop(void);`
 
+`void bhv_controllable_platform_loop(void);`
 
 ## bhv_controllable_platform_sub_loop
 
 ### Description
+
 Behavior loop function for controllable sub platform
 
 ### Lua Example
+
 `bhv_controllable_platform_sub_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_controllable_platform_sub_loop(void);`
 
+`void bhv_controllable_platform_sub_loop(void);`
 
 ## bhv_breakable_box_small_init
 
 ### Description
+
 Behavior init function for small breakable box
 
 ### Lua Example
+
 `bhv_breakable_box_small_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_breakable_box_small_init(void);`
 
+`void bhv_breakable_box_small_init(void);`
 
 ## bhv_breakable_box_small_loop
 
 ### Description
+
 Behavior loop function for small breakable box
 
 ### Lua Example
+
 `bhv_breakable_box_small_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_breakable_box_small_loop(void);`
 
+`void bhv_breakable_box_small_loop(void);`
 
 ## bhv_sliding_snow_mound_loop
 
 ### Description
+
 Behavior loop function for sliding snow mound
 
 ### Lua Example
+
 `bhv_sliding_snow_mound_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sliding_snow_mound_loop(void);`
 
+`void bhv_sliding_snow_mound_loop(void);`
 
 ## bhv_snow_mound_spawn_loop
 
 ### Description
+
 Behavior loop function for snow mound spawn
 
 ### Lua Example
+
 `bhv_snow_mound_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snow_mound_spawn_loop(void);`
 
+`void bhv_snow_mound_spawn_loop(void);`
 
 ## bhv_floating_platform_loop
 
 ### Description
+
 Behavior loop function for floating platform
 
 ### Lua Example
+
 `bhv_floating_platform_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_floating_platform_loop(void);`
 
+`void bhv_floating_platform_loop(void);`
 
 ## bhv_arrow_lift_loop
 
 ### Description
+
 Behavior loop function for Wet Dry World arrow lift
 
 ### Lua Example
+
 `bhv_arrow_lift_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_arrow_lift_loop(void);`
 
+`void bhv_arrow_lift_loop(void);`
 
 ## bhv_orange_number_init
 
 ### Description
+
 Behavior init function for orange number
 
 ### Lua Example
+
 `bhv_orange_number_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_orange_number_init(void);`
 
+`void bhv_orange_number_init(void);`
 
 ## bhv_orange_number_loop
 
 ### Description
+
 Behavior loop function for orange number
 
 ### Lua Example
+
 `bhv_orange_number_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_orange_number_loop(void);`
 
+`void bhv_orange_number_loop(void);`
 
 ## bhv_manta_ray_init
 
 ### Description
+
 Behavior init function for Manta Ray
 
 ### Lua Example
+
 `bhv_manta_ray_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_manta_ray_init(void);`
 
+`void bhv_manta_ray_init(void);`
 
 ## bhv_manta_ray_loop
 
 ### Description
+
 Behavior loop function for Manta Ray
 
 ### Lua Example
+
 `bhv_manta_ray_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_manta_ray_loop(void);`
 
+`void bhv_manta_ray_loop(void);`
 
 ## bhv_falling_pillar_init
 
 ### Description
+
 Behavior init function for Jolly Roger Bay falling pillar
 
 ### Lua Example
+
 `bhv_falling_pillar_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_falling_pillar_init(void);`
 
+`void bhv_falling_pillar_init(void);`
 
 ## bhv_falling_pillar_loop
 
 ### Description
+
 Behavior loop function for Jolly Roger Bay falling pillar
 
 ### Lua Example
+
 `bhv_falling_pillar_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_falling_pillar_loop(void);`
 
+`void bhv_falling_pillar_loop(void);`
 
 ## bhv_falling_pillar_hitbox_loop
 
 ### Description
+
 Behavior loop function for Jolly Roger Bay falling pillar hitbox
 
 ### Lua Example
+
 `bhv_falling_pillar_hitbox_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_falling_pillar_hitbox_loop(void);`
 
+`void bhv_falling_pillar_hitbox_loop(void);`
 
 ## bhv_jrb_floating_box_loop
 
 ### Description
+
 Behavior loop function for Jolly Roger Bay floating box
 
 ### Lua Example
+
 `bhv_jrb_floating_box_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_jrb_floating_box_loop(void);`
 
+`void bhv_jrb_floating_box_loop(void);`
 
 ## bhv_decorative_pendulum_init
 
 ### Description
+
 Behavior init function for decorative pendulum
 
 ### Lua Example
+
 `bhv_decorative_pendulum_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_decorative_pendulum_init(void);`
 
+`void bhv_decorative_pendulum_init(void);`
 
 ## bhv_decorative_pendulum_loop
 
 ### Description
+
 Behavior loop function for decorative pendulum
 
 ### Lua Example
+
 `bhv_decorative_pendulum_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_decorative_pendulum_loop(void);`
 
+`void bhv_decorative_pendulum_loop(void);`
 
 ## bhv_treasure_chest_ship_init
 
 ### Description
+
 Behavior init function for treasure chest ship
 
 ### Lua Example
+
 `bhv_treasure_chest_ship_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_ship_init(void);`
 
+`void bhv_treasure_chest_ship_init(void);`
 
 ## bhv_treasure_chest_ship_loop
 
 ### Description
+
 Behavior loop function for treasure chest ship
 
 ### Lua Example
+
 `bhv_treasure_chest_ship_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_ship_loop(void);`
 
+`void bhv_treasure_chest_ship_loop(void);`
 
 ## bhv_treasure_chest_jrb_init
 
 ### Description
+
 Behavior init function for treasure chest jrb
 
 ### Lua Example
+
 `bhv_treasure_chest_jrb_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_jrb_init(void);`
 
+`void bhv_treasure_chest_jrb_init(void);`
 
 ## bhv_treasure_chest_jrb_loop
 
 ### Description
+
 Behavior loop function for treasure chest jrb
 
 ### Lua Example
+
 `bhv_treasure_chest_jrb_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_jrb_loop(void);`
 
+`void bhv_treasure_chest_jrb_loop(void);`
 
 ## bhv_treasure_chest_init
 
 ### Description
+
 Behavior init function for treasure chest
 
 ### Lua Example
+
 `bhv_treasure_chest_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_init(void);`
 
+`void bhv_treasure_chest_init(void);`
 
 ## bhv_treasure_chest_loop
 
 ### Description
+
 Behavior loop function for treasure chest
 
 ### Lua Example
+
 `bhv_treasure_chest_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_loop(void);`
 
+`void bhv_treasure_chest_loop(void);`
 
 ## bhv_treasure_chest_bottom_init
 
 ### Description
+
 Behavior init function for treasure chest bottom
 
 ### Lua Example
+
 `bhv_treasure_chest_bottom_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_bottom_init(void);`
 
+`void bhv_treasure_chest_bottom_init(void);`
 
 ## bhv_treasure_chest_bottom_loop
 
 ### Description
+
 Behavior loop function for treasure chest bottom
 
 ### Lua Example
+
 `bhv_treasure_chest_bottom_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_bottom_loop(void);`
 
+`void bhv_treasure_chest_bottom_loop(void);`
 
 ## bhv_treasure_chest_top_loop
 
 ### Description
+
 Behavior loop function for treasure chest top
 
 ### Lua Example
+
 `bhv_treasure_chest_top_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_treasure_chest_top_loop(void);`
 
+`void bhv_treasure_chest_top_loop(void);`
 
 ## bhv_mips_init
 
 ### Description
+
 Behavior init function for Mips
 
 ### Lua Example
+
 `bhv_mips_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mips_init(void);`
 
+`void bhv_mips_init(void);`
 
 ## bhv_mips_loop
 
 ### Description
+
 Behavior loop function for Mips
 
 ### Lua Example
+
 `bhv_mips_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mips_loop(void);`
 
+`void bhv_mips_loop(void);`
 
 ## bhv_yoshi_init
 
 ### Description
+
 Behavior init function for Yoshi
 
 ### Lua Example
+
 `bhv_yoshi_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_yoshi_init(void);`
 
+`void bhv_yoshi_init(void);`
 
 ## bhv_koopa_init
 
 ### Description
+
 Behavior init function for Koopa
 
 ### Lua Example
+
 `bhv_koopa_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_koopa_init(void);`
 
+`void bhv_koopa_init(void);`
 
 ## bhv_koopa_update
 
 ### Description
+
 Behavior loop function for Koopa
 
 ### Lua Example
+
 `bhv_koopa_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_koopa_update(void);`
 
+`void bhv_koopa_update(void);`
 
 ## bhv_koopa_race_endpoint_update
 
 ### Description
+
 Behavior loop function for Koopa race endpoint
 
 ### Lua Example
+
 `bhv_koopa_race_endpoint_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_koopa_race_endpoint_update(void);`
 
+`void bhv_koopa_race_endpoint_update(void);`
 
 ## bhv_pokey_update
 
 ### Description
+
 Behavior loop function for Pokey
 
 ### Lua Example
+
 `bhv_pokey_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pokey_update(void);`
 
+`void bhv_pokey_update(void);`
 
 ## bhv_pokey_body_part_update
 
 ### Description
+
 Behavior loop function for Pokey body part
 
 ### Lua Example
+
 `bhv_pokey_body_part_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_pokey_body_part_update(void);`
 
+`void bhv_pokey_body_part_update(void);`
 
 ## bhv_swoop_update
 
 ### Description
+
 Behavior loop function for Swoop
 
 ### Lua Example
+
 `bhv_swoop_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_swoop_update(void);`
 
+`void bhv_swoop_update(void);`
 
 ## bhv_fly_guy_update
 
 ### Description
+
 Behavior loop function for Fly Guy
 
 ### Lua Example
+
 `bhv_fly_guy_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fly_guy_update(void);`
 
+`void bhv_fly_guy_update(void);`
 
 ## bhv_goomba_init
 
 ### Description
+
 Behavior init function for Goomba
 
 ### Lua Example
+
 `bhv_goomba_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_goomba_init(void);`
 
+`void bhv_goomba_init(void);`
 
 ## bhv_goomba_update
 
 ### Description
+
 Behavior loop function for Goomba
 
 ### Lua Example
+
 `bhv_goomba_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_goomba_update(void);`
 
+`void bhv_goomba_update(void);`
 
 ## bhv_goomba_triplet_spawner_update
 
 ### Description
+
 Behavior loop function for Goomba triplet spawner
 
 ### Lua Example
+
 `bhv_goomba_triplet_spawner_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_goomba_triplet_spawner_update(void);`
 
+`void bhv_goomba_triplet_spawner_update(void);`
 
 ## bhv_chain_chomp_update
 
 ### Description
+
 Behavior loop function for Chain Chomp
 
 ### Lua Example
+
 `bhv_chain_chomp_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_chain_chomp_update(void);`
 
+`void bhv_chain_chomp_update(void);`
 
 ## bhv_chain_chomp_chain_part_update
 
 ### Description
+
 Behavior loop function for Chain Chomp chain part
 
 ### Lua Example
+
 `bhv_chain_chomp_chain_part_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_chain_chomp_chain_part_update(void);`
 
+`void bhv_chain_chomp_chain_part_update(void);`
 
 ## bhv_wooden_post_update
 
 ### Description
+
 Behavior loop function for ground poundable wooden post
 
 ### Lua Example
+
 `bhv_wooden_post_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wooden_post_update(void);`
 
+`void bhv_wooden_post_update(void);`
 
 ## bhv_chain_chomp_gate_init
 
 ### Description
+
 Behavior init function for Chain Chomp gate
 
 ### Lua Example
+
 `bhv_chain_chomp_gate_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_chain_chomp_gate_init(void);`
 
+`void bhv_chain_chomp_gate_init(void);`
 
 ## bhv_chain_chomp_gate_update
 
 ### Description
+
 Behavior loop function for Chain Chomp gate
 
 ### Lua Example
+
 `bhv_chain_chomp_gate_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_chain_chomp_gate_update(void);`
 
+`void bhv_chain_chomp_gate_update(void);`
 
 ## bhv_wiggler_update
 
 ### Description
+
 Behavior loop function for Wiggler
 
 ### Lua Example
+
 `bhv_wiggler_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wiggler_update(void);`
 
+`void bhv_wiggler_update(void);`
 
 ## bhv_wiggler_body_part_update
 
 ### Description
+
 Behavior loop function for Wiggler body part
 
 ### Lua Example
+
 `bhv_wiggler_body_part_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_wiggler_body_part_update(void);`
 
+`void bhv_wiggler_body_part_update(void);`
 
 ## bhv_enemy_lakitu_update
 
 ### Description
+
 Behavior loop function for Enemy Lakitu
 
 ### Lua Example
+
 `bhv_enemy_lakitu_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_enemy_lakitu_update(void);`
 
+`void bhv_enemy_lakitu_update(void);`
 
 ## bhv_camera_lakitu_init
 
 ### Description
+
 Behavior init function for Camera Lakitu
 
 ### Lua Example
+
 `bhv_camera_lakitu_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_camera_lakitu_init(void);`
 
+`void bhv_camera_lakitu_init(void);`
 
 ## bhv_camera_lakitu_update
 
 ### Description
+
 Behavior loop function for Camera Lakitu
 
 ### Lua Example
+
 `bhv_camera_lakitu_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_camera_lakitu_update(void);`
 
+`void bhv_camera_lakitu_update(void);`
 
 ## bhv_cloud_update
 
 ### Description
+
 Behavior loop function for cloud
 
 ### Lua Example
+
 `bhv_cloud_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cloud_update(void);`
 
+`void bhv_cloud_update(void);`
 
 ## bhv_cloud_part_update
 
 ### Description
+
 Behavior loop function for cloud part
 
 ### Lua Example
+
 `bhv_cloud_part_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_cloud_part_update(void);`
 
+`void bhv_cloud_part_update(void);`
 
 ## bhv_spiny_update
 
 ### Description
+
 Behavior loop function for Spiny
 
 ### Lua Example
+
 `bhv_spiny_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_spiny_update(void);`
 
+`void bhv_spiny_update(void);`
 
 ## bhv_monty_mole_init
 
 ### Description
+
 Behavior init function for Monty Mole
 
 ### Lua Example
+
 `bhv_monty_mole_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_monty_mole_init(void);`
 
+`void bhv_monty_mole_init(void);`
 
 ## bhv_monty_mole_update
 
 ### Description
+
 Behavior loop function for Monty Mole
 
 ### Lua Example
+
 `bhv_monty_mole_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_monty_mole_update(void);`
 
+`void bhv_monty_mole_update(void);`
 
 ## bhv_monty_mole_hole_update
 
 ### Description
+
 Behavior loop function for Monty Mole hole
 
 ### Lua Example
+
 `bhv_monty_mole_hole_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_monty_mole_hole_update(void);`
 
+`void bhv_monty_mole_hole_update(void);`
 
 ## bhv_monty_mole_rock_update
 
 ### Description
+
 Behavior loop function for Monty Mole rock
 
 ### Lua Example
+
 `bhv_monty_mole_rock_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_monty_mole_rock_update(void);`
 
+`void bhv_monty_mole_rock_update(void);`
 
 ## bhv_platform_on_track_init
 
 ### Description
+
 Behavior init function for platform on track
 
 ### Lua Example
+
 `bhv_platform_on_track_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_platform_on_track_init(void);`
 
+`void bhv_platform_on_track_init(void);`
 
 ## bhv_platform_on_track_update
 
 ### Description
+
 Behavior loop function for platform on track
 
 ### Lua Example
+
 `bhv_platform_on_track_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_platform_on_track_update(void);`
 
+`void bhv_platform_on_track_update(void);`
 
 ## bhv_track_ball_update
 
 ### Description
+
 Behavior loop function for track ball
 
 ### Lua Example
+
 `bhv_track_ball_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_track_ball_update(void);`
 
+`void bhv_track_ball_update(void);`
 
 ## bhv_seesaw_platform_init
 
 ### Description
+
 Behavior init function for seesaw platform
 
 ### Lua Example
+
 `bhv_seesaw_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_seesaw_platform_init(void);`
 
+`void bhv_seesaw_platform_init(void);`
 
 ## bhv_seesaw_platform_update
 
 ### Description
+
 Behavior loop function for seesaw platform
 
 ### Lua Example
+
 `bhv_seesaw_platform_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_seesaw_platform_update(void);`
 
+`void bhv_seesaw_platform_update(void);`
 
 ## bhv_ferris_wheel_axle_init
 
 ### Description
+
 Behavior init function for ferris wheel axle
 
 ### Lua Example
+
 `bhv_ferris_wheel_axle_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ferris_wheel_axle_init(void);`
 
+`void bhv_ferris_wheel_axle_init(void);`
 
 ## bhv_ferris_wheel_platform_init
 
 ### Description
+
 Behavior init function for ferris wheel platform
 
 ### Lua Example
+
 `bhv_ferris_wheel_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ferris_wheel_platform_init(void);`
 
+`void bhv_ferris_wheel_platform_init(void);`
 
 ## bhv_ferris_wheel_platform_update
 
 ### Description
+
 Behavior loop function for ferris wheel platform
 
 ### Lua Example
+
 `bhv_ferris_wheel_platform_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ferris_wheel_platform_update(void);`
 
+`void bhv_ferris_wheel_platform_update(void);`
 
 ## bhv_water_bomb_spawner_update
 
 ### Description
+
 Behavior loop function for water bomb spawner
 
 ### Lua Example
+
 `bhv_water_bomb_spawner_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_bomb_spawner_update(void);`
 
+`void bhv_water_bomb_spawner_update(void);`
 
 ## bhv_water_bomb_update
 
 ### Description
+
 Behavior loop function for water bomb
 
 ### Lua Example
+
 `bhv_water_bomb_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_bomb_update(void);`
 
+`void bhv_water_bomb_update(void);`
 
 ## bhv_water_bomb_shadow_update
 
 ### Description
+
 Behavior loop function for water bomb shadow
 
 ### Lua Example
+
 `bhv_water_bomb_shadow_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_bomb_shadow_update(void);`
 
+`void bhv_water_bomb_shadow_update(void);`
 
 ## bhv_ttc_rotating_solid_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock rotating solid
 
 ### Lua Example
+
 `bhv_ttc_rotating_solid_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_rotating_solid_init(void);`
 
+`void bhv_ttc_rotating_solid_init(void);`
 
 ## bhv_ttc_rotating_solid_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock rotating solid
 
 ### Lua Example
+
 `bhv_ttc_rotating_solid_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_rotating_solid_update(void);`
 
+`void bhv_ttc_rotating_solid_update(void);`
 
 ## bhv_ttc_pendulum_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock pendulum
 
 ### Lua Example
+
 `bhv_ttc_pendulum_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_pendulum_init(void);`
 
+`void bhv_ttc_pendulum_init(void);`
 
 ## bhv_ttc_pendulum_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock pendulum
 
 ### Lua Example
+
 `bhv_ttc_pendulum_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_pendulum_update(void);`
 
+`void bhv_ttc_pendulum_update(void);`
 
 ## bhv_ttc_treadmill_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock treadmill
 
 ### Lua Example
+
 `bhv_ttc_treadmill_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_treadmill_init(void);`
 
+`void bhv_ttc_treadmill_init(void);`
 
 ## bhv_ttc_treadmill_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock treadmill
 
 ### Lua Example
+
 `bhv_ttc_treadmill_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_treadmill_update(void);`
 
+`void bhv_ttc_treadmill_update(void);`
 
 ## bhv_ttc_moving_bar_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock moving bar
 
 ### Lua Example
+
 `bhv_ttc_moving_bar_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_moving_bar_init(void);`
 
+`void bhv_ttc_moving_bar_init(void);`
 
 ## bhv_ttc_moving_bar_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock moving bar
 
 ### Lua Example
+
 `bhv_ttc_moving_bar_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_moving_bar_update(void);`
 
+`void bhv_ttc_moving_bar_update(void);`
 
 ## bhv_ttc_cog_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock cog
 
 ### Lua Example
+
 `bhv_ttc_cog_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_cog_init(void);`
 
+`void bhv_ttc_cog_init(void);`
 
 ## bhv_ttc_cog_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock cog
 
 ### Lua Example
+
 `bhv_ttc_cog_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_cog_update(void);`
 
+`void bhv_ttc_cog_update(void);`
 
 ## bhv_ttc_pit_block_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock pit block
 
 ### Lua Example
+
 `bhv_ttc_pit_block_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_pit_block_init(void);`
 
+`void bhv_ttc_pit_block_init(void);`
 
 ## bhv_ttc_pit_block_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock pit block
 
 ### Lua Example
+
 `bhv_ttc_pit_block_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_pit_block_update(void);`
 
+`void bhv_ttc_pit_block_update(void);`
 
 ## bhv_ttc_elevator_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock elevator
 
 ### Lua Example
+
 `bhv_ttc_elevator_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_elevator_init(void);`
 
+`void bhv_ttc_elevator_init(void);`
 
 ## bhv_ttc_elevator_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock elevator
 
 ### Lua Example
+
 `bhv_ttc_elevator_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_elevator_update(void);`
 
+`void bhv_ttc_elevator_update(void);`
 
 ## bhv_ttc_2d_rotator_init
 
 ### Description
+
 Behavior init function for Tick Tock Clock 2D rotator
 
 ### Lua Example
+
 `bhv_ttc_2d_rotator_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_2d_rotator_init(void);`
 
+`void bhv_ttc_2d_rotator_init(void);`
 
 ## bhv_ttc_2d_rotator_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock 2D rotator
 
 ### Lua Example
+
 `bhv_ttc_2d_rotator_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_2d_rotator_update(void);`
 
+`void bhv_ttc_2d_rotator_update(void);`
 
 ## bhv_ttc_spinner_update
 
 ### Description
+
 Behavior loop function for Tick Tock Clock spinner
 
 ### Lua Example
+
 `bhv_ttc_spinner_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ttc_spinner_update(void);`
 
+`void bhv_ttc_spinner_update(void);`
 
 ## bhv_mr_blizzard_init
 
 ### Description
+
 Behavior init function for Mr. Blizzard
 
 ### Lua Example
+
 `bhv_mr_blizzard_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mr_blizzard_init(void);`
 
+`void bhv_mr_blizzard_init(void);`
 
 ## bhv_mr_blizzard_update
 
 ### Description
+
 Behavior loop function for Mr. Blizzard
 
 ### Lua Example
+
 `bhv_mr_blizzard_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mr_blizzard_update(void);`
 
+`void bhv_mr_blizzard_update(void);`
 
 ## bhv_mr_blizzard_snowball
 
 ### Description
+
 Behavior loop function for Mr. Blizzard's snowball
 
 ### Lua Example
+
 `bhv_mr_blizzard_snowball()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mr_blizzard_snowball(void);`
 
+`void bhv_mr_blizzard_snowball(void);`
 
 ## bhv_sliding_plat_2_init
 
 ### Description
+
 Behavior init function for sliding platform 2 in Rainbow Ride and Bowser courses
 
 ### Lua Example
+
 `bhv_sliding_plat_2_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sliding_plat_2_init(void);`
 
+`void bhv_sliding_plat_2_init(void);`
 
 ## bhv_sliding_plat_2_loop
 
 ### Description
+
 Behavior loop function for sliding platform 2 in Rainbow Ride and Bowser courses
 
 ### Lua Example
+
 `bhv_sliding_plat_2_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_sliding_plat_2_loop(void);`
 
+`void bhv_sliding_plat_2_loop(void);`
 
 ## bhv_rotating_octagonal_plat_init
 
 ### Description
+
 Behavior init function for Rotating octagonal platform in Rainbow Ride and Bowser in the Sky
 
 ### Lua Example
+
 `bhv_rotating_octagonal_plat_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rotating_octagonal_plat_init(void);`
 
+`void bhv_rotating_octagonal_plat_init(void);`
 
 ## bhv_rotating_octagonal_plat_loop
 
 ### Description
+
 Behavior loop function for Rotating octagonal platform in Rainbow Ride and Bowser in the Sky
 
 ### Lua Example
+
 `bhv_rotating_octagonal_plat_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_rotating_octagonal_plat_loop(void);`
 
+`void bhv_rotating_octagonal_plat_loop(void);`
 
 ## bhv_animates_on_floor_switch_press_init
 
 ### Description
+
 Behavior init function for animates on floor switch press in Rainbow Ride and Bowser courses
 
 ### Lua Example
+
 `bhv_animates_on_floor_switch_press_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_animates_on_floor_switch_press_init(void);`
 
+`void bhv_animates_on_floor_switch_press_init(void);`
 
 ## bhv_animates_on_floor_switch_press_loop
 
 ### Description
+
 Behavior loop function for animates on floor switch press in Rainbow Ride and Bowser courses
 
 ### Lua Example
+
 `bhv_animates_on_floor_switch_press_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_animates_on_floor_switch_press_loop(void);`
 
+`void bhv_animates_on_floor_switch_press_loop(void);`
 
 ## bhv_activated_back_and_forth_platform_init
 
 ### Description
+
 Behavior init function for activated back and forth platform in Bowser courses
 
 ### Lua Example
+
 `bhv_activated_back_and_forth_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_activated_back_and_forth_platform_init(void);`
 
+`void bhv_activated_back_and_forth_platform_init(void);`
 
 ## bhv_activated_back_and_forth_platform_update
 
 ### Description
+
 Behavior loop function for activated back and forth platform in Bowser courses
 
 ### Lua Example
+
 `bhv_activated_back_and_forth_platform_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_activated_back_and_forth_platform_update(void);`
 
+`void bhv_activated_back_and_forth_platform_update(void);`
 
 ## bhv_recovery_heart_loop
 
 ### Description
+
 Behavior loop function for Recovery Heart
 
 ### Lua Example
+
 `bhv_recovery_heart_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_recovery_heart_loop(void);`
 
+`void bhv_recovery_heart_loop(void);`
 
 ## bhv_water_bomb_cannon_loop
 
 ### Description
+
 Behavior loop function for water bomb cannon
 
 ### Lua Example
+
 `bhv_water_bomb_cannon_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_water_bomb_cannon_loop(void);`
 
+`void bhv_water_bomb_cannon_loop(void);`
 
 ## bhv_bubble_cannon_barrel_loop
 
 ### Description
+
 Behavior loop function for bubble cannon barrel
 
 ### Lua Example
+
 `bhv_bubble_cannon_barrel_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bubble_cannon_barrel_loop(void);`
 
+`void bhv_bubble_cannon_barrel_loop(void);`
 
 ## bhv_unagi_init
 
 ### Description
+
 Behavior init function for Unagi
 
 ### Lua Example
+
 `bhv_unagi_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_unagi_init(void);`
 
+`void bhv_unagi_init(void);`
 
 ## bhv_unagi_loop
 
 ### Description
+
 Behavior loop function for Unagi
 
 ### Lua Example
+
 `bhv_unagi_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_unagi_loop(void);`
 
+`void bhv_unagi_loop(void);`
 
 ## bhv_unagi_subobject_loop
 
 ### Description
+
 Behavior loop function for Unagi subobject
 
 ### Lua Example
+
 `bhv_unagi_subobject_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_unagi_subobject_loop(void);`
 
+`void bhv_unagi_subobject_loop(void);`
 
 ## bhv_dorrie_update
 
 ### Description
+
 Behavior loop function for Dorrie
 
 ### Lua Example
+
 `bhv_dorrie_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_dorrie_update(void);`
 
+`void bhv_dorrie_update(void);`
 
 ## bhv_haunted_chair_init
 
 ### Description
+
 Behavior init function for Haunted Chair
 
 ### Lua Example
+
 `bhv_haunted_chair_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_haunted_chair_init(void);`
 
+`void bhv_haunted_chair_init(void);`
 
 ## bhv_haunted_chair_loop
 
 ### Description
+
 Behavior loop function for Haunted Chair
 
 ### Lua Example
+
 `bhv_haunted_chair_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_haunted_chair_loop(void);`
 
+`void bhv_haunted_chair_loop(void);`
 
 ## bhv_mad_piano_update
 
 ### Description
+
 Behavior loop function for Mad Piano
 
 ### Lua Example
+
 `bhv_mad_piano_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_mad_piano_update(void);`
 
+`void bhv_mad_piano_update(void);`
 
 ## bhv_flying_bookend_loop
 
 ### Description
+
 Behavior loop function for flying bookend
 
 ### Lua Example
+
 `bhv_flying_bookend_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_flying_bookend_loop(void);`
 
+`void bhv_flying_bookend_loop(void);`
 
 ## bhv_bookend_spawn_loop
 
 ### Description
+
 Behavior loop function for Bookend spawn
 
 ### Lua Example
+
 `bhv_bookend_spawn_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bookend_spawn_loop(void);`
 
+`void bhv_bookend_spawn_loop(void);`
 
 ## bhv_haunted_bookshelf_manager_loop
 
 ### Description
+
 Behavior loop function for haunted bookshelf manager
 
 ### Lua Example
+
 `bhv_haunted_bookshelf_manager_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_haunted_bookshelf_manager_loop(void);`
 
+`void bhv_haunted_bookshelf_manager_loop(void);`
 
 ## bhv_book_switch_loop
 
 ### Description
+
 Behavior loop function for Book switch
 
 ### Lua Example
+
 `bhv_book_switch_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_book_switch_loop(void);`
 
+`void bhv_book_switch_loop(void);`
 
 ## bhv_fire_piranha_plant_init
 
 ### Description
+
 Behavior init function for Fire Piranha Plant
 
 ### Lua Example
+
 `bhv_fire_piranha_plant_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fire_piranha_plant_init(void);`
 
+`void bhv_fire_piranha_plant_init(void);`
 
 ## bhv_fire_piranha_plant_update
 
 ### Description
+
 Behavior loop function for Fire Piranha Plant
 
 ### Lua Example
+
 `bhv_fire_piranha_plant_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fire_piranha_plant_update(void);`
 
+`void bhv_fire_piranha_plant_update(void);`
 
 ## bhv_small_piranha_flame_loop
 
 ### Description
+
 Behavior loop function for Small Piranha flame
 
 ### Lua Example
+
 `bhv_small_piranha_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_small_piranha_flame_loop(void);`
 
+`void bhv_small_piranha_flame_loop(void);`
 
 ## bhv_fire_spitter_update
 
 ### Description
+
 Behavior loop function for Fire spitter
 
 ### Lua Example
+
 `bhv_fire_spitter_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fire_spitter_update(void);`
 
+`void bhv_fire_spitter_update(void);`
 
 ## bhv_fly_guy_flame_loop
 
 ### Description
+
 Behavior loop function for Fly Guy flame
 
 ### Lua Example
+
 `bhv_fly_guy_flame_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_fly_guy_flame_loop(void);`
 
+`void bhv_fly_guy_flame_loop(void);`
 
 ## bhv_snufit_loop
 
 ### Description
+
 Behavior loop function for Snufit
 
 ### Lua Example
+
 `bhv_snufit_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snufit_loop(void);`
 
+`void bhv_snufit_loop(void);`
 
 ## bhv_snufit_balls_loop
 
 ### Description
+
 Behavior loop function for Snufit balls
 
 ### Lua Example
+
 `bhv_snufit_balls_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_snufit_balls_loop(void);`
 
+`void bhv_snufit_balls_loop(void);`
 
 ## bhv_horizontal_grindel_init
 
 ### Description
+
 Behavior init function for horizontal Grindel
 
 ### Lua Example
+
 `bhv_horizontal_grindel_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_horizontal_grindel_init(void);`
 
+`void bhv_horizontal_grindel_init(void);`
 
 ## bhv_horizontal_grindel_update
 
 ### Description
+
 Behavior loop function for horizontal Grindel
 
 ### Lua Example
+
 `bhv_horizontal_grindel_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_horizontal_grindel_update(void);`
 
+`void bhv_horizontal_grindel_update(void);`
 
 ## bhv_eyerok_boss_init
 
 ### Description
+
 Behavior init function for Eyerok boss
 
 ### Lua Example
+
 `bhv_eyerok_boss_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_eyerok_boss_init(void);`
 
+`void bhv_eyerok_boss_init(void);`
 
 ## bhv_eyerok_boss_loop
 
 ### Description
+
 Behavior loop function for Eyerok boss
 
 ### Lua Example
+
 `bhv_eyerok_boss_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_eyerok_boss_loop(void);`
 
+`void bhv_eyerok_boss_loop(void);`
 
 ## bhv_eyerok_hand_loop
 
 ### Description
+
 Behavior loop function for Eyerok hand
 
 ### Lua Example
+
 `bhv_eyerok_hand_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_eyerok_hand_loop(void);`
 
+`void bhv_eyerok_hand_loop(void);`
 
 ## bhv_klepto_init
 
 ### Description
+
 Behavior init function for Klepto
 
 ### Lua Example
+
 `bhv_klepto_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_klepto_init(void);`
 
+`void bhv_klepto_init(void);`
 
 ## bhv_klepto_update
 
 ### Description
+
 Behavior loop function for Klepto
 
 ### Lua Example
+
 `bhv_klepto_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_klepto_update(void);`
 
+`void bhv_klepto_update(void);`
 
 ## bhv_bird_update
 
 ### Description
+
 Behavior loop function for bird
 
 ### Lua Example
+
 `bhv_bird_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bird_update(void);`
 
+`void bhv_bird_update(void);`
 
 ## bhv_racing_penguin_init
 
 ### Description
+
 Behavior init function for Racing Penguin
 
 ### Lua Example
+
 `bhv_racing_penguin_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_racing_penguin_init(void);`
 
+`void bhv_racing_penguin_init(void);`
 
 ## bhv_racing_penguin_update
 
 ### Description
+
 Behavior loop function for Racing Penguin
 
 ### Lua Example
+
 `bhv_racing_penguin_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_racing_penguin_update(void);`
 
+`void bhv_racing_penguin_update(void);`
 
 ## bhv_penguin_race_finish_line_update
 
 ### Description
+
 Behavior loop function for Penguin race finish line
 
 ### Lua Example
+
 `bhv_penguin_race_finish_line_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_penguin_race_finish_line_update(void);`
 
+`void bhv_penguin_race_finish_line_update(void);`
 
 ## bhv_penguin_race_shortcut_check_update
 
 ### Description
+
 Behavior loop function for Penguin race shortcut check
 
 ### Lua Example
+
 `bhv_penguin_race_shortcut_check_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_penguin_race_shortcut_check_update(void);`
 
+`void bhv_penguin_race_shortcut_check_update(void);`
 
 ## bhv_coffin_spawner_loop
 
 ### Description
+
 Behavior loop function for coffin spawner
 
 ### Lua Example
+
 `bhv_coffin_spawner_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coffin_spawner_loop(void);`
 
+`void bhv_coffin_spawner_loop(void);`
 
 ## bhv_coffin_loop
 
 ### Description
+
 Behavior loop function for coffin
 
 ### Lua Example
+
 `bhv_coffin_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_coffin_loop(void);`
 
+`void bhv_coffin_loop(void);`
 
 ## bhv_clam_loop
 
 ### Description
+
 Behavior loop function for Clam
 
 ### Lua Example
+
 `bhv_clam_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_clam_loop(void);`
 
+`void bhv_clam_loop(void);`
 
 ## bhv_skeeter_update
 
 ### Description
+
 Behavior loop function for Skeeter
 
 ### Lua Example
+
 `bhv_skeeter_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_skeeter_update(void);`
 
+`void bhv_skeeter_update(void);`
 
 ## bhv_skeeter_wave_update
 
 ### Description
+
 Behavior loop function for Skeeter wave
 
 ### Lua Example
+
 `bhv_skeeter_wave_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_skeeter_wave_update(void);`
 
+`void bhv_skeeter_wave_update(void);`
 
 ## bhv_swing_platform_init
 
 ### Description
+
 Behavior init function for swing platform
 
 ### Lua Example
+
 `bhv_swing_platform_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_swing_platform_init(void);`
 
+`void bhv_swing_platform_init(void);`
 
 ## bhv_swing_platform_update
 
 ### Description
+
 Behavior loop function for swing platform
 
 ### Lua Example
+
 `bhv_swing_platform_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_swing_platform_update(void);`
 
+`void bhv_swing_platform_update(void);`
 
 ## bhv_donut_platform_spawner_update
 
 ### Description
+
 Behavior loop function for donut platform spawner
 
 ### Lua Example
+
 `bhv_donut_platform_spawner_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_donut_platform_spawner_update(void);`
 
+`void bhv_donut_platform_spawner_update(void);`
 
 ## bhv_donut_platform_update
 
 ### Description
+
 Behavior loop function for donut platform
 
 ### Lua Example
+
 `bhv_donut_platform_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_donut_platform_update(void);`
 
+`void bhv_donut_platform_update(void);`
 
 ## bhv_ddd_pole_init
 
 ### Description
+
 Behavior init function for Dire Dire Docks pole
 
 ### Lua Example
+
 `bhv_ddd_pole_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ddd_pole_init(void);`
 
+`void bhv_ddd_pole_init(void);`
 
 ## bhv_ddd_pole_update
 
 ### Description
+
 Behavior loop function for Dire Dire Docks pole
 
 ### Lua Example
+
 `bhv_ddd_pole_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ddd_pole_update(void);`
 
+`void bhv_ddd_pole_update(void);`
 
 ## bhv_red_coin_star_marker_init
 
 ### Description
+
 Behavior init function for Red Coin Star marker
 
 ### Lua Example
+
 `bhv_red_coin_star_marker_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_red_coin_star_marker_init(void);`
 
+`void bhv_red_coin_star_marker_init(void);`
 
 ## bhv_triplet_butterfly_update
 
 ### Description
+
 Behavior loop function for a triplet of butterflies
 
 ### Lua Example
+
 `bhv_triplet_butterfly_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_triplet_butterfly_update(void);`
 
+`void bhv_triplet_butterfly_update(void);`
 
 ## bhv_bubba_loop
 
 ### Description
+
 Behavior loop function for Bubba
 
 ### Lua Example
+
 `bhv_bubba_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_bubba_loop(void);`
 
+`void bhv_bubba_loop(void);`
 
 ## bhv_intro_lakitu_loop
 
 ### Description
+
 Behavior loop function for intro Lakitu
 
 ### Lua Example
+
 `bhv_intro_lakitu_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_intro_lakitu_loop(void);`
 
+`void bhv_intro_lakitu_loop(void);`
 
 ## bhv_intro_peach_loop
 
 ### Description
+
 Behavior loop function for intro Peach
 
 ### Lua Example
+
 `bhv_intro_peach_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_intro_peach_loop(void);`
 
+`void bhv_intro_peach_loop(void);`
 
 ## bhv_end_birds_1_loop
 
 ### Description
+
 Behavior loop function for first end birds
 
 ### Lua Example
+
 `bhv_end_birds_1_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_end_birds_1_loop(void);`
 
+`void bhv_end_birds_1_loop(void);`
 
 ## bhv_end_birds_2_loop
 
 ### Description
+
 Behavior loop function for second end birds
 
 ### Lua Example
+
 `bhv_end_birds_2_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_end_birds_2_loop(void);`
 
+`void bhv_end_birds_2_loop(void);`
 
 ## bhv_intro_scene_loop
 
 ### Description
+
 Behavior loop function for intro scene
 
 ### Lua Example
+
 `bhv_intro_scene_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_intro_scene_loop(void);`
 
+`void bhv_intro_scene_loop(void);`
 
 ## bhv_yoshi_loop
 
 ### Description
+
 Behavior loop function for Yoshi
 
 ### Lua Example
+
 `bhv_yoshi_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_yoshi_loop(void);`
 
+`void bhv_yoshi_loop(void);`
 
 ## bhv_volcano_trap_loop
 
 ### Description
+
 Behavior loop function for volcano trap
 
 ### Lua Example
+
 `bhv_volcano_trap_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_volcano_trap_loop(void);`
 
+`void bhv_volcano_trap_loop(void);`
 
 ## uv_update_scroll
 
 ### Description
+
 Behavior loop function for UV texture scrolling
 
 ### Lua Example
+
 `uv_update_scroll()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void uv_update_scroll(void);`
 
+`void uv_update_scroll(void);`
 
 ## bhv_ambient_light_update
 
 ### Description
+
 Behavior loop function for the lighting engine ambient light. Takes the first 3 behavior parameter bytes for RGB color
 
 ### Lua Example
+
 `bhv_ambient_light_update()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_ambient_light_update(void);`
 
+`void bhv_ambient_light_update(void);`
 
 ## bhv_point_light_init
 
 ### Description
+
 Behavior init function for the lighting engine point light. Takes the first 3 behavior parameter bytes for RGB color and the last for radius
 
 ### Lua Example
+
 `bhv_point_light_init()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_point_light_init(void);`
 
+`void bhv_point_light_init(void);`
 
 ## bhv_point_light_loop
 
 ### Description
+
 Behavior loop function for the lighting engine point light
 
 ### Lua Example
+
 `bhv_point_light_loop()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void bhv_point_light_loop(void);`
 
+`void bhv_point_light_loop(void);`
 
 ## spawn_default_star
 
 ### Description
+
 Spawns a Star with an ID corresponding to the current object's first behavior parameter byte
 
 ### Lua Example
+
 `local objectValue = spawn_default_star(x, y, z)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | x | `number` |
@@ -10316,21 +12592,25 @@ Spawns a Star with an ID corresponding to the current object's first behavior pa
 | z | `number` |
 
 ### Returns
+
 - [Object](structs.md#Object)
 
 ### C Prototype
-`struct Object* spawn_default_star(f32 x, f32 y, f32 z);`
 
+`struct Object* spawn_default_star(f32 x, f32 y, f32 z);`
 
 ## spawn_red_coin_cutscene_star
 
 ### Description
+
 Spawns a Red Coin cutscene star with an ID corresponding to the current object's first behavior parameter byte
 
 ### Lua Example
+
 `local objectValue = spawn_red_coin_cutscene_star(x, y, z)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | x | `number` |
@@ -10338,21 +12618,25 @@ Spawns a Red Coin cutscene star with an ID corresponding to the current object's
 | z | `number` |
 
 ### Returns
+
 - [Object](structs.md#Object)
 
 ### C Prototype
-`struct Object* spawn_red_coin_cutscene_star(f32 x, f32 y, f32 z);`
 
+`struct Object* spawn_red_coin_cutscene_star(f32 x, f32 y, f32 z);`
 
 ## spawn_no_exit_star
 
 ### Description
+
 Spawns a Star that won't make Mario exit the level with an ID corresponding to the current object's first behavior parameter byte
 
 ### Lua Example
+
 `local objectValue = spawn_no_exit_star(x, y, z)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | x | `number` |
@@ -10360,290 +12644,342 @@ Spawns a Star that won't make Mario exit the level with an ID corresponding to t
 | z | `number` |
 
 ### Returns
+
 - [Object](structs.md#Object)
 
 ### C Prototype
+
 `struct Object* spawn_no_exit_star(f32 x, f32 y, f32 z);`
 
-
 ---
+
 # functions from behavior_script.h
-
-<br />
-
 
 ## random_u16
 
 ### Description
+
 Generates a pseudo random integer between 0 and 65535
 
 ### Lua Example
+
 `local integerValue = random_u16()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `integer`
 
 ### C Prototype
-`u16 random_u16(void);`
 
+`u16 random_u16(void);`
 
 ## random_float
 
 ### Description
+
 Generates a pseudo random float between 0.0 and 1.0
 
 ### Lua Example
+
 `local numberValue = random_float()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `number`
 
 ### C Prototype
-`float random_float(void);`
 
+`float random_float(void);`
 
 ## random_sign
 
 ### Description
+
 Returns either 1 or -1 with a pseudo 50:50 chance
 
 ### Lua Example
+
 `local integerValue = random_sign()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `integer`
 
 ### C Prototype
-`s32 random_sign(void);`
 
+`s32 random_sign(void);`
 
 ## obj_update_gfx_pos_and_angle
 
 ### Description
+
 Updates an object's graphical position and angle
 
 ### Lua Example
+
 `obj_update_gfx_pos_and_angle(obj)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | obj | [Object](structs.md#Object) |
 
 ### Returns
+
 - None
 
 ### C Prototype
-`void obj_update_gfx_pos_and_angle(struct Object *obj);`
 
+`void obj_update_gfx_pos_and_angle(struct Object *obj);`
 
 ## position_based_random_u16
 
 ### Description
+
 Sets the current object's position to random integers between 0 and 65536
 
 ### Lua Example
+
 `local integerValue = position_based_random_u16()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `integer`
 
 ### C Prototype
-`u16 position_based_random_u16(void);`
 
+`u16 position_based_random_u16(void);`
 
 ## position_based_random_float_position
 
 ### Description
+
 Sets the current object's position to random floats between 0.0 and 1.0
 
 ### Lua Example
+
 `local numberValue = position_based_random_float_position()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `number`
 
 ### C Prototype
-`f32 position_based_random_float_position(void);`
 
+`f32 position_based_random_float_position(void);`
 
 ## draw_distance_scalar_is_infinite
 
 ### Description
+
 Checks if the draw distance scalar is infinite
 
 ### Lua Example
+
 `local booleanValue = draw_distance_scalar_is_infinite()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `boolean`
 
 ### C Prototype
-`bool draw_distance_scalar_is_infinite(void);`
 
+`bool draw_distance_scalar_is_infinite(void);`
 
 ## draw_distance_scalar
 
 ### Description
+
 Gets the draw distance scalar
 
 ### Lua Example
+
 `local numberValue = draw_distance_scalar()`
 
 ### Parameters
+
 - None
 
 ### Returns
+
 - `number`
 
 ### C Prototype
+
 `f32 draw_distance_scalar(void);`
 
-
 ---
+
 # functions from behavior_table.h
-
-<br />
-
 
 ## get_id_from_behavior
 
 ### Description
+
 Gets the behavior ID of the provided `behavior`
 
 ### Lua Example
+
 `local enumValue = get_id_from_behavior(behavior)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | behavior | `Pointer` <`BehaviorScript`> |
 
 ### Returns
+
 - [enum BehaviorId](constants.md#enum-BehaviorId)
 
 ### C Prototype
-`enum BehaviorId get_id_from_behavior(const BehaviorScript* behavior);`
 
+`enum BehaviorId get_id_from_behavior(const BehaviorScript* behavior);`
 
 ## get_id_from_vanilla_behavior
 
 ### Description
+
 Gets the behavior ID of the provided `behavior` if it's a vanilla behavior, `id_bhv_max_count` otherwise
 
 ### Lua Example
+
 `local enumValue = get_id_from_vanilla_behavior(behavior)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | behavior | `Pointer` <`BehaviorScript`> |
 
 ### Returns
+
 - [enum BehaviorId](constants.md#enum-BehaviorId)
 
 ### C Prototype
-`enum BehaviorId get_id_from_vanilla_behavior(const BehaviorScript* behavior);`
 
+`enum BehaviorId get_id_from_vanilla_behavior(const BehaviorScript* behavior);`
 
 ## get_behavior_from_id
 
 ### Description
+
 Gets the behavior script corresponding to the provided `id`
 
 ### Lua Example
+
 `local pointerValue = get_behavior_from_id(id)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | id | [enum BehaviorId](constants.md#enum-BehaviorId) |
 
 ### Returns
+
 - `Pointer` <`BehaviorScript`>
 
 ### C Prototype
-`const BehaviorScript* get_behavior_from_id(enum BehaviorId id);`
 
+`const BehaviorScript* get_behavior_from_id(enum BehaviorId id);`
 
 ## get_vanilla_behavior_from_id
 
 ### Description
+
 Gets the behavior script corresponding to the provided `id` if it's a vanilla behavior, `nil` otherwise
 
 ### Lua Example
+
 `local pointerValue = get_vanilla_behavior_from_id(id)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | id | [enum BehaviorId](constants.md#enum-BehaviorId) |
 
 ### Returns
+
 - `Pointer` <`BehaviorScript`>
 
 ### C Prototype
-`const BehaviorScript* get_vanilla_behavior_from_id(enum BehaviorId id);`
 
+`const BehaviorScript* get_vanilla_behavior_from_id(enum BehaviorId id);`
 
 ## get_behavior_name_from_id
 
 ### Description
+
 Gets the behavior name from the provided `id` (bhvMyGreatMODCustom004)
 
 ### Lua Example
+
 `local stringValue = get_behavior_name_from_id(id)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | id | [enum BehaviorId](constants.md#enum-BehaviorId) |
 
 ### Returns
+
 - `string`
 
 ### C Prototype
-`const char* get_behavior_name_from_id(enum BehaviorId id);`
 
+`const char* get_behavior_name_from_id(enum BehaviorId id);`
 
 ## get_id_from_behavior_name
 
 ### Description
+
 Gets the behavior ID corresponding to the provided `name`
 
 ### Lua Example
+
 `local enumValue = get_id_from_behavior_name(name)`
 
 ### Parameters
+
 | Field | Type |
 | ----- | ---- |
 | name | `string` |
 
 ### Returns
+
 - [enum BehaviorId](constants.md#enum-BehaviorId)
 
 ### C Prototype
-`enum BehaviorId get_id_from_behavior_name(const char* name);`
 
+`enum BehaviorId get_id_from_behavior_name(const char* name);`
 ---
 
-[< prev](functions.md) | [1](functions.md) | 2 | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-3.md)]
-
+[< prev](functions.md) | [1](functions.md) | 2 | [3](functions-3.md) | [4](functions-4.md) | [5](functions-5.md) | [6](functions-6.md) | [7](functions-7.md) | [next >](functions-3.md)

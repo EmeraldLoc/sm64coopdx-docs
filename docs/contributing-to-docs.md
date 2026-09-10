@@ -26,7 +26,7 @@ View the [configuration file](../.markdownlint.json) to see every single rule ig
 
 - Title and header capitalization uses title case. Specifically, we use the [APA style](https://apastyle.apa.org/style-grammar-guidelines/capitalization/title-case)
 - In a bullet like this, do not end off the final sentence with a `.`. For example, this sentence is the last, so there will not be a period, but the previous sentence was not the last so it had a period
-- Refrain from using inline HTML
+- Refrain from using inline HTML in manually written documentation
 - Tables should have pipes separated with a space:
 
 ```md

@@ -891,13 +891,13 @@ def doc_page_link(page_num):
         return 'functions-%d.md' % page_num
 
 def doc_function_index(processed_files, manual_functions):
-    s = '# Supported Functions\n'
+    s = '\n# Supported Functions\n'
 
     if manual_functions:
         s += '\n- manually written functions\n'
         for function in manual_functions:
-            s += '   - [{identifier}](#{identifier})\n'.format(identifier=function['identifier'])
-        s += '\n<br />\n\n'
+            s += '    - [{identifier}](#{identifier})\n'.format(identifier=function['identifier'])
+        s += '\n'
 
     for processed_file in processed_files:
         if not processed_file['functions'] or processed_file.get('no_doc'):
@@ -911,8 +911,7 @@ def doc_function_index(processed_files, manual_functions):
             if not allowed_identifier(None, functions_hidden, processed_file['filename'], function['identifier']):
                 continue
 
-            s += '   - [%s](%s#%s)\n' % (function['identifier'], doc_page_link(page_num), function['identifier'])
-        s += '\n<br />\n\n'
+            s += '    - [%s](%s#%s)\n' % (function['identifier'], doc_page_link(page_num), function['identifier'])
 
     return s
 
@@ -980,11 +979,11 @@ def doc_function(fname, function):
     param_str = ', '.join([x['identifier'] for x in function['params'] if 'RET' not in x])
 
     if description[0] != "":
-        s += '\n### Description\n'
+        s += '\n### Description\n\n'
         for line in description:
             s +=  f'{line}\n'
 
-    s += "\n### Lua Example\n"
+    s += "\n### Lua Example\n\n"
     rvalues = []
     if rtype is not None:
         rid = rtype.replace('`', '').split(' ')[0]
@@ -1001,7 +1000,7 @@ def doc_function(fname, function):
     else:
         s += "`%s(%s)`\n" % (fid, param_str)
 
-    s += '\n### Parameters\n'
+    s += '\n### Parameters\n\n'
     if len(fparams) > 0:
         s += '| Field | Type |\n'
         s += '| ----- | ---- |\n'
@@ -1023,7 +1022,7 @@ def doc_function(fname, function):
     else:
         s += '- None\n'
 
-    s += '\n### Returns\n'
+    s += '\n### Returns\n\n'
     if len(rvalues) > 0:
         for _, ptype, plink in rvalues:
             if plink:
@@ -1034,10 +1033,8 @@ def doc_function(fname, function):
         s += '- None\n'
 
 
-    s += '\n### C Prototype\n'
+    s += '\n### C Prototype\n\n'
     s += '`%s`\n' % function['line'].strip()
-
-    s += '\n'
 
     return s
 
@@ -1054,12 +1051,12 @@ def doc_files(processed_files):
     extra_space = 25000
 
     s = '## [:rewind: Modding](modding.md)\n\n'
-    s += '---\n\n$[FUNCTION_NAV_HERE]\n\n---\n\n'
+    s += '---\n\n$[FUNCTION_NAV_HERE]\n\n---\n'
     s += '$[FUNCTION_INDEX_HERE]'
 
     manual_functions, classes = read_manually_written_functions(get_path(manually_written_functions_filename))
     if manual_functions:
-        s += '\n---\n# manually written functions\n'
+        s += '\n---\n\n# manually written functions\n'
         for function in manual_functions:
             s += doc_manual_function(function, classes, ".", False)
 
@@ -1073,21 +1070,21 @@ def doc_files(processed_files):
             continue
 
         s_file  = '\n---'
-        s_file += '\n# functions from %s\n\n<br />\n\n' % processed_file['filename']
+        s_file += '\n\n# functions from %s\n' % processed_file['filename']
         s_file += functions
 
         if len(s) + len(s_file) + extra_space > page_len_limit:
-            s += '---\n\n$[FUNCTION_NAV_HERE]\n\n'
+            s += '---\n\n$[FUNCTION_NAV_HERE]\n'
             pages[page_num] = s
             s = '## [:rewind: Lua Functions](functions.md)\n\n'
-            s += '---\n\n$[FUNCTION_NAV_HERE]\n\n'
+            s += '---\n\n$[FUNCTION_NAV_HERE]\n'
             page_num += 1
             extra_space = 0
 
         s += s_file
         processed_file['page_num'] = page_num
 
-    s += '\n---\n\n$[FUNCTION_NAV_HERE]\n\n'
+    s += '\n---\n\n$[FUNCTION_NAV_HERE]\n'
     pages[page_num] = s
 
     for pnum in pages:
@@ -1114,7 +1111,7 @@ def doc_files(processed_files):
         if (pnum + 1) in pages:
             function_nav += ' | [next >](%s)' % doc_page_link(pnum + 1)
 
-        buffer = buffer.replace('$[FUNCTION_NAV_HERE', function_nav)
+        buffer = buffer.replace('$[FUNCTION_NAV_HERE]', function_nav)
 
         with open(get_path(out_filename_docs % page_name), 'w', encoding='utf-8', newline='\n') as out:
             out.write(buffer)
