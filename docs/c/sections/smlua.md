@@ -11,6 +11,7 @@ Autogen is the system in place to allow C constants, functions and structs to be
 Autogen can be ran by running `autogen/autogen.sh` in the root directory of your project.
 
 Autogen may need a rerun when changes are made to:
+
 - Functions
 - Structs
 - Enums

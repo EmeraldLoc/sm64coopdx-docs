@@ -26,16 +26,16 @@ The ModFS files are located in the `sav` directory at the usual save file locati
 
 - The maximum filepath length is **256 characters** (`MOD_FS_MAX_PATH`), including the NUL terminator.
 - Filepaths have the following restrictions:
-  - Cannot start or end with whitespaces or slashes `/`, and cannot have two or more consecutive slashes `/`
-  - Can contain only valid ASCII characters, no `*` or `\`
-  - Cannot be called `properties.json` (this name is reserved for ModFS internal properties)
-  - Only the following extensions (and extension-less files) are allowed:
-    - text: `.txt`, `.json`, `.ini`, `.sav`
-    - actors: `.bin`, `.col`
-    - behaviors: `.bhv`
-    - textures: `.tex`, `.png`
-    - levels: `.lvl`
-    - audio: `.m64`, `.aiff`, `.mp3`, `.ogg`
+    - Cannot start or end with whitespaces or slashes `/`, and cannot have two or more consecutive slashes `/`
+    - Can contain only valid ASCII characters, no `*` or `\`
+    - Cannot be called `properties.json` (this name is reserved for ModFS internal properties)
+    - Only the following extensions (and extension-less files) are allowed:
+        - text: `.txt`, `.json`, `.ini`, `.sav`
+        - actors: `.bin`, `.col`
+        - behaviors: `.bhv`
+        - textures: `.tex`, `.png`
+        - levels: `.lvl`
+        - audio: `.m64`, `.aiff`, `.mp3`, `.ogg`
 
 ## [`ModFs`](../structs.md#ModFs)
 

@@ -26,9 +26,11 @@ GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_START)
 GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_LEVEL_OF_DETAIL)
 ...
 ```
+
 First column is the constant name.
 
 If needed, explicitly define the value of each constant:
+
 ```c
 // src/engine/graph_node_types.inl
 
@@ -40,6 +42,7 @@ GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_START,            0x00A)
 GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_LEVEL_OF_DETAIL,  0x00B)
 ...
 ```
+
 Second column becomes the constant value.
 
 ## Enum definition
@@ -62,6 +65,7 @@ From now on, we can start using the enum in all sorts of look-up tables.<br>
 For example, a function that returns the size of a `GraphNode` struct from its type.
 
 First, let's add the relevant data to the `.inl` file:
+
 ```c
 // src/engine/graph_node_types.inl
 
@@ -73,9 +77,11 @@ GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_START,            0x00A,                        
 GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_LEVEL_OF_DETAIL,  0x00B,                              GraphNodeLevelOfDetail)
 ...
 ```
+
 The third column holds the C type of the `GraphNode`.
 
 Now, create the function using these:
+
 ```c
 // src/engine/graph_node.c
 
@@ -87,11 +93,10 @@ u32 get_graph_node_type_size(s16 type) {
 }
 ```
 
-<br>
-
 Another example is the function `cast_graph_node` in the Lua API, which builds and returns the correct `CObject` depending on the `GraphNode` type.
 
 But for that, we need to map each type to its corresponding Lua Object Type:
+
 ```c
 // src/engine/graph_node_types.inl
 
@@ -103,9 +108,11 @@ GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_START,            0x00A,                        
 GRAPH_NODE_TYPE(GRAPH_NODE_TYPE_LEVEL_OF_DETAIL,  0x00B,                              GraphNodeLevelOfDetail,   LOT_GRAPHNODELEVELOFDETAIL)
 ...
 ```
+
 Fourth column gives the Lua Object Type.
 
 And that's it! The mapping table now looks like this:
+
 ```c
 // src/pc/lua/smlua_functions.c
 
