@@ -6,6 +6,8 @@ The ROM being asked for is a copy of the Super Mario 64 game. We cannot provide 
 
 ## How can I install mods
 
+You can install mods from the [modding site](https://mods.sm64coopdx.com) or the [Discord server](https://discord.gg/TJVKHS4).
+
 Mods downloaded can be placed either the `mods` folder in the base directory, or in `<SAVE FILE LOCATION>/mods`. You can also drag and drop mods into the window to install them.
 
 The save file locations are:

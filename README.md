@@ -26,4 +26,4 @@ For instructions on building the game, head [here](BUILDING.md). Manually compil
 
 ## Community
 
-We have an official Discord server open to the public [here](https://discord.gg/TJVKHS4).
+We have an official Discord server open to the public [here](https://discord.gg/TJVKHS4). You can find and install mods [on the modding site](https://mods.sm64coopdx.com).
