@@ -1,23 +1,23 @@
 ## [:rewind: Modding](../modding.md)
 
-# [`MarioState`](../structs.md#mariostate)
+# `MarioState`
 
-A [`MarioState`](../structs.md#mariostate) is a Mario "object" that contains all information about Mario. Mario's position, facing angle, speed, health, inputs, etc. are all stored in a [`MarioState`](../structs.md#mariostate).
+A [`MarioState`](../structs.md#mariostate) is a Mario "object" that contains all information about Mario. Mario's position, facing angle, speed, health, inputs, etc. are all stored in a `MarioState`.
 
-This guide through [`MarioState`](../structs.md#mariostate) will be split into multiple sections:
+This guide through `MarioState` will be split into multiple sections:
 
 - [Accessing a `MarioState`](#accessing-a-mariostate)
 - [Basic `MarioState` Properties](#basic-mariostate-properties)
 
-## Accessing a [`MarioState`](../structs.md#mariostate)
+## Accessing a `MarioState`
 
-There are a few ways to access a [`MarioState`](../structs.md#mariostate):
+There are a few ways to access a `MarioState`:
 
 ### Direct Access
 
-You can directly access a [`MarioState`](../structs.md#mariostate) at any time via `gMarioStates`.
+You can directly access a `MarioState` at any time via `gMarioStates`.
 
-`gMarioStates` is an array of [`MarioState`](../structs.md#mariostate)'s of size `MAX_PLAYERS`. It's based on the local index (see TODO for more information), so `gMarioStates[0]` is always the local [`MarioState`](../structs.md#mariostate).
+`gMarioStates` is an array of `MarioState`'s of size `MAX_PLAYERS`. It's based on the local index (see TODO for more information), so `gMarioStates[0]` is always the local `MarioState`.
 
 ```lua
 ---@type MarioState
@@ -26,7 +26,7 @@ local m = gMarioStates[0]
 
 ### Access From a [Hook Event](hook-events.md)
 
-Many [hook events](hook-events.md) pass in a [`MarioState`](../structs.md#mariostate) as a parameter. `HOOK_MARIO_UPDATE`, `HOOK_BEFORE_PHYS_STEP`, `HOOK_ON_PVP_ATTACK`, that's just a few instances. There are **tons** of hooks in which a [`MarioState`](../structs.md#mariostate) is passed in.
+Many [hook events](hook-events.md) pass in a `MarioState` as a parameter. `HOOK_MARIO_UPDATE`, `HOOK_BEFORE_PHYS_STEP`, `HOOK_ON_PVP_ATTACK`, that's just a few instances. There are **tons** of hooks in which a `MarioState` is passed in.
 
 ```lua
 ---@param m MarioState
@@ -44,15 +44,15 @@ end
 hook_event(HOOK_MARIO_UPDATE, mario_update)
 ```
 
-Consult the documentation to see what index you can expect for the [`MarioState`](../structs.md#mariostate). Some pass in the local mario only, others pass in any mario.
+Consult the [hook event documentation](hook-events.md) to see what index you can expect for the `MarioState` when coming from a hook event. Some pass in the local mario only, others pass in any mario.
 
-## Basic [`MarioState`](../structs.md#mariostate) Properties
+## Basic `MarioState` Properties
 
 A `MarioState` is a **very** large class with a bunch of properties. We'll be going over the most important ones, but we won't be going over every single one. For a complete look, please take a look at the [`MarioState struct`](../structs.md#mariostate).
 
 ### `playerIndex`
 
-Mario's `playerIndex` is the local index that owns that [`MarioState`](../structs.md#mariostate) (for more info on networked indexes, see TODO). It's also the key for `gMarioStates`. So `gMarioStates[m.playerIndex] == m`.
+Mario's `playerIndex` is the local index that owns that `MarioState` (for more info on networked indexes, see TODO). It's also the key for `gMarioStates`. So `gMarioStates[m.playerIndex] == m`.
 
 ```lua
 ---@param m MarioState
