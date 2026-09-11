@@ -48,7 +48,7 @@ Consult the [hook event documentation](hook-events.md) to see what index you can
 
 ## Basic `MarioState` Properties
 
-A `MarioState` is a **very** large class with a bunch of properties. We'll be going over the most important ones, but we won't be going over every single one. For a complete look, please take a look at the [`MarioState struct`](../structs.md#mariostate).
+A `MarioState` is a **very** large class with a bunch of properties. We'll be going over the most important ones, but we won't be going over every single one. For a complete look, please take a look at the [`MarioState` struct](../structs.md#mariostate).
 
 ### `playerIndex`
 
