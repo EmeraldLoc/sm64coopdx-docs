@@ -33,6 +33,7 @@ View the [configuration file](../.markdownlint.json) to see every single rule ig
 Do:
 
 | Name | Description |
+|------|-------------|
 | mario | he's so cool! |
 
 Don't do:

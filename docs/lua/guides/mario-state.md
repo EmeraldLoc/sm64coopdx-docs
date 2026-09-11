@@ -1,118 +1,193 @@
 ## [:rewind: Modding](../modding.md)
 
-# How to use `gMarioStates`
+# [`MarioState`](../structs.md#mariostate)
 
-## Section 1: What is `gMarioStates`?
+A [`MarioState`](../structs.md#mariostate) is a Mario "object" that contains all information about Mario. Mario's position, facing angle, speed, health, inputs, etc. are all stored in a [`MarioState`](../structs.md#mariostate).
 
-gMarioStates is an array that goes from 0 to the maximum amount of players, or 16, subtracted by 1, 0 being your mario, that contains a `MarioState` struct. The reason the end of the range is the max players subtracted by 1 instead of just the max players is because arrays are 0 indexed, which means that instead of starting at 1, arrays start at 0, so the total numbers of entries in that array is 16, which is the maximum amount of players.
+This guide through [`MarioState`](../structs.md#mariostate) will be split into multiple sections:
 
-## Section 2: What is the `MarioState` Structure?
+- [Accessing a `MarioState`](#accessing-a-mariostate)
+- [Basic `MarioState` Properties](#basic-mariostate-properties)
 
-The `MarioState` structure contains 76 different variables, this guide will try to make it as easy as possible to understand.
+## Accessing a [`MarioState`](../structs.md#mariostate)
 
-| Field | Type | Notes |
-| ----- | ---- | ----- |
-| `playerIndex`|`integer`| This is the local index of the Mario you are modifying out of all of the 16 different Mario's.
-| `input`|`integer`| Mario's current input. This can be the `INPUT_A_BUTTON `constant, etc.
-| `flags`| `integer`| Includes things such as the current cap mario has on, and similar properties.
-| `particleFlags`| `integer`|This can be used to add particles to Mario, such as the one you see with the star dance.
-|`action`|`integer`| Mario's current action, this includes `ACT_IDLE`, `ACT_JUMP`, etc.
-|`prevAction`|`integer`|Mario's previous action, similar to above.
-|`terrainSoundAddend`|`integer`|Used to see what sound for the terrain is being used.
-|`actionState`|`integer`|Typically used within actions, can be useful for deciding whether or not to return a specific action by reading this variable set within the action.
-|`actionTimer`|`integer`|How long it has been since the action was set.
-|`actionArg`|`integer`|This var is typically set when the action is set, i.e when setting the action to `ACT_STAR_DANCE`, decide whether or not the animation should be the water star dance animation or not, if yes, set `actionArg` to 1, else, set `actionArg` to 0
-|`intendedMag`|`integer`|The intended magnitude. Without smoothening, this is the magnitude
-|`intendedYaw`|`integer`|The intended yaw, similar to above, except the yaw, or y axis.
-|`invincTimer`|`integer`|How long Mario will be invincible, if 0 or less than 0, there will be no invincibility for Mario.
-|`framesSinceA`|`integer`|How long it has been since the controller last hit the A button.
-|`framesSinceB`|`integer`|How long it has been since the controller last hit the B button.
-|`wallKickTimer`|`integer`|When you bonk on a wall, this timer is set to 5, if you press A before the timer comes down to 0, then the walljump action can be set.
-|`doubleJumpTimer`|`integer`|Similar to the `wallKickTimer`, except for being able to do a double jump.
-|`faceAngle`|`Vec3s`|Which direction mario is looking in every axis.
-|`angleVel`|`Vec3s`|Mario's angle velocity, how slow or fast Mario's angle will change.
-|`slideYaw`|`integer`|Mario's yaw face angle when sliding.
-|`twirlYaw`|`integer`|Mario's yaw face angle when twirling.
-|`pos`|`Vec3f`|Mario's current location.
-|`vel`|`Vec3f`|Mario's velocity, this is different from mario's `forwardVel` below, and more advanced. This is typically used to adjust Mario's overall speed.
-|`forwardVel`|`integer`|Mario's forward velocity, used in most of Mario's actions.
-|`slideVelX`|`integer`|Mario's x velocity for sliding. Typically use this with `slideVelZ` for best results.
-|`slideVelZ`|`integer`|Mario's z velocity for sliding. Typically use this with `slideVelX` for best results.
-|`wall`|`Surface`|The wall mario is currently touching.
-|`ceil`|`Surface`|The ceiling mario is currently touching.
-|`floor`|`Surface`|The floor mario is currently touching.
-|`ceilHeight`|`integer`|The height of mario's current ceiling.
-|`floorHeight`|`integer`|The height of mario's current floor.
-|`floorAngle`|`integer`|The angle of mario's current floor.
-|`waterLevel`|`integer`|The height of mario's current water.
-|`interactObj`|`Object`|The object mario has interacted with.
-|`heldObj`|`Object`|The object mario is holding.
-|`usedObj`|`Object`|The object mario is "using" i.e stomping a goomba, or grabbing the hoot in Whomp's Fortress.
-|`riddenObj`|`Object`|The object mario is riding, for instance, if he is riding a shell, then mario's `riddenObj` will be set to the shell object.
-|`marioObj`|`Object`|Mario's object, Mario himself is an object, so the `MarioState` structure contains the Mario object.
-|`spawnInfo`|`SpawnInfo`|Mario's Spawn Info, this is much more advanced, and should not need to be changed.
-|`area`|`Area`|Mario's current area. You can use this var to access the camera, music params, warp nodex, etc.
-|`statusForCamera`|`PlayerCameraState`|This is a bit more complicated, but is generally used to handle cutscenes, and other things such as cannons.
-|`marioBodyState`|`MarioBodyState`|This var contains multiple visual variables, such as Mario's head position, if Mario should look like he has the vanish, metal, or wing cap on, etc.
-|`controller`|`Controller`|This contains the button Mario is pressing, holding, the stick position, etc. Similar to input, except easier to change this variable and see results.
-|`animation`|`MarioAnimation`|Contains Mario's animation data, you usually don't have to touch this, but rather use functions such as `set_mario_animation`.
-|`collidedObjInteractTypes`|`integer`|If Mario is interacting with an object, then the type will be in this variable, i.e when interacting with a door, this variable will be set to `INTERACT_DOOR`, assuming it's not `INTERACT_WARP_DOOR`.
-|`numCoins`|`integer`|How many coins Mario has.
-|`numStars`|`integer`|How many stars Mario has. **NOTE: Changing this variable will NOT change the save file**, if you need to do that, refer to the function `save_file_set_star_flags`.
-|`numKeys`|`integer`|*\[UNUSED\]* How many keys mario has.
-|`numLives`|`integer`|How many lives mario has.
-|`health`|`integer`|Mario's health in hex value. Full health is 0x880.
-|`unkB0`|`integer`|Something you wont have to modify, seems to be used for animations and such.
-|`hurtCounter`|`integer`|How much health mario should lose.
-|`healCounter`|`integer`|How much health mario should gain.
-|`squishTimer`|`integer`|How long mario should stay squished for. It should be noted that if the `squishTimer` is less than or equal to 16 that mario's size will rubberband. It should also be noted that if mario's `squishTimer` is equal to 0, then mario's size will be normal.
-|`fadeWarpOpacity`|`integer`|Mario's opacity when using a fading warp.
-|`capTimer`|`integer`|How much time should the current cap last for.
-|`prevNumStarsForDialog`|`integer`|This var is used to decide if the star dialog should be played or not.
-|`peakHeight`|`integer`|Mario's highest point, or y value. Mainly used for fall damage to see how far Mario has fallen since his peak height.
-|`quicksandDepth`|`integer`|How deep mario is into the quicksand.
-|`unkC4`|`integer`|You probably wont need to modify this variable, seems to be used for `ACT_GETTING_BLOWN`.
-|`currentRoom`|`integer`|The room mario is in, used for handling the rendering of rooms.
-|`heldByObj`|`Object`|The object mario is being held by, mainly used for King Bob-omb and Chuckya.
-|`isSnoring`|`integer`|Stores if Mario is snoring or not, can be used as a bool.
-|`bubbleObj`|`Object`|The bubble object for Mario, this is almost always the bubble you see when bubbling is enabled in the host settings.
-|`freeze`|`integer`|Stores if Mario is frozen or not, can be used as a bool.
-|`splineKeyframe`|`Vec4s`|Used in the flight path for the grand star.
-|`splineKeyframeFraction`|`integer`|Used in the flight path for the grand star.
-|`splineState`|`integer`|Used in the flight path for the grand star.
-|`nonInstantWarpPos`|`Vec3f`|Mario's non instant warp position, not used in many places, you should not have to change this var.
-|`character`|`Character`|Contains all of Mario's \(or the current character's\) sounds, like snoring, dying, being attacked, etc.
-|`wasNetworkVisible`|`bool`|A more advanced variable, this var should not be changed unless you know what your doing.
-|`minimumBoneY`|`integer`|Used for animations.
-|`curAnimOffset`|`integer`|Used to offset an animation.
-|`knockbackTimer`|`integer`|Used for invincibilty when flying through the air after a bonk or being hit by another player.
-|`specialTripleJump`|`integer`|Can be used as a bool, sets whether or not to use the special triple jump unlocked after talking to Yoshi.
-|`wallNormal`|`Vec3f`|The angle of the current wall on the x, y, and z axis.
-|`cap`|`integer`|Where Mario's cap is meant to be. Can be on Mario's head, the snowman's head in Snowman's Land, held by Klepto, or on Ukiki's head.
-|`dialogID`|`integer`|The id of the current dialog Mario is in. The default value for not being in any dialog is -1.
+There are a few ways to access a [`MarioState`](../structs.md#mariostate):
 
-## Section 3: When should I use `gMarioStates`?
+### Direct Access
 
-Most of the time you won't be using `gMarioStates[0]` to access your Mario, but rather use a hook. A lot of hooks pass `m` through the function. What does this mean? Well, here is a example with comments to explain it as well as possible:
+You can directly access a [`MarioState`](../structs.md#mariostate) at any time via `gMarioStates`.
+
+`gMarioStates` is an array of [`MarioState`](../structs.md#mariostate)'s of size `MAX_PLAYERS`. It's based on the local index (see TODO for more information), so `gMarioStates[0]` is always the local [`MarioState`](../structs.md#mariostate).
 
 ```lua
--- m here is gMarioStates with the index being 0...16, one of those, so you are not always modifying your own mario.
+---@type MarioState
+local m = gMarioStates[0]
+```
+
+### Access From a [Hook Event](hook-events.md)
+
+Many [hook events](hook-events.md) pass in a [`MarioState`](../structs.md#mariostate) as a parameter. `HOOK_MARIO_UPDATE`, `HOOK_BEFORE_PHYS_STEP`, `HOOK_ON_PVP_ATTACK`, that's just a few instances. There are **tons** of hooks in which a [`MarioState`](../structs.md#mariostate) is passed in.
+
+```lua
+---@param m MarioState
 local function mario_update(m)
-    -- Refer to section 2 of this guide to know what playerIndex is
-
-    -- Remember how gMarioStates[0] is the local mario? Well the playerIndex is the same way! This means that if the playerIndex is not 0, then it's not the local mario, thus we can't do anything with it! So, when we return here, that means that we dont do anything below the return within that function
-
-    -- This means, if not the local Mario, stop executing the function (return nothing).
+    -- HOOK_MARIO_UPDATE runs through every single mario, but we only want to edit
+    -- the local mario, so bail if player index is not 0
+    -- More information on indexes can be found in the TODO
     if m.playerIndex ~= 0 then return end
+
+    -- disable fall damage by making the check used for it always be the mario's
+    -- current height
+    m.peakHeight = m.pos.y
 end
 
--- Create the hook here. To understand this better, refer to the guide on hooks.
--- NOTE: There are more hooks you can use to do specific things, however HOOK_MARIO_UPDATE is the most common hook to be used.
 hook_event(HOOK_MARIO_UPDATE, mario_update)
 ```
 
-The only time you should use `gMarioStates[0]` is if the hook you are using does not have `m` as a parameter, otherwise, do as shown above with your own function names.
+Consult the documentation to see what index you can expect for the [`MarioState`](../structs.md#mariostate). Some pass in the local mario only, others pass in any mario.
 
-## Section 4: Wrapping Up
+## Basic [`MarioState`](../structs.md#mariostate) Properties
 
-Hopefully, you were now able to learn more about how `gMarioStates` works.
+A `MarioState` is a **very** large class with a bunch of properties. We'll be going over the most important ones, but we won't be going over every single one. For a complete look, please take a look at the [`MarioState struct`](../structs.md#mariostate).
+
+### `playerIndex`
+
+Mario's `playerIndex` is the local index that owns that [`MarioState`](../structs.md#mariostate) (for more info on networked indexes, see TODO). It's also the key for `gMarioStates`. So `gMarioStates[m.playerIndex] == m`.
+
+```lua
+---@param m MarioState
+local function mario_update(m)
+    -- Don't process any mario that isn't the local mario
+    if m.playerIndex ~= 0 then return end
+
+    -- do stuff
+end
+
+hook_event(HOOK_MARIO_UPDATE, mario_update)
+```
+
+### `pos`
+
+Mario's `pos` is a [`Vec3f`](structs.md#Vec3f) which contains Mario's current position, or location. A single unit is roughly a centimeter in real life.
+
+```lua
+-- if Mario taps the X button, send him to a diagonal PU!
+if m.controller.buttonPressed & X_BUTTON ~= 0 then
+    -- 65536 is the number in which the floor collision calculation completely loops
+    m.pos.x = m.pos.x + 65536
+    m.pos.z = m.pos.z + 65536
+end
+```
+
+### `health`, `hurtCounter`, and `healCounter`
+
+Mario's `health` is the current health of Mario. Mario's `health` is not actually split into individual slices, that's simply what it is visually. Under the hood, Mario's `health` is a number that ranges between `0x0` (`0`) to `0x880` (`2176`).
+
+The 1st slice has a buffer of `0xFE` (`254`). Any value below or equal to `0xFF` (`255`) will kill Mario. That means any value below 0xFF is effectively useless in 99% of use cases.
+
+The 8th slice has a buffer of `0x80` (`128`), so `0x800` (`2048`) will render mario at full health (but internally Mario will not be at full health).
+
+Here's a table for the slice values for health:
+
+| Health Range | Health Hex Range | Slice Count |
+| ------------ | ---------------- | ----------- |
+| 000 - 255 | 0x00 - 0xFF | 0 Slices |
+| 256 - 511 | 0x100 - 0x1FF | 1 Slice |
+| 512 - 767 | 0x200 - 0x2FF | 2 Slices |
+| 768 - 1023 | 0x300 - 0x3FF | 3 Slices |
+| 1024 - 1279 | 0x400 - 0x4FF | 4 Slices |
+| 1280 - 1535 | 0x500 - 0x5FF | 5 Slices |
+| 1536 - 1791 | 0x600 - 0x6FF | 6 Slices |
+| 1792 - 2047 | 0x700 - 0x7FF | 7 Slices |
+| 2048 - 2176 | 0x800 - 0x880 | 8 Slices |
+
+```lua
+hook_chat_command("set-marios-health", "Sets Mario's health in slices", function(msg)
+    local health = tonumber(msg)
+    if health == nil or health < 0 or health > 8 then
+        command_message_create("Failed to set health, please enter a number between 0-8!", CONSOLE_MESSAGE_ERROR)
+        return true
+    end
+
+    m.health = health * 0x100
+
+    -- alternatively, doing a bitshift left by `8` will do this perfectly as well
+
+    --m.health = health << 8
+
+    -- Note: These methods will NOT get mario's health up to the absolute maximum (0x880)
+    -- To do that, you can do
+
+    -- m.health = health * 0x110
+
+    -- or the bitwise equivalent
+
+    -- m.health = health << 8 | 0x80
+
+    -- or you can hardcode health 8 to equal 0x880
+
+    -- if health == 8 then m.health = 0x880 end
+
+    command_message_create("Set mario's health to " .. health)
+    return true
+end)
+```
+
+- When Mario is inhaling toxic gas fumes and is NOT metal, he loses `4` health per frame
+- If Mario is freezing in water, and Mario is tangible, he loses `3` health per frame
+- If Mario is underwater, tangible, and is NOT freezing, he loses `1` health per frame
+- If Mario is poking his head above the water, is NOT freezing, and IS tangible, he gains `0x1A` (`26`) health per frame
+
+You can check if Mario is in toxic gas or is freezing via the input `INPUT_IN_POISON_GAS`. You can also check if Mario is wearing a metal cap by checking Mario's `flags` and checking for `MARIO_METAL_CAP`
+
+You can also check if Mario is swimming by checking if mario is swimming via `ACT_FLAG_SWIMMING`. You can check if Mario is tangible via `ACT_FLAG_INTANGIBLE`. You can check the terrain type, and if Mario will freeze in water, via `m.area.terrainType`
+
+```lua
+terrainIsSnow = m.area.terrainType & TERRAIN_MASK == TERRAIN_SNOW;
+```
+
+Here's a code example showing every single one of these healing and hurting measures being countered:
+
+```lua
+---@param m MarioState
+local function mario_update(m)
+    if m.playerIndex ~= 0 then return end -- only run for local player
+
+    -- when mario is healing or hurting, mario's health is not adjusted
+    if m.healCounter ~= 0 or m.hurtCounter ~= 0 then return end
+
+    -- if we are in poisonous gas and don't have metal cap, increase mario's health by 4 to counter health decrease
+    if m.input & INPUT_IN_POISON_GAS ~= 0 and m.flags & MARIO_METAL_CAP == 0 then
+        m.health = m.health + 4
+    end
+
+    -- make sure we are swimming and tangible
+    if m.action & ACT_FLAG_SWIMMING ~= 0 and m.action & ACT_FLAG_INTANGIBLE == 0 then
+        -- get if we are currently in snow or not
+        local terrainIsSnow = m.area.terrainType & TERRAIN_MASK == TERRAIN_SNOW;
+
+        if (m.pos.y >= m.waterLevel - 140 and not terrainIsSnow) then
+            -- mario is healing! Counter by subtracting mario's health by 0x1A (26)
+            m.health = m.health - 0x1A
+        else
+            -- mario is hurting! Depending on whether `terrainIsSnow`, increment health by 3 or 1
+            m.health = m.health + (terrainIsSnow and 3 or 1)
+        end
+    end
+end
+
+hook_event(HOOK_MARIO_UPDATE, mario_update)
+```
+
+Mario's `healCounter` is the amount of health to gain and `hurtCounter` is the amount of health to lose per frame by units of `0x40`. They are `integers`, which means they cannot hold decimals. Doing so will cause "integer truncation."
+
+In this unit space, `30.015625` is equivalent to the maximum health assuming the maximum is `0x880`. Assuming a unit range where max health is `0x800`, which is the maximum health by the slice, `32` is the equivalent to the maximum health. It takes `4` frames to change Mario's health by 1 slice, so that means the `healCounter`/`hurtCounter` must be `4` to drop by a single slice.
+
+```lua
+-- if we hit the A button, drop mario's health by 1 slice
+if m.controller.buttonPressed & A_BUTTON ~= 0 then
+    m.hurtCounter = 4 -- 4 in a hurt counter = 1 slice
+end
+```
+
+TODO: Finish rest
