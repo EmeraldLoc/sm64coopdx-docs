@@ -57,7 +57,7 @@ Mario's `playerIndex` is the local index that owns that `MarioState` (for more i
 ```lua
 ---@param m MarioState
 local function mario_update(m)
-    -- Don't process any mario that isn't the local mario
+    -- don't process any mario that isn't the local mario
     if m.playerIndex ~= 0 then return end
 
     -- do stuff
@@ -86,8 +86,8 @@ Mario's `faceAngle` is a [`Vec3s`](../structs.md#vec3s). It's a 16-bit angle, wh
 Note that this is **not** Mario's *graphical* rotation, that would be on Mario's [`object`](../structs.md#object), accessed via the `marioObj` field, stored in the `header`, then `gfx`, and finally the `angle`.
 
 ```lua
--- rotate mario's yaw against his will by 50 units per frame
-m.faceAngle.y = m.faceAngle.y + 50
+-- rotate mario's yaw against his will by 90 degrees
+m.faceAngle.y = m.faceAngle.y + 0x4000 -- 16,384 is 0x4000
 ```
 
 ### `intendedYaw`
@@ -230,7 +230,7 @@ Both counters are `u8`'s, which means that if the value goes below `0` or above 
 
 ### `controller`
 
-TODO
+TODO (Controller documentation should be written first)
 
 ### `input`
 
@@ -238,19 +238,77 @@ TODO
 
 ### `peakHeight`
 
-TODO
+Mario's `peakHeight` is used to track just that, Mario's peak height. This value:
 
-### `wall`, `floor`, and `ceiling`
+- Checks if Mario should take fall damage
+- Checks if Mario should play the far fall sound (`CHAR_SOUND_WAAAOOOW`)
+- Checks if Mario should get stuck in the ground when falling into snow
+- Checks if Mario should go "HAHA" (`CHAR_SOUND_HAHA_2`) if he fell from a high enough height
 
-TODO
+```lua
+-- disable fall damage by setting mario's peakHeight to mario's height each frame
+
+---@param m MarioState
+local function mario_update(m)
+    m.peakHeight = m.pos.y
+end
+
+hook_event(HOOK_MARIO_UPDATE, mario_update)
+```
+
+### `wall`, `floor`, and `ceil`
+
+Mario's `wall`, `floor`, and `ceil` are all of type [Surface](../structs.md#surface).
+
+- The `floor` is the floor Mario is currently above
+- The `ceil` is the ceiling Mario is currently below
+- The `wall` is the wall Mario is currently touching
+
+These values can be `nil`:
+
+- If Mario is not above a floor, `floor` will be `nil`
+- If Mario is not below a ceiling, `ceil` will be `nil`
+- If Mario is not touching a wall, `wall` will be `nil`
+
+```lua
+-- TODO: What code example should go here?
+```
 
 ### `floorHeight` and `ceilHeight`
 
-TODO
+Mario's `floorHeight` is the `y` position of the floor Mario is above. Mario does not need to be standing for this height to be active.
+
+Mario's `ceilHeight` is the `y` position of the ceiling Mario is below. Mario does not need to be hanging from a ceiling or touching a ceiling for this to be active.
+
+In the event Mario goes out of bounds, the `floorHeight` will be calculated from Mario's last valid position rather than Mario's current position.
+
+For the `ceilHeight`, in the event Mario is not under a ceiling, it will be set `gLevelValues.cellHeightLimit`.
+
+The lowest the `floorHeight` will go is `gLevelValues.floorLowerLimit`. The highest a ceiling will go is `gLevelValues.cellHeightLimit`.
+
+```lua
+-- give mario a speed boost if he is touching the floor, with a hard-cap of 48
+if m.pos.y == m.floorHeight then
+    m.forwardVel = math.min(m.forwardVel + 5, 48)
+end
+```
 
 ### `waterLevel`
 
-TODO
+Mario's `waterLevel` is the `y` coordinate of water under Mario. In the event there is no water under Mario, `waterLevel` will be set to `gLevelValues.floorLowerLimit`.
+
+If Mario's `pos.y` is within 480 units of the `waterLevel`, that means Mario is swimming near the surface.
+
+Different actions check at different offsets for the water level. For instance, when entering a level, to decide when to enter the swimming action, the it checks if `m.pos.y` is less than `m.waterLevel - 100`. However in other instances, notably for checking if mario should transition from swimming to walking, it checks if `m.pos.y` is less than `m.waterLevel - 80`.
+
+Generally, the consensus is if Mario's `m.pos.y` is less than `m.waterLevel - 100`, then Mario is inside water. This is what the check is for all air actions, bubbles, most cutscenes, etc. Just know that this isn't what it is all the time.
+
+```lua
+-- give mario the vanish cap if he is underwater
+if m.pos.y < m.waterLevel - 100 then
+    m.flags = m.flags | MARIO_VANISH_CAP
+end
+```
 
 ### `marioBodyState`
 
