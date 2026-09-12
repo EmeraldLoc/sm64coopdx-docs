@@ -68,7 +68,7 @@ hook_event(HOOK_MARIO_UPDATE, mario_update)
 
 ### `pos`
 
-Mario's `pos` is a [`Vec3f`](structs.md#Vec3f) which contains Mario's current position, or location. A single unit is roughly a centimeter in real life.
+Mario's `pos` is a [`Vec3f`](../structs.md#vec3f) which contains Mario's current position, or location. A single unit is roughly a centimeter in real life.
 
 ```lua
 -- if Mario taps the X button, send him to a diagonal PU!
@@ -79,13 +79,45 @@ if m.controller.buttonPressed & X_BUTTON ~= 0 then
 end
 ```
 
+### `faceAngle`
+
+Mario's `faceAngle` is a [`Vec3s`](../structs.md#vec3s). It's a 16-bit angle, which means the angle ranges from `-32768` to `32767`. This is Mario's current facing angle.
+
+Note that this is **not** Mario's *graphical* rotation, that would be on Mario's [`object`](../structs.md#object), accessed via the `marioObj` field, stored in the `header`, then `gfx`, and finally the `angle`.
+
+```lua
+-- rotate mario's yaw against his will by 50 units per frame
+m.faceAngle.y = m.faceAngle.y + 50
+```
+
+### `intendedYaw`
+
+Mario's `intendedYaw` is a `float` that usually is Mario's currently held rotation on the joystick. It's the target yaw for Mario.
+
+```lua
+-- if mario is diving, allow for free rotation of the face angle
+if m.action == ACT_DIVING then
+    m.faceAngle.y = m.intendedYaw
+end
+```
+
+### `forwardVel`, `vel`, `angleVel`, `slideVelX`, and `slideVelZ`
+
+TODO
+
+### `action`, `actionState`, `actionArg`, `actionTimer`, and `prevAction`
+
+TODO
+
+### `flags`
+
+TODO
+
 ### `health`, `hurtCounter`, and `healCounter`
 
 Mario's `health` is the current health of Mario. Mario's `health` is not actually split into individual slices, that's simply what it is visually. Under the hood, Mario's `health` is a number that ranges between `0x0` (`0`) to `0x880` (`2176`).
 
-The 1st slice has a buffer of `0xFE` (`254`). Any value below or equal to `0xFF` (`255`) will kill Mario. That means any value below 0xFF is effectively useless in 99% of use cases.
-
-The 8th slice has a buffer of `0x80` (`128`), so `0x800` (`2048`) will render mario at full health (but internally Mario will not be at full health).
+The 8th slice has a buffer of `0x80` (`128`), so `0x800` (`2048`) will render mario at full health (but internally Mario will not be at full health). This is to pad out effects like toxic gas, burning, drowning, etc.
 
 Here's a table for the slice values for health:
 
@@ -146,6 +178,8 @@ You can also check if Mario is swimming by checking if mario is swimming via `AC
 terrainIsSnow = m.area.terrainType & TERRAIN_MASK == TERRAIN_SNOW;
 ```
 
+In all of these instances, Mario's health does *not* update if `healCounter` or `hurtCounter` is not equal to `0`.
+
 Here's a code example showing every single one of these healing and hurting measures being countered:
 
 ```lua
@@ -190,4 +224,38 @@ if m.controller.buttonPressed & A_BUTTON ~= 0 then
 end
 ```
 
-TODO: Finish rest
+Healing and hurting both cancel eachother out. That means that if `m.hurtCounter` is `4` and `m.healCounter` is `4`, that will be equivalent to both being `0`.
+
+Both counters are `u8`'s, which means that if the value goes below `0` or above `255`, it wraps to the other side. A value `256` will internally be set to `0`, and a value of `-1` will internally be set to 255``.
+
+### `controller`
+
+TODO
+
+### `input`
+
+TODO
+
+### `peakHeight`
+
+TODO
+
+### `wall`, `floor`, and `ceiling`
+
+TODO
+
+### `floorHeight` and `ceilHeight`
+
+TODO
+
+### `waterLevel`
+
+TODO
+
+### `marioBodyState`
+
+TODO
+
+### `heldObj`, `heldByObj`, `interactObj`, `riddenObj`, and `usedObj`
+
+TODO
