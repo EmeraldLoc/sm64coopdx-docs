@@ -107,7 +107,21 @@ TODO
 
 ### `action`, `actionState`, `actionArg`, `actionTimer`, and `prevAction`
 
-TODO
+Mario's `action` is his current state. It's whatever he is doing right now. You can be walking (`ACT_WALK`), diving (`ACT_DIVE`), etc. and it is all represented with an action. A list of actions may be found (TODO: Allow macro definitions to be converted to enums in Autogen for easier linking in documentation).
+
+Mario's `action` should never be set or mutated directly. Instead, use [`set_mario_action`](../functions-4.md#set_mario_action). Failure to do so may leave `actionState`, `actionArg`, and `actionTimer` variables with whatever they were before.
+
+Mario's `prevAction` is the action he had the previous time `set_mario_action` was called.
+
+- Mario's `actionTimer` is the amount of time in frames Mario has been in that action for
+- Mario's `actionState` is like a sub-action in an action. It's used a variable for internal tracking in an action
+- Mario's `actionArg` is the argument passed in `set_mario_action`. It's an argument for the setter of the action, and isn't really meant to be changed by the action itself
+
+For information on how to create a action, and code examples for actions, please see (TODO: Write documentation on custom Mario actions)
+
+### `controller`
+
+TODO (Controller documentation should be written first)
 
 ### `flags`
 
@@ -169,7 +183,7 @@ end
 -- check if mario has no cap on
 if m.flags & MARIO_CAP_ON_HEAD == 0 then
     -- mario has no cap! put a cap back on his head
-    -- note: this code is inefficent, better to not do the if check
+    -- note: this code is inefficient, better to not do the if check
     -- but this works for the code example
     m.flags = m.flags | MARIO_CAP_ON_HEAD
 end
@@ -292,14 +306,6 @@ Healing and hurting both cancel eachother out. That means that if `m.hurtCounter
 
 Both counters are `u8`'s, which means that if the value goes below `0` or above `255`, it wraps to the other side. A value `256` will internally be set to `0`, and a value of `-1` will internally be set to 255``.
 
-### `controller`
-
-TODO (Controller documentation should be written first)
-
-### `input`
-
-TODO
-
 ### `peakHeight`
 
 Mario's `peakHeight` is used to track just that, Mario's peak height. This value:
@@ -378,6 +384,38 @@ end
 
 TODO
 
+## `marioObj`
+
+`marioObj` is Mario's self object. It's the object Mario is. Anything you can do with an object you can manipulate using `marioObj`.
+
+Mario's object includes many things you'd find in any object, the gfx data in `m.marioObj.header.gfx`, position, rotation, and scale data, and more.
+
+```lua
+-- set mario to be double his normal size
+cur_obj_set_scale(m.marioObj, 2)
+```
+
 ### `heldObj`, `heldByObj`, `interactObj`, `riddenObj`, and `usedObj`
 
-TODO
+Each of these fields are [`Object`s](../structs.md#object) related to Mario in whatever way is described. All these objects can be `nil`. These fields may point to the same object.
+
+- `interactObj` is the most broad. If Mario is interacting with an object, it'll appear here! It specifically is for *interacting*. Things like poles, the Big Boo's Haunt cage entrance, and more are not included
+- `usedObj` is the object Mario is "using." It covers a lot of the same ground as `interactObj`, but includes some things it misses like BBH's cage entrance and poles. It's missing it's fair share of things, such as some `interact_x` function not setting `usedObj`
+- `heldObj` is the object Mario is currently holding
+- `heldByObj` is the object Mario is being held by, such as King Bob-omb or Chuckya
+- `riddenObj` is the object Mario is currently riding. In vanilla, this is only used for the Koopa Shell
+
+There are nuance to these, so experiment if necessary to see which one fits your use case.
+
+```lua
+-- send any object mario holds 200 units above him
+if m.heldObj then
+    local o = m.heldObj
+    -- drop_and_set_mario_action sends the object to the holp, which is never set in this
+    -- situation, so we need to hardcode oPosX and oPosZ to be set to mario's position
+    drop_and_set_mario_action(m, ACT_IDLE, 0)
+    o.oPosX = m.pos.x
+    o.oPosY = o.oPosY + 300
+    o.oPosZ = m.pos.z
+end
+```
