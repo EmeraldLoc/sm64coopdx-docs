@@ -111,7 +111,71 @@ TODO
 
 ### `flags`
 
-TODO
+Mario's `flags` are a set of, well, flags that Mario has. There are many flags. Here's a list, but not all of these are documented (yet), however we will document the more important ones:
+
+```lua
+MARIO_NORMAL_CAP
+MARIO_VANISH_CAP
+MARIO_METAL_CAP
+MARIO_WING_CAP
+MARIO_CAP_ON_HEAD
+MARIO_CAP_IN_HAND
+MARIO_METAL_SHOCK
+MARIO_TELEPORTING
+MARIO_UNKNOWN_08
+MARIO_UNKNOWN_13
+MARIO_ACTION_SOUND_PLAYED
+MARIO_MARIO_SOUND_PLAYED
+MARIO_UNKNOWN_18
+MARIO_PUNCHING
+MARIO_KICKING
+MARIO_TRIPPING
+MARIO_UNKNOWN_25
+MARIO_UNKNOWN_30
+MARIO_UNKNOWN_31
+
+MARIO_SPECIAL_CAPS (MARIO_VANISH_CAP | MARIO_METAL_CAP | MARIO_WING_CAP)
+MARIO_CAPS (MARIO_NORMAL_CAP | MARIO_SPECIAL_CAPS)
+```
+
+`m.flags` uses bitwise operations. Just as a quick guideline:
+
+- `&` is used to check if a flag is active. `m.flags & MARIO_X ~= 0` returns non-zero if the flag is set
+- `|` combines multiple flags together or enables a new flag on `m.flags`
+- `~` inverts bits. Combined with `&` (as `m.flags & ~MARIO_X`), it clears a specific flag
+
+To better showcase this, here is a list of unorganized code examples:
+
+```lua
+-- check if mario has any cap
+if m.flags & MARIO_SPECIAL_CAPS ~= 0 then
+    -- do something
+end
+
+-- don't let mario have a wing cap!
+m.flags = m.flags & ~MARIO_WING_CAP
+
+-- check if mario is teleporting
+if m.flags & MARIO_TELEPORTING ~= 0 then
+    -- steal mario's vanish cap if mario is teleporting
+    m.flags = m.flags & ~MARIO_VANISH_CAP
+end
+
+-- you can also check if mario has multiple caps
+if m.flags & (MARIO_VANISH_CAP | MARIO_METAL_CAP) ~= 0 then
+    -- do something
+end
+
+-- check if mario has no cap on
+if m.flags & MARIO_CAP_ON_HEAD == 0 then
+    -- mario has no cap! put a cap back on his head
+    -- note: this code is inefficent, better to not do the if check
+    -- but this works for the code example
+    m.flags = m.flags | MARIO_CAP_ON_HEAD
+end
+```
+
+The flags shown in the first list is decently self-explanatory (except for the flags that are just "unknown" :D ).
 
 ### `health`, `hurtCounter`, and `healCounter`
 
