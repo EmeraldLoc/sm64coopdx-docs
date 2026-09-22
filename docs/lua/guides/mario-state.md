@@ -101,9 +101,42 @@ if m.action == ACT_DIVING then
 end
 ```
 
-### `forwardVel`, `vel`, `angleVel`, `slideVelX`, and `slideVelZ`
+### `forwardVel`, `vel`, `slideVelX`, and `slideVelZ`
 
-TODO
+Mario has quite a few velocity components. Mario's `forwardVel` is the most straightforward. It's the velocity Mario is going forward.
+
+The exact usage and what this value lines up with depends on the action. For most actions, what represents "forwards" is the direction mario is facing.
+
+`m.forwardVel` is the easiest, most straightforward velocity to modify.
+
+`vel`, for most actions, is derived from Mario's `forwardVel` using Mario's yaw (`faceAngle.y`). That's for **most** actions. There's a couple exceptions to this rule, most notably for moving along a surface like Quicksand. For mutating velocity, in many instances manipulating `vel` is better for smoother speed acceleration or deceleration. For mutation the hook used also matters.
+
+Mario's `y` `vel` (`vel.y`) is fully independent from the standard calculation used from the `forwardVel`. That operates independently, and is the sole decider of Mario's vertical velocity.
+
+Assuming Mario is sliding, Mario's sliding velocity (`m.slideVelX` and `m.slideVelZ`) is not based around Mario's `forwardVel`, in fact, Mario's `forwardVel` is set depending on the slide velocity. The slide velocity is calculated from the controller's joystick as well as the angle of the slope Mario is sliding down.
+
+Assuming Mario is not sliding, Mario's slide velocity **mostly** is set to the same as Mario's `vel`.
+
+```lua
+---@param m MarioState
+local function before_phys_step(m)
+    -- the actions here are unstable! They will constantly compound acceleration,
+    -- causing obnoxiously high speeds
+    if  m.action ~= ACT_BACKWARD_AIR_KB
+    and m.action ~= ACT_FORWARD_AIR_KB
+    and m.action ~= ACT_HARD_BACKWARD_AIR_KB
+    and m.action ~= ACT_HARD_FORWARD_AIR_KB
+    and m.action ~= ACT_BACKWARD_AIR_KB
+    and m.action ~= ACT_SOFT_BONK
+    and m.action ~= ACT_WATER_JUMP then
+        -- speed up by a multiplier of 1.3
+        m.vel.x = m.vel.x * 1.3
+        m.vel.z = m.vel.z * 1.3
+    end
+
+    hook_event(HOOK_BEFORE_PHYS_STEP, before_phys_step)
+end
+```
 
 ### `action`, `actionState`, `actionArg`, `actionTimer`, and `prevAction`
 
@@ -341,7 +374,19 @@ These values can be `nil`:
 - If Mario is not touching a wall, `wall` will be `nil`
 
 ```lua
--- TODO: What code example should go here?
+-- if mario is touching a wall, climb up it
+if m.wall then
+    -- freefall gives mario air control and allows him to dive and such
+    set_mario_action(m, ACT_FREEFALL, 0)
+    m.vel.y = 10
+
+    -- if mario hits A, let him wallkick
+    if m.controller.buttonPressed & A_BUTTON ~= 0 then
+        m.faceAngle.y = m.faceAngle.y + 0x8000;
+
+        set_mario_action(m, ACT_WALL_KICK_AIR, 0);
+    end
+end
 ```
 
 ### `floorHeight` and `ceilHeight`
@@ -382,9 +427,29 @@ end
 
 ### `marioBodyState`
 
-TODO
+Mario's [`marioBodyState`](../structs.md#mariobodystate) contains a lot of information about the visual state of Mario's player model. Mario's lighting, shading, the held object's last position (HOLP), eye state, hand state, head angle, head pos, and a heck of a lot more.
 
-## `marioObj`
+Take a look at the [`MarioBodyState`](../structs.md#mariobodystate) struct to get a better idea of all the things to look at. Don't be afraid to experiment, that's the best way to learn what the stuff here does!
+
+There's constants for most of these values, most being intuitive, but as a general map:
+
+| Field | Enum or Constant Prefix |
+| ----- | ----------------------- |
+| `capState` | [`MarioCapGSCId`](../constants.md#enum-mariocapgscid) |
+| `eyeState` | [`MarioEyesGSCId`](../constants.md#enum-marioeyesgscid) |
+| `handState` | [`MarioHandGSCId`](../constants.md#enum-mariohandgscid) |
+| `modelState` | `MODEL_STATE_*` |
+| `grabPos` | [`MarioGrabPosGSCId`](../constants.md#enum-mariograbposgscid) |
+
+```lua
+-- have mario shout-out world peace
+m.marioBodyState.handState = MARIO_HAND_PEACE_SIGN
+
+-- shade mario red
+m.marioBodyState.shadeR = 255
+```
+
+### `marioObj`
 
 `marioObj` is Mario's self object. It's the object Mario is. Anything you can do with an object you can manipulate using `marioObj`.
 
@@ -411,8 +476,8 @@ There are nuance to these, so experiment if necessary to see which one fits your
 -- send any object mario holds 200 units above him
 if m.heldObj then
     local o = m.heldObj
-    -- drop_and_set_mario_action sends the object to the holp, which is never set in this
-    -- situation, so we need to hardcode oPosX and oPosZ to be set to mario's position
+    -- drop_and_set_mario_action sends the object to the holp, which is never set in
+    -- this situation, so we need to hardcode oPosX and oPosZ to be set to mario's position
     drop_and_set_mario_action(m, ACT_IDLE, 0)
     o.oPosX = m.pos.x
     o.oPosY = o.oPosY + 300
