@@ -154,7 +154,7 @@ For information on how to create a action, and code examples for actions, please
 
 ### `controller`
 
-TODO (Controller documentation should be written first)
+Mario's `controller` is one of the access points for a `Controller`. For more information on how those works, view the [Controller documentation](controllers.md).
 
 ### `flags`
 

@@ -34,6 +34,7 @@ TODO: Figure out if this is OK
 - [Creating a Mod](guides/creating-mod.md)
 - [Hooks](guides/hooks.md)
 - [gMarioStates](guides/mario-state.md)
+- [Controllers](guides/controllers.md)
 - [Behavior Object Lists](guides/object-lists.md)
 - [Lighting Engine](guides/lighting-engine.md)
 - [ModFS](guides/modfs.md)
