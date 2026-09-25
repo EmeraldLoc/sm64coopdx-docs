@@ -4,7 +4,7 @@
 
 A [`MarioState`](../structs.md#mariostate) is a Mario "object" that contains all information about Mario. Mario's position, facing angle, speed, health, inputs, etc. are all stored in a `MarioState`.
 
-This guide through `MarioState` will be split into multiple sections:
+This guide through `MarioState` will be split into two sections:
 
 - [Accessing a `MarioState`](#accessing-a-mariostate)
 - [Basic `MarioState` Properties](#basic-mariostate-properties)
