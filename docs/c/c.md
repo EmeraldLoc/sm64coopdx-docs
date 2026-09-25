@@ -2,6 +2,8 @@
 
 If you haven't, please read up on [contributing](../../CONTRIBUTING.md)!
 
+For info on how to build the game, view the [building instructions](../../BUILDING.md).
+
 ## Sections
 
 - [SMLua](sections/smmodding.md)

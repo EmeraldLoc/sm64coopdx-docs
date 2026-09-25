@@ -20,4 +20,6 @@ AI is allowed, however if a PR isn't deemed to be useful, we reserve the right t
 
 ## Documentation
 
-For reading documentation on the sm64coopdx codebase, check out the [C Documentation](docs/c/c.md)!
+For reading documentation on the sm64coopdx codebase, check out the [C Documentation](docs/c/c.md).
+
+For info on how to build the game for development purposes, check out the [building guide](BUILDING.md).

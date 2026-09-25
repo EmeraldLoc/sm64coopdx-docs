@@ -84,7 +84,7 @@ The final build will be found in `build/us_pc/sm64coopdx`. The extension is depe
 
 You can append [build flags](#build-flags) after your `make` or `gmake` command for any needed changes.
 
-# Build Flags
+## Build Flags
 
 - `-j`: Jobs amount, may speed up compilation. Recommended to use the number of cores, or the result of `nproc`.
 - `DISCORD_SDK [0|1]`: Enable or disable Discord Game SDK
