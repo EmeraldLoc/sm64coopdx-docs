@@ -17,7 +17,7 @@ There are a few ways to access a `MarioState`:
 
 You can directly access a `MarioState` at any time via `gMarioStates`.
 
-`gMarioStates` is an array of `MarioState`'s of size `MAX_PLAYERS`. It's based on the local index (see TODO for more information), so `gMarioStates[0]` is always the local `MarioState`.
+`gMarioStates` is an array of `MarioState`'s of size `MAX_PLAYERS`. It's based on the local index (see [the player index documentation](player-indexes.md) for more information), so `gMarioStates[0]` is always the local `MarioState`.
 
 ```lua
 ---@type MarioState
@@ -33,7 +33,8 @@ Many [hook events](hook-events.md) pass in a `MarioState` as a parameter. `HOOK_
 local function mario_update(m)
     -- HOOK_MARIO_UPDATE runs through every single mario, but we only want to edit
     -- the local mario, so bail if player index is not 0
-    -- More information on indexes can be found in the TODO
+    -- More information on indexes can be found in the player index
+    -- documentation
     if m.playerIndex ~= 0 then return end
 
     -- disable fall damage by making the check used for it always be the mario's
@@ -52,7 +53,7 @@ A `MarioState` is a **very** large class with a bunch of properties. We'll be go
 
 ### `playerIndex`
 
-Mario's `playerIndex` is the local index that owns that `MarioState` (for more info on networked indexes, see TODO). It's also the key for `gMarioStates`. So `gMarioStates[m.playerIndex] == m`.
+Mario's `playerIndex` is the local index that owns that `MarioState` (for more info on networked indexes, see [the player index documentation](player-indexes.md)). It's also the key for `gMarioStates`. So `gMarioStates[m.playerIndex] == m`.
 
 ```lua
 ---@param m MarioState

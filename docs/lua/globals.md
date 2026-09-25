@@ -10,11 +10,17 @@ The `gMarioStates[]` table is an array from `0` to `(MAX_PLAYERS - 1)` that cont
 
 It is indexed by the local `playerIndex`, so `gMarioStates[0]` is always the local player.
 
+For more information on what indexes for players are, see the [player index documentation](guides/player-indexes.md).
+
+For more information on `MarioState`'s, read the [documentation on Mario](guides/mario-state.md).
+
 ## gNetworkPlayers
 
 The `gNetworkPlayers[]` table is an array from `0` to `(MAX_PLAYERS - 1)` that contains a [NetworkPlayer](structs.md#NetworkPlayer) struct for each possible player.
 
 It is indexed by the local `playerIndex`, so `gNetworkPlayers[0]` is always the local player.
+
+For more information on what indexes for players are, see the [player index documentation](guides/player-indexes.md).
 
 ## gActiveMods
 
@@ -26,7 +32,7 @@ The `gCharacters[]` table is an array from `0` to `(CT_MAX - 1)` that contains a
 
 ## gControllers
 
-The `gControllers[]` table is an array from `0` to `(MAX_PLAYERS - 1)` that contains a [Controller](structs.md#Controller) struct for each possible player.
+The `gControllers[]` table is an array from `0` to `(MAX_PLAYERS - 1)` that contains a [Controller](structs.md#Controller) struct for each possible player. For more info on controllers, read the [controller documentation](guides/controllers.md).
 
 ## gMatStack
 
@@ -92,7 +98,7 @@ __**NOTE**__: The fields in this struct are not synced and are meant to be chang
 
 ## gGlobalSyncTable
 
-The `gGlobalSyncTable` is a table used for networking. Any field set inside of this table is automatically synchronized with all other clients. Do not use this table for player-specific variables, keep those in [gPlayerSyncTable](#gplayersynctable). Player-specific variable will desynchronize within this table since it doesn't automatically translate `playerIndex`.
+The `gGlobalSyncTable` is a table used for networking. Any field set inside of this table is automatically synchronized with all other clients. Do not use this table for player-specific variables, keep those in [gPlayerSyncTable](#gplayersynctable).
 
 ## gPlayerSyncTable
 
@@ -101,3 +107,5 @@ The `gPlayerSyncTable[]` is an array from 0 to `(MAX_PLAYERS - 1)` that is used 
 It is indexed by the local `playerIndex`, so `gPlayerSyncTable[0]` is always for the local player.
 
 The underlying networking system will automatically translate the local `playerIndex` so that the field is set for the correct player.
+
+For more information on what indexes for players are, see the [player index documentation](guides/player-indexes.md).

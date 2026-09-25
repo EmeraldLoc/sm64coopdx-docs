@@ -13,8 +13,6 @@ Help should be asked for in the [modding server](https://mods.sm64coopdx.com) or
 
 ## Tips
 
-TODO: Figure out if this is OK
-
 - When developing Lua mods, open the console with `~` or `F1` to see Lua errors and warnings.
 - When a function requests a time parameter, it is almost if not always in frames.
 - You can use the `print()` command when debugging. Your logs will show up in the console and terminal.
@@ -32,26 +30,13 @@ TODO: Figure out if this is OK
 
 - [Setting up Visual Studio Code](guides/vs-code-setup.md)
 - [Creating a Mod](guides/creating-mod.md)
+- [Player Indexes](guides/player-indexes.md)
 - [Hooks](guides/hooks.md)
 - [gMarioStates](guides/mario-state.md)
 - [Controllers](guides/controllers.md)
 - [Behavior Object Lists](guides/object-lists.md)
 - [Lighting Engine](guides/lighting-engine.md)
 - [ModFS](guides/modfs.md)
-
-## Important notes on player indices
-
-TODO: Figure out if this goes in its own section
-
-Something important to realize is that the `localIndex` for each player is different (unfortunately).
-
-So the order of `gMarioStates[]`, `gNetworkPlayers[]`, and `gPlayerSyncTable[]` is different for each player.
-
-Luckily `gPlayerSyncTable[]` will automatically translate the player indices, so setting `gPlayerSyncTable[0].example = 1` will set it for the correct player for everyone.
-
-The `globalIndex` of each player is consistent among everyone connected. So if you absolutely need to sort things in order you will have to grab it from `gNetworkPlayers[<LOCAL INDEX HERE>].globalIndex`.
-
-All of this is a holdover from when there were only two players. It was a reasonable idea back then.
 
 ## Example Lua mods (small)
 

@@ -6,7 +6,7 @@ A [`Controller`](../structs.md#controller) is used to control the game (shocker)
 
 ### `gControllers`
 
-`gControllers` is an array of `0` to `MAX_PLAYERS - 1` which has a [`Controller`](../structs.md#controller) struct for each player. This uses the local index, so `0` is always the local player. For more information, check out the [player index documentation](TODO).
+`gControllers` is an array of `0` to `MAX_PLAYERS - 1` which has a [`Controller`](../structs.md#controller) struct for each player. This uses the local index, so `0` is always the local player. For more information, check out [the player index documentation](player-indexes.md).
 
 ```lua
 local function update()
@@ -129,22 +129,28 @@ controller.buttonDown = controller.buttonDown & ~A_BUTTON & ~X_BUTTON
 
 ## Joystick
 
+As a general summarization:
+
+| Fields | Stick Location | Notes |
+| ------ | -------------- | ----- |
+| `rawStickX` and `rawStickY` | Left Stick | The raw stick values, from `-127` (Left/Down) to `127` (Right/Up) |
+| `extStickX` and `extStickY` | Right Stick | The raw stick values for the right stick, from `-127` (Left/Down) to `127` (Right/Up) |
+| `stickX` and `stickY` | Left Stick | The adjusted stick value, derived from the raw stick values. Has a range of `-64` (Left/Down) to `64` (Right/Up). This is the stick value used for Mario |
+
 ### The Left Joystick
 
-`rawStickX` and `rawStickY` are the raw stick value, which goes from `0` to `127`. This is the easiest, most convenient, and most precise to use, however it isn't the value used for Mario.
+`rawStickX` and `rawStickY` are the raw stick value, which goes from `-127` to `127`. This is the easiest, most convenient, and most precise to use, however it isn't the value used for Mario.
 
 `stickX` and `stickY` is used for calculating anything related to Mario, like Mario's `intendedYaw`. The values it uses are... quite arbitrary, but to break it down:
 
-- When the raw stick input is less than `9` (or greater than `-9` depending on the direction) the value is ignored, so the stick value remains at `0`
-- The stick value is the raw stick value plus (or minus depending on the direction) `-6`
+- The stick value is offset by `6` in each direction, so a raw stick value of `36` would end up as a stick value of `30`, and one of `-36` would be `-30`
+- When the raw stick input is less than `9` (or greater than `-9` depending on the direction) the value is ignored, so the stick value remains at `0`. This sort of acts as a builtin deadzone
 - The stick value is capped to `64`
 
-This means there is less precision and more randomness. It's just bad. However, it's what is used for deciding values regarding Mario, so you may need to work with it.
-
-When possible, use the raw stick values, but if necessary, use the regular stick values.
+This is the value that is used for Mario when calculating things like the `intendedYaw` and `faceAngle.y`.
 
 ### The Right Joystick
 
 `extStick` is what stores the information for your right joystick if you are on a modern controller. It uses a range of `0` to `127`.
 
-This value isn't used by the vanilla game, and is explicitly designed for mods (that is why it has a sane range!). When using this, account for the fact users may use keyboard and mouse, or that users may use an original N64 controller, which only has one joystick.
+This value isn't used by the vanilla game. When using this, account for the fact users may use keyboard and mouse, or that users may use an original N64 controller, which only has one joystick.
